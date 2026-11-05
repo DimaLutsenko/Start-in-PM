@@ -457,3 +457,32 @@ input.wb-field { min-height: 0; }
 .mx-res-group li.res-alt { background: var(--alt-bg); }
 .mx-res-group li.res-best { border: 1px solid var(--line); }
 .mx-res-group summary { cursor: pointer; }
+
+/* Персони */
+.persona-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.persona { border-radius: 12px; padding: 18px 20px; display: grid; gap: 8px; align-content: start; }
+.persona.bad { background: var(--miss-bg); }
+.persona.good { background: var(--q-inf); }
+.persona b { font-family: var(--font-display); font-weight: 500; }
+.persona p b { font-family: var(--font-body); font-weight: 600; }
+.persona p { font-size: 0.97rem; line-height: 1.65; }
+.persona small { color: var(--muted); font-size: 0.88rem; line-height: 1.5; border-top: 1px solid var(--line); padding-top: 8px; }
+@media (max-width: 700px) { .persona-compare { grid-template-columns: 1fr; } }
+
+/* Тест */
+.quiz { display: grid; gap: 14px; }
+.qz-q { border: 1px solid var(--line); border-radius: 12px; background: var(--surface); padding: 18px 20px; margin: 0; display: grid; gap: 12px; min-width: 0; }
+.qz-q legend { display: contents; }
+.qz-q legend .label { display: block; }
+.qz-text { display: block; font-weight: 600; font-size: 1.05rem; line-height: 1.5; margin-top: 4px; }
+.qz-opts { display: grid; gap: 8px; }
+.qz-opt { text-align: left; font: 400 0.98rem/1.5 var(--font-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; cursor: pointer; }
+.qz-opt:hover:not(:disabled) { border-color: var(--ink); }
+.qz-opt:disabled { cursor: default; }
+.qz-opt.correct { border-color: var(--ok); background: var(--q-inf); font-weight: 600; }
+.qz-opt.wrong { border-color: var(--miss); background: var(--miss-bg); }
+.qz-opt.dim { opacity: 0.55; }
+.qz-explain { border-radius: 10px; padding: 12px 14px; font-size: 0.95rem; line-height: 1.6; }
+.qz-explain.ok { background: var(--q-inf); }
+.qz-explain.no { background: var(--alt-bg); }
+.qz-total { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }

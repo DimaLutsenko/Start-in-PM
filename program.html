@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Програма курсу</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-root="">
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="index.html"><span class="dot" aria-hidden="true"></span>Продакт з нуля</a>
+  <nav class="site-nav" aria-label="Розділи"><a href="index.html">Головна</a><a href="program.html" aria-current="page">Програма</a><a href="product.html">Продукт «Слот»</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<div class="page-head">
+  <span class="label">Програма</span>
+  <h1>12 тижнів, 36 уроків</h1>
+  <p class="muted">Іди по порядку: кожен тиждень спирається на артефакти попередніх. Уроки з позначкою «чернетка» ще пишуться.</p>
+</div>
+<div id="program"></div>
+<div class="reset-zone">
+  <button class="btn ghost" id="reset-btn" type="button">Скинути прогрес</button>
+  <span id="reset-confirm" hidden>Видалити всі позначки і чек-листи? <button class="btn" data-yes type="button">Так, скинути</button> <button class="btn ghost" data-no type="button">Скасувати</button></span>
+</div>
+
+</div></main>
+<footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
+<script src="assets/course.js"></script>
+<script>PMZ.renderProgram(document.getElementById('program'));PMZ.initReset(document.getElementById('reset-btn'),document.getElementById('reset-confirm'));</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Продакт з нуля</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-root="">
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="index.html"><span class="dot" aria-hidden="true"></span>Продакт з нуля</a>
+  <nav class="site-nav" aria-label="Розділи"><a href="index.html" aria-current="page">Головна</a><a href="program.html">Програма</a><a href="product.html">Продукт «Слот»</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<section class="hero">
+  <div>
+    <span class="label">Курс продакт-менеджменту · 12 тижнів</span>
+    <h1 style="margin-top:14px">Продакт з&nbsp;нуля</h1>
+    <p class="lead">36 уроків теорії та практики. Весь курс ведеш один вигаданий продукт і в кінці маєш портфоліо з 12 робочих артефактів.</p>
+    <div class="actions">
+      <a class="btn" href="program.html">Відкрити програму</a>
+      <a class="btn ghost" href="product.html">Продукт курсу</a>
+    </div>
+  </div>
+  <aside class="sticky-note" id="summary" aria-live="polite"></aside>
+</section>
+
+<section class="section">
+  <header><span class="label">Як влаштований курс</span><h2>Тиждень = одна тема, три уроки</h2>
+  <p class="muted">Два уроки теорії по 40 хвилин і один практичний на 90 хвилин. Практика завжди на продукті «Слот», тож кожен тиждень додає нову частину до однієї історії.</p></header>
+  <ul class="anatomy">
+    <li><b>Мета і поняття</b><span>Що вмітимеш після уроку і словник термінів.</span></li>
+    <li><b>Теорія</b><span>Пояснення простими словами з прикладами.</span></li>
+    <li><b>Приклад на «Слоті»</b><span>Як тема виглядає на продукті курсу.</span></li>
+    <li><b>Кейс з практики</b><span>Реальна історія з роботи продакта.</span></li>
+    <li><b>Типові помилки</b><span>Де новачки помиляються найчастіше.</span></li>
+    <li><b>Завдання і самоперевірка</b><span>Практика з артефактом і чек-лист.</span></li>
+  </ul>
+</section>
+
+<section class="section">
+  <header><span class="label">Портфоліо</span><h2>Що в тебе буде після курсу</h2>
+  <p class="muted">Кожен тиждень закінчується робочим документом. Разом вони складаються в продуктову стратегію, яку можна показати на співбесіді.</p></header>
+  <ul class="portfolio" id="portfolio"></ul>
+</section>
+
+</div></main>
+<footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
+<script src="assets/course.js"></script>
+<script>PMZ.renderSummary(document.getElementById('summary'));PMZ.renderPortfolio(document.getElementById('portfolio'));</script>
+</body>
+</html>

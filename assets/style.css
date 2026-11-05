@@ -433,3 +433,27 @@ input.wb-field { min-height: 0; }
   .mx-title { font-size: 0.82rem; }
   .mx-chip span { display: none; }
 }
+
+/* Перевірка матриці */
+:root { --ok: #1C7F52; --alt: #9A6A00; --miss: #B3261E; --miss-bg: #FBE7E5; --alt-bg: #FFF3D1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ok: #5BC893; --alt: #E3B341; --miss: #FF8A80; --miss-bg: #3A1C1A; --alt-bg: #33290F; } }
+:root[data-theme="dark"] { --ok: #5BC893; --alt: #E3B341; --miss: #FF8A80; --miss-bg: #3A1C1A; --alt-bg: #33290F; }
+.mx-check { display: grid; gap: 14px; }
+.mx-check > .btn { justify-self: start; }
+.mx-chip { position: relative; }
+.mx-mark { position: absolute; top: -8px; right: -8px; width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font: 700 0.72rem var(--font-body); font-style: normal; color: #fff; }
+.mx-chip.res-best { border-color: var(--ok); } .mx-chip.res-best .mx-mark { background: var(--ok); }
+.mx-chip.res-alt { border-color: var(--alt); } .mx-chip.res-alt .mx-mark { background: var(--alt); }
+.mx-chip.res-miss { border-color: var(--miss); border-width: 2px; } .mx-chip.res-miss .mx-mark { background: var(--miss); }
+.mx-result { display: grid; gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; }
+.mx-score { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.mx-score b { font-family: var(--font-display); font-weight: 600; font-size: 1.8rem; }
+.mx-score span { color: var(--muted); }
+.mx-res-group { display: grid; gap: 8px; }
+.mx-res-group ul { list-style: none; padding: 0 !important; margin: 0; display: grid; gap: 8px !important; }
+.mx-res-group li { display: grid; gap: 4px; padding: 12px 14px; border-radius: 10px; font-size: 0.95rem; line-height: 1.6; }
+.mx-res-group li small { color: var(--muted); font-size: 0.85rem; }
+.mx-res-group li.res-miss { background: var(--miss-bg); }
+.mx-res-group li.res-alt { background: var(--alt-bg); }
+.mx-res-group li.res-best { border: 1px solid var(--line); }
+.mx-res-group summary { cursor: pointer; }

@@ -6,12 +6,12 @@
 <title>Урок 1.2 · Продакт і команда: хто за що відповідає</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=4">
+<link rel="stylesheet" href="../assets/style.css?v=6">
 </head>
 <body data-root="../" data-lesson="01-2">
 <header class="site-header"><div class="wrap">
   <a class="wordmark" href="../index.html"><span class="dot" aria-hidden="true"></span>Продакт з нуля</a>
-  <nav class="site-nav" aria-label="Розділи"><a href="../index.html">Головна</a><a href="../program.html" aria-current="page">Програма</a><a href="../product.html">Продукт «Слот»</a></nav>
+  <nav class="site-nav" aria-label="Розділи"><a href="../index.html">Головна</a><a href="../program.html" aria-current="page">Програма</a><a href="../product.html">Продукт «Слот»</a><a href="../zoshyt.html">Мій зошит</a></nav>
 </div></header>
 <main><div class="wrap">
 
@@ -301,15 +301,57 @@
       <h3>Частина 1. Чия це зона?</h3>
       <p>Нижче шість робочих ситуацій з «Слота». Для кожної письмово дай відповідь на два питання: <b>хто головний</b> у цій ситуації і <b>що робить продакт</b>. Лише після цього відкривай розбір.</p>
       <div class="qa">
-        <details><summary>1. Великий салон через менеджера з продажу просить терміново додати вивантаження записів в Excel.</summary><p>Рішення за продактом, але не одразу. Спершу з'ясувати, навіщо салону вивантаження: що він робить з цими даними? Можливо, проблему розв'яже простіший звіт. Потім оцінити, чи потрібно це іншим салонам, і поставити задачу в пріоритет поруч з іншими. Продажам — пояснити рішення і терміни.</p></details>
-        <details><summary>2. Розробник каже, що реліз нової функції зсувається на два тижні.</summary><p>Терміни — зона розробки і проджекта (у «Слоті» це теж ти). Продакт з'ясовує причину і вирішує, чи можна випустити меншу версію вчасно. Потім попереджає всіх, кого зачепить зсув: продажі, підтримку, засновника.</p></details>
-        <details><summary>3. Підтримка помічає, що за тиждень втричі більше скарг на оплату.</summary><p>Сигнал для продакта: розібратися разом з підтримкою і розробкою, що змінилося, наскільки серйозна проблема і скільки клієнтів зачепило. Якщо проблема технічна і критична, техлід виправляє її позачергово.</p></details>
-        <details><summary>4. Засновник хоче вийти на ринок Польщі в наступному кварталі.</summary><p>Стратегічне рішення — зона CEO. Продакт допомагає зрозуміти, що для цього потрібно від продукту (переклад, оплата, законодавство), оцінити витрати і ризики, і чесно сказати, що доведеться відкласти.</p></details>
-        <details><summary>5. Дизайнер хоче зробити екран красивим і зручним, розробник каже, що це місяць роботи замість тижня.</summary><p>Зручність — зона дизайнера, реалізація — зона розробника. Продакт не обирає, хто правий, а допомагає знайти компроміс: що в цьому екрані найважливіше для користувача і чи можна зробити це за тиждень, а решту пізніше.</p></details>
-        <details><summary>6. Юрист каже, що для SMS-нагадувань клієнтам салонів потрібна їхня згода.</summary><p>Юридичні вимоги — зона юриста, і їх не обговорюють. Продакт вирішує, як вбудувати отримання згоди в продукт так, щоб це було зручно, і закладає це в план робіт.</p></details>
-      </div>
+        <div class="situation">
+          <span class="label">Ситуація 1</span>
+          <p>Великий салон через менеджера з продажу просить терміново додати вивантаження записів в Excel.</p>
+          <textarea class="wb-field" rows="2" data-field="sit1" data-label="Ситуація 1: Великий салон через менеджера з продажу просить терміново додати виван…" aria-label="Твоя відповідь на ситуацію 1" placeholder="Хто головний і що робить продакт"></textarea>
+          <details><summary>Відкрити розбір</summary><p>Рішення за продактом, але не одразу. Спершу з'ясувати, навіщо салону вивантаження: що він робить з цими даними? Можливо, проблему розв'яже простіший звіт. Потім оцінити, чи потрібно це іншим салонам, і поставити задачу в пріоритет поруч з іншими. Продажам — пояснити рішення і терміни.</p></details>
+        </div>
+        <div class="situation">
+          <span class="label">Ситуація 2</span>
+          <p>Розробник каже, що реліз нової функції зсувається на два тижні.</p>
+          <textarea class="wb-field" rows="2" data-field="sit2" data-label="Ситуація 2: Розробник каже, що реліз нової функції зсувається на два тижні.…" aria-label="Твоя відповідь на ситуацію 2" placeholder="Хто головний і що робить продакт"></textarea>
+          <details><summary>Відкрити розбір</summary><p>Терміни — зона розробки і проджекта (у «Слоті» це теж ти). Продакт з'ясовує причину і вирішує, чи можна випустити меншу версію вчасно. Потім попереджає всіх, кого зачепить зсув: продажі, підтримку, засновника.</p></details>
+        </div>
+        <div class="situation">
+          <span class="label">Ситуація 3</span>
+          <p>Підтримка помічає, що за тиждень втричі більше скарг на оплату.</p>
+          <textarea class="wb-field" rows="2" data-field="sit3" data-label="Ситуація 3: Підтримка помічає, що за тиждень втричі більше скарг на оплату.…" aria-label="Твоя відповідь на ситуацію 3" placeholder="Хто головний і що робить продакт"></textarea>
+          <details><summary>Відкрити розбір</summary><p>Сигнал для продакта: розібратися разом з підтримкою і розробкою, що змінилося, наскільки серйозна проблема і скільки клієнтів зачепило. Якщо проблема технічна і критична, техлід виправляє її позачергово.</p></details>
+        </div>
+        <div class="situation">
+          <span class="label">Ситуація 4</span>
+          <p>Засновник хоче вийти на ринок Польщі в наступному кварталі.</p>
+          <textarea class="wb-field" rows="2" data-field="sit4" data-label="Ситуація 4: Засновник хоче вийти на ринок Польщі в наступному кварталі.…" aria-label="Твоя відповідь на ситуацію 4" placeholder="Хто головний і що робить продакт"></textarea>
+          <details><summary>Відкрити розбір</summary><p>Стратегічне рішення — зона CEO. Продакт допомагає зрозуміти, що для цього потрібно від продукту (переклад, оплата, законодавство), оцінити витрати і ризики, і чесно сказати, що доведеться відкласти.</p></details>
+        </div>
+        <div class="situation">
+          <span class="label">Ситуація 5</span>
+          <p>Дизайнер хоче зробити екран красивим і зручним, розробник каже, що це місяць роботи замість тижня.</p>
+          <textarea class="wb-field" rows="2" data-field="sit5" data-label="Ситуація 5: Дизайнер хоче зробити екран красивим і зручним, розробник каже, що це …" aria-label="Твоя відповідь на ситуацію 5" placeholder="Хто головний і що робить продакт"></textarea>
+          <details><summary>Відкрити розбір</summary><p>Зручність — зона дизайнера, реалізація — зона розробника. Продакт не обирає, хто правий, а допомагає знайти компроміс: що в цьому екрані найважливіше для користувача і чи можна зробити це за тиждень, а решту пізніше.</p></details>
+        </div>
+        <div class="situation">
+          <span class="label">Ситуація 6</span>
+          <p>Юрист каже, що для SMS-нагадувань клієнтам салонів потрібна їхня згода.</p>
+          <textarea class="wb-field" rows="2" data-field="sit6" data-label="Ситуація 6: Юрист каже, що для SMS-нагадувань клієнтам салонів потрібна їхня згода…" aria-label="Твоя відповідь на ситуацію 6" placeholder="Хто головний і що робить продакт"></textarea>
+          <details><summary>Відкрити розбір</summary><p>Юридичні вимоги — зона юриста, і їх не обговорюють. Продакт вирішує, як вбудувати отримання згоди в продукт так, щоб це було зручно, і закладає це в план робіт.</p></details>
+        </div>
+        </div>
       <h3>Частина 2. Своїми словами</h3>
       <p>Обери 5 ролей з уроку, з якими, як тобі здається, продакт працює найчастіше. Для кожної напиши 2–3 речення своїми словами: що ця людина робить і що їй потрібно від продакта. Не переписуй текст уроку, спробуй пояснити так, ніби розповідаєш другу.</p>
+      <div class="qa">
+        <div class="answer"><input class="wb-field" type="text" data-field="role1-name" data-label="Роль 1" aria-label="Роль 1: назва" placeholder="Роль 1">
+        <textarea class="wb-field" rows="2" data-field="role1-text" data-label="Роль 1: своїми словами" aria-label="Роль 1: опис своїми словами" placeholder="Що ця людина робить і що їй потрібно від продакта"></textarea></div>
+        <div class="answer"><input class="wb-field" type="text" data-field="role2-name" data-label="Роль 2" aria-label="Роль 2: назва" placeholder="Роль 2">
+        <textarea class="wb-field" rows="2" data-field="role2-text" data-label="Роль 2: своїми словами" aria-label="Роль 2: опис своїми словами" placeholder="Що ця людина робить і що їй потрібно від продакта"></textarea></div>
+        <div class="answer"><input class="wb-field" type="text" data-field="role3-name" data-label="Роль 3" aria-label="Роль 3: назва" placeholder="Роль 3">
+        <textarea class="wb-field" rows="2" data-field="role3-text" data-label="Роль 3: своїми словами" aria-label="Роль 3: опис своїми словами" placeholder="Що ця людина робить і що їй потрібно від продакта"></textarea></div>
+        <div class="answer"><input class="wb-field" type="text" data-field="role4-name" data-label="Роль 4" aria-label="Роль 4: назва" placeholder="Роль 4">
+        <textarea class="wb-field" rows="2" data-field="role4-text" data-label="Роль 4: своїми словами" aria-label="Роль 4: опис своїми словами" placeholder="Що ця людина робить і що їй потрібно від продакта"></textarea></div>
+        <div class="answer"><input class="wb-field" type="text" data-field="role5-name" data-label="Роль 5" aria-label="Роль 5: назва" placeholder="Роль 5">
+        <textarea class="wb-field" rows="2" data-field="role5-text" data-label="Роль 5: своїми словами" aria-label="Роль 5: опис своїми словами" placeholder="Що ця людина робить і що їй потрібно від продакта"></textarea></div>
+        </div>
       <div class="summary">
         <span class="label">Як зрозуміти, що зроблено добре</span>
         <ol class="circled">
@@ -356,7 +398,8 @@
 
 </div></main>
 <footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
-<script src="../assets/course.js?v=4"></script>
-<script>PMZ.initLesson();</script>
+<script src="../assets/course.js?v=6"></script>
+<script src="../assets/workbook.js?v=6"></script>
+<script>PMZ.initLesson();WB.initLesson();</script>
 </body>
 </html>

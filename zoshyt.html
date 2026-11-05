@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мій зошит</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=6">
+</head>
+<body data-root="">
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="index.html"><span class="dot" aria-hidden="true"></span>Продакт з нуля</a>
+  <nav class="site-nav" aria-label="Розділи"><a href="index.html">Головна</a><a href="program.html">Програма</a><a href="product.html">Продукт «Слот»</a><a href="zoshyt.html" aria-current="page">Мій зошит</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<div class="page-head">
+  <span class="label">Мій зошит</span>
+  <h1>Усе, що ти записав</h1>
+  <p class="muted">Нотатки, виділення з коментарями і відповіді на завдання з усіх уроків, зібрані по тижнях. До кінця курсу тут складеться твоє портфоліо.</p>
+</div>
+
+<section class="backup" aria-label="Резервна копія">
+  <div class="warn">
+    <span class="label">Важливо</span>
+    <p>Записи зберігаються тільки в цьому браузері на цьому пристрої. Якщо очистити браузер або відкрити курс на іншому пристрої, їх там не буде. Регулярно зберігай копію у файл. <span id="backup-info"></span></p>
+  </div>
+  <div class="row">
+    <button class="btn" id="btn-download" type="button">Зберегти копію у файл</button>
+    <label class="btn ghost" for="file-restore">Відновити з файлу</label>
+    <input id="file-restore" type="file" accept="application/json,.json" hidden>
+    <button class="btn ghost" id="btn-copy" type="button">Скопіювати як текст</button>
+  </div>
+  <p id="backup-msg" class="saved-note" role="status"></p>
+  <div id="restore-confirm" class="row" hidden>
+    <span>Записи з файлу замінять поточні. Продовжити?</span>
+    <button class="btn" id="restore-yes" type="button">Так, відновити</button>
+    <button class="btn ghost" id="restore-no" type="button">Скасувати</button>
+  </div>
+</section>
+
+<div id="notebook" style="margin-top:40px"></div>
+
+<div class="reset-zone">
+  <button class="btn ghost" id="clear-btn" type="button">Очистити зошит</button>
+  <span id="clear-confirm" hidden>Видалити всі нотатки, виділення і відповіді? Це не можна скасувати. <button class="btn" id="clear-yes" type="button">Так, видалити</button> <button class="btn ghost" id="clear-no" type="button">Скасувати</button></span>
+</div>
+
+</div></main>
+<footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
+<script src="assets/course.js?v=6"></script>
+<script src="assets/workbook.js?v=6"></script>
+<script>
+(() => {
+  const esc = WB.esc;
+  const fmt = (iso) => { try { return new Date(iso).toLocaleString("uk-UA", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" }); } catch (e) { return ""; } };
+
+  function lessonData(id) {
+    const d = WB.data;
+    const notes = d.notes[id] || "";
+    const fields = Object.entries(d.fields[id] || {}).map(([k, v]) => v).sort((a, b) => a.order - b.order);
+    const hls = d.highlights[id] || [];
+    return { notes, fields, hls, has: !!(notes || fields.length || hls.length) };
+  }
+
+  function render() {
+    const el = document.getElementById("notebook");
+    let html = "", any = false;
+    COURSE.weeks.forEach((w) => {
+      const items = w.lessons.map((l) => ({ l, d: lessonData(l.id) })).filter((x) => x.d.has);
+      if (!items.length) return;
+      any = true;
+      html += `<section class="nb-week"><div><span class="label">Тиждень ${w.n}</span><h2>${esc(w.title)}</h2></div>`;
+      items.forEach(({ l, d }) => {
+        html += `<article class="nb-lesson"><h3><a href="lessons/${l.id}.html">${l.code} ${esc(l.title)}</a></h3>`;
+        if (d.notes) html += `<div class="nb-block"><span class="label">Нотатки</span><p class="nb-text">${esc(d.notes)}</p></div>`;
+        if (d.hls.length) html += `<div class="nb-block"><span class="label">Виділення</span><ul class="wb-list">${d.hls.map((h) => `<li class="${h.orphan ? "orphan" : ""}"><q>${esc(h.quote)}</q>${h.comment ? `<span>${esc(h.comment)}</span>` : ""}${h.orphan ? "<small>Текст уроку змінився, виділення не знайдено</small>" : ""}</li>`).join("")}</ul></div>`;
+        if (d.fields.length) html += `<div class="nb-block"><span class="label">Відповіді на завдання</span><dl class="nb-fields">${d.fields.map((f) => `<div><dt>${esc(f.label)}</dt><dd>${esc(f.v)}</dd></div>`).join("")}</dl></div>`;
+        html += `</article>`;
+      });
+      html += `</section>`;
+    });
+    el.innerHTML = any ? html : `<div class="nb-empty"><b>Зошит поки порожній</b><span>Відкрий <a href="lessons/01-1.html">перший урок</a>: виділяй важливе, пиши нотатки через кнопку «Нотатки» внизу екрана і відповідай на завдання прямо в уроці. Усе з'явиться тут.</span></div>`;
+    const b = WB.data.meta.backup;
+    document.getElementById("backup-info").textContent = b ? `Остання копія: ${fmt(b)}.` : "Ти ще не зберігав копію.";
+  }
+
+  function asText() {
+    let out = "Продакт з нуля — мій зошит\n";
+    COURSE.weeks.forEach((w) => {
+      const items = w.lessons.map((l) => ({ l, d: lessonData(l.id) })).filter((x) => x.d.has);
+      if (!items.length) return;
+      out += `\n\n## Тиждень ${w.n}. ${w.title}\n`;
+      items.forEach(({ l, d }) => {
+        out += `\n### ${l.code} ${l.title}\n`;
+        if (d.notes) out += `\nНотатки:\n${d.notes}\n`;
+        if (d.hls.length) out += `\nВиділення:\n` + d.hls.map((h) => `— «${h.quote}»${h.comment ? `\n  ${h.comment}` : ""}`).join("\n") + "\n";
+        if (d.fields.length) out += `\nВідповіді:\n` + d.fields.map((f) => `${f.label}:\n${f.v}`).join("\n\n") + "\n";
+      });
+    });
+    return out;
+  }
+
+  const msg = (t) => { document.getElementById("backup-msg").textContent = t; };
+  document.getElementById("btn-download").addEventListener("click", () => { WB.download(); render(); msg("Файл збережено в папку завантажень."); });
+  document.getElementById("btn-copy").addEventListener("click", () => {
+    const text = asText();
+    navigator.clipboard.writeText(text).then(() => msg("Скопійовано. Можна вставити в Google Doc чи нотатки."), () => msg("Не вдалося скопіювати автоматично. Спробуй інший браузер."));
+  });
+
+  let pending = null;
+  const fileIn = document.getElementById("file-restore");
+  fileIn.addEventListener("change", () => {
+    const f = fileIn.files[0];
+    if (!f) return;
+    const r = new FileReader();
+    r.onload = () => {
+      try { pending = JSON.parse(r.result); if (pending.app !== "produkt-z-nulya") throw 0; document.getElementById("restore-confirm").hidden = false; msg(""); }
+      catch (e) { pending = null; msg("Цей файл не схожий на копію зошита. Обери файл, збережений кнопкою «Зберегти копію у файл»."); }
+      fileIn.value = "";
+    };
+    r.readAsText(f);
+  });
+  document.getElementById("restore-yes").addEventListener("click", () => {
+    try { WB.restore(pending); location.reload(); } catch (e) { msg("Не вдалося відновити: файл пошкоджений."); }
+  });
+  document.getElementById("restore-no").addEventListener("click", () => { pending = null; document.getElementById("restore-confirm").hidden = true; });
+
+  const clearBtn = document.getElementById("clear-btn"), clearBox = document.getElementById("clear-confirm");
+  clearBtn.addEventListener("click", () => { clearBox.hidden = false; clearBtn.hidden = true; });
+  document.getElementById("clear-no").addEventListener("click", () => { clearBox.hidden = true; clearBtn.hidden = false; });
+  document.getElementById("clear-yes").addEventListener("click", () => { WB.clearAll(); clearBox.hidden = true; clearBtn.hidden = false; render(); msg("Зошит очищено."); });
+
+  render();
+})();
+</script>
+</body>
+</html>

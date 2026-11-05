@@ -486,3 +486,21 @@ input.wb-field { min-height: 0; }
 .qz-explain.ok { background: var(--q-inf); }
 .qz-explain.no { background: var(--alt-bg); }
 .qz-total { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+
+/* JTBD */
+.quad-legend.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.formula { font-family: var(--font-display); font-weight: 500; font-size: 1.15rem; line-height: 1.6; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; }
+.formula span { background: var(--note); color: var(--note-ink); border-radius: 4px; padding: 1px 6px; font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; }
+.forces { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.force { border-radius: 12px; padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.force.push { background: var(--q-inf); }
+.force.hold { background: var(--miss-bg); }
+.force b { font-weight: 600; }
+.force p { font-size: 0.95rem; font-style: italic; line-height: 1.6; }
+.force .wb-field { background: var(--surface); }
+.builder { display: grid; gap: 8px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.builder .row { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; align-items: center; }
+.builder .row span { font-weight: 600; font-size: 0.95rem; }
+.builder .preview { margin-top: 6px; padding: 12px 14px; border-radius: 10px; background: var(--note-soft); font-size: 0.98rem; line-height: 1.6; }
+.builder .preview:empty::before { content: "Тут з'явиться готова job story"; color: var(--muted); }
+@media (max-width: 700px) { .quad-legend.three, .forces { grid-template-columns: 1fr; } .builder .row { grid-template-columns: 1fr; gap: 4px; } }

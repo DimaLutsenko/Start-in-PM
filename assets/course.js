@@ -19,9 +19,9 @@ const COURSE = {
       { title: "Гіпотези і Opportunity Solution Tree", desc: "Як будувати гіпотези і пов'язувати їх із ціллю продукту.", type: "theory", minutes: 60, status: "ready" },
       { title: "Практика: дерево можливостей", desc: "Будуєш дерево від цілі до гіпотез для «Слота».", type: "practice", minutes: 90, status: "ready" } ] },
     { n: 5, title: "Метрики продукту", goal: "Вимірювати те, що справді показує цінність.", artifact: "Дерево метрик «Слота»", lessons: [
-      { title: "North Star і дерево метрик", desc: "Одна головна метрика і як вона розкладається на ті, на які можна впливати.", type: "theory" },
-      { title: "AARRR і воронки", desc: "Шлях користувача від першого контакту до оплати і де він губиться.", type: "theory" },
-      { title: "Практика: система метрик", desc: "Обираєш North Star для «Слота» і будуєш дерево метрик.", type: "practice" } ] },
+      { title: "North Star і дерево метрик", desc: "Одна головна метрика і як вона розкладається на ті, на які можна впливати.", type: "theory", minutes: 45, status: "ready" },
+      { title: "AARRR і воронки", desc: "Шлях користувача від першого контакту до оплати і де він губиться.", type: "theory", minutes: 45, status: "ready" },
+      { title: "Практика: система метрик", desc: "Обираєш North Star для «Слота» і будуєш дерево метрик.", type: "practice", minutes: 90, status: "ready" } ] },
     { n: 6, title: "Юніт-економіка", goal: "Розуміти, чи заробляє продукт на кожному клієнті.", artifact: "Модель юніт-економіки в таблиці", lessons: [
       { title: "LTV, CAC і окупність", desc: "Скільки коштує залучити клієнта і скільки він приносить.", type: "theory", minutes: 60, status: "ready" },
       { title: "Retention і когорти", desc: "Чому утримання важливіше за залучення і як читати когортну таблицю.", type: "theory", minutes: 60, status: "ready" },

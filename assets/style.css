@@ -573,3 +573,19 @@ svg .off { opacity: 0.18; }
 .sort-board .mx-chip { max-width: 100%; }
 .sort-board .mx-chip b { font-weight: 500; font-size: 0.82rem; line-height: 1.35; }
 @media (max-width: 600px) { .sort-board .mx-grid { grid-template-columns: 1fr; } .sort-board .mx-chip span { display: block; } }
+
+/* Дерево можливостей */
+.ost { display: grid; gap: 14px; }
+.ost-level { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 10px; position: relative; padding-top: 14px; border-top: 2px solid var(--line); }
+.ost-branch { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.ost-branch .ost-level { grid-auto-flow: row; grid-auto-columns: auto; border-top: 0; padding-top: 0; padding-left: 12px; border-left: 2px solid var(--line); }
+.ost-node { border-radius: 10px; padding: 10px 12px; display: grid; gap: 2px; font-size: 0.92rem; line-height: 1.45; min-width: 0; overflow-wrap: anywhere; }
+.ost-node .label { font-size: 0.66rem; }
+.ost-outcome { background: var(--ink); color: var(--bg); justify-self: center; text-align: center; max-width: 520px; }
+.ost-outcome .label { color: var(--bg); opacity: 0.7; }
+.ost-opp { background: var(--q-key); }
+.ost-sol { background: var(--surface); border: 1px solid var(--line); }
+.ost-branch.empty .ost-opp { background: transparent; border: 1.5px dashed var(--line); color: var(--muted); }
+.ost-input { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ost-input .panel { padding: 16px; gap: 8px; }
+@media (max-width: 760px) { .ost-level { grid-auto-flow: row; grid-auto-columns: auto; } .ost-input { grid-template-columns: 1fr; } }

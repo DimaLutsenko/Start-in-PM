@@ -325,13 +325,16 @@ const WB = (() => {
   /* Конструктор job story: три поля → готове речення */
   function initBuilders() {
     document.querySelectorAll(".builder").forEach((b) => {
-      const f = b.querySelectorAll("input"), pv = b.querySelector(".preview");
-      if (!pv || f.length < 3 || b.dataset.ready) return;
+      const f = [...b.querySelectorAll("input")], pv = b.querySelector(".preview");
+      if (!pv || f.length < 2 || b.dataset.ready) return;
       b.dataset.ready = "1";
       const words = (b.dataset.words || "Коли|, я хочу|, щоб|.").split("|");
       const u = () => {
-        const v = [...f].map((i) => i.value.trim());
-        pv.textContent = v.some(Boolean) ? `${words[0]} ${v[0] || "…"}${words[1]} ${v[1] || "…"}${words[2]} ${v[2] || "…"}${words[3]}` : "";
+        const v = f.map((i) => i.value.trim());
+        if (!v.some(Boolean)) { pv.textContent = ""; return; }
+        let s = "";
+        v.forEach((x, i) => { s += (words[i] || " ") + " " + (x || "…"); });
+        pv.textContent = (s + (words[v.length] || "")).replace(/\s+([,.])/g, "$1").trim();
       };
       f.forEach((i) => i.addEventListener("input", u));
       u();

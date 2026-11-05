@@ -148,5 +148,40 @@ const Tools = (() => {
     render();
   }
 
-  return { initChecks, initCalc, initCohort, cell };
+  /* ---------- Калькулятор A/B-тесту (z-тест для двох часток) ---------- */
+  function erfc(x) { // наближення Абрамовіца–Стіган
+    const z = Math.abs(x), t = 1 / (1 + 0.5 * z);
+    const r = t * Math.exp(-z * z - 1.26551223 + t * (1.00002368 + t * (0.37409196 + t * (0.09678418 + t * (-0.18628806 + t * (0.27886807 + t * (-1.13520398 + t * (1.48851587 + t * (-0.82215223 + t * 0.17087277)))))))));
+    return x >= 0 ? r : 2 - r;
+  }
+  function initAB(el) {
+    if (!el) return;
+    const $ = (id) => el.querySelector(`[data-in="${id}"]`);
+    const out = (id, v) => { const o = el.querySelector(`[data-out="${id}"]`); if (o) o.textContent = v; };
+    function calc() {
+      const na = num($("na").value), xa = num($("xa").value), nb = num($("nb").value), xb = num($("xb").value);
+      const pa = xa / na, pb = xb / nb, pp = (xa + xb) / (na + nb);
+      const se = Math.sqrt(pp * (1 - pp) * (1 / na + 1 / nb));
+      const z = (pb - pa) / se;
+      const pv = erfc(Math.abs(z) / Math.SQRT2);
+      out("pa", `${fmt(pa * 100, 2)}%`); out("pb", `${fmt(pb * 100, 2)}%`);
+      out("diff", `${pb - pa >= 0 ? "+" : ""}${fmt((pb - pa) * 100, 2)} п.п.`);
+      out("rel", isFinite(pa) && pa > 0 ? `${pb - pa >= 0 ? "+" : ""}${fmt(((pb - pa) / pa) * 100, 1)}%` : "—");
+      out("pv", !isFinite(pv) ? "—" : pv < 0.001 ? "< 0,001" : fmt(pv, 3));
+      const v = el.querySelector(".calc-verdict");
+      if (!isFinite(pv)) { v.className = "calc-verdict mid"; v.textContent = "Введи кількість учасників і подій у кожній групі."; return; }
+      if (pv < 0.05) { v.className = "calc-verdict good"; v.textContent = "Різниця статистично значуща: p-значення менше 0,05. Малоймовірно, що вона виникла випадково."; }
+      else { v.className = "calc-verdict bad"; v.textContent = "Різниця не значуща: вона цілком могла виникнути випадково. Потрібно більше даних або ефекту немає."; }
+    }
+    el.querySelectorAll("input").forEach((i) => i.addEventListener("input", calc));
+    el.querySelectorAll("[data-preset]").forEach((b) => b.addEventListener("click", () => {
+      const pr = JSON.parse(b.dataset.preset);
+      Object.entries(pr).forEach(([k, v]) => { const i = $(k); if (i) i.value = v; });
+      el.querySelectorAll("[data-preset]").forEach((x) => x.setAttribute("aria-pressed", x === b));
+      calc();
+    }));
+    calc();
+  }
+
+  return { initChecks, initCalc, initCohort, initAB, cell };
 })();

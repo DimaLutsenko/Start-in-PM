@@ -35,9 +35,9 @@ const COURSE = {
       { title: "Roadmap як інструмент комунікації", desc: "Види roadmap і чому це не план з датами.", type: "theory", minutes: 45, status: "ready" },
       { title: "Практика: квартальний roadmap", desc: "Пріоритизуєш беклог і збираєш roadmap «Слота».", type: "practice", minutes: 90, status: "ready" } ] },
     { n: 9, title: "Вимоги і робота з розробкою", goal: "Ставити задачі так, щоб команда зробила саме те, що потрібно.", artifact: "PRD для однієї фічі", lessons: [
-      { title: "PRD і user stories", desc: "Як описати фічу: проблема, рішення, критерії приймання.", type: "theory" },
-      { title: "Scrum, Kanban і спринти", desc: "Як живе команда розробки і яке місце в цьому процесі продакта.", type: "theory" },
-      { title: "Практика: пишемо PRD", desc: "Пишеш повний PRD для фічі «Слота».", type: "practice" } ] },
+      { title: "PRD і user stories", desc: "Як описати фічу: проблема, рішення, критерії приймання.", type: "theory", minutes: 60, status: "ready" },
+      { title: "Scrum, Kanban і спринти", desc: "Як живе команда розробки і яке місце в цьому процесі продакта.", type: "theory", minutes: 45, status: "ready" },
+      { title: "Практика: пишемо PRD", desc: "Пишеш повний PRD для фічі «Слота».", type: "practice", minutes: 90, status: "ready" } ] },
     { n: 10, title: "Стейкхолдери і комунікація", goal: "Домовлятися з бізнесом, продажами і командою.", artifact: "Продуктовий апдейт для керівництва", lessons: [
       { title: "Карта впливу і домовленості", desc: "Хто впливає на продукт і як вибудувати з ними роботу.", type: "theory" },
       { title: "Як казати «ні» і захищати рішення", desc: "Аргументація, компроміси і робота із запитами «зробіть під клієнта».", type: "theory" },

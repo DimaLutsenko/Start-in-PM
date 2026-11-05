@@ -242,3 +242,47 @@ main { padding-block: 40px 72px; }
   .pager .next { grid-column: 1; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* ===== Оформлення уроку v2: номери в кругах, виділені блоки, більше повітря ===== */
+:root { --note-soft: #FFF3C4; --info-soft: #E8EEFB; --info-ink: #1C46C4; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --note-soft: #2E2814; --info-soft: #1B2440; --info-ink: #93AEFF; } }
+:root[data-theme="dark"] { --note-soft: #2E2814; --info-soft: #1B2440; --info-ink: #93AEFF; }
+
+.lesson-body { gap: 72px; font-size: 1.075rem; }
+.lesson-body p { line-height: 1.75; }
+.lesson-body section { gap: 20px; }
+.lesson-body ul, .lesson-body ol { gap: 12px; }
+.lesson-body h3 { font-size: 1.2rem; margin-top: 16px; }
+
+.sec-head { display: flex; align-items: center; gap: 14px; }
+.sec-head .num { flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--bg); display: grid; place-items: center; font-family: var(--font-display); font-weight: 600; font-size: 1rem; font-variant-numeric: tabular-nums; }
+
+.circled { list-style: none; padding: 0 !important; counter-reset: c; display: grid; gap: 14px; }
+.circled > li { counter-increment: c; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 14px; align-items: start; }
+.circled > li::before { content: counter(c); width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; font: 600 0.85rem var(--font-body); font-variant-numeric: tabular-nums; margin-top: 1px; }
+.circled.filled > li::before { background: var(--note); border-color: var(--note); color: var(--note-ink); }
+
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 22px 24px; display: grid; gap: 14px; }
+.summary { background: var(--note-soft); border-radius: 12px; padding: 18px 22px; display: grid; gap: 8px; }
+.summary .label { color: var(--ink); }
+.fact { border-left: 0; background: var(--info-soft); border-radius: 12px; padding: 18px 22px; }
+.fact .label { color: var(--info-ink); }
+
+.quote { margin: 4px 0; padding: 18px 22px 18px 56px; position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; display: grid; gap: 8px; }
+.quote::before { content: "«"; position: absolute; left: 18px; top: 6px; font-family: var(--font-display); font-size: 2.6rem; line-height: 1; color: var(--draft-line); }
+.quote p { font-style: italic; font-size: 1.12rem; }
+.quote cite { font-style: normal; font-size: var(--step--1); color: var(--muted); }
+.quote cite::before { content: "— "; }
+
+.timeline li { padding-bottom: 40px; gap: 12px; }
+.timeline li > b { font-size: 1.15rem; }
+.today { background: var(--done-bg); border-radius: 10px; padding: 14px 18px; display: grid; gap: 4px; }
+.today .label { color: var(--done); }
+
+.example { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 18px 22px; display: grid; gap: 8px; }
+.example .label { color: var(--muted); }
+
+.mistakes { gap: 14px !important; }
+.mistakes li { padding: 18px 20px; gap: 8px; }
+.mistakes .fix { font-size: var(--step--1); color: var(--done); }
+.terms > div { padding: 16px 0; }

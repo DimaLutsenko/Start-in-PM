@@ -566,3 +566,10 @@ svg .ln-private, svg .ln-bad { stroke: var(--miss); } svg .lbl.ln-private, svg .
 svg .ln-small { stroke: var(--alt); } svg .lbl.ln-small, svg .dot.ln-small { fill: var(--alt); stroke: none; }
 svg .ln-large, svg .ln-good { stroke: var(--ok); } svg .lbl.ln-large, svg .dot.ln-large, svg .lbl.ln-good { fill: var(--ok); stroke: none; }
 svg .off { opacity: 0.18; }
+
+/* Сортування карток без осей */
+.sort-board .mx-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.sort-board .mx-zone { min-height: 150px; }
+.sort-board .mx-chip { max-width: 100%; }
+.sort-board .mx-chip b { font-weight: 500; font-size: 0.82rem; line-height: 1.35; }
+@media (max-width: 600px) { .sort-board .mx-grid { grid-template-columns: 1fr; } .sort-board .mx-chip span { display: block; } }

@@ -322,11 +322,28 @@ const WB = (() => {
   function openPanel() { closeSheet(); panel.hidden = false; panel.querySelector("textarea").focus(); requestAnimationFrame(() => autoGrow(panel.querySelector("textarea"))); }
   function closePanel() { if (panel) panel.hidden = true; }
 
+  /* Конструктор job story: три поля → готове речення */
+  function initBuilders() {
+    document.querySelectorAll(".builder").forEach((b) => {
+      const f = b.querySelectorAll("input"), pv = b.querySelector(".preview");
+      if (!pv || f.length < 3 || b.dataset.ready) return;
+      b.dataset.ready = "1";
+      const words = (b.dataset.words || "Коли|, я хочу|, щоб|.").split("|");
+      const u = () => {
+        const v = [...f].map((i) => i.value.trim());
+        pv.textContent = v.some(Boolean) ? `${words[0]} ${v[0] || "…"}${words[1]} ${v[1] || "…"}${words[2]} ${v[2] || "…"}${words[3]}` : "";
+      };
+      f.forEach((i) => i.addEventListener("input", u));
+      u();
+    });
+  }
+
   function initLesson() {
     lessonId = document.body.dataset.lesson;
     root = document.querySelector(".lesson-body");
     if (!lessonId || !root) return;
     initFields(lessonId);
+    initBuilders();
     renderHighlights();
     buildPanel();
     buildToolbar();

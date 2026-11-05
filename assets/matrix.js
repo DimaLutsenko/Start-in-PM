@@ -43,7 +43,7 @@ const Matrix = (() => {
     if (answers) {
       const wrapEl = document.createElement("div");
       wrapEl.className = "mx-check";
-      wrapEl.innerHTML = '<button type="button" class="btn">Перевірити матрицю</button><div class="mx-result" hidden></div>';
+      wrapEl.innerHTML = '<button type="button" class="btn">${opts.checkLabel || "Перевірити матрицю"}</button><div class="mx-result" hidden></div>';
       el.appendChild(wrapEl);
       checkBtn = wrapEl.querySelector("button");
       resultBox = wrapEl.querySelector(".mx-result");
@@ -84,7 +84,7 @@ const Matrix = (() => {
         ${block("miss", "Варто переглянути", "Тут найчастіше помиляються. Прочитай пояснення і подумай, чи згоден.")}
         ${block("alt", "Можна обґрунтувати", "Не так, як у розборі, але аргументи на користь твого варіанту теж є. Запиши їх у поле нижче.")}
         ${block("best", "Збігається з розбором", "")}
-        <p class="muted">Змінив розташування? Натисни «Перевірити матрицю» ще раз.</p>`;
+        <p class="muted">Змінив розташування? Натисни «${opts.checkLabel || "Перевірити матрицю"}» ще раз.</p>`;
     }
 
     function render() {

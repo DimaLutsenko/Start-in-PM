@@ -6,7 +6,7 @@
 <title>Урок 8.3 · Практика: квартальний roadmap</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=14">
+<link rel="stylesheet" href="../assets/style.css?v=15">
 </head>
 <body data-root="../" data-lesson="08-3">
 <header class="site-header"><div class="wrap">
@@ -20,11 +20,153 @@
   <span class="label">Урок 8.3</span>
   <h1>Практика: квартальний roadmap</h1>
   <p class="muted">Пріоритизуєш беклог і збираєш roadmap «Слота».</p>
-  <div class="row"><span class="tag practice">практика</span><span class="tag">90 хв</span><span class="tag draft">чернетка</span></div>
+  <div class="row"><span class="tag practice">практика</span><span class="tag">90 хв</span></div>
 </header>
 <div class="lesson-layout">
-  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Мета уроку</a><a href="#terms">Що знадобиться з теорії</a><a href="#theory">Що робимо і навіщо</a><a href="#slot">Приклад на «Слоті»</a><a href="#case">Кейс з практики</a><a href="#mistakes">Типові помилки</a><a href="#task">Практичне завдання</a><a href="#check">Самоперевірка</a><a href="#more">Що почитати далі</a></nav>
-  <article class="lesson-body"><section id="goal"><h2>Мета уроку</h2><div class="draft"><span class="label">Чернетка</span><p>Що студент вмітиме після уроку: 2–3 конкретні результати.</p></div></section><section id="terms"><h2>Що знадобиться з теорії</h2><div class="draft"><span class="label">Чернетка</span><p>5–7 термінів з короткими визначеннями простою мовою.</p></div></section><section id="theory"><h2>Що робимо і навіщо</h2><div class="draft"><span class="label">Чернетка</span><p>Основний матеріал: пояснення, схеми, приклади з різних продуктів.</p></div></section><section id="slot"><h2>Приклад на «Слоті»</h2><div class="draft"><span class="label">Чернетка</span><p>Як тема уроку виглядає на продукті курсу.</p></div></section><section id="case"><h2>Кейс з практики</h2><div class="draft case-slot"><span class="label">Чернетка</span><p>Місце для реального кейсу. Формат і правила оформлення обговоримо окремо.</p></div></section><section id="mistakes"><h2>Типові помилки</h2><div class="draft"><span class="label">Чернетка</span><p>3–5 помилок новачків і як їх уникнути.</p></div></section><section id="task"><h2>Практичне завдання</h2><div class="draft"><span class="label">Чернетка</span><p>Що зробити, вхідні дані, формат результату і критерії якості.</p></div></section><section id="check"><h2>Самоперевірка</h2><ul class="checklist"><li><label><input type="checkbox" id="c1"><span>Можу пояснити ключові поняття уроку своїми словами</span></label></li><li><label><input type="checkbox" id="c2"><span>Виконав практичне завдання</span></label></li><li><label><input type="checkbox" id="c3"><span>Записав питання, які залишилися</span></label></li></ul><div class="draft"><span class="label">Чернетка</span><p>Додамо питання самоперевірки саме з цієї теми.</p></div></section><section id="more"><h2>Що почитати далі</h2><div class="draft"><span class="label">Чернетка</span><p>Книги, статті і відео за темою уроку.</p></div></section></article>
+  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Що робимо і навіщо</a><a href="#data">Вхідні дані</a><a href="#step1">Крок 1. Оцінка за RICE</a><a href="#step2">Крок 2. Перевірка здоровим глуздом</a><a href="#step3">Крок 3. Roadmap</a><a href="#step4">Крок 4. Розмови</a><a href="#criteria">Як зрозуміти, що зроблено добре</a><a href="#review">Розбір</a><a href="#check">Самоперевірка</a><a href="#case">Кейс з практики</a><a href="#next">Що далі</a></nav>
+  <article class="lesson-body">
+
+    <section id="goal">
+      <h2>Що робимо і навіщо</h2>
+      <p>Кінець кварталу. Через тиждень планування наступного, і Андрій попросив прийти з готовим roadmap. За останні тижні до тебе прийшли запити від усіх: Віктор нагадує про інтеграцію з Instagram, Олег — про переписування розкладу, Софія — про темну тему, Марина з великого салону — про гід для нових майстрів. Плюс ідеї з власних досліджень.</p>
+      <p>У беклозі десять задач. За квартал команда встигне чотири-п'ять. Сьогодні ти пріоритизуєш беклог, складаєш roadmap і готуєшся пояснити рішення тим, чиї задачі не потрапили в «Зараз».</p>
+      <p>Результат уроку — восьмий артефакт у портфоліо: <b>roadmap «Слота» на квартал з обґрунтуванням</b>. Розрахуй близько півтори години.</p>
+      <div class="panel">
+        <span class="label">Після уроку ти зможеш</span>
+        <ol class="circled filled">
+          <li><span>Оцінити беклог за RICE разом з командою.</span></li>
+          <li><span>Поєднати оцінки з ціллю кварталу і стратегією.</span></li>
+          <li><span>Скласти roadmap за темами і пояснити рішення стейкхолдерам.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="data">
+      <h2>Вхідні дані</h2>
+      <p>Ціль на наступний квартал, погоджена з Андрієм: <b>зменшити відтік малих салонів у перші два місяці з 18% до 12%</b> і <b>підняти активацію нових салонів з 46% до 60%</b>.</p>
+      <p>Охоплення — скільки салонів зачепить задача за квартал — порахувала Олена з даних. Зусилля в людино-тижнях оцінив Олег разом з командою. Вплив і впевненість оцінюєш ти, спираючись на дослідження і тести попередніх тижнів.</p>
+      <div class="summary"><span class="label">Нагадування про шкали</span><p><b>Impact:</b> 3 — величезний, 2 — великий, 1 — середній, 0,5 — малий, 0,25 — мінімальний вплив на ціль кварталу. <b>Confidence:</b> 100% — перевірено тестом, 80% — є сигнали в даних чи інтерв'ю, 50% — здогадка.</p></div>
+    </section>
+
+    <section id="step1">
+      <h2>Крок 1. Оцінка за RICE</h2>
+      <p>Обери вплив і впевненість для кожної задачі. Оцінка рахується автоматично, а три найвищі підсвічуються. Твої оцінки зберігаються в зошиті.</p>
+      <div class="rice" id="rice-tool">
+        <div class="table-wrap"><table>
+          <thead><tr><th>Задача</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE</th></tr></thead>
+          <tbody>
+            <tr><td>Нагадування у Viber для всіх малих салонів<small>Перевірено експериментом у тижні 7</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-viber-r" data-label="RICE · Нагадування у Viber для всіх малих салонів: reach" value="170"></td><td><select class="wb-field" data-r="impact" data-field="rice-viber-i" data-label="RICE · Нагадування у Viber для всіх малих салонів: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-viber-c" data-label="RICE · Нагадування у Viber для всіх малих салонів: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-viber-e" data-label="RICE · Нагадування у Viber для всіх малих салонів: effort" value="2"></td><td data-score>—</td></tr>
+            <tr><td>Пілот тарифу 990 грн для малих салонів<small>Залежить від нагадувань</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-tariff-r" data-label="RICE · Пілот тарифу 990 грн для малих салонів: reach" value="170"></td><td><select class="wb-field" data-r="impact" data-field="rice-tariff-i" data-label="RICE · Пілот тарифу 990 грн для малих салонів: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-tariff-c" data-label="RICE · Пілот тарифу 990 грн для малих салонів: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-tariff-e" data-label="RICE · Пілот тарифу 990 грн для малих салонів: effort" value="1"></td><td data-score>—</td></tr>
+            <tr><td>Список очікування на звільнений час<small>Ідея з тесту: салони заповнюють лише 40% слотів</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-wait-r" data-label="RICE · Список очікування на звільнений час: reach" value="170"></td><td><select class="wb-field" data-r="impact" data-field="rice-wait-i" data-label="RICE · Список очікування на звільнений час: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-wait-c" data-label="RICE · Список очікування на звільнений час: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-wait-e" data-label="RICE · Список очікування на звільнений час: effort" value="4"></td><td data-score>—</td></tr>
+            <tr><td>Шаблони послуг для швидкого старту<small>Інтерв'ю і воронка: третина не доходить до налаштування</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-tmpl-r" data-label="RICE · Шаблони послуг для швидкого старту: reach" value="300"></td><td><select class="wb-field" data-r="impact" data-field="rice-tmpl-i" data-label="RICE · Шаблони послуг для швидкого старту: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-tmpl-c" data-label="RICE · Шаблони послуг для швидкого старту: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-tmpl-e" data-label="RICE · Шаблони послуг для швидкого старту: effort" value="3"></td><td data-score>—</td></tr>
+            <tr><td>Підказка з посиланням в Instagram для приватних майстрів<small>Випадок Романа, гіпотеза з тижня 4</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-hint-r" data-label="RICE · Підказка з посиланням в Instagram для приватних майстрів: reach" value="360"></td><td><select class="wb-field" data-r="impact" data-field="rice-hint-i" data-label="RICE · Підказка з посиланням в Instagram для приватних майстрів: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-hint-c" data-label="RICE · Підказка з посиланням в Instagram для приватних майстрів: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-hint-e" data-label="RICE · Підказка з посиланням в Instagram для приватних майстрів: effort" value="1"></td><td data-score>—</td></tr>
+            <tr><td>Повна інтеграція з Instagram<small>Запит Віктора</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-insta-r" data-label="RICE · Повна інтеграція з Instagram: reach" value="180"></td><td><select class="wb-field" data-r="impact" data-field="rice-insta-i" data-label="RICE · Повна інтеграція з Instagram: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-insta-c" data-label="RICE · Повна інтеграція з Instagram: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-insta-e" data-label="RICE · Повна інтеграція з Instagram: effort" value="8"></td><td data-score>—</td></tr>
+            <tr><td>Звіт по майстрах для великих салонів<small>Скарги великих салонів</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-report-r" data-label="RICE · Звіт по майстрах для великих салонів: reach" value="50"></td><td><select class="wb-field" data-r="impact" data-field="rice-report-i" data-label="RICE · Звіт по майстрах для великих салонів: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-report-c" data-label="RICE · Звіт по майстрах для великих салонів: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-report-e" data-label="RICE · Звіт по майстрах для великих салонів: effort" value="3"></td><td data-score>—</td></tr>
+            <tr><td>Переписати модуль розкладу<small>Запит Олега, ризик стабільності</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-debt-r" data-label="RICE · Переписати модуль розкладу: reach" value="400"></td><td><select class="wb-field" data-r="impact" data-field="rice-debt-i" data-label="RICE · Переписати модуль розкладу: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-debt-c" data-label="RICE · Переписати модуль розкладу: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-debt-e" data-label="RICE · Переписати модуль розкладу: effort" value="6"></td><td data-score>—</td></tr>
+            <tr><td>Гід для нових майстрів у застосунку<small>Інтерв'ю з Мариною</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-guide-r" data-label="RICE · Гід для нових майстрів у застосунку: reach" value="50"></td><td><select class="wb-field" data-r="impact" data-field="rice-guide-i" data-label="RICE · Гід для нових майстрів у застосунку: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-guide-c" data-label="RICE · Гід для нових майстрів у застосунку: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-guide-e" data-label="RICE · Гід для нових майстрів у застосунку: effort" value="2"></td><td data-score>—</td></tr>
+            <tr><td>Темна тема<small>Ідея Софії; охоплення — салони, які нею користуватимуться</small></td><td><input class="wb-field" type="number" data-r="reach" data-field="rice-dark-r" data-label="RICE · Темна тема: reach" value="100"></td><td><select class="wb-field" data-r="impact" data-field="rice-dark-i" data-label="RICE · Темна тема: impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select class="wb-field" data-r="conf" data-field="rice-dark-c" data-label="RICE · Темна тема: confidence"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input class="wb-field" type="number" data-r="effort" data-field="rice-dark-e" data-label="RICE · Темна тема: effort" value="2"></td><td data-score>—</td></tr>
+
+          </tbody>
+        </table></div>
+        <div class="rice-actions"><button type="button" class="btn ghost" data-sort>Сортувати за RICE</button><span class="saved-note">Охоплення і зусилля можна змінити, якщо не згоден з оцінкою.</span></div>
+      </div>
+    </section>
+
+    <section id="step2">
+      <h2>Крок 2. Перевірка здоровим глуздом</h2>
+      <p>Відсортуй таблицю. Тепер подивися на результат не як на вирок, а як на початок розмови. Дай відповідь на три питання:</p>
+      <div class="qa">
+        <div class="answer"><label class="label" for="q-goal">Чи всі задачі з верху списку працюють на ціль кварталу? Чи є щось, що треба опустити або підняти всупереч оцінці?</label><textarea class="wb-field" id="q-goal" rows="3" data-field="rq-goal" data-label="Перевірка: ціль кварталу"></textarea></div>
+        <div class="answer"><label class="label" for="q-tech">Що робимо з переписуванням розкладу, яке RICE ставить низько?</label><textarea class="wb-field" id="q-tech" rows="3" data-field="rq-tech" data-label="Перевірка: технічний борг"></textarea></div>
+        <div class="answer"><label class="label" for="q-dep">Чи є залежності: задача, яка потрібна для іншої?</label><textarea class="wb-field" id="q-dep" rows="2" data-field="rq-dep" data-label="Перевірка: залежності"></textarea></div>
+      </div>
+    </section>
+
+    <section id="step3">
+      <h2>Крок 3. Roadmap</h2>
+      <p>Збери roadmap у форматі Now/Next/Later з темами. Пам'ятай: у «Зараз» — дві-три теми з цілями в метриках, і місткість команди — близько 12 людино-тижнів на квартал, з яких 20% на технічні задачі.</p>
+      <div class="nnl">
+        <div class="col q-key"><b>Зараз</b><textarea class="wb-field" rows="8" data-field="r-now" data-label="Квартальний roadmap: зараз" placeholder="Тема · ціль · задачі"></textarea></div>
+        <div class="col q-sat"><b>Далі</b><textarea class="wb-field" rows="8" data-field="r-next" data-label="Квартальний roadmap: далі" placeholder="Тема · умова"></textarea></div>
+        <div class="col q-mon"><b>Пізніше</b><textarea class="wb-field" rows="8" data-field="r-later" data-label="Квартальний roadmap: пізніше" placeholder="Напрями"></textarea></div>
+      </div>
+      <div class="answer"><label class="label" for="r-no">Чого точно не робимо цього кварталу і чому</label><textarea class="wb-field" id="r-no" rows="3" data-field="r-no" data-label="Не робимо цього кварталу"></textarea></div>
+    </section>
+
+    <section id="step4">
+      <h2>Крок 4. Розмови</h2>
+      <p>Найважча частина — сказати людям, що їхня задача не в «Зараз». Підготуй коротке повідомлення для трьох людей. Детально про те, як казати «ні», — у тижні 10, а поки орієнтуйся на принципи з попередніх уроків: пояснюй причину, показуй, що задача не зникла, і що може змінити рішення.</p>
+      <div class="qa">
+        <div class="situation"><span class="label">Віктору · інтеграція з Instagram</span><textarea class="wb-field" rows="3" data-field="talk-viktor" data-label="Розмова з Віктором"></textarea></div>
+        <div class="situation"><span class="label">Олегу · переписування розкладу</span><textarea class="wb-field" rows="3" data-field="talk-oleh" data-label="Розмова з Олегом"></textarea></div>
+        <div class="situation"><span class="label">Софії · темна тема</span><textarea class="wb-field" rows="3" data-field="talk-sofia" data-label="Розмова з Софією"></textarea></div>
+      </div>
+    </section>
+
+    <section id="criteria">
+      <h2>Як зрозуміти, що зроблено добре</h2>
+      <div class="summary">
+        <span class="label">Перевір себе</span>
+        <ol class="circled">
+          <li><span>Оцінки впевненості спираються на те, що перевірено в попередніх тижнях.</span></li>
+          <li><span>«Зараз» вміщується в місткість команди і працює на ціль кварталу.</span></li>
+          <li><span>Технічний борг не забутий, а має окрему частку часу.</span></li>
+          <li><span>У roadmap теми з цілями, а не просто список функцій.</span></li>
+          <li><span>Кожне «ні» пояснене і містить умову, за якої рішення може змінитися.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="review">
+      <h2>Розбір</h2>
+      <details class="review">
+        <summary>Відкрити приклад оцінок і roadmap</summary>
+        <div class="review-body">
+          <div class="table-wrap"><table>
+            <thead><tr><th>Задача</th><th>I</th><th>C</th><th>RICE</th></tr></thead>
+            <tbody>
+              <tr><td>Нагадування у Viber для всіх малих салонів</td><td>3</td><td>100%</td><td>255</td></tr>
+              <tr><td>Підказка з посиланням в Instagram</td><td>1</td><td>50%</td><td>180</td></tr>
+              <tr><td>Пілот тарифу 990 грн</td><td>2</td><td>50%</td><td>170</td></tr>
+              <tr><td>Шаблони послуг</td><td>2</td><td>80%</td><td>160</td></tr>
+              <tr><td>Переписати модуль розкладу</td><td>1</td><td>50%</td><td>33</td></tr>
+              <tr><td>Список очікування</td><td>1</td><td>50%</td><td>21</td></tr>
+              <tr><td>Гід для нових майстрів</td><td>1</td><td>80%</td><td>20</td></tr>
+              <tr><td>Звіт по майстрах</td><td>1</td><td>80%</td><td>13</td></tr>
+              <tr><td>Інтеграція з Instagram</td><td>1</td><td>50%</td><td>11</td></tr>
+              <tr><td>Темна тема</td><td>0,25</td><td>80%</td><td>10</td></tr>
+            </tbody>
+          </table></div>
+          <p><b>Перевірка здоровим глуздом.</b> Підказка з Instagram стоїть другою, хоча ціль кварталу — малі салони. Але вона дешева, займає один тиждень і перевіряє важливу гіпотезу. Її можна залишити як невеликий експеримент. Шаблони послуг прямо працюють на активацію — другу половину цілі. Переписування розкладу RICE оцінює низько, але воно йде в окремі 20% часу. Залежність: тариф 990 грн має сенс лише після запуску нагадувань для всіх.</p>
+          <p><b>Зараз:</b> менше неявок у малих салонах (нагадування для всіх, пілот тарифу); простіший старт (шаблони послуг); технічна стабільність — 20%. Плюс невеликий тест підказки з Instagram. Разом близько 7 людино-тижнів продуктових задач, 2–3 на технічні і невеликий запас на непередбачене. <b>Далі:</b> список очікування; гід для нових майстрів. <b>Пізніше:</b> звіти по майстрах, інтеграція з Instagram — залежно від тесту. <b>Не робимо:</b> темна тема.</p>
+          <p><b>Віктору:</b> «Повна інтеграція — 8 тижнів, а ми ще не знаємо, наскільки вона допоможе. Цього кварталу тестуємо підказку з Instagram за тиждень. Якщо майстри з нею залишаються частіше — у нас буде сильний аргумент, і інтеграція піде вгору». <b>Олегу:</b> «Твої 20% часу — на найризикованіші частини розкладу. Давай разом оберемо, з чого почати». <b>Софії:</b> «Дякую за ідею. Зараз вона програє задачам, які прямо впливають на відтік, але я записав її в "Пізніше". Якщо побачиш, що салони про неї питають, — приходь з цим».</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="check">
+      <h2>Самоперевірка</h2>
+      <p>Короткий тест на чотири питання. Після кожної відповіді побачиш пояснення.</p>
+      <div class="quiz" id="quiz"></div>
+      <ul class="checklist">
+        <li><label><input type="checkbox" id="c1"><span>Оцінив беклог за RICE</span></label></li>
+        <li><label><input type="checkbox" id="c2"><span>Склав roadmap на квартал</span></label></li>
+        <li><label><input type="checkbox" id="c3"><span>Підготував розмови з Віктором, Олегом і Софією</span></label></li>
+      </ul>
+    </section>
+
+    <section id="case">
+      <h2>Кейс з практики</h2>
+      <div class="draft case-slot"><span class="label">Місце для реального кейсу</span><p>Як відбувалося квартальне планування і як вдалося узгодити пріоритети різних людей. Формат обговоримо окремо.</p></div>
+    </section>
+
+    <section id="next">
+      <h2>Що далі</h2>
+      <p>Восьмий тиждень пройдено: «Слот» знає, що робити в наступному кварталі. Тепер треба описати задачі так, щоб команда зробила саме те, що потрібно. Про вимоги, user stories і роботу з розробкою — тиждень 9.</p>
+    </section>
+
+  </article>
+
 </div>
 <div class="lesson-end">
   <div><button class="btn" id="done-btn" type="button">Позначити як пройдений</button></div>
@@ -33,8 +175,10 @@
 
 </div></main>
 <footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
-<script src="../assets/course.js?v=14"></script>
-<script src="../assets/workbook.js?v=14"></script>
-<script>PMZ.initLesson();WB.initLesson();</script>
+<script src="../assets/course.js?v=15"></script>
+<script src="../assets/workbook.js?v=15"></script>
+<script src="../assets/tools.js?v=15"></script>
+<script src="../assets/quiz.js?v=15"></script>
+<script>PMZ.initLesson();WB.initLesson();Tools.initChecks();Tools.initRice(document.getElementById("rice-tool"));Quiz.init({el:document.getElementById("quiz"),lesson:"08-3",questions:[{"q": "Задача з високим RICE не працює на ціль кварталу. Що робити?", "options": ["Обов'язково робити, бо оцінка висока", "Обговорити: формула — початок розмови, а стратегія і ціль важливіші", "Видалити з беклогу", "Перерахувати, поки не опуститься"], "correct": 1, "explain": "Фреймворк допомагає, але рішення ухвалюють з урахуванням цілі і стратегії."}, {"q": "Як найкраще врахувати переписування модуля розкладу?", "options": ["Не робити ніколи, бо RICE низький", "Виділити на технічні задачі окрему частку часу", "Робити замість усіх продуктових задач", "Віддати на аутсорс"], "correct": 1, "explain": "Окрема частка, наприклад 20%, захищає технічні задачі від постійного відкладання."}, {"q": "Що найважливіше в розмові з Віктором про відкладену інтеграцію?", "options": ["Показати таблицю RICE і закінчити розмову", "Пояснити причину і назвати умову, за якої пріоритет зміниться", "Пообіцяти зробити наступного кварталу", "Перекласти відповідальність на Андрія"], "correct": 1, "explain": "«Ні» з поясненням і чесною умовою зберігає довіру і перетворює опонента на союзника."}, {"q": "Скільки тем варто мати в колонці «Зараз»?", "options": ["Усі задачі беклогу", "Дві-три теми, які вміщуються в місткість команди", "Одну задачу", "Десять, щоб усі були задоволені"], "correct": 1, "explain": "Багато тем одночасно — це жодної в фокусі. Місткість команди обмежена."}]});</script>
 </body>
 </html>

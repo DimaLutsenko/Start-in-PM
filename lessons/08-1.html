@@ -6,7 +6,7 @@
 <title>Урок 8.1 · RICE, ICE і Kano</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=14">
+<link rel="stylesheet" href="../assets/style.css?v=15">
 </head>
 <body data-root="../" data-lesson="08-1">
 <header class="site-header"><div class="wrap">
@@ -20,11 +20,195 @@
   <span class="label">Урок 8.1</span>
   <h1>RICE, ICE і Kano</h1>
   <p class="muted">Фреймворки пріоритизації, їхні сильні сторони і обмеження.</p>
-  <div class="row"><span class="tag">теорія</span><span class="tag">40 хв</span><span class="tag draft">чернетка</span></div>
+  <div class="row"><span class="tag">теорія</span><span class="tag">45 хв</span></div>
 </header>
 <div class="lesson-layout">
-  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Мета уроку</a><a href="#terms">Ключові поняття</a><a href="#theory">Теорія</a><a href="#slot">Приклад на «Слоті»</a><a href="#case">Кейс з практики</a><a href="#mistakes">Типові помилки</a><a href="#task">Практичне завдання</a><a href="#check">Самоперевірка</a><a href="#more">Що почитати далі</a></nav>
-  <article class="lesson-body"><section id="goal"><h2>Мета уроку</h2><div class="draft"><span class="label">Чернетка</span><p>Що студент вмітиме після уроку: 2–3 конкретні результати.</p></div></section><section id="terms"><h2>Ключові поняття</h2><div class="draft"><span class="label">Чернетка</span><p>5–7 термінів з короткими визначеннями простою мовою.</p></div></section><section id="theory"><h2>Теорія</h2><div class="draft"><span class="label">Чернетка</span><p>Основний матеріал: пояснення, схеми, приклади з різних продуктів.</p></div></section><section id="slot"><h2>Приклад на «Слоті»</h2><div class="draft"><span class="label">Чернетка</span><p>Як тема уроку виглядає на продукті курсу.</p></div></section><section id="case"><h2>Кейс з практики</h2><div class="draft case-slot"><span class="label">Чернетка</span><p>Місце для реального кейсу. Формат і правила оформлення обговоримо окремо.</p></div></section><section id="mistakes"><h2>Типові помилки</h2><div class="draft"><span class="label">Чернетка</span><p>3–5 помилок новачків і як їх уникнути.</p></div></section><section id="task"><h2>Практичне завдання</h2><div class="draft"><span class="label">Чернетка</span><p>Що зробити, вхідні дані, формат результату і критерії якості.</p></div></section><section id="check"><h2>Самоперевірка</h2><ul class="checklist"><li><label><input type="checkbox" id="c1"><span>Можу пояснити ключові поняття уроку своїми словами</span></label></li><li><label><input type="checkbox" id="c2"><span>Виконав практичне завдання</span></label></li><li><label><input type="checkbox" id="c3"><span>Записав питання, які залишилися</span></label></li></ul><div class="draft"><span class="label">Чернетка</span><p>Додамо питання самоперевірки саме з цієї теми.</p></div></section><section id="more"><h2>Що почитати далі</h2><div class="draft"><span class="label">Чернетка</span><p>Книги, статті і відео за темою уроку.</p></div></section></article>
+  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Мета уроку</a><a href="#terms">Ключові поняття</a><a href="#why">Навіщо фреймворки</a><a href="#valueeffort">Найпростіше: цінність і зусилля</a><a href="#rice">RICE</a><a href="#ice">ICE</a><a href="#kano">Модель Кано</a><a href="#limits">Обмеження фреймворків</a><a href="#slot">Приклад на «Слоті»</a><a href="#case">Кейс з практики</a><a href="#mistakes">Типові помилки</a><a href="#task">Практичне завдання</a><a href="#check">Самоперевірка</a><a href="#more">Що почитати далі</a></nav>
+  <article class="lesson-body">
+
+    <section id="goal">
+      <h2>Мета уроку</h2>
+      <p>У «Слоті» з'явилася перша перевірена функція, і команда відчула смак. Тепер ідей стало ще більше: список очікування, шаблони послуг, звіти для великих салонів, інтеграція з Instagram від Віктора, переписування розкладу від Олега, темна тема від Софії. У команди з п'яти людей є ресурс на три-чотири такі задачі за квартал.</p>
+      <p>Пріоритизація — одна з найважливіших і найнеприємніших частин роботи продакта. Кожне «так» одній задачі означає «ні» або «пізніше» десятку інших, і за кожною з них стоїть людина, якій вона важлива. Без чіткого способу вибору пріоритизація перетворюється на змагання, хто голосніше просить або хто ближче до CEO.</p>
+      <p>У цьому уроці — найпопулярніші фреймворки пріоритизації: як вони працюють, у чому їхня сила і де вони обманюють. Урок займе близько 45 хвилин.</p>
+      <div class="panel">
+        <span class="label">Після уроку ти зможеш</span>
+        <ol class="circled filled">
+          <li><span>Оцінити задачі за RICE і ICE і порівняти їх між собою.</span></li>
+          <li><span>Використати модель Кано, щоб зрозуміти, які функції клієнти сприймають як обов'язкові, а які як приємний бонус.</span></li>
+          <li><span>Розуміти обмеження фреймворків і поєднувати їх із стратегією.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="terms">
+      <h2>Ключові поняття</h2>
+      <dl class="terms">
+        <div><dt>Беклог</dt><dd>Список усіх задач та ідей, які команда може зробити. Завжди довший, ніж команда встигне.</dd></div>
+        <div><dt>Пріоритизація</dt><dd>Вибір, що робити зараз, що потім, а що ніколи.</dd></div>
+        <div><dt>Альтернативна вартість</dt><dd>Те, що ми втрачаємо, обираючи одну задачу замість іншої. Будь-яка задача «коштує» не лише часу розробників, а й усього, що вони могли б зробити натомість.</dd></div>
+        <div><dt>RICE</dt><dd>Фреймворк оцінки задач за охопленням, впливом, впевненістю і зусиллями.</dd></div>
+        <div><dt>ICE</dt><dd>Спрощений фреймворк: вплив, впевненість і легкість реалізації.</dd></div>
+        <div><dt>Модель Кано</dt><dd>Спосіб класифікувати функції за тим, як вони впливають на задоволення клієнтів.</dd></div>
+      </dl>
+    </section>
+
+    <section id="why">
+      <h2>Навіщо фреймворки</h2>
+      <p>Можна пріоритизувати «на відчуттях». Іноді це працює, особливо в маленькій команді з досвідченим засновником. Але відчуття мають три слабкі місця:</p>
+      <ol class="circled">
+        <li><span><b>Вони не пояснюються.</b> «Я так відчуваю» — поганий аргумент для Віктора, чию задачу відклали.</span></li>
+        <li><span><b>Вони упереджені.</b> Свіжа скарга здається важливішою за давню проблему. Ідея CEO — важливішою за ідею підтримки.</span></li>
+        <li><span><b>Вони не порівнюються.</b> Як порівняти «великий вплив на мало клієнтів» з «маленьким впливом на всіх»?</span></li>
+      </ol>
+      <p>Фреймворки не ухвалюють рішення за тебе. Вони змушують однаково подивитися на всі задачі, проговорити припущення вголос і зробити розмову предметною: не «моя задача важливіша», а «ти оцінив вплив як високий — на чому це ґрунтується?».</p>
+    </section>
+
+    <section id="valueeffort">
+      <h2>Найпростіше: цінність і зусилля</h2>
+      <p>Почнемо з найпростішого інструменту, який можна намалювати на дошці за хвилину. Кожну задачу оцінюємо за двома осями: скільки цінності вона принесе і скільки зусиль потребує.</p>
+      <div class="quad-legend">
+        <div class="q q-key"><b>Швидкі перемоги</b><span>Багато цінності, мало зусиль</span><p>Робимо в першу чергу.</p></div>
+        <div class="q q-sat"><b>Великі ставки</b><span>Багато цінності, багато зусиль</span><p>Плануємо обережно, розбиваємо на частини, перевіряємо гіпотези дешево.</p></div>
+        <div class="q q-mon"><b>Дрібниці</b><span>Мало цінності, мало зусиль</span><p>Робимо, коли є вільний час, або не робимо.</p></div>
+        <div class="q q-inf"><b>Пастки</b><span>Мало цінності, багато зусиль</span><p>Не робимо. Тут найчастіше ховаються «улюблені» ідеї.</p></div>
+      </div>
+      <p>Матриця корисна для першого відбору, коли задач багато. Але «цінність» тут — дуже розмите поняття, і для точнішого порівняння використовують RICE.</p>
+    </section>
+
+    <section id="rice">
+      <h2>RICE</h2>
+      <p>RICE запропонувала команда продукту Intercom. Кожна задача оцінюється за чотирма параметрами:</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Параметр</th><th>Що означає</th><th>Як оцінювати</th></tr></thead>
+        <tbody>
+          <tr><td><b>Reach</b><br><small class="muted">Охоплення</small></td><td>Скільки людей зачепить задача за період</td><td>Кількість клієнтів за квартал. Беремо з даних.</td></tr>
+          <tr><td><b>Impact</b><br><small class="muted">Вплив</small></td><td>Наскільки сильно зміниться ціль для кожного з них</td><td>Шкала: 3 — величезний, 2 — великий, 1 — середній, 0,5 — малий, 0,25 — мінімальний</td></tr>
+          <tr><td><b>Confidence</b><br><small class="muted">Впевненість</small></td><td>Наскільки ми впевнені в оцінках охоплення і впливу</td><td>100% — є дані, 80% — є сигнали, 50% — здогадка</td></tr>
+          <tr><td><b>Effort</b><br><small class="muted">Зусилля</small></td><td>Скільки роботи потрібно</td><td>Людино-тижні всієї команди: розробка, дизайн, тестування</td></tr>
+        </tbody>
+      </table></div>
+      <div class="formula">RICE = <span>Reach</span> × <span>Impact</span> × <span>Confidence</span> ÷ <span>Effort</span></div>
+      <p>Найцінніше в RICE — параметр <b>Confidence</b>. Він чесно штрафує ідеї, які спираються на здогадки. Задача з великим, але неперевіреним впливом опуститься нижче за задачу, вплив якої підтверджений тестом. Це підштовхує команду спершу дешево перевірити гіпотезу, а вже потім будувати.</p>
+      <h3>Спробуй</h3>
+      <p>Чотири задачі «Слота». Охоплення і зусилля вже оцінено, обери вплив і впевненість для двох останніх і подивися, як зміниться порядок.</p>
+      <div class="rice wb-ignore" id="rice-tool">
+        <div class="table-wrap"><table>
+          <thead><tr><th>Задача</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE</th></tr></thead>
+          <tbody>
+            <tr><td>Нагадування у Viber для малих салонів<small>Перевірено в тесті</small></td><td><input type="number" data-r="reach" value="170"></td><td><select data-r="impact"><option value="3" selected>3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select data-r="conf"><option value="100" selected>100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input type="number" data-r="effort" value="2"></td><td data-score>—</td></tr>
+            <tr><td>Інтеграція з Instagram<small>Запит Віктора, не перевірено</small></td><td><input type="number" data-r="reach" value="180"></td><td><select data-r="impact"><option value="3">3</option><option value="2">2</option><option value="1" selected>1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select data-r="conf"><option value="100">100%</option><option value="80">80%</option><option value="50" selected>50%</option></select></td><td><input type="number" data-r="effort" value="8"></td><td data-score>—</td></tr>
+            <tr><td>Шаблони послуг для швидкого старту<small>Сигнали з інтерв'ю і воронки</small></td><td><input type="number" data-r="reach" value="300"></td><td><select data-r="impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select data-r="conf"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input type="number" data-r="effort" value="3"></td><td data-score>—</td></tr>
+            <tr><td>Темна тема<small>Ідея Софії</small></td><td><input type="number" data-r="reach" value="100"></td><td><select data-r="impact"><option value="">—</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0.5">0,5</option><option value="0.25">0,25</option></select></td><td><select data-r="conf"><option value="">—</option><option value="100">100%</option><option value="80">80%</option><option value="50">50%</option></select></td><td><input type="number" data-r="effort" value="2"></td><td data-score>—</td></tr>
+          </tbody>
+        </table></div>
+        <div class="rice-actions"><button type="button" class="btn ghost" data-sort>Сортувати за RICE</button><span class="saved-note">Три найвищі оцінки підсвічені.</span></div>
+      </div>
+      <p>Зверни увагу на інтеграцію з Instagram: охоплення велике, але зусилля і невпевненість опускають її на дно. Це не означає «ніколи». Це означає «спершу дешево перевір, чи вплив справді такий». Наприклад, підказкою з посиланням, як в уроці 4.2.</p>
+    </section>
+
+    <section id="ice">
+      <h2>ICE</h2>
+      <p>ICE — спрощена версія, яку популяризував маркетолог Шон Елліс, автор терміну «growth hacking». Три параметри, кожен за шкалою від 1 до 10:</p>
+      <ol class="circled">
+        <li><span><b>Impact</b> — наскільки сильний ефект.</span></li>
+        <li><span><b>Confidence</b> — наскільки ми впевнені.</span></li>
+        <li><span><b>Ease</b> — наскільки легко зробити.</span></li>
+      </ol>
+      <p>Оцінки перемножують або усереднюють. ICE швидший за RICE і зручний, коли треба за пів години відсортувати двадцять ідей для експериментів. Але він суб'єктивніший: без охоплення легко переоцінити ідею, яка сильно допоможе лише трьом клієнтам.</p>
+    </section>
+
+    <section id="kano">
+      <h2>Модель Кано</h2>
+      <p>RICE і ICE відповідають на питання «скільки користі». Модель Кано відповідає на інше: «як клієнти сприймають функцію». Її запропонував японський професор Норіакі Кано у 1980-х. Він помітив, що різні функції впливають на задоволення по-різному.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Тип</th><th>Якщо є</th><th>Якщо немає</th><th>Приклад для «Слота»</th></tr></thead>
+        <tbody>
+          <tr><td><b>Обов'язкові</b></td><td>Ніхто не помічає і не хвалить</td><td>Клієнти обурюються і йдуть</td><td>Запис зберігається і не губиться, розклад не дублює час</td></tr>
+          <tr><td><b>Лінійні</b></td><td>Чим краще, тим задоволеніші</td><td>Чим гірше, тим незадоволеніші</td><td>Швидкість завантаження, кількість способів нагадування</td></tr>
+          <tr><td><b>Приємні сюрпризи</b></td><td>Захоплення, про це розповідають друзям</td><td>Ніхто не помічає відсутності</td><td>Список очікування, який сам знаходить клієнта на звільнений час</td></tr>
+          <tr><td><b>Байдужі</b></td><td>Нічого не змінюється</td><td>Нічого не змінюється</td><td>Можливо, темна тема для власниць салонів</td></tr>
+        </tbody>
+      </table></div>
+      <p>Два важливі висновки з моделі. Перший: <b>обов'язкові функції — не місце для економії</b>. Якщо запис губиться навіть зрідка, жоден «приємний сюрприз» не врятує. Другий: <b>приємні сюрпризи з часом стають обов'язковими</b>. Колись онлайн-запис дивував, сьогодні салон без нього здається застарілим. Тому продукт, який нічого не додає, поступово відстає.</p>
+    </section>
+
+    <section id="limits">
+      <h2>Обмеження фреймворків</h2>
+      <p>Фреймворки корисні, але мають слабкі місця, про які варто пам'ятати.</p>
+      <ol class="circled filled">
+        <li><span><b>Сміття на вході — сміття на виході.</b> Оцінки впливу часто вигадані. Формула з вигаданими числами дає вигадану точність.</span></li>
+        <li><span><b>Стратегія важливіша за формулу.</b> Якщо компанія вирішила фокусуватися на малих салонах, задача для великих салонів з високим RICE все одно може почекати.</span></li>
+        <li><span><b>Технічний борг погано оцінюється.</b> Переписування модуля розкладу не має прямого впливу на клієнтів, тому RICE ставить його внизу. А потім система падає. Тому багато команд виділяють на технічні задачі фіксовану частку часу, наприклад 20%, окремо від пріоритизації.</span></li>
+        <li><span><b>Залежності.</b> Задача з низьким балом може бути потрібна для задачі з високим.</span></li>
+      </ol>
+      <div class="summary"><span class="label">Головна думка</span><p>Фреймворк — інструмент для розмови, а не суддя. Його цінність не в цифрі, а в тому, що команда проговорює припущення і бачить задачі поруч. Остаточне рішення завжди за людьми, і продакт має вміти його пояснити.</p></div>
+      <aside class="fact"><span class="label">Цікаво знати</span><p>Ще один популярний метод — MoSCoW: задачі ділять на Must have, Should have, Could have і Won't have. Його придумав Дай Клегг з Oracle у 1990-х для проєктів з жорсткими термінами. Найкорисніша частина методу — остання категорія: явно записати, чого ми цього разу <b>не</b> робимо.</p></aside>
+    </section>
+
+    <section id="slot">
+      <h2>Приклад на «Слоті»</h2>
+      <p>Ти щойно бачив, як RICE розставив чотири задачі. Тепер подивися на це очима людей. Віктор бачить, що його інтеграція внизу. Якщо просто показати йому таблицю, він вирішить, що формулу підігнали проти нього. Тому розмова будується інакше: «Подивимося разом: ти оцінюєш вплив інтеграції як великий. Звідки ця впевненість? Скільки угод ми втратили саме через неї? Давай перевіримо дешево і, якщо підтвердиться, впевненість зросте до 100%, і задача піде вгору».</p>
+      <p>Так фреймворк перетворюється з вироку на запрошення: принеси дані, і пріоритет зміниться. Повну пріоритизацію беклогу «Слота» ти зробиш у практичному уроці 8.3.</p>
+    </section>
+
+    <section id="case">
+      <h2>Кейс з практики</h2>
+      <div class="draft case-slot"><span class="label">Місце для реального кейсу</span><p>Історія про пріоритизацію: як вдалося домовитися між запитами продажів, технічним боргом і продуктовими ідеями. Формат обговоримо окремо.</p></div>
+    </section>
+
+    <section id="mistakes">
+      <h2>Типові помилки</h2>
+      <ul class="mistakes">
+        <li><b>Вірити цифрі більше, ніж здоровому глузду</b><p>RICE видав 270 — значить, робимо. Навіть якщо задача не відповідає стратегії.</p><p class="fix">Як правильно: формула допомагає, рішення ухвалюють люди.</p></li>
+        <li><b>Оцінювати наодинці</b><p>Продакт сам ставить усі оцінки. Команда їм не вірить.</p><p class="fix">Як правильно: оцінювати разом, особливо зусилля — з розробкою.</p></li>
+        <li><b>Забувати про технічні задачі</b><p>Технічний борг росте, поки система не почне падати.</p><p class="fix">Як правильно: окрема частка часу на технічні задачі.</p></li>
+        <li><b>Не казати «ні»</b><p>Усе залишається в беклозі «на потім», і беклог стає безкінечним.</p><p class="fix">Як правильно: явно позначати, чого не робимо, і пояснювати чому.</p></li>
+        <li><b>Пріоритизувати рішення, а не проблеми</b><p>Порівнювати функції без зв'язку з ціллю.</p><p class="fix">Як правильно: пріоритизувати в контексті дерева можливостей і цілі кварталу.</p></li>
+      </ul>
+    </section>
+
+    <section id="task">
+      <h2>Практичне завдання</h2>
+      <p>Розклади функції знайомого продукту за моделлю Кано. Обери застосунок, яким користуєшся щодня, і знайди хоча б по одній функції кожного типу. Займе 15 хвилин.</p>
+      <div class="answer"><label class="label" for="k-prod">Продукт</label><input class="wb-field" id="k-prod" type="text" data-field="kano-prod" data-label="Кано: продукт" placeholder="Наприклад, застосунок банку"></div>
+      <div class="table-wrap editable"><table>
+        <thead><tr><th>Тип</th><th>Функція і чому саме цей тип</th></tr></thead>
+        <tbody>
+          <tr><td>Обов'язкова</td><td><textarea class="wb-field" rows="1" data-field="kano-must" data-label="Кано: обов'язкова"></textarea></td></tr>
+          <tr><td>Лінійна</td><td><textarea class="wb-field" rows="1" data-field="kano-lin" data-label="Кано: лінійна"></textarea></td></tr>
+          <tr><td>Приємний сюрприз</td><td><textarea class="wb-field" rows="1" data-field="kano-wow" data-label="Кано: приємний сюрприз"></textarea></td></tr>
+          <tr><td>Байдужа</td><td><textarea class="wb-field" rows="1" data-field="kano-ind" data-label="Кано: байдужа"></textarea></td></tr>
+          <tr><td>Сюрприз, що став обов'язковим</td><td><textarea class="wb-field" rows="1" data-field="kano-shift" data-label="Кано: сюрприз, що став обов'язковим"></textarea></td></tr>
+        </tbody>
+      </table></div>
+      <details class="review"><summary>Подивитися приклад для застосунку банку</summary><div class="review-body">
+        <p><b>Обов'язкова:</b> переказ доходить, баланс правильний. <b>Лінійна:</b> швидкість переказу — чим швидше, тим краще. <b>Приємний сюрприз:</b> автоматичний розподіл кешбеку на ціль накопичення. <b>Байдужа:</b> вибір кольору картки в застосунку для більшості людей. <b>Сюрприз, що став обов'язковим:</b> миттєві сповіщення про кожну покупку — колись дивували, тепер їхня відсутність дратує.</p>
+      </div></details>
+    </section>
+
+    <section id="check">
+      <h2>Самоперевірка</h2>
+      <p>Короткий тест на п'ять питань. Після кожної відповіді побачиш пояснення.</p>
+      <div class="quiz" id="quiz"></div>
+      <ul class="checklist">
+        <li><label><input type="checkbox" id="c1"><span>Спробував RICE на задачах «Слота»</span></label></li>
+        <li><label><input type="checkbox" id="c2"><span>Розклав функції продукту за моделлю Кано</span></label></li>
+        <li><label><input type="checkbox" id="c3"><span>Розумію обмеження фреймворків</span></label></li>
+      </ul>
+    </section>
+
+    <section id="more">
+      <h2>Що почитати далі</h2>
+      <p>Усе необхідне для курсу є в уроках. Ці матеріали — для тих, хто хоче піти глибше.</p>
+      <ul class="reading">
+        <li><b>Intercom, «RICE: Simple prioritization for product managers»</b><small>Оригінальна стаття про RICE. Знаходиться пошуком за назвою.</small></li>
+        <li><b>Мелісса Перрі, «The Build Trap»</b><small>Про те, чому пріоритизувати треба результати, а не функції.</small></li>
+      </ul>
+    </section>
+
+  </article>
+
 </div>
 <div class="lesson-end">
   <div><button class="btn" id="done-btn" type="button">Позначити як пройдений</button></div>
@@ -33,8 +217,10 @@
 
 </div></main>
 <footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
-<script src="../assets/course.js?v=14"></script>
-<script src="../assets/workbook.js?v=14"></script>
-<script>PMZ.initLesson();WB.initLesson();</script>
+<script src="../assets/course.js?v=15"></script>
+<script src="../assets/workbook.js?v=15"></script>
+<script src="../assets/tools.js?v=15"></script>
+<script src="../assets/quiz.js?v=15"></script>
+<script>PMZ.initLesson();WB.initLesson();Tools.initChecks();Tools.initRice(document.getElementById("rice-tool"));Quiz.init({el:document.getElementById("quiz"),lesson:"08-1",questions:[{"q": "Що найцінніше в параметрі Confidence у RICE?", "options": ["Він робить оцінку більшою", "Він чесно штрафує ідеї, які спираються на здогадки", "Він враховує зусилля", "Він потрібен лише для звіту"], "correct": 1, "explain": "Неперевірена ідея з великим впливом опускається нижче за перевірену. Це підштовхує спершу дешево перевірити гіпотезу."}, {"q": "Охоплення 200, вплив 2, впевненість 50%, зусилля 4. Яка оцінка RICE?", "options": ["400", "50", "100", "200"], "correct": 1, "explain": "200 × 2 × 0,5 ÷ 4 = 50."}, {"q": "Яка функція за моделлю Кано — обов'язкова для сервісу запису?", "options": ["Список очікування", "Запис зберігається і не губиться", "Темна тема", "Анімація на екрані підтвердження"], "correct": 1, "explain": "Її ніхто не хвалить, коли вона є, але якщо її немає, клієнти обурюються і йдуть."}, {"q": "Чому технічний борг погано пріоритизується за RICE?", "options": ["Бо він неважливий", "Бо в нього немає прямого впливу на клієнтів, хоча без нього система може впасти", "Бо його не можна оцінити в тижнях", "Бо так вирішив CTO"], "correct": 1, "explain": "Тому багато команд виділяють технічним задачам фіксовану частку часу окремо від пріоритизації."}, {"q": "Що найкраще описує роль фреймворків пріоритизації?", "options": ["Вони ухвалюють рішення замість продакта", "Вони допомагають проговорити припущення і зробити розмову предметною, а рішення ухвалюють люди", "Вони потрібні лише для інвесторів", "Вони замінюють стратегію"], "correct": 1, "explain": "Цінність фреймворку — у спільній розмові про припущення, а не в цифрі як вироку."}]});</script>
 </body>
 </html>

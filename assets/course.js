@@ -31,9 +31,9 @@ const COURSE = {
       { title: "A/B-тести простими словами", desc: "Як влаштований експеримент, що таке значущість і коли тест не потрібен.", type: "theory", minutes: 60, status: "ready" },
       { title: "Практика: дизайн експерименту", desc: "Проєктуєш A/B-тест для однієї з гіпотез «Слота».", type: "practice", minutes: 90, status: "ready" } ] },
     { n: 8, title: "Пріоритизація і roadmap", goal: "Вирішувати, що робити зараз, що потім, а що ніколи.", artifact: "Roadmap «Слота» на квартал", lessons: [
-      { title: "RICE, ICE і Kano", desc: "Фреймворки пріоритизації, їхні сильні сторони і обмеження.", type: "theory" },
-      { title: "Roadmap як інструмент комунікації", desc: "Види roadmap і чому це не план з датами.", type: "theory" },
-      { title: "Практика: квартальний roadmap", desc: "Пріоритизуєш беклог і збираєш roadmap «Слота».", type: "practice" } ] },
+      { title: "RICE, ICE і Kano", desc: "Фреймворки пріоритизації, їхні сильні сторони і обмеження.", type: "theory", minutes: 45, status: "ready" },
+      { title: "Roadmap як інструмент комунікації", desc: "Види roadmap і чому це не план з датами.", type: "theory", minutes: 45, status: "ready" },
+      { title: "Практика: квартальний roadmap", desc: "Пріоритизуєш беклог і збираєш roadmap «Слота».", type: "practice", minutes: 90, status: "ready" } ] },
     { n: 9, title: "Вимоги і робота з розробкою", goal: "Ставити задачі так, щоб команда зробила саме те, що потрібно.", artifact: "PRD для однієї фічі", lessons: [
       { title: "PRD і user stories", desc: "Як описати фічу: проблема, рішення, критерії приймання.", type: "theory" },
       { title: "Scrum, Kanban і спринти", desc: "Як живе команда розробки і яке місце в цьому процесі продакта.", type: "theory" },

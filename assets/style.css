@@ -597,3 +597,19 @@ svg .off { opacity: 0.18; }
 .fn-num { font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
 .fn-conv { font-variant-numeric: tabular-nums; text-align: right; color: var(--muted); font-family: var(--font-mono); font-size: 0.8rem; }
 @media (max-width: 600px) { .fn-row { grid-template-columns: minmax(0, 1fr) 60px 42px; } .fn-bar { grid-column: 1 / -1; grid-row: 2; } }
+
+/* RICE */
+.rice table { min-width: 720px; }
+.rice td, .rice th { vertical-align: middle; }
+.rice input, .rice select { width: 100%; font: 400 0.92rem var(--font-body); color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 7px 8px; font-variant-numeric: tabular-nums; }
+.rice td:first-child { min-width: 220px; font-size: 0.92rem; }
+.rice td:first-child small { display: block; color: var(--muted); font-size: 0.8rem; }
+.rice [data-score] { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; text-align: right; font-variant-numeric: tabular-nums; }
+.rice tr.top td { background: var(--note-soft); }
+.rice-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.nnl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.nnl .col { border-radius: 12px; padding: 16px; display: grid; gap: 8px; align-content: start; }
+.nnl .col b { font-family: var(--font-display); font-weight: 500; }
+.nnl .col ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: 0.95rem; }
+@media (max-width: 760px) { .nnl { grid-template-columns: 1fr; } }
+.lesson-body section > *, .rice, .calc, .cohort, .num-check, .matrix-tool { min-width: 0; }

@@ -183,5 +183,34 @@ const Tools = (() => {
     calc();
   }
 
-  return { initChecks, initCalc, initCohort, initAB, cell };
+  /* ---------- RICE-таблиця ---------- */
+  function initRice(el) {
+    if (!el) return;
+    const tbody = el.querySelector("tbody");
+    function score(tr) {
+      const g = (k) => num((tr.querySelector(`[data-r="${k}"]`) || {}).value);
+      const r = g("reach"), i = g("impact"), c = g("conf"), e = g("effort");
+      const s = (r * i * (c / 100)) / e;
+      return isFinite(s) && e > 0 ? s : NaN;
+    }
+    function render() {
+      const rows = [...tbody.querySelectorAll("tr")];
+      const scores = rows.map(score);
+      const ranked = scores.filter(isFinite).sort((a, b) => b - a);
+      rows.forEach((tr, k) => {
+        const s = scores[k], o = tr.querySelector("[data-score]");
+        o.textContent = isFinite(s) ? fmt(s, s < 10 ? 1 : 0) : "—";
+        tr.classList.toggle("top", isFinite(s) && ranked.indexOf(s) < 3);
+      });
+    }
+    el.addEventListener("input", render);
+    el.addEventListener("change", render);
+    const btn = el.querySelector("[data-sort]");
+    if (btn) btn.addEventListener("click", () => {
+      [...tbody.querySelectorAll("tr")].map((tr) => [score(tr), tr]).sort((a, b) => (isFinite(b[0]) ? b[0] : -1) - (isFinite(a[0]) ? a[0] : -1)).forEach(([, tr]) => tbody.appendChild(tr));
+    });
+    setTimeout(render, 0);
+  }
+
+  return { initChecks, initCalc, initCohort, initAB, initRice, cell };
 })();

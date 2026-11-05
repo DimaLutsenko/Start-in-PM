@@ -20,11 +20,191 @@
   <span class="label">Урок 6.3</span>
   <h1>Практика: модель юніт-економіки</h1>
   <p class="muted">Рахуєш юніт-економіку «Слота» в таблиці на вигаданих даних.</p>
-  <div class="row"><span class="tag practice">практика</span><span class="tag">90 хв</span><span class="tag draft">чернетка</span></div>
+  <div class="row"><span class="tag practice">практика</span><span class="tag">90 хв</span></div>
 </header>
 <div class="lesson-layout">
-  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Мета уроку</a><a href="#terms">Що знадобиться з теорії</a><a href="#theory">Що робимо і навіщо</a><a href="#slot">Приклад на «Слоті»</a><a href="#case">Кейс з практики</a><a href="#mistakes">Типові помилки</a><a href="#task">Практичне завдання</a><a href="#check">Самоперевірка</a><a href="#more">Що почитати далі</a></nav>
-  <article class="lesson-body"><section id="goal"><h2>Мета уроку</h2><div class="draft"><span class="label">Чернетка</span><p>Що студент вмітиме після уроку: 2–3 конкретні результати.</p></div></section><section id="terms"><h2>Що знадобиться з теорії</h2><div class="draft"><span class="label">Чернетка</span><p>5–7 термінів з короткими визначеннями простою мовою.</p></div></section><section id="theory"><h2>Що робимо і навіщо</h2><div class="draft"><span class="label">Чернетка</span><p>Основний матеріал: пояснення, схеми, приклади з різних продуктів.</p></div></section><section id="slot"><h2>Приклад на «Слоті»</h2><div class="draft"><span class="label">Чернетка</span><p>Як тема уроку виглядає на продукті курсу.</p></div></section><section id="case"><h2>Кейс з практики</h2><div class="draft case-slot"><span class="label">Чернетка</span><p>Місце для реального кейсу. Формат і правила оформлення обговоримо окремо.</p></div></section><section id="mistakes"><h2>Типові помилки</h2><div class="draft"><span class="label">Чернетка</span><p>3–5 помилок новачків і як їх уникнути.</p></div></section><section id="task"><h2>Практичне завдання</h2><div class="draft"><span class="label">Чернетка</span><p>Що зробити, вхідні дані, формат результату і критерії якості.</p></div></section><section id="check"><h2>Самоперевірка</h2><ul class="checklist"><li><label><input type="checkbox" id="c1"><span>Можу пояснити ключові поняття уроку своїми словами</span></label></li><li><label><input type="checkbox" id="c2"><span>Виконав практичне завдання</span></label></li><li><label><input type="checkbox" id="c3"><span>Записав питання, які залишилися</span></label></li></ul><div class="draft"><span class="label">Чернетка</span><p>Додамо питання самоперевірки саме з цієї теми.</p></div></section><section id="more"><h2>Що почитати далі</h2><div class="draft"><span class="label">Чернетка</span><p>Книги, статті і відео за темою уроку.</p></div></section></article>
+  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Що робимо і навіщо</a><a href="#data">Вхідні дані</a><a href="#step1">Крок 1. Юніт-економіка за сегментами</a><a href="#step2">Крок 2. Що показує середнє</a><a href="#step3">Крок 3. Сценарії «що якщо»</a><a href="#step4">Крок 4. Рекомендація</a><a href="#criteria">Як зрозуміти, що зроблено добре</a><a href="#review">Розбір</a><a href="#check">Самоперевірка</a><a href="#case">Кейс з практики</a><a href="#next">Що далі</a></nav>
+  <article class="lesson-body">
+
+    <section id="goal">
+      <h2>Що робимо і навіщо</h2>
+      <p>Через місяць Андрій зустрічається з Сергієм, а за ним — з новими інвесторами. Сергій попередив: «Мене питатимуть не лише скільки у вас салонів, а й чи заробляєте ви на кожному з них». Андрій попросив тебе допомогти підготувати розрахунок юніт-економіки і відповісти на питання, яке його давно мучить: <i>чи правильно ми витрачаємо гроші на залучення?</i></p>
+      <p>У тебе є все: цифри по сегментах з уроків 2.1 і 6.1, когорти з уроку 6.2, гіпотези з четвертого тижня. Сьогодні ти зводиш це в модель, рахуєш кілька сценаріїв «що якщо» і формулюєш рекомендацію.</p>
+      <p>Результат уроку — шостий артефакт у портфоліо: <b>модель юніт-економіки «Слота» з рекомендацією</b>. Розрахуй близько півтори години. Знадобиться калькулятор телефону або таблиця.</p>
+      <div class="panel">
+        <span class="label">Після уроку ти зможеш</span>
+        <ol class="circled filled">
+          <li><span>Порахувати юніт-економіку окремо для кожного сегменту і в середньому.</span></li>
+          <li><span>Оцінити вплив продуктових рішень на юніт-економіку через сценарії.</span></li>
+          <li><span>Сформулювати рекомендацію для керівника і інвестора мовою цифр.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="data">
+      <h2>Вхідні дані</h2>
+      <p>Віктор і Олена допомогли розділити витрати на залучення по сегментах за останній квартал. Усі цифри — місячні, вигадані для курсу.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th></th><th>Приватні майстри</th><th>Малі салони</th><th>Великі салони</th></tr></thead>
+        <tbody>
+          <tr><td>Ціна на місяць</td><td>390 грн</td><td>790 грн</td><td>1 990 грн</td></tr>
+          <tr><td>Змінні витрати на клієнта</td><td>100 грн</td><td>210 грн</td><td>560 грн</td></tr>
+          <tr><td>Відтік на місяць</td><td>15%</td><td>6%</td><td>2,5%</td></tr>
+          <tr><td>Витрати на маркетинг і продажі</td><td>288 000 грн</td><td>288 000 грн</td><td>180 000 грн</td></tr>
+          <tr><td>Нових платних клієнтів</td><td>180</td><td>60</td><td>10</td></tr>
+        </tbody>
+      </table></div>
+      <p>Нагадування: час життя обмежуємо 36 місяцями, LTV рахуємо з маржі.</p>
+    </section>
+
+    <section id="step1">
+      <h2>Крок 1. Юніт-економіка за сегментами</h2>
+      <p>Порахуй LTV, CAC і їхнє співвідношення для кожного сегменту. Цифри можна звірити з уроком 6.1, але спробуй спершу сам.</p>
+      <div class="num-check">
+        <div class="nc-row"><label for="a1">Приватні майстри: LTV, грн</label><input class="wb-field" id="a1" type="text" inputmode="decimal" data-field="p-ltv" data-label="Приватні: LTV" data-answer="1933" data-tol="3"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="a2">Приватні майстри: LTV ÷ CAC</label><input class="wb-field" id="a2" type="text" inputmode="decimal" data-field="p-ratio" data-label="Приватні: LTV/CAC" data-answer="1.21" data-tol="0.03" data-dec="2"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="a3">Малі салони: LTV, грн</label><input class="wb-field" id="a3" type="text" inputmode="decimal" data-field="s-ltv" data-label="Малі: LTV" data-answer="9667" data-tol="5"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="a4">Малі салони: LTV ÷ CAC</label><input class="wb-field" id="a4" type="text" inputmode="decimal" data-field="s-ratio" data-label="Малі: LTV/CAC" data-answer="2.01" data-tol="0.03" data-dec="2"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="a5">Великі салони: LTV з обмеженням 36 міс., грн</label><input class="wb-field" id="a5" type="text" inputmode="decimal" data-field="l-ltv" data-label="Великі: LTV" data-answer="51480" data-tol="5"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="a6">Великі салони: LTV ÷ CAC</label><input class="wb-field" id="a6" type="text" inputmode="decimal" data-field="l-ratio" data-label="Великі: LTV/CAC" data-answer="2.86" data-tol="0.03" data-dec="2"><span class="nc-mark"></span></div>
+        <button type="button" class="btn" data-check>Перевірити</button>
+        <div class="nc-result" hidden><div class="mx-score"><b class="nc-score"></b><span>правильних відповідей</span></div></div>
+        <div class="nc-explain review-body" hidden>
+          <p><b>Приватні:</b> маржа 290 грн, час життя 1 ÷ 0,15 ≈ 6,7 міс, LTV ≈ 1 933 грн, CAC 288 000 ÷ 180 = 1 600 грн, LTV/CAC ≈ 1,21. <b>Малі:</b> маржа 580 грн, час життя ≈ 16,7 міс, LTV ≈ 9 667 грн, CAC 4 800 грн, LTV/CAC ≈ 2,01. <b>Великі:</b> маржа 1 430 грн, час життя 40 міс, обмежуємо 36, LTV = 51 480 грн, CAC 18 000 грн, LTV/CAC ≈ 2,86.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="step2">
+      <h2>Крок 2. Що показує середнє</h2>
+      <p>Андрій звик дивитися на «загальну» юніт-економіку: усі витрати поділити на всіх нових клієнтів. Порахуй, що побачить він, і порівняй з картиною за сегментами.</p>
+      <div class="num-check">
+        <div class="nc-row"><label for="b1">Змішаний CAC: усі витрати ÷ усі нові клієнти, грн</label><input class="wb-field" id="b1" type="text" inputmode="decimal" data-field="bl-cac" data-label="Змішаний CAC" data-answer="3024" data-tol="2"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="b2">Середній LTV нового клієнта з урахуванням того, скільки прийшло з кожного сегменту, грн</label><input class="wb-field" id="b2" type="text" inputmode="decimal" data-field="bl-ltv" data-label="Середній LTV" data-answer="5771" data-tol="8"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="b3">Загальне LTV ÷ CAC</label><input class="wb-field" id="b3" type="text" inputmode="decimal" data-field="bl-ratio" data-label="Загальне LTV/CAC" data-answer="1.91" data-tol="0.03" data-dec="2"><span class="nc-mark"></span></div>
+        <button type="button" class="btn" data-check>Перевірити</button>
+        <div class="nc-result" hidden><div class="mx-score"><b class="nc-score"></b><span>правильних відповідей</span></div></div>
+        <div class="nc-explain review-body" hidden>
+          <p>Витрати: 288 000 + 288 000 + 180 000 = 756 000 грн. Нові клієнти: 180 + 60 + 10 = 250. Змішаний CAC = 3 024 грн. Середній LTV = (180 × 1 933 + 60 × 9 667 + 10 × 51 480) ÷ 250 ≈ 5 771 грн. Загальне співвідношення ≈ 1,91.</p>
+          <p>Цифра 1,9 каже: «трохи не дотягуємо до 3, треба трохи покращити». Але насправді за нею ховаються три дуже різні історії. Більше половини бюджету на залучення — 288 000 з 756 000 — іде на сегмент, який ледь окупається. Без розбивки на сегменти цього не видно.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="step3">
+      <h2>Крок 3. Сценарії «що якщо»</h2>
+      <p>Тепер порахуємо, як змінилася б юніт-економіка, якби спрацювали гіпотези з четвертого тижня. Використовуй калькулятор нижче: він уже налаштований на кожен сценарій.</p>
+      <div class="calc wb-ignore" id="ue-calc">
+        <div class="calc-presets">
+          <span class="label">Сценарії</span>
+          <div class="row">
+            <button type="button" class="chip-btn" aria-pressed="true" data-preset='{"price":390,"cost":100,"churn":15,"spend":288000,"clients":180}'>Приватні: зараз</button>
+            <button type="button" class="chip-btn" aria-pressed="false" data-preset='{"price":390,"cost":100,"churn":10,"spend":288000,"clients":180}'>А: приватні після підказки з Instagram</button>
+            <button type="button" class="chip-btn" aria-pressed="false" data-preset='{"price":790,"cost":210,"churn":6,"spend":288000,"clients":60}'>Малі: зараз</button>
+            <button type="button" class="chip-btn" aria-pressed="false" data-preset='{"price":990,"cost":250,"churn":4.5,"spend":288000,"clients":60}'>Б: малі з захистом від неявок</button>
+          </div>
+        </div>
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <label><span>Ціна на місяць, грн</span><input type="number" inputmode="decimal" data-in="price" value="390" min="0"></label>
+            <label><span>Змінні витрати на клієнта за місяць, грн</span><input type="number" inputmode="decimal" data-in="cost" value="100" min="0"></label>
+            <label><span>Відтік на місяць, %</span><input type="number" inputmode="decimal" data-in="churn" value="15" min="0" step="0.5"></label>
+            <label><span>Витрати на маркетинг і продажі, грн</span><input type="number" inputmode="decimal" data-in="spend" value="288000" min="0"></label>
+            <label><span>Нових клієнтів за той самий період</span><input type="number" inputmode="decimal" data-in="clients" value="180" min="0"></label>
+            <label class="check-row"><input type="checkbox" data-in="cap" checked><span>Обмежити час життя 36 місяцями</span></label>
+          </div>
+          <div class="calc-outputs">
+            <div class="kv"><span>Маржа на клієнта</span><b data-out="margin"></b><small data-out="marginPct"></small></div>
+            <div class="kv"><span>Середній час життя</span><b data-out="life"></b></div>
+            <div class="kv"><span>LTV</span><b data-out="ltv"></b></div>
+            <div class="kv"><span>CAC</span><b data-out="cac"></b></div>
+            <div class="kv big"><span>LTV ÷ CAC</span><b data-out="ratio"></b></div>
+            <div class="kv"><span>Окупність CAC</span><b data-out="payback"></b></div>
+          </div>
+        </div>
+        <p class="calc-verdict" role="status"></p>
+      </div>
+      <div class="example">
+        <span class="label">Сценарій А · приватні майстри</span>
+        <p>Підказка під час підключення допомагає майстрам поставити посилання в Instagram. Відтік падає з 15% до 10%. Ціна і витрати на залучення ті самі.</p>
+      </div>
+      <div class="example">
+        <span class="label">Сценарій Б · малі салони</span>
+        <p>«Слот» запускає нагадування у Viber з підтвердженням запису. Для малих салонів з'являється новий тариф за 990 грн. Змінні витрати зростають на 40 грн через вартість повідомлень. Оскільки салони менше втрачають через неявки, відтік падає з 6% до 4,5%.</p>
+      </div>
+      <div class="num-check">
+        <div class="nc-row"><label for="c1n">Сценарій А: LTV ÷ CAC</label><input class="wb-field" id="c1n" type="text" inputmode="decimal" data-field="sa-ratio" data-label="Сценарій А: LTV/CAC" data-answer="1.81" data-tol="0.03" data-dec="2"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="c2n">Сценарій Б: LTV, грн</label><input class="wb-field" id="c2n" type="text" inputmode="decimal" data-field="sb-ltv" data-label="Сценарій Б: LTV" data-answer="16444" data-tol="10"><span class="nc-mark"></span></div>
+        <div class="nc-row"><label for="c3n">Сценарій Б: LTV ÷ CAC</label><input class="wb-field" id="c3n" type="text" inputmode="decimal" data-field="sb-ratio" data-label="Сценарій Б: LTV/CAC" data-answer="3.43" data-tol="0.03" data-dec="2"><span class="nc-mark"></span></div>
+        <button type="button" class="btn" data-check>Перевірити</button>
+        <div class="nc-result" hidden><div class="mx-score"><b class="nc-score"></b><span>правильних відповідей</span></div></div>
+        <div class="nc-explain review-body" hidden>
+          <p><b>Сценарій А:</b> маржа 290 грн, час життя 10 міс, LTV 2 900 грн, LTV/CAC ≈ 1,81. Помітне покращення, але сегмент усе ще нижче орієнтиру 3.</p>
+          <p><b>Сценарій Б:</b> маржа 990 − 250 = 740 грн, час життя 1 ÷ 0,045 ≈ 22,2 міс, LTV ≈ 16 444 грн, LTV/CAC ≈ 3,43. Малі салони переходять у здорову зону. Окупність — близько 6,5 місяця замість 8,3.</p>
+        </div>
+      </div>
+      <h3>Свій сценарій</h3>
+      <p>Придумай ще один сценарій, наприклад перенаправити частину бюджету з приватних майстрів на малі салони, або зменшити CAC приватних майстрів через реферальну програму. Порахуй його в калькуляторі і запиши результат.</p>
+      <div class="answer"><label class="label" for="own">Твій сценарій і результат</label><textarea class="wb-field" id="own" rows="4" data-field="own-scenario" data-label="Власний сценарій" placeholder="Що змінюємо, які припущення, що вийшло"></textarea></div>
+    </section>
+
+    <section id="step4">
+      <h2>Крок 4. Рекомендація</h2>
+      <p>Найважливіша частина. Андрію не потрібні всі цифри, йому потрібна відповідь: що робити і чому. Напиши рекомендацію на пів сторінки. Хороша рекомендація містить висновок у першому реченні, три-чотири ключові цифри, що конкретно робимо, і чесні ризики: які припущення ще не перевірені.</p>
+      <div class="answer"><label class="label" for="rec">Рекомендація для Андрія</label><textarea class="wb-field" id="rec" rows="9" data-field="recommendation" data-label="Рекомендація для Андрія" placeholder="Висновок · ключові цифри · що робимо · ризики і що ще перевірити"></textarea></div>
+    </section>
+
+    <section id="criteria">
+      <h2>Як зрозуміти, що зроблено добре</h2>
+      <div class="summary">
+        <span class="label">Перевір себе</span>
+        <ol class="circled">
+          <li><span>Розрахунки по сегментах правильні, і ти розумієш, звідки береться кожна цифра.</span></li>
+          <li><span>Ти бачиш, чим середня юніт-економіка вводить в оману.</span></li>
+          <li><span>Сценарії спираються на гіпотези з попередніх тижнів, а не на побажання.</span></li>
+          <li><span>Рекомендація починається з висновку, містить цифри і називає ризики.</span></li>
+          <li><span>Ти не пропонуєш просто «перестати працювати з приватними майстрами», не оцінивши наслідки.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="review">
+      <h2>Розбір</h2>
+      <details class="review">
+        <summary>Відкрити приклад рекомендації</summary>
+        <div class="review-body">
+          <p><b>Висновок:</b> ми витрачаємо 38% бюджету на залучення на сегмент, який ледь окупається, і недоінвестуємо в сегмент, який можна зробити прибутковим.</p>
+          <p><b>Цифри:</b> загальне LTV/CAC — 1,9. Але приватні майстри дають 1,2 при 38% бюджету, малі салони — 2,0, великі — 2,9. Якщо захист від неявок для малих салонів підтвердить гіпотезу, їхнє співвідношення зросте до 3,4.</p>
+          <p><b>Що робимо:</b> перше — у наступному кварталі продуктова команда фокусується на малих салонах: захист від неявок і простіший старт. Друге — Віктор зменшує платне залучення приватних майстрів, а звільнений бюджет переводимо на малі салони після того, як побачимо перші результати тесту нагадувань. Третє — для приватних майстрів тестуємо дешеву підказку з Instagram: якщо відтік впаде до 10%, повертаємось до питання бюджету.</p>
+          <p><b>Ризики:</b> сценарій Б спирається на непідтверджені припущення: що відтік знизиться до 4,5% і що салони приймуть нову ціну. Перевіряємо консьєрж-тестом і пілотом нового тарифу на 20 салонах. Скорочення реклами приватним майстрам знизить загальну кількість нових салонів, і цифра «кількість клієнтів» для інвестора тимчасово зростатиме повільніше. Але кожен новий клієнт буде прибутковішим, і це сильніша історія для інвестора.</p>
+          <div class="summary"><span class="label">Зверни увагу</span><p>Рекомендація не звучить як «відмовитися від приватних майстрів». Це великий сегмент, і в ньому є гіпотеза, яка може змінити картину. Хороша рекомендація зменшує ризик і зберігає можливості.</p></div>
+        </div>
+      </details>
+    </section>
+
+    <section id="check">
+      <h2>Самоперевірка</h2>
+      <p>Короткий тест на чотири питання. Після кожної відповіді побачиш пояснення.</p>
+      <div class="quiz" id="quiz"></div>
+      <ul class="checklist">
+        <li><label><input type="checkbox" id="c1"><span>Порахував юніт-економіку за сегментами і в середньому</span></label></li>
+        <li><label><input type="checkbox" id="c2"><span>Порахував сценарії і свій власний</span></label></li>
+        <li><label><input type="checkbox" id="c3"><span>Написав рекомендацію для Андрія</span></label></li>
+      </ul>
+    </section>
+
+    <section id="case">
+      <h2>Кейс з практики</h2>
+      <div class="draft case-slot"><span class="label">Місце для реального кейсу</span><p>Як розрахунок юніт-економіки змінив розподіл бюджету або фокус продукту. Формат обговоримо окремо.</p></div>
+    </section>
+
+    <section id="next">
+      <h2>Що далі</h2>
+      <p>Шостий тиждень пройдено. Сценарії показали, скільки може дати захист від неявок. Але це поки розрахунок на припущеннях. Наступного тижня ти навчишся перевіряти такі припущення на даних: читати цифри без самообману і проводити експерименти, яким можна довіряти.</p>
+    </section>
+
+  </article>
+
 </div>
 <div class="lesson-end">
   <div><button class="btn" id="done-btn" type="button">Позначити як пройдений</button></div>
@@ -35,6 +215,8 @@
 <footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
 <script src="../assets/course.js?v=13"></script>
 <script src="../assets/workbook.js?v=13"></script>
-<script>PMZ.initLesson();WB.initLesson();</script>
+<script src="../assets/tools.js?v=13"></script>
+<script src="../assets/quiz.js?v=13"></script>
+<script>PMZ.initLesson();WB.initLesson();Tools.initChecks();Tools.initCalc(document.getElementById("ue-calc"));Quiz.init({el:document.getElementById("quiz"),lesson:"06-3",questions:[{"q": "Чому загальне LTV/CAC 1,9 вводить в оману?", "options": ["Бо його неправильно порахували", "Бо воно ховає три різні історії: майже збитковий сегмент, середній і найвигідніший", "Бо 1,9 — це добре", "Бо LTV завжди треба множити на два"], "correct": 1, "explain": "Середнє змішує сегменти. Лише розбивка показує, що більше третини бюджету йде на сегмент з LTV/CAC 1,2."}, {"q": "Сценарій Б: ціна 990 грн, змінні витрати 250 грн, відтік 4,5%. Чому LTV зріс майже вдвічі?", "options": ["Лише через ціну", "Через поєднання вищої маржі і довшого часу життя клієнта", "Через нижчий CAC", "Через обмеження 36 місяцями"], "correct": 1, "explain": "Маржа виросла з 580 до 740 грн, а час життя — з 16,7 до 22,2 місяця. Два важелі одночасно."}, {"q": "З чого має починатися рекомендація для керівника?", "options": ["З історії компанії", "З висновку: що робити і чому", "З усіх розрахунків по черзі", "З переліку ризиків"], "correct": 1, "explain": "Керівник має зрозуміти суть з першого речення. Цифри і ризики — далі, як обґрунтування."}, {"q": "Чому в рекомендації важливо назвати ризики?", "options": ["Щоб зняти з себе відповідальність", "Бо сценарії спираються на неперевірені припущення, і керівник має знати, що саме треба перевірити", "Так прийнято", "Ризики не потрібні"], "correct": 1, "explain": "Чесно названі ризики разом з планом перевірки підвищують довіру до рекомендації."}]});</script>
 </body>
 </html>

@@ -359,5 +359,13 @@ const WB = (() => {
     db = empty();
   }
 
-  return { initLesson, get data() { return db; }, download, restore, clearAll, esc };
+  /* Поля, якими керує скрипт уроку (наприклад, матриця). hidden — не показувати в зошиті. */
+  function getField(lid, id) { const f = (db.fields[lid] || {})[id]; return f ? f.v : ""; }
+  function setField(lid, id, v, label, order, hidden) {
+    const s = db.fields[lid] || (db.fields[lid] = {});
+    if (v) s[id] = { v, label, order: order || 0, hidden: !!hidden }; else delete s[id];
+    saveSoon();
+  }
+
+  return { initLesson, get data() { return db; }, download, restore, clearAll, esc, getField, setField };
 })();

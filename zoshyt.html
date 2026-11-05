@@ -6,7 +6,7 @@
 <title>Мій зошит</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=6">
+<link rel="stylesheet" href="assets/style.css?v=7">
 </head>
 <body data-root="">
 <header class="site-header"><div class="wrap">
@@ -49,8 +49,8 @@
 
 </div></main>
 <footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
-<script src="assets/course.js?v=6"></script>
-<script src="assets/workbook.js?v=6"></script>
+<script src="assets/course.js?v=7"></script>
+<script src="assets/workbook.js?v=7"></script>
 <script>
 (() => {
   const esc = WB.esc;
@@ -59,7 +59,7 @@
   function lessonData(id) {
     const d = WB.data;
     const notes = d.notes[id] || "";
-    const fields = Object.entries(d.fields[id] || {}).map(([k, v]) => v).sort((a, b) => a.order - b.order);
+    const fields = Object.entries(d.fields[id] || {}).map(([k, v]) => v).filter((v) => !v.hidden).sort((a, b) => a.order - b.order);
     const hls = d.highlights[id] || [];
     return { notes, fields, hls, has: !!(notes || fields.length || hls.length) };
   }

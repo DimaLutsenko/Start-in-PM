@@ -43,7 +43,7 @@ const Matrix = (() => {
     if (answers) {
       const wrapEl = document.createElement("div");
       wrapEl.className = "mx-check";
-      wrapEl.innerHTML = '<button type="button" class="btn">${opts.checkLabel || "Перевірити матрицю"}</button><div class="mx-result" hidden></div>';
+      wrapEl.innerHTML = `<button type="button" class="btn">${opts.checkLabel || "Перевірити матрицю"}</button><div class="mx-result" hidden></div>`;
       el.appendChild(wrapEl);
       checkBtn = wrapEl.querySelector("button");
       resultBox = wrapEl.querySelector(".mx-result");

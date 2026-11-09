@@ -5,51 +5,82 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Продакт з нуля</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=15">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=16">
+<link rel="stylesheet" href="assets/v2.css?v=16">
 </head>
-<body data-root="">
-<header class="site-header"><div class="wrap">
-  <a class="wordmark" href="index.html"><span class="dot" aria-hidden="true"></span>Продакт з нуля</a>
-  <nav class="site-nav" aria-label="Розділи"><a href="index.html" aria-current="page">Головна</a><a href="program.html">Програма</a><a href="product.html">Продукт «Слот»</a><a href="zoshyt.html">Мій зошит</a></nav>
+<body class="v2" data-root="">
+<header class="hd"><div class="in">
+  <a class="logo" href="index.html"><i aria-hidden="true"></i>Продакт з нуля</a>
+  <nav aria-label="Розділи"><a href="index.html" aria-current="page">Головна</a><a href="program.html">Програма</a><a href="product.html">Продукт «Слот»</a><a href="zoshyt.html">Мій зошит</a></nav>
 </div></header>
-<main><div class="wrap">
 
-<section class="hero">
-  <div>
-    <span class="label">Курс продакт-менеджменту · 12 тижнів</span>
-    <h1 style="margin-top:14px">Продакт з&nbsp;нуля</h1>
-    <p class="lead">36 уроків теорії та практики. Весь курс ведеш один вигаданий продукт і в кінці маєш портфоліо з 12 робочих артефактів.</p>
-    <div class="actions">
-      <a class="btn" href="program.html">Відкрити програму</a>
-      <a class="btn ghost" href="product.html">Продукт курсу</a>
+<main class="home">
+  <section class="home-hero">
+    <div>
+      <span class="eyebrow">Курс продакт-менеджменту · 12 тижнів · 36 уроків</span>
+      <h1>Продакт з&nbsp;нуля</h1>
+      <p class="lead">Від «що це за професія» до продуктової стратегії. Весь курс ти працюєш продактом вигаданого сервісу «Слот» і збираєш портфоліо з 12 робочих артефактів.</p>
+      <div class="actions">
+        <a class="btn" id="hero-go" href="lessons/01-1.html">Почати з першого уроку</a>
+        <a class="btn ghost" href="program.html">Уся програма</a>
+      </div>
     </div>
-  </div>
-  <aside class="sticky-note" id="summary" aria-live="polite"></aside>
-</section>
+    <div class="cont" id="cont"></div>
+  </section>
 
-<section class="section">
-  <header><span class="label">Як влаштований курс</span><h2>Тиждень = одна тема, три уроки</h2>
-  <p class="muted">Два уроки теорії по 40 хвилин і один практичний на 90 хвилин. Практика завжди на продукті «Слот», тож кожен тиждень додає нову частину до однієї історії.</p></header>
-  <ul class="anatomy">
-    <li><b>Мета і поняття</b><span>Що вмітимеш після уроку і словник термінів.</span></li>
-    <li><b>Теорія</b><span>Пояснення простими словами з прикладами.</span></li>
-    <li><b>Приклад на «Слоті»</b><span>Як тема виглядає на продукті курсу.</span></li>
-    <li><b>Кейс з практики</b><span>Реальна історія з роботи продакта.</span></li>
-    <li><b>Типові помилки</b><span>Де новачки помиляються найчастіше.</span></li>
-    <li><b>Завдання і самоперевірка</b><span>Практика з артефактом і чек-лист.</span></li>
-  </ul>
-</section>
+  <section class="sec">
+    <header><span class="eyebrow">Як влаштований урок</span><h2>Один екран — одна думка</h2>
+    <p class="muted">Кожен урок проходиш у чотири кроки. Прогрес, відповіді і нотатки зберігаються автоматично, до будь-якого екрана можна повернутися.</p></header>
+    <div class="steps-plan">
+      <div class="card"><i style="font-style:normal;width:36px;height:36px;border-radius:10px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">1</i><b class="t">Розбираємось</b><span class="muted">Теорія короткими екранами: головне на стікері, подробиці — за бажанням.</span></div>
+      <div class="card"><i style="font-style:normal;width:36px;height:36px;border-radius:10px;background:var(--done-bg);color:var(--done);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">2</i><b class="t">На прикладі «Слота»</b><span class="muted">Сцени з командою продукту: Андрій, Олег, Віктор, Олена і інші.</span></div>
+      <div class="card"><i style="font-style:normal;width:36px;height:36px;border-radius:10px;background:var(--dark);color:var(--dark-ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">3</i><b class="t">Пробуємо</b><span class="muted">Завдання з відповідями прямо в курсі. Усе збирається в «Мій зошит».</span></div>
+      <div class="card"><i style="font-style:normal;width:36px;height:36px;border-radius:10px;background:var(--note);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600">4</i><b class="t">Перевіряємо</b><span class="muted">Тест з поясненнями після кожної відповіді і підсумок уроку.</span></div>
+    </div>
+  </section>
 
-<section class="section">
-  <header><span class="label">Портфоліо</span><h2>Що в тебе буде після курсу</h2>
-  <p class="muted">Кожен тиждень закінчується робочим документом. Разом вони складаються в продуктову стратегію, яку можна показати на співбесіді.</p></header>
-  <ul class="portfolio" id="portfolio"></ul>
-</section>
+  <section class="sec">
+    <header><span class="eyebrow">Програма</span><h2>12 тижнів, 12 артефактів</h2>
+    <p class="muted">Тиждень — одна тема: два уроки теорії і практика. Кожен тиждень закінчується робочим документом для портфоліо.</p></header>
+    <div class="weeks" id="weeks"></div>
+  </section>
 
-</div></main>
-<footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
-<script src="assets/course.js?v=15"></script>
-<script>PMZ.renderSummary(document.getElementById('summary'));PMZ.renderPortfolio(document.getElementById('portfolio'));</script>
+  <section class="home-slot">
+    <div>
+      <span class="eyebrow" style="color:var(--done)">Продукт курсу</span>
+      <h2 style="font-size:28px">«Слот» — онлайн-запис для барбершопів і салонів</h2>
+      <p>Півтора року на ринку, близько 400 салонів, команда з одинадцяти людей. Ти — їхній перший продакт. Кожен тиждень додає нову частину до однієї історії.</p>
+      <a class="btn" href="product.html" style="align-self:flex-start">Познайомитися зі «Слотом»</a>
+    </div>
+    <div class="chat" style="background:var(--surface)">
+      <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Радий, що ти з нами. Досі все вирішували я і продажі.</span></div></div>
+      <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">Салони йдуть через місяць-два. Чому — ніхто не питав.</span></div></div>
+      <div class="msg"><span class="ava p-you">Ти</span><div><span class="who">Ти · продакт</span><span class="bubble">Почнемо з розмов із салонами.</span></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft"><div class="in"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
+<script src="assets/course.js?v=16"></script>
+<script>
+(function () {
+  var st = { done: {} };
+  try { var s = JSON.parse(localStorage.getItem("pmz-progress-v1")); if (s && s.done) st = s; } catch (e) {}
+  var L = PMZ.lessons, done = function (l) { return !!st.done[l.id]; };
+  var n = L.filter(done).length, nx = L.find(function (l) { return !done(l); });
+  var arrow = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var cont = document.getElementById("cont");
+  cont.innerHTML = (nx ? '<a class="next-card" href="lessons/' + nx.id + '.html"><span class="label">' + (n ? "Продовжити" : "Перший урок") + ' · урок ' + nx.code + '</span><b>' + nx.title + '</b><span style="font-size:14px;opacity:.75">' + (nx.type === "practice" ? "Практика" : "Теорія") + ' · ≈ ' + nx.minutes + ' хв · тиждень ' + nx.week.n + '</span><span class="go">' + (n ? "Продовжити" : "Почати") + arrow + '</span></a>'
+    : '<div class="next-card"><span class="label">Курс пройдено</span><b>Усі 36 уроків позаду</b></div>') +
+    '<div class="prog"><div style="display:flex;justify-content:space-between;font-size:14px"><span>Твій прогрес</span><b>' + n + ' з ' + L.length + ' уроків</b></div><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="' + L.length + '" aria-valuenow="' + n + '"><span style="width:' + (n / L.length * 100) + '%"></span></div></div>';
+  if (nx && n) { var g = document.getElementById("hero-go"); g.href = "lessons/" + nx.id + ".html"; g.textContent = "Продовжити: урок " + nx.code; }
+  var curW = nx ? nx.week.n : 0;
+  document.getElementById("weeks").innerHTML = COURSE.weeks.map(function (w) {
+    var ls = L.filter(function (l) { return l.week === w; }), d = ls.filter(done).length, all = d === ls.length;
+    return '<a class="wk' + (w.n === curW ? " cur" : "") + '" href="program.html#week-' + w.n + '"><span class="n">Тиждень ' + w.n + (all ? "<em>Пройдено</em>" : w.n === curW ? "<em>Зараз</em>" : "") + '</span><b>' + w.title + '</b><span class="ds" aria-label="' + d + ' з ' + ls.length + ' уроків">' + ls.map(function (l) { return '<span class="' + (done(l) ? "on" : "") + '"></span>'; }).join("") + '</span><small>Артефакт: ' + w.artifact + '</small></a>';
+  }).join("");
+})();
+</script>
 </body>
 </html>

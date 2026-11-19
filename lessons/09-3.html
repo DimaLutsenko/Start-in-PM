@@ -5,170 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Урок 9.3 · Практика: пишемо PRD</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=15">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=19">
+<link rel="stylesheet" href="../assets/v2.css?v=19">
 </head>
-<body data-root="../" data-lesson="09-3">
-<header class="site-header"><div class="wrap">
-  <a class="wordmark" href="../index.html"><span class="dot" aria-hidden="true"></span>Продакт з нуля</a>
-  <nav class="site-nav" aria-label="Розділи"><a href="../index.html">Головна</a><a href="../program.html" aria-current="page">Програма</a><a href="../product.html">Продукт «Слот»</a><a href="../zoshyt.html">Мій зошит</a></nav>
+<body class="v2" data-root="../" data-lesson="09-3">
+<header class="ls-top"><div class="in">
+  <div class="ls-bar">
+    <div class="l"><a class="ls-close" href="../program.html#week-9" aria-label="До програми"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <span class="ls-title">Урок 9.3 · <b>Практика: пишемо PRD</b></span></div>
+    <span class="ls-count" id="ls-count"></span>
+  </div>
+  <div class="ls-steps" id="ls-steps"></div>
 </div></header>
-<main><div class="wrap">
+<main class="ls-main">
+<article class="lesson-body" data-steps="Контекст|Робимо|Розбір|Перевіряємо">
+<section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
+  <div class="start-hero">
+    <div>
+      <span class="eyebrow">Тиждень 9 · Вимоги і робота з розробкою · Урок 9.3</span>
+      <h1>Практика: пишемо PRD</h1>
+      <p class="lead">Пишеш повний PRD для фічі «Слота».</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
+      <p>У roadmap кварталу в «Зараз» стоять шаблони послуг для швидкого старту. Команда почне роботу через тиждень, і Олег попросив: «Дай нормальний документ, щоб не було як з розкладом, коли ми тричі переробляли». Марта хоче почати малювати, але спершу хоче розуміти, що саме і для кого.</p><p>Сьогодні ти пишеш свій перший повноцінний PRD. Усі матеріали для нього вже зібрані за попередні тижні, плюс нові вводні від команди нижче.</p><p>Результат уроку — дев'ятий артефакт у портфоліо: <b>PRD для функції «Слота»</b>. Це один з найкорисніших документів для співбесіди: його можна показати як приклад того, як ти думаєш. Розрахуй близько півтори години.</p>
+      <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Зібрати PRD з даних досліджень, метрик і вводних від команди.</span></li><li><span>Чітко визначити обсяг першої версії і що в неї не входить.</span></li><li><span>Розбити функцію на user stories з критеріями приймання.</span></li></ol></aside>
+  </div>
+  
+  <span class="label">Як пройде практика</span>
+  <div class="steps-plan">
+<button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Вхідні дані.</span><small>1 екран</small></button>
+<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Проблема і ціль, Крок 2. Обсяг, Крок 3. User stories, Крок 4. Ризики і запуск…</span><small>5 екранів</small></button>
+<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
+<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+  </div>
+</section>
 
-<nav class="crumbs" aria-label="Шлях"><a href="../program.html">Програма</a><span>/</span><a href="../program.html#week-9">Тиждень 9. Вимоги і робота з розробкою</a></nav>
-<header class="lesson-head">
-  <span class="label">Урок 9.3</span>
-  <h1>Практика: пишемо PRD</h1>
-  <p class="muted">Пишеш повний PRD для фічі «Слота».</p>
-  <div class="row"><span class="tag practice">практика</span><span class="tag">90 хв</span></div>
-</header>
-<div class="lesson-layout">
-  <nav class="toc" aria-label="Зміст уроку"><a href="#goal">Що робимо і навіщо</a><a href="#inputs">Вхідні дані</a><a href="#step1">Крок 1. Проблема і ціль</a><a href="#step2">Крок 2. Обсяг</a><a href="#step3">Крок 3. User stories</a><a href="#step4">Крок 4. Ризики і запуск</a><a href="#step5">Крок 5. Відповідь Віктору</a><a href="#criteria">Як зрозуміти, що зроблено добре</a><a href="#review">Розбір</a><a href="#check">Самоперевірка</a><a href="#case">Кейс з практики</a><a href="#next">Що далі</a></nav>
-  <article class="lesson-body">
+<section class="screen" id="inputs" data-step="1" data-name="Вхідні дані">
+  <h2>Вхідні дані</h2>
+  <h3>Що ти вже знаєш</h3><ol class="circled">
+<li><span><b>Воронка (урок 5.3):</b> з 120 малих салонів, які почали пробний період, налаштування закінчили 78. Третина губиться на першому кроці.</span></li>
+<li><span><b>Активація (урок 5.3):</b> салони з онлайн-записом за перший тиждень платять у 9 разів частіше. Зараз активація — 46%.</span></li>
+<li><span><b>Інтерв'ю (урок 3.3):</b> «Налаштування послуг і цін для трьох майстрів зайняло в мене всі вихідні» — Оксана. «Перші дні не розуміла, як відкрити запис» — Ліля.</span></li>
+<li><span><b>Ціль кварталу:</b> активація нових салонів з 46% до 60%.</span></li>
+</ol><h3>Нові вводні від команди</h3><div class="roles people">
+<article class="role"><header><h4>Олена</h4><span>Підтримка</span></header><dl><dt>Каже</dt><dd class="say">«90% салонів мають майже однаковий набір послуг: стрижка жіноча і чоловіча, фарбування, укладка, манікюр, педикюр, брови. Я сама щоразу диктую їм те саме по телефону».</dd></dl></article>
+<article class="role"><header><h4>Марта</h4><span>Дизайнерка</span></header><dl><dt>Каже</dt><dd class="say">«На екрані налаштування зараз 14 полів для кожної послуги. Половина з них потрібна лише великим салонам».</dd></dl></article>
+<article class="role"><header><h4>Олег</h4><span>Техлід</span></header><dl><dt>Каже</dt><dd class="say">«Шаблони — це просто готові записи в базі, нескладно. Але якщо хочете, щоб салон міг масово змінювати ціни в шаблонах, — це вже окрема велика задача».</dd></dl></article>
+<article class="role"><header><h4>Віктор</h4><span>Продажі</span></header><dl><dt>Каже</dt><dd class="say">«Зробіть шаблони під кожен тип: барбершоп, манікюрний салон, салон краси повного циклу. І щоб ціни були середні по місту».</dd></dl></article>
+</div>
+  
+</section>
 
-    <section id="goal">
-      <h2>Що робимо і навіщо</h2>
-      <p>У roadmap кварталу в «Зараз» стоять шаблони послуг для швидкого старту. Команда почне роботу через тиждень, і Олег попросив: «Дай нормальний документ, щоб не було як з розкладом, коли ми тричі переробляли». Марта хоче почати малювати, але спершу хоче розуміти, що саме і для кого.</p>
-      <p>Сьогодні ти пишеш свій перший повноцінний PRD. Усі матеріали для нього вже зібрані за попередні тижні, плюс нові вводні від команди нижче.</p>
-      <p>Результат уроку — дев'ятий артефакт у портфоліо: <b>PRD для функції «Слота»</b>. Це один з найкорисніших документів для співбесіди: його можна показати як приклад того, як ти думаєш. Розрахуй близько півтори години.</p>
-      <div class="panel">
-        <span class="label">Після уроку ти зможеш</span>
-        <ol class="circled filled">
-          <li><span>Зібрати PRD з даних досліджень, метрик і вводних від команди.</span></li>
-          <li><span>Чітко визначити обсяг першої версії і що в неї не входить.</span></li>
-          <li><span>Розбити функцію на user stories з критеріями приймання.</span></li>
-        </ol>
-      </div>
-    </section>
+<section class="screen" id="step1" data-step="2" data-name="Крок 1. Проблема і ціль">
+  <h2>Крок 1. Проблема і ціль</h2>
+  <div class="panel">
+<div class="answer"><label class="label" for="p-problem">Проблема і контекст</label><textarea class="wb-field" data-field="prd-problem" data-label="PRD: проблема" id="p-problem" placeholder="Чия проблема, у чому вона, чому важлива зараз, докази" rows="4"></textarea></div>
+<div class="answer"><label class="label" for="p-goal">Ціль і метрики</label><textarea class="wb-field" data-field="prd-goal" data-label="PRD: ціль і метрики" id="p-goal" placeholder="Головна метрика, цільове значення, контрметрика" rows="3"></textarea></div>
+<div class="answer"><label class="label" for="p-users">Користувачі і сценарій</label><textarea class="wb-field" data-field="prd-users" data-label="PRD: користувачі і сценарій" id="p-users" placeholder="Хто і в якій ситуації. Можна job story" rows="3"></textarea></div>
+</div>
+  
+</section>
 
-    <section id="inputs">
-      <h2>Вхідні дані</h2>
-      <h3>Що ти вже знаєш</h3>
-      <ol class="circled">
-        <li><span><b>Воронка (урок 5.3):</b> з 120 малих салонів, які почали пробний період, налаштування закінчили 78. Третина губиться на першому кроці.</span></li>
-        <li><span><b>Активація (урок 5.3):</b> салони з онлайн-записом за перший тиждень платять у 9 разів частіше. Зараз активація — 46%.</span></li>
-        <li><span><b>Інтерв'ю (урок 3.3):</b> «Налаштування послуг і цін для трьох майстрів зайняло в мене всі вихідні» — Оксана. «Перші дні не розуміла, як відкрити запис» — Ліля.</span></li>
-        <li><span><b>Ціль кварталу:</b> активація нових салонів з 46% до 60%.</span></li>
-      </ol>
-      <h3>Нові вводні від команди</h3>
-      <div class="roles people">
-        <article class="role"><header><h4>Олена</h4><span>Підтримка</span></header><dl><dt>Каже</dt><dd class="say">«90% салонів мають майже однаковий набір послуг: стрижка жіноча і чоловіча, фарбування, укладка, манікюр, педикюр, брови. Я сама щоразу диктую їм те саме по телефону».</dd></dl></article>
-        <article class="role"><header><h4>Марта</h4><span>Дизайнерка</span></header><dl><dt>Каже</dt><dd class="say">«На екрані налаштування зараз 14 полів для кожної послуги. Половина з них потрібна лише великим салонам».</dd></dl></article>
-        <article class="role"><header><h4>Олег</h4><span>Техлід</span></header><dl><dt>Каже</dt><dd class="say">«Шаблони — це просто готові записи в базі, нескладно. Але якщо хочете, щоб салон міг масово змінювати ціни в шаблонах, — це вже окрема велика задача».</dd></dl></article>
-        <article class="role"><header><h4>Віктор</h4><span>Продажі</span></header><dl><dt>Каже</dt><dd class="say">«Зробіть шаблони під кожен тип: барбершоп, манікюрний салон, салон краси повного циклу. І щоб ціни були середні по місту».</dd></dl></article>
-      </div>
-    </section>
+<section class="screen" id="step2" data-step="2" data-name="Крок 2. Обсяг">
+  <h2>Крок 2. Обсяг</h2>
+  <p>Найважливіше рішення PRD. У вводних є кілька ідей, які легко розширюють задачу: шаблони під кожен тип салону, середні ціни по місту, масова зміна цін, спрощення екрану з 14 полів. Що з цього потрібно для першої версії, щоб досягти цілі, а що може почекати?</p><div class="panel">
+<div class="answer"><label class="label" for="p-must">Обов'язково в першій версії</label><textarea class="wb-field" data-field="prd-must" data-label="PRD: обов'язково" id="p-must" placeholder="Мінімум, без якого функція не розв'яже проблему" rows="4"></textarea></div>
+<div class="answer"><label class="label" for="p-nice">Бажано, якщо встигнемо</label><textarea class="wb-field" data-field="prd-nice" data-label="PRD: бажано" id="p-nice" rows="2"></textarea></div>
+<div class="answer"><label class="label" for="p-out">Поза обсягом і чому</label><textarea class="wb-field" data-field="prd-out" data-label="PRD: поза обсягом" id="p-out" placeholder="Що свідомо не робимо зараз" rows="3"></textarea></div>
+</div>
+  
+</section>
 
-    <section id="step1">
-      <h2>Крок 1. Проблема і ціль</h2>
-      <div class="panel">
-        <div class="answer"><label class="label" for="p-problem">Проблема і контекст</label><textarea class="wb-field" id="p-problem" rows="4" data-field="prd-problem" data-label="PRD: проблема" placeholder="Чия проблема, у чому вона, чому важлива зараз, докази"></textarea></div>
-        <div class="answer"><label class="label" for="p-goal">Ціль і метрики</label><textarea class="wb-field" id="p-goal" rows="3" data-field="prd-goal" data-label="PRD: ціль і метрики" placeholder="Головна метрика, цільове значення, контрметрика"></textarea></div>
-        <div class="answer"><label class="label" for="p-users">Користувачі і сценарій</label><textarea class="wb-field" id="p-users" rows="3" data-field="prd-users" data-label="PRD: користувачі і сценарій" placeholder="Хто і в якій ситуації. Можна job story"></textarea></div>
-      </div>
-    </section>
+<section class="screen" id="step3" data-step="2" data-name="Крок 3. User stories">
+  <h2>Крок 3. User stories</h2>
+  <p>Розбий першу версію на три-чотири вертикальні історії. Для найважливішої напиши критерії приймання, включно з одним нестандартним сценарієм.</p><div class="panel">
+<div class="answer"><label class="label" for="p-stories">User stories</label><textarea class="wb-field" data-field="prd-stories" data-label="PRD: user stories" id="p-stories" placeholder="1. Як …, я хочу …, щоб …
+2. …" rows="5"></textarea></div>
+<div class="answer"><label class="label" for="p-ac">Критерії приймання для головної історії</label><textarea class="wb-field" data-field="prd-ac" data-label="PRD: критерії приймання" id="p-ac" placeholder="Дано …, коли …, тоді …" rows="5"></textarea></div>
+</div>
+  
+</section>
 
-    <section id="step2">
-      <h2>Крок 2. Обсяг</h2>
-      <p>Найважливіше рішення PRD. У вводних є кілька ідей, які легко розширюють задачу: шаблони під кожен тип салону, середні ціни по місту, масова зміна цін, спрощення екрану з 14 полів. Що з цього потрібно для першої версії, щоб досягти цілі, а що може почекати?</p>
-      <div class="panel">
-        <div class="answer"><label class="label" for="p-must">Обов'язково в першій версії</label><textarea class="wb-field" id="p-must" rows="4" data-field="prd-must" data-label="PRD: обов'язково" placeholder="Мінімум, без якого функція не розв'яже проблему"></textarea></div>
-        <div class="answer"><label class="label" for="p-nice">Бажано, якщо встигнемо</label><textarea class="wb-field" id="p-nice" rows="2" data-field="prd-nice" data-label="PRD: бажано"></textarea></div>
-        <div class="answer"><label class="label" for="p-out">Поза обсягом і чому</label><textarea class="wb-field" id="p-out" rows="3" data-field="prd-out" data-label="PRD: поза обсягом" placeholder="Що свідомо не робимо зараз"></textarea></div>
-      </div>
-    </section>
+<section class="screen" id="step4" data-step="2" data-name="Крок 4. Ризики і запуск">
+  <h2>Крок 4. Ризики і запуск</h2>
+  <div class="panel">
+<div class="answer"><label class="label" for="p-risk">Ризики і відкриті питання</label><textarea class="wb-field" data-field="prd-risk" data-label="PRD: ризики і питання" id="p-risk" placeholder="Що може піти не так, на що ще немає відповіді" rows="3"></textarea></div>
+<div class="answer"><label class="label" for="p-launch">Як запускаємо і як перевіримо результат</label><textarea class="wb-field" data-field="prd-launch" data-label="PRD: запуск і перевірка" id="p-launch" placeholder="Для кого вмикаємо, як вимірюємо, хто має знати" rows="3"></textarea></div>
+</div>
+  
+</section>
 
-    <section id="step3">
-      <h2>Крок 3. User stories</h2>
-      <p>Розбий першу версію на три-чотири вертикальні історії. Для найважливішої напиши критерії приймання, включно з одним нестандартним сценарієм.</p>
-      <div class="panel">
-        <div class="answer"><label class="label" for="p-stories">User stories</label><textarea class="wb-field" id="p-stories" rows="5" data-field="prd-stories" data-label="PRD: user stories" placeholder="1. Як …, я хочу …, щоб …&#10;2. …"></textarea></div>
-        <div class="answer"><label class="label" for="p-ac">Критерії приймання для головної історії</label><textarea class="wb-field" id="p-ac" rows="5" data-field="prd-ac" data-label="PRD: критерії приймання" placeholder="Дано …, коли …, тоді …"></textarea></div>
-      </div>
-    </section>
+<section class="screen" id="step5" data-step="2" data-name="Крок 5. Відповідь Віктору">
+  <h2>Крок 5. Відповідь Віктору</h2>
+  <p>Віктор просив шаблони під кожен тип салону і середні ціни по місту. Якщо в першій версії цього немає, поясни йому коротко чому, і що він отримає.</p><div class="answer"><label class="label" for="p-viktor">Повідомлення Віктору</label><textarea class="wb-field" data-field="prd-viktor" data-label="PRD: відповідь Віктору" id="p-viktor" rows="3"></textarea></div>
+  
+</section>
 
-    <section id="step4">
-      <h2>Крок 4. Ризики і запуск</h2>
-      <div class="panel">
-        <div class="answer"><label class="label" for="p-risk">Ризики і відкриті питання</label><textarea class="wb-field" id="p-risk" rows="3" data-field="prd-risk" data-label="PRD: ризики і питання" placeholder="Що може піти не так, на що ще немає відповіді"></textarea></div>
-        <div class="answer"><label class="label" for="p-launch">Як запускаємо і як перевіримо результат</label><textarea class="wb-field" id="p-launch" rows="3" data-field="prd-launch" data-label="PRD: запуск і перевірка" placeholder="Для кого вмикаємо, як вимірюємо, хто має знати"></textarea></div>
-      </div>
-    </section>
+<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
+  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><div class="summary">
+<span class="label">Перевір себе</span>
+<ol class="circled">
+<li><span>Проблема спирається на дані і цитати, а не на «нам здається».</span></li>
+<li><span>Ціль пов'язана з метрикою активації і ціллю кварталу.</span></li>
+<li><span>Перша версія маленька: її можна зробити за 2–3 тижні.</span></li>
+<li><span>У розділі «поза обсягом» є конкретні пункти з поясненням.</span></li>
+<li><span>Історії вертикальні, а критерії приймання містять нестандартний сценарій.</span></li>
+<li><span>Документ можна дати Олегу і Марті, і вони зрозуміють, що робити, без зустрічі з тобою.</span></li>
+</ol>
+</div></div>
+  
+  
+</section>
 
-    <section id="step5">
-      <h2>Крок 5. Відповідь Віктору</h2>
-      <p>Віктор просив шаблони під кожен тип салону і середні ціни по місту. Якщо в першій версії цього немає, поясни йому коротко чому, і що він отримає.</p>
-      <div class="answer"><label class="label" for="p-viktor">Повідомлення Віктору</label><textarea class="wb-field" id="p-viktor" rows="3" data-field="prd-viktor" data-label="PRD: відповідь Віктору"></textarea></div>
-    </section>
+<section class="screen" id="review" data-step="3" data-name="Розбір">
+  <h2>Розбір</h2>
+  <details class="review">
+<summary>Відкрити приклад PRD</summary>
+<div class="review-body">
+<p><b>Проблема.</b> Третина малих салонів, які почали пробний період, не доходять до кінця налаштування (42 з 120 у вересні). Налаштування послуг займає вечори і вихідні: на екрані 14 полів для кожної послуги. Олена щоразу диктує салонам по телефону однаковий набір послуг. Салони, які не отримали онлайн-запис за перший тиждень, платять у 9 разів рідше.</p>
+<p><b>Ціль.</b> Частка малих салонів, які завершили налаштування, з 65% до 80%. Через це — активація з 46% до 60%. Контрметрика: частка салонів, які видаляють більшість послуг з шаблону. Якщо вона висока, шаблон не підходить.</p>
+<p><b>Сценарій.</b> Коли власниця малого салону вперше налаштовує «Слот» увечері після роботи, вона хоче за кілька хвилин мати готовий список послуг, щоб того ж вечора надіслати клієнтам посилання на запис.</p>
+<p><b>Обов'язково.</b> Під час налаштування салон обирає один з трьох типів: барбершоп, манікюр, салон краси. Отримує готовий список типових послуг з тривалістю. Ціни порожні — салон вписує свої, на одному екрані для всіх послуг. Будь-яку послугу можна видалити або додати свою.</p>
+<p><b>Бажано.</b> Приховати поля, потрібні лише великим салонам, під кнопкою «Додаткові налаштування».</p>
+<p><b>Поза обсягом.</b> Середні ціни по місту — немає надійних даних, і неправильна ціна зашкодить салону. Масова зміна цін у майбутньому — велика окрема задача за оцінкою Олега. Шаблони для великих салонів — не ціль цього кварталу.</p>
+<p><b>Історії.</b> 1. Як власниця салону, я хочу обрати тип салону під час налаштування, щоб отримати готовий список послуг. 2. Як власниця, я хочу вписати ціни для всіх послуг на одному екрані, щоб не відкривати кожну окремо. 3. Як власниця, я хочу видалити зайві і додати свої послуги, щоб список відповідав моєму салону.</p>
+<p><b>Критерії для історії 1.</b> Дано новий салон на кроці «Послуги», коли власниця обирає «Барбершоп», тоді з'являється список з 8 послуг з типовою тривалістю і порожніми цінами. Дано салон уже має свої послуги, коли власниця обирає тип, тоді система питає, додати шаблон до наявних чи замінити, і нічого не видаляє без підтвердження.</p>
+<p><b>Ризики.</b> Типові послуги можуть називатися в різних регіонах по-різному — перевірити список з Оленою на 10 салонах. <b>Запуск.</b> Для всіх нових малих салонів, порівнюємо частку завершених налаштувань з вереснем. Олена отримує новий сценарій допомоги.</p>
+<p><b>Віктору.</b> «Шаблони будуть для трьох типів салонів — це покриває більшість клієнтів. Ціни салон вписує сам: якщо поставимо середні, а вони не підійдуть, салон може навіть не помітити і втратити гроші. Тобі буде що показати на демо: салон налаштовується за 10 хвилин замість вечора».</p>
+</div>
+</details>
+  
+</section>
 
-    <section id="criteria">
-      <h2>Як зрозуміти, що зроблено добре</h2>
-      <div class="summary">
-        <span class="label">Перевір себе</span>
-        <ol class="circled">
-          <li><span>Проблема спирається на дані і цитати, а не на «нам здається».</span></li>
-          <li><span>Ціль пов'язана з метрикою активації і ціллю кварталу.</span></li>
-          <li><span>Перша версія маленька: її можна зробити за 2–3 тижні.</span></li>
-          <li><span>У розділі «поза обсягом» є конкретні пункти з поясненням.</span></li>
-          <li><span>Історії вертикальні, а критерії приймання містять нестандартний сценарій.</span></li>
-          <li><span>Документ можна дати Олегу і Марті, і вони зрозуміють, що робити, без зустрічі з тобою.</span></li>
-        </ol>
-      </div>
-    </section>
+<section class="screen" id="check" data-step="4" data-name="Тест">
+  <h2>Самоперевірка</h2>
+  <p>Короткий тест на чотири питання. Після кожної відповіді побачиш пояснення.</p><div class="quiz" id="quiz"></div>
+</section>
 
-    <section id="review">
-      <h2>Розбір</h2>
-      <details class="review">
-        <summary>Відкрити приклад PRD</summary>
-        <div class="review-body">
-          <p><b>Проблема.</b> Третина малих салонів, які почали пробний період, не доходять до кінця налаштування (42 з 120 у вересні). Налаштування послуг займає вечори і вихідні: на екрані 14 полів для кожної послуги. Олена щоразу диктує салонам по телефону однаковий набір послуг. Салони, які не отримали онлайн-запис за перший тиждень, платять у 9 разів рідше.</p>
-          <p><b>Ціль.</b> Частка малих салонів, які завершили налаштування, з 65% до 80%. Через це — активація з 46% до 60%. Контрметрика: частка салонів, які видаляють більшість послуг з шаблону. Якщо вона висока, шаблон не підходить.</p>
-          <p><b>Сценарій.</b> Коли власниця малого салону вперше налаштовує «Слот» увечері після роботи, вона хоче за кілька хвилин мати готовий список послуг, щоб того ж вечора надіслати клієнтам посилання на запис.</p>
-          <p><b>Обов'язково.</b> Під час налаштування салон обирає один з трьох типів: барбершоп, манікюр, салон краси. Отримує готовий список типових послуг з тривалістю. Ціни порожні — салон вписує свої, на одному екрані для всіх послуг. Будь-яку послугу можна видалити або додати свою.</p>
-          <p><b>Бажано.</b> Приховати поля, потрібні лише великим салонам, під кнопкою «Додаткові налаштування».</p>
-          <p><b>Поза обсягом.</b> Середні ціни по місту — немає надійних даних, і неправильна ціна зашкодить салону. Масова зміна цін у майбутньому — велика окрема задача за оцінкою Олега. Шаблони для великих салонів — не ціль цього кварталу.</p>
-          <p><b>Історії.</b> 1. Як власниця салону, я хочу обрати тип салону під час налаштування, щоб отримати готовий список послуг. 2. Як власниця, я хочу вписати ціни для всіх послуг на одному екрані, щоб не відкривати кожну окремо. 3. Як власниця, я хочу видалити зайві і додати свої послуги, щоб список відповідав моєму салону.</p>
-          <p><b>Критерії для історії 1.</b> Дано новий салон на кроці «Послуги», коли власниця обирає «Барбершоп», тоді з'являється список з 8 послуг з типовою тривалістю і порожніми цінами. Дано салон уже має свої послуги, коли власниця обирає тип, тоді система питає, додати шаблон до наявних чи замінити, і нічого не видаляє без підтвердження.</p>
-          <p><b>Ризики.</b> Типові послуги можуть називатися в різних регіонах по-різному — перевірити список з Оленою на 10 салонах. <b>Запуск.</b> Для всіх нових малих салонів, порівнюємо частку завершених налаштувань з вереснем. Олена отримує новий сценарій допомоги.</p>
-          <p><b>Віктору.</b> «Шаблони будуть для трьох типів салонів — це покриває більшість клієнтів. Ціни салон вписує сам: якщо поставимо середні, а вони не підійдуть, салон може навіть не помітити і втратити гроші. Тобі буде що показати на демо: салон налаштовується за 10 хвилин замість вечора».</p>
-        </div>
-      </details>
-    </section>
-
-    <section id="check">
-      <h2>Самоперевірка</h2>
-      <p>Короткий тест на чотири питання. Після кожної відповіді побачиш пояснення.</p>
-      <div class="quiz" id="quiz"></div>
-      <ul class="checklist">
-        <li><label><input type="checkbox" id="c1"><span>Описав проблему, ціль і сценарій</span></label></li>
-        <li><label><input type="checkbox" id="c2"><span>Визначив обсяг і що поза ним</span></label></li>
-        <li><label><input type="checkbox" id="c3"><span>Розбив на історії з критеріями і описав ризики</span></label></li>
-      </ul>
-    </section>
-
-    <section id="case">
-      <h2>Кейс з практики</h2>
-      <div class="draft case-slot"><span class="label">Місце для реального кейсу</span><p>Приклад реального PRD або історія, як документ вимог допоміг команді. Формат обговоримо окремо.</p></div>
-    </section>
-
-    <section id="next">
-      <h2>Що далі</h2>
+<section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
+  <div class="split">
+    <div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 9.3 · фініш</span><h2 style="font-size:32px">Тиждень 9 завершено</h2></div></div>
       <p>Дев'ятий тиждень пройдено. Ти вже кілька разів стикався з тим, що Віктор, Андрій і Олег хочуть різного. Наступного тижня — як вибудовувати стосунки зі стейкхолдерами, як казати «ні» так, щоб не зіпсувати стосунки, і як звітувати керівництву.</p>
-    </section>
-
-  </article>
-
-</div>
-<div class="lesson-end">
-  <div><button class="btn" id="done-btn" type="button">Позначити як пройдений</button></div>
-  <div class="pager" id="pager"></div>
-</div>
-
-</div></main>
-<footer class="site-footer"><div class="wrap"><span>Продакт з нуля · курс продакт-менеджменту</span><span>Прогрес зберігається тільки в цьому браузері</span></div></footer>
-<script src="../assets/course.js?v=15"></script>
-<script src="../assets/workbook.js?v=15"></script>
-<script src="../assets/quiz.js?v=15"></script>
-<script>PMZ.initLesson();WB.initLesson();Quiz.init({el:document.getElementById("quiz"),lesson:"09-3",questions:[{"q": "Віктор просить середні ціни по місту в шаблонах. Чому їх варто винести поза обсяг?", "options": ["Бо Віктор неважливий", "Бо немає надійних даних, а неправильна ціна може зашкодити салону", "Бо ціни не потрібні", "Бо це занадто просто"], "correct": 1, "explain": "Функція не повинна створювати ризик для клієнта. Плюс це розширює обсяг без впливу на ціль."}, {"q": "Яка метрика найкраще показує успіх шаблонів?", "options": ["Кількість шаблонів", "Частка салонів, які завершили налаштування, і активація", "Кількість натискань на кнопку", "Задоволення Віктора"], "correct": 1, "explain": "Шаблони розв'язують проблему незавершеного налаштування, тому і метрика — про це."}, {"q": "Навіщо контрметрика «частка салонів, які видаляють більшість послуг з шаблону»?", "options": ["Для звіту", "Щоб помітити, якщо шаблон не підходить салонам", "Щоб рахувати послуги", "Вона не потрібна"], "correct": 1, "explain": "Якщо салони масово видаляють запропоноване, шаблон заважає, а не допомагає."}, {"q": "Як зрозуміти, що PRD написаний добре?", "options": ["Він довгий", "Техлід і дизайнерка розуміють, що робити, без додаткової зустрічі", "Його затвердив CEO", "У ньому багато таблиць"], "correct": 1, "explain": "PRD — інструмент спільного розуміння. Його якість перевіряється тим, чи може команда за ним працювати."}]});</script>
+      <span class="label">Перевір себе</span>
+      <ul class="checklist">
+<li><label><input id="c1" type="checkbox"/><span>Описав проблему, ціль і сценарій</span></label></li>
+<li><label><input id="c2" type="checkbox"/><span>Визначив обсяг і що поза ним</span></label></li>
+<li><label><input id="c3" type="checkbox"/><span>Розбив на історії з критеріями і описав ризики</span></label></li>
+</ul>
+      <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
+    </div>
+    <div>
+      <div class="draft case-slot"><span class="label">Місце для реального кейсу</span><p>Приклад реального PRD або історія, як документ вимог допоміг команді. Формат обговоримо окремо.</p></div>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <div class="pager" id="pager"></div>
+      <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
+    </div>
+  </div>
+</section>
+</article>
+</main>
+<nav class="ls-foot" id="ls-foot" aria-label="Навігація уроком"></nav>
+<script src="../assets/course.js?v=19"></script>
+<script src="../assets/quiz.js?v=19"></script>
+<script src="../assets/workbook.js?v=19"></script>
+<script src="../assets/stepper.js?v=19"></script>
+<script>PMZ.initLesson();WB.initLesson();Quiz.init({el:document.getElementById("quiz"),lesson:"09-3",questions:[{"q": "Віктор просить середні ціни по місту в шаблонах. Чому їх варто винести поза обсяг?", "options": ["Бо Віктор неважливий", "Бо немає надійних даних, а неправильна ціна може зашкодити салону", "Бо ціни не потрібні", "Бо це занадто просто"], "correct": 1, "explain": "Функція не повинна створювати ризик для клієнта. Плюс це розширює обсяг без впливу на ціль."}, {"q": "Яка метрика найкраще показує успіх шаблонів?", "options": ["Кількість шаблонів", "Частка салонів, які завершили налаштування, і активація", "Кількість натискань на кнопку", "Задоволення Віктора"], "correct": 1, "explain": "Шаблони розв'язують проблему незавершеного налаштування, тому і метрика — про це."}, {"q": "Навіщо контрметрика «частка салонів, які видаляють більшість послуг з шаблону»?", "options": ["Для звіту", "Щоб помітити, якщо шаблон не підходить салонам", "Щоб рахувати послуги", "Вона не потрібна"], "correct": 1, "explain": "Якщо салони масово видаляють запропоноване, шаблон заважає, а не допомагає."}, {"q": "Як зрозуміти, що PRD написаний добре?", "options": ["Він довгий", "Техлід і дизайнерка розуміють, що робити, без додаткової зустрічі", "Його затвердив CEO", "У ньому багато таблиць"], "correct": 1, "explain": "PRD — інструмент спільного розуміння. Його якість перевіряється тим, чи може команда за ним працювати."}]});
+Stepper.init();</script>
 </body>
 </html>

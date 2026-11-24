@@ -3,6 +3,18 @@ const Quiz = (() => {
   function init(opts) {
     const el = opts.el, lid = opts.lesson, qs = opts.questions;
     let answers = [];
+    /* стабільне перемішування варіантів: однаковий порядок при кожному відкритті, але правильна відповідь не завжди на тому самому місці */
+    const order = qs.map((q, i) => {
+      let h = 2166136261;
+      for (const ch of lid + ":" + i + ":" + q.q) h = Math.imul(h ^ ch.charCodeAt(0), 16777619) >>> 0;
+      const idx = q.options.map((_, j) => j);
+      for (let j = idx.length - 1; j > 0; j--) {
+        h = Math.imul(h ^ (h >>> 15), 2246822507) >>> 0;
+        const k = h % (j + 1);
+        [idx[j], idx[k]] = [idx[k], idx[j]];
+      }
+      return idx;
+    });
     try { answers = JSON.parse(WB.getField(lid, "quiz-raw") || "[]"); } catch (e) {}
 
     function save() {
@@ -20,7 +32,8 @@ const Quiz = (() => {
         const answered = a != null;
         return `<fieldset class="qz-q${answered ? " answered" : ""}">
           <legend><span class="label">Питання ${i + 1} з ${qs.length}</span><span class="qz-text">${q.q}</span></legend>
-          <div class="qz-opts">${q.options.map((o, j) => {
+          <div class="qz-opts">${order[i].map((j) => {
+            const o = q.options[j];
             const cls = !answered ? "" : j === q.correct ? " correct" : j === a ? " wrong" : " dim";
             return `<button type="button" class="qz-opt${cls}" data-q="${i}" data-o="${j}" ${answered ? "disabled" : ""}>${o}</button>`;
           }).join("")}</div>

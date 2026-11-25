@@ -1,84 +1,138 @@
 <!--{"code": "9.3", "title": "Практика: пишемо PRD", "week": 9, "js": [], "steps": "Контекст|Робимо|Розбір|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 9 · Вимоги і робота з розробкою · Урок 9.3</span>
       <h1>Практика: пишемо PRD</h1>
-      <p class="lead">Пишеш повний PRD для фічі «Слота».</p>
-      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Шаблони послуг стоять у «Зараз». Олег просить нормальний документ, Марта хоче розуміти, що малювати. Пишеш свій перший повний PRD.</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Зібрати PRD з даних досліджень, метрик і вводних від команди.</span></li><li><span>Чітко визначити обсяг першої версії і що в неї не входить.</span></li><li><span>Розбити функцію на user stories з критеріями приймання.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Опишеш проблему, ціль і сценарій на даних попередніх тижнів.</span></li>
+        <li><span>Визначиш обсяг першої версії і чесно запишеш, що поза ним.</span></li>
+        <li><span>Розіб'єш функцію на історії з критеріями, опишеш ризики, запуск і відповіш Віктору.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде практика</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Вхідні дані.</span><small>1 екран</small></button>
-<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Проблема і ціль, Крок 2. Обсяг, Крок 3. User stories, Крок 4. Ризики і запуск…</span><small>5 екранів</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Що ти вже знаєш і що кажуть Олена, Марта, Олег і Віктор.</span><small>1 екран · 10 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>П'ять кроків PRD, у кожному — самоперевірка.</span><small>5 екранів · 60 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і приклад повного PRD.</span><small>2 екрани · 15 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок тижня.</span><small>4 питання · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="inputs" data-step="1" data-name="Вхідні дані">
-  <h2>Вхідні дані</h2>
-  <take sel="#inputs" i="1"></take><take sel="#inputs" i="2"></take><take sel="#inputs" i="3"></take><take sel="#inputs" i="4"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Усе вже зібрано</span><h2>Вхідні дані</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Кожна людина з команди приносить корисний факт і одну ідею, яка роздуває обсяг. Твоя задача — відрізнити одне від іншого.</p></div>
+  </div>
+  <div class="split">
+    <div><take sel="#inputs" i="1-2"></take></div>
+    <div><take sel="#inputs" i="3-4"></take></div>
+  </div>
 </section>
 
-<section class="screen" id="step1" data-step="2" data-name="Крок 1. Проблема і ціль">
-  <h2>Крок 1. Проблема і ціль</h2>
+<section class="screen" id="step1" data-step="2" data-name="Крок 1. Проблема і ціль">
+  <h2>Крок 1. Проблема і ціль</h2>
+  <p>Почни з того, чия це проблема і як ти дізнаєшся, що її розв'язано. Цифри і цитати бери з вхідних даних.</p>
   <take sel="#step1" i="1"></take>
-  
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Салонам незручно налаштовувати послуги. Ціль — зробити налаштування зручнішим».</p><p>Немає ні доказів, ні цифри, за якою можна перевірити успіх.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Третина малих салонів на пробному періоді не завершує налаштування (42 з 120). Оксана витратила на послуги всі вихідні. Ціль: частка, що завершили налаштування, з 65% до 80%, і через це активація з 46% до 60%. Контрметрика: скільки салонів видаляють більшість послуг з шаблону».</p><p>Проблема з даними і цитатою, ціль у метриці, є контрметрика.</p></div>
+    </div>
+    <ul>
+      <li>Проблема спирається на воронку, інтерв'ю або слова Олени, а не на «нам здається».</li>
+      <li>Ціль пов'язана з метрикою активації і ціллю кварталу.</li>
+      <li>Є контрметрика: що покаже, якщо рішення шкодить.</li>
+    </ul>
+  </div></details>
 </section>
 
 <section class="screen" id="step2" data-step="2" data-name="Крок 2. Обсяг">
   <h2>Крок 2. Обсяг</h2>
-  <take sel="#step2" i="1"></take><take sel="#step2" i="2"></take>
-  
+  <div class="main-idea"><p><b>Головне.</b> Для кожної ідеї спитай: без неї функція не розв'яже проблему? Якщо розв'яже — ідея йде в «бажано» або «поза обсягом».</p></div>
+  <take sel="#step2" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Обов'язково: шаблони для всіх типів салонів, середні ціни по місту, масова зміна цін, новий екран налаштувань».</p><p>Усі ідеї потрапили в першу версію. Це вже не два-три тижні, а квартал.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Обов'язково: три типи салонів, готовий список послуг з тривалістю, ціни вписує салон на одному екрані. Поза обсягом: середні ціни — немає надійних даних; масова зміна цін — окрема велика задача за оцінкою Олега».</p><p>Мала перша версія, і кожне «ні» має причину.</p></div>
+    </div>
+    <ul>
+      <li>Першу версію можна зробити за 2–3 тижні.</li>
+      <li>У «Поза обсягом» хоча б два конкретні пункти з поясненням.</li>
+      <li>Нічого з «обов'язково» не можна прибрати без втрати сенсу функції.</li>
+    </ul>
+  </div></details>
 </section>
 
 <section class="screen" id="step3" data-step="2" data-name="Крок 3. User stories">
   <h2>Крок 3. User stories</h2>
-  <take sel="#step3" i="1"></take><take sel="#step3" i="2"></take>
-  
+  <take sel="#step3" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«1. Створити таблицю шаблонів у базі. 2. Зробити API. 3. Зробити екран вибору». Критерій: «Шаблони працюють коректно».</p><p>Технічні шари замість історій, і критерій неможливо перевірити.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Як власниця салону, я хочу обрати тип салону під час налаштування, щоб одразу отримати готовий список послуг». Критерій: «Дано салон уже має свої послуги, коли власниця обирає тип, тоді система питає, додати шаблон чи замінити, і нічого не видаляє без підтвердження».</p><p>Вертикальна історія, а критерій ловить реальний ризик.</p></div>
+    </div>
+    <ul>
+      <li>Кожна історія сама дає користь власниці салону.</li>
+      <li>Критерії у форматі «Дано — коли — тоді», і хоча б один — нестандартний сценарій.</li>
+    </ul>
+  </div></details>
 </section>
 
-<section class="screen" id="step4" data-step="2" data-name="Крок 4. Ризики і запуск">
-  <h2>Крок 4. Ризики і запуск</h2>
+<section class="screen" id="step4" data-step="2" data-name="Крок 4. Ризики і запуск">
+  <h2>Крок 4. Ризики і запуск</h2>
+  <p>Подумай, що може піти не так, на що ще немає відповіді, і як ти дізнаєшся, що функція спрацювала.</p>
   <take sel="#step4" i="1"></take>
-  
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Ризиків немає. Запускаємо для всіх».</p><p>Ризики є завжди. І незрозуміло, з чим порівнювати результат і хто має знати про запуск.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Ризик: послуги в різних регіонах називаються по-різному — перевірити список з Оленою на 10 салонах. Запуск: для всіх нових малих салонів, порівнюємо частку завершених налаштувань з когортою березня–травня. Олена отримує новий сценарій допомоги».</p><p>Конкретний ризик з дією, точка порівняння і люди, яких треба попередити.</p></div>
+    </div>
+    <ul><li>Кожен ризик має дію: як перевіримо або що зробимо.</li><li>Є з чим порівняти результат: та сама метрика до запуску.</li><li>Названо, кого попередити до запуску: підтримку, продажі.</li></ul>
+  </div></details>
 </section>
 
 <section class="screen" id="step5" data-step="2" data-name="Крок 5. Відповідь Віктору">
   <h2>Крок 5. Відповідь Віктору</h2>
-  <take sel="#step5" i="1"></take><take sel="#step5" i="2"></take>
-  
+  <take sel="#step5" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Середніх цін не буде, це поза обсягом».</p><p>Віктор не знає чому і що отримає натомість.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Шаблони будуть для трьох типів салонів, це більшість наших клієнтів. Ціни салон впише сам: якщо поставимо середні, а вони не підійдуть, салон може не помітити і втратити гроші. На демо покажеш, що налаштування займає 10 хвилин замість вечора».</p><p>Причина мовою Віктора і те, що він зможе продавати.</p></div>
+    </div>
+    <ul><li>Віктор розуміє, чому немає середніх цін, — причина пов'язана з клієнтами, а не «так вирішили».</li><li>Він знає, що отримає в першій версії і що зможе показати клієнтам.</li><li>Повідомлення коротке: три-чотири речення.</li></ul>
+  </div></details>
 </section>
 
-<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
-  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><take sel="#criteria" i="1"></take></div>
-  
-  
+<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
+  <div class="head-row"><div><span class="eyebrow">Перед розбором</span><h2>Як зрозуміти, що зроблено добре</h2></div><div class="main-idea"><p><b>Головне.</b> Найкраща перевірка PRD: Олег і Марта можуть почати роботу, не кличучи тебе на зустріч.</p></div></div>
+  <take sel="#criteria" i="1"></take>
 </section>
 
 <section class="screen" id="review" data-step="3" data-name="Розбір">
   <h2>Розбір</h2>
+  <p>Порівняй зі своїм варіантом. Формулювання можуть відрізнятися: важливо, щоб збігалася логіка.</p>
   <take sel="#review" i="1"></take>
-  
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 9.3 · фініш</span><h2 style="font-size:32px">Тиждень 9 завершено</h2></div></div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 9 · фініш</span><h2 style="font-size:32px">Дев'ятий артефакт готовий</h2></div></div>
       <take sel="#next" i="1"></take>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
@@ -86,7 +140,7 @@
     </div>
     <div>
       <take sel="#case" i="1"></take>
-      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твій PRD</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>

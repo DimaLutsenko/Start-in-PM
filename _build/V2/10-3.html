@@ -1,78 +1,125 @@
 <!--{"code": "10.3", "title": "Практика: продуктовий апдейт", "week": 10, "js": [], "steps": "Контекст|Робимо|Розбір|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 10 · Стейкхолдери і комунікація · Урок 10.3</span>
       <h1>Практика: продуктовий апдейт</h1>
-      <p class="lead">Готуєш апдейт для CEO «Слота» про результати і плани.</p>
-      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Минуло три місяці. Квартал закінчився, і Андрій просить підсумок: що зробили, що вийшло, що далі. Пишеш апдейт у двох версіях: для Андрія з командою і для інвестора.</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Структурувати продуктовий апдейт так, щоб головне було зрозуміло за хвилину.</span></li><li><span>Чесно показувати і успіхи, і невдачі, і що з них випливає.</span></li><li><span>Адаптувати один і той самий апдейт під різні аудиторії.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Розберешся в цифрах кварталу: що вдалося, а що ні.</span></li>
+        <li><span>Напишеш три речення головного і повний апдейт для Андрія.</span></li>
+        <li><span>Стиснеш усе до 8–10 речень для Сергія, мовою результатів і грошей.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде практика</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Структура апдейту, Підсумки кварталу «Слота».</span><small>2 екрани</small></button>
-<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Коротко, Крок 2. Повна версія для Андрія і команди, Крок 3. Коротка версія для Сергія.</span><small>3 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Структура апдейту і підсумки кварталу «Слота».</span><small>2 екрани · 15 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Коротко, повна версія, версія для інвестора.</span><small>3 екрани · 55 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і приклад апдейту.</span><small>2 екрани · 15 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок тижня.</span><small>4 питання · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="structure" data-step="1" data-name="Структура апдейту">
-  <div class="head-row"><div><h2>Структура апдейту</h2></div><take sel="#structure" i="3"></take></div>
-  <take sel="#structure" i="1"></take><take sel="#structure" i="2"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Інструмент</span><h2>Структура апдейту</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Читач, який прочитав лише перші три речення, має знати суть. Усе інше — для тих, кому потрібні деталі.</p></div>
+  </div>
+  <div class="split">
+    <div><take sel="#structure" i="1-2"></take></div>
+    <div>
+      <take sel="#structure" i="3"></take>
+      <div class="grid-2">
+        <div class="warn"><span class="label">Прикметник</span><p>«Значно покращили утримання».</p></div>
+        <div class="ex"><span class="label">Цифра</span><p>«Відтік малих салонів: з 18% до 14%».</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="data" data-step="1" data-name="Підсумки кварталу «Слота»">
-  <h2>Підсумки кварталу «Слота»</h2>
-  <take sel="#data" i="1"></take><take sel="#data" i="2"></take><take sel="#data" i="3"></take><take sel="#data" i="4"></take><take sel="#data" i="5"></take><take sel="#data" i="6"></take>
-  
+<section class="screen" id="data" data-step="1" data-name="Підсумки кварталу">
+  <div class="head-row">
+    <div><span class="eyebrow">Дані Олега й Олени</span><h2>Підсумки кварталу «Слота»</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Одна ціль виконана, дві — ні, але рух у правильний бік. Чесно пояснити чому — найважливіша частина апдейту.</p></div>
+  </div>
+  <take sel="#data" i="1-2"></take>
+  <take sel="#data" i="3-4"></take>
+  <take sel="#data" i="5-6"></take>
 </section>
 
 <section class="screen" id="step1" data-step="2" data-name="Крок 1. Коротко">
   <h2>Крок 1. Коротко</h2>
-  <take sel="#step1" i="1"></take><take sel="#step1" i="2"></take>
-  
+  <take sel="#step1" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Квартал був насиченим. Ми запустили багато важливих функцій і досягли хороших результатів. Попереду цікаві плани».</p><p>Три речення без жодного факту. Після них Андрій нічого не знає.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Нагадування у Viber скоротили неявки в малих салонах на 40%, відтік малих салонів впав з 18% до 14% — не до цільових 12%. Шаблони послуг запустилися на місяць пізніше через збій у розкладі. Наступного кварталу масштабуємо тариф 990 і запускаємо список очікування».</p><p>Результат, проблема і що далі — з цифрами.</p></div>
+    </div>
+    <ul><li>Рівно три речення: головний результат, головна проблема, що далі.</li><li>У кожному реченні є факт або цифра, а не прикметник.</li><li>Невиконана ціль названа прямо, а не схована.</li></ul>
+  </div></details>
 </section>
 
-<section class="screen" id="step2" data-step="2" data-name="Крок 2. Повна версія для Андрія і команди">
-  <h2>Крок 2. Повна версія для Андрія і команди</h2>
-  <take sel="#step2" i="1"></take><take sel="#step2" i="2"></take>
-  
+<section class="screen" id="step2" data-step="2" data-name="Крок 2. Повна версія">
+  <h2>Крок 2. Повна версія для Андрія і команди</h2>
+  <take sel="#step2" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Що потрібно від Андрія: підтримка команди і подальша співпраця».</p><p>Андрію нічого вирішувати. Розділ, який мав допомогти отримати рішення, нічого не просить.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Рішення про запуск тарифу 990 для всіх малих салонів. Рекомендую так: у пілоті 13 з 20 перейшли, ніхто не пішов. Якщо відкладемо, втратимо ще квартал додаткового доходу».</p><p>Конкретне рішення, рекомендація, аргумент і ціна зволікання.</p></div>
+    </div>
+    <ul>
+      <li>«Що зробили» — це зміни для клієнтів, а не список задач.</li>
+      <li>Невиконані цілі названі прямо, з причиною і висновком.</li>
+      <li>Заслуги віддано команді поіменно: Ірина, Олег, Олена.</li>
+      <li>У «Що потрібно» — рішення з варіантами і твоєю рекомендацією.</li>
+    </ul>
+  </div></details>
 </section>
 
-<section class="screen" id="step3" data-step="2" data-name="Крок 3. Коротка версія для Сергія">
+<section class="screen" id="step3" data-step="2" data-name="Крок 3. Версія для Сергія">
   <h2>Крок 3. Коротка версія для Сергія</h2>
-  <take sel="#step3" i="1"></take><take sel="#step3" i="2"></take>
-  
+  <take sel="#step3" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Запустили нагадування у Viber, шаблони послуг, виправили два місця в модулі розкладу, протестували підказку з Instagram на 40 майстрах…»</p><p>Звіт про задачі. Сергій не бачить, росте компанія чи ні і чому.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«За квартал платних салонів стало 418 замість 400, відвідані записи виросли на 24%. Відтік малих салонів впав з 18% до 14%. Головний драйвер — нагадування, на них побудовано новий тариф на 25% дорожчий: у пілоті його обрали дві третини салонів».</p><p>Результати, гроші і причина — без деталей реалізації.</p></div>
+    </div>
+    <ul>
+      <li>Не більше 8–10 речень.</li>
+      <li>Мова результатів і грошей: салони, головна метрика, відтік, юніт-економіка.</li>
+      <li>Не приховано, що ціль з відтоку не досягнута, хоча і без деталей.</li>
+    </ul>
+  </div></details>
 </section>
 
-<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
-  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><take sel="#criteria" i="1"></take></div>
-  
-  
+<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
+  <div class="head-row"><div><span class="eyebrow">Перед розбором</span><h2>Як зрозуміти, що зроблено добре</h2></div><div class="main-idea"><p><b>Головне.</b> Добрий апдейт будує довіру: керівник бачить, що продукт під контролем, навіть коли не все вдалося.</p></div></div>
+  <take sel="#criteria" i="1"></take>
 </section>
 
 <section class="screen" id="review" data-step="3" data-name="Розбір">
   <h2>Розбір</h2>
+  <p>Порівняй зі своїм варіантом. Звір не слова, а структуру: чи головне нагорі, чи чесно названі невдачі, чи є конкретне «що потрібно».</p>
   <take sel="#review" i="1"></take>
-  
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 10.3 · фініш</span><h2 style="font-size:32px">Тиждень 10 завершено</h2></div></div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 10 · фініш</span><h2 style="font-size:32px">Десятий артефакт готовий</h2></div></div>
       <take sel="#next" i="1"></take>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
@@ -80,7 +127,7 @@
     </div>
     <div>
       <take sel="#case" i="1"></take>
-      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твій апдейт</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>

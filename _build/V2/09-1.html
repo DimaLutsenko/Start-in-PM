@@ -1,55 +1,154 @@
 <!--{"code": "9.1", "title": "PRD і user stories", "week": 9, "js": [], "steps": "Розбираємось|На прикладі «Слота»|Пробуємо|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 9 · Вимоги і робота з розробкою · Урок 9.1</span>
       <h1>PRD і user stories</h1>
-      <p class="lead">Як описати фічу: проблема, рішення, критерії приймання.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">60 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Як описати задачу так, щоб команда зробила саме те, що потрібно, і не переробляла тричі.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 60 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Написати короткий документ вимог до функції: проблема, ціль, обсяг, ризики.</span></li><li><span>Сформулювати user stories і розбити велику задачу на частини.</span></li><li><span>Описати критерії приймання і нестандартні сценарії.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span>PRD — короткий документ про проблему, ціль, обсяг і ризики. Його пишуть, щоб обговорити, а не щоб затвердити.</span></li>
+        <li><span>User story — маленький шматок функції, який уже дає щось користувачу.</span></li>
+        <li><span>Критерії приймання і нестандартні сценарії рятують від «я думав, ти мав на увазі інше».</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Документ вимог, User stories, Критерії приймання.</span><small>4 екрани</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад на «Слоті», Типові помилки.</span><small>2 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Структура PRD, user stories і INVEST, вертикальне розбиття, критерії приймання, нестандартні сценарії.</span><small>6 екранів · 30 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Обговорення PRD нагадувань. Андрій пропонує «заодно» передоплату.</span><small>3 екрани · 10 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Пишеш user stories і критерії приймання для списку очікування.</span><small>Завдання · 25–30 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>Слова уроку</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Від великого до малого: PRD описує функцію цілком, user story — шматок роботи, критерії приймання — як перевірити, що шматок готовий.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
 </section>
 
 <section class="screen" id="prd" data-step="1" data-name="Документ вимог">
-  <div class="head-row"><div><h2>Документ вимог</h2></div><take sel="#prd" i="4"></take></div>
-  <take sel="#prd" i="1"></take><take sel="#prd" i="2"></take><take sel="#prd" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">PRD</span><h2>Документ вимог</h2></div>
+    <take sel="#prd" i="4"></take>
+  </div>
+  <take sel="#prd" i="1"></take>
+  <div class="split">
+    <div><take sel="#prd" i="2-3"></take></div>
+    <div>
+      <div class="ex"><span class="label">Навіщо це «Слоту»</span><p>Ірина тричі переписувала функцію розкладу за квартал. Щоразу з'ясовувалося щось нове: «а якщо майстер на лікарняному?», «а адміністратор теж має бачити?». Пів сторінки з розділами «Користувачі і сценарії» та «Ризики і питання» зекономили б їй тижні.</p></div>
+      <div class="self-check pick" id="pick-prd-scope" data-yes="Так." data-nope="Не зовсім.">
+        <span class="label">Перевір себе</span>
+        <p class="pick-q">Обговорюєте PRD нагадувань у Viber. Денис каже: «А давайте одразу й Telegram, там роботи на тиждень». Ціль — неявки малих салонів з 11% до 7%. Що робиш?</p>
+        <div class="pick-opts">
+          <button type="button" class="pick-opt" data-say="Тиждень тут, тиждень там — і перша версія стає двомісячним проєктом. До того ж ми не знаємо, чи Telegram взагалі вплине на неявки.">Додаєш у першу версію, раз це недовго</button>
+          <button type="button" class="pick-opt" data-ok="1" data-say="Ідея розумна, і її варто зберегти. Але перша версія перевіряє головну гіпотезу. «Поза обсягом» з умовою («повернемося, якщо побачимо, що багато клієнтів без Viber») тримає фокус і не ображає Дениса.">Записуєш у «Поза обсягом» з причиною і умовою, коли повернетеся</button>
+          <button type="button" class="pick-opt" data-say="Відмова без запису і пояснення — і через тиждень хтось запропонує те саме знову. Краще зафіксувати рішення в PRD.">Відповідаєш «ні» і йдеш далі</button>
+        </div>
+        <div class="pick-out" hidden></div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="stories" data-step="1" data-name="User stories">
-  <h2>User stories</h2>
-  <take sel="#stories" i="1"></take><take sel="#stories" i="2"></take><take sel="#stories" i="3"></take><take sel="#stories" i="4"></take><take sel="#stories" i="5"></take><take sel="#stories" i="6"></take><take sel="#stories" i="7"></take><take sel="#stories" i="8"></take><take sel="#stories" i="9"></take><take sel="#stories" i="10"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">User stories</span><h2>Як, я хочу, щоб</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Історія називає, <b>хто</b> отримає користь, <b>що</b> він зможе зробити і <b>навіщо</b>. Без «навіщо» це просто задача.</p></div>
+  </div>
+  <take sel="#stories" i="1-4"></take>
+  <take sel="#stories" i="5-7"></take>
+  <take sel="#criteria" i="9"></take>
+</section>
+
+<section class="screen" id="slicing" data-step="1" data-name="Як розбивати задачу">
+  <div class="head-row">
+    <div><span class="eyebrow">Розбиття</span><h2>Як розбивати велику задачу</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Ріж функцію, як торт: кожен шматок має всі шари, від бази даних до екрана, і його можна з'їсти окремо.</p></div>
+  </div>
+  <take sel="#stories" i="9-10"></take>
+  <div class="self-check pick" id="pick-slice" data-yes="Так, вертикальне." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Олег приніс розбиття функції «Нагадування у Viber». Яке з них вертикальне?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Це технічні шари. Поки не готові всі три, користувач не отримає нічого, і показати на демо теж нічого.">1. Таблиця нагадувань у базі. 2. Сервіс відправки. 3. Екран налаштувань.</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Кожен крок уже працює від початку до кінця: після першого клієнти отримують нагадування, після другого можуть відповісти, після третього салон бачить відповідь.">1. Клієнт отримує нагадування. 2. Клієнт підтверджує або скасовує кнопкою. 3. Салон бачить статус у розкладі.</button>
+      <button type="button" class="pick-opt" data-say="Це розподіл роботи між людьми. Кожна частина окремо нічого не дає користувачу.">1. Ірина робить сервер. 2. Софія — веб. 3. Денис — мобільний застосунок.</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="criteria" data-step="1" data-name="Критерії приймання">
-  <h2>Критерії приймання</h2>
-  <take sel="#criteria" i="1"></take><take sel="#criteria" i="2"></take><take sel="#criteria" i="3"></take><take sel="#criteria" i="4"></take><take sel="#criteria" i="5"></take><take sel="#criteria" i="6"></take><take sel="#criteria" i="7"></take><take sel="#criteria" i="8"></take><take sel="#criteria" i="9"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Критерії приймання</span><h2>Дано, коли, тоді</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Критерій описує конкретну ситуацію, дію і результат. Його можна перевірити: так або ні, без суперечок.</p></div>
+  </div>
+  <take sel="#criteria" i="1-4"></take>
+  <details class="more"><summary>Детальніше: звідки формат і що таке Gherkin</summary><div>
+    <p>Формат «Дано — коли — тоді» (Given — When — Then) походить з BDD. У розробці його часто пишуть мовою Gherkin, яку розуміє інструмент Cucumber: тоді критерії приймання можна автоматично перетворити на тести. Продакту не обов'язково знати Gherkin. Достатньо писати критерії в цьому форматі звичайною мовою.</p>
+  </div></details>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад на «Слоті»">
-  <h2>Приклад на «Слоті»</h2>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take><take sel="#slot" i="3"></take>
-  
+<section class="screen" id="edge" data-step="1" data-name="Нестандартні сценарії">
+  <div class="head-row">
+    <div><span class="eyebrow">Поза «щасливим шляхом»</span><h2>Нестандартні сценарії</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Найбільше помилок ховається навколо основного сценарію. Продакт не мусить знайти все сам, але мусить спитати.</p></div>
+  </div>
+  <div class="split">
+    <div><take sel="#criteria" i="6-8"></take></div>
+    <div>
+      <div class="ex"><span class="label">У «Слоті»: що спливло на обговоренні нагадувань</span><p>Марта: «А якщо клієнт записався за дві години до візиту? Нагадування за добу вже не встигне». Ірина: «А якщо салон переніс запис після того, як нагадування пішло?» Обидва питання стали окремими критеріями приймання.</p></div>
+      <div class="self-check pick" id="pick-edge" data-yes="Так." data-nope="Не зовсім.">
+        <span class="label">Перевір себе</span>
+        <p class="pick-q">Софія посеред роботи питає: «Що показати, якщо клієнт натиснув "Підтверджую" вдруге?» Що робиш?</p>
+        <div class="pick-opts">
+          <button type="button" class="pick-opt" data-say="Софія щось вирішить, але рішення ніде не зафіксоване. Денис у мобільному застосунку зробить інакше, і продукт поводитиметься по-різному.">«Вирішуй сама, як тобі зручніше»</button>
+          <button type="button" class="pick-opt" data-say="Рідкісні випадки трапляються щодня, коли користувачів сотні. Повторне натискання — одна з найчастіших ситуацій.">«Це рідкісний випадок, не варто витрачати час»</button>
+          <button type="button" class="pick-opt" data-ok="1" data-say="Швидко вирішити разом, хто бачить що, і записати як критерій приймання. Так рішення однакове на всіх платформах і його перевірять.">Обговорити з Софією і Мартою за 10 хвилин і дописати критерій приймання</button>
+        </div>
+        <div class="pick-out" hidden></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="scene" data-step="2" data-name="Обговорення PRD">
+  <h2>Обговорення PRD нагадувань</h2>
+  <p>Тест у тижні 7 пройшов, і нагадування треба ввімкнути для всіх малих салонів. Ти оновив PRD під повний запуск і розіслав чернетку за два дні до старту роботи. Зустріч на 30 хвилин: Олег, Ірина, Марта і Андрій, який зайшов на п'ять хвилин.</p>
+  <div class="chat">
+    <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">Прочитав. Одне питання: на всі 170 салонів це тисячі повідомлень на тиждень. Скільки коштує одне у Viber? Якщо дорожче за SMS, треба знати до запуску.</span></div></div>
+    <div class="msg"><span class="ava p-marta">М</span><div><span class="who">Марта · дизайнерка</span><span class="bubble">Додала б у вимоги: адміністратор бачить статус підтвердження прямо в розкладі, кольором. Інакше він не помітить.</span></div></div>
+    <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Слухайте, а давайте одразу й передоплату через Viber? Раз уже пишемо клієнтам. Неявок тоді взагалі не буде.</span></div></div>
+    <div class="msg"><span class="ava p-oleh">І</span><div><span class="who">Ірина · бекенд</span><span class="bubble">Передоплата — це платіжна система, повернення, договір з банком. Місяць мінімум.</span></div></div>
+  </div>
+  <div class="pick" id="pick-prd-andrii" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що робиш з ідеєю Андрія?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Перша версія розросте з двох тижнів до двох місяців. А ти ще не знаєш, чи нагадувань не вистачить самих по собі. Тест у тижні 7 показав, що вони вже скорочують неявки в малих салонах на 40%.">Додати передоплату в першу версію: CEO краще знає</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Ти не сперечаєшся з Андрієм, а показуєш ціну і план: спершу дешево перевіряємо нагадування, потім дивимося, скільки неявок лишилось. Ідея записана, і в неї є чесна умова.">Записати в «Поза обсягом»: «Повернемося, якщо після нагадувань неявки лишаться вище 7%». Пояснити ціну: місяць замість двох тижнів</button>
+      <button type="button" class="pick-opt" data-say="Можливо, ти маєш рацію, але «ні» без пояснення CEO не прийме. І ідея зникне без сліду, хоча може знадобитися пізніше.">Сказати Андрію, що це погана ідея</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+  <p>Зверни увагу і на інших учасників: питання Олега пішло в «Ризики», пропозиція Марти — у вимоги. Саме для цього PRD показують рано.</p>
+</section>
+
+<section class="screen" id="slot" data-step="2" data-name="PRD нагадувань">
+  <div class="head-row">
+    <div><span class="eyebrow">Як це виглядає</span><h2>PRD нагадувань у Viber</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Одна сторінка. Проблема з доказами, ціль у цифрах і чесне «поза обсягом».</p></div>
+  </div>
+  <take sel="#slot" i="1-3"></take>
 </section>
 
 <section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
@@ -58,28 +157,58 @@
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take><take sel="#task" i="6"></take><take sel="#task" i="7"></take>
-  
+<section class="screen" id="task" data-step="3" data-name="Практика: історії">
+  <style>.builder[data-words^="Як"] .preview:empty::before{content:"Тут з'явиться готова user story"}.builder[data-words^="Дано"] .preview:empty::before{content:"Тут з'явиться готовий критерій"}</style>
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · 25–30 хв</span>
+      <h2 style="font-size:26px">Список очікування: історії і критерії</h2>
+      <take sel="#task" i="1"></take>
+      <ol class="circled">
+        <li><span>Напиши дві історії: для клієнта і для салону.</span></li>
+        <li><span>Для першої — два критерії: основний і нестандартний.</span></li>
+        <li><span>Додай ще три нестандартні сценарії, про які треба домовитися з командою.</span></li>
+      </ol>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Як користувач, я хочу список очікування, щоб було зручно». «Дано список, коли натискаю, тоді працює».</p><p>Незрозуміло, хто цей користувач, що саме він робить і що означає «працює». Перевірити неможливо.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Як клієнт салону, я хочу залишити заявку на зайнятий час, щоб потрапити до свого майстра, якщо хтось скасує». «Дано я вже в черзі на цей час, коли натискаю ще раз, тоді друга заявка не створюється, і я бачу, що вже в черзі».</p><p>Конкретна роль, дія і мета. Критерій можна перевірити.</p></div>
+        </div>
+        <ul>
+          <li>Роль конкретна: клієнт, адміністраторка, майстер, а не «користувач».</li>
+          <li>Кожна історія сама по собі дає користь (вертикальна).</li>
+          <li>Критерій має ситуацію, дію і результат, який видно на екрані.</li>
+          <li>Нестандартні сценарії стосуються часу, одночасних дій або змін після події.</li>
+        </ul>
+      </div></details>
+      <take sel="#task" i="7"></take>
+    </div>
+    <div>
+      <take sel="#task" i="2-6"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 9.1 · фініш</span><h2 style="font-size:32px">Урок 9.1 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 9.1 · фініш</span><h2 style="font-size:32px">Ти вмієш ставити задачі</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>PRD починається з проблеми і цілі. Найкорисніший розділ — «Поза обсягом».</span></li>
+        <li><span>Історії ріжемо вертикально: кожна вже дає користь і перевіряється за INVEST.</span></li>
+        <li><span>«Дано — коли — тоді» і питання про нестандартні сценарії — до розробки, а не після.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
       <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>

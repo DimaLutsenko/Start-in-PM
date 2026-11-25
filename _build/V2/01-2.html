@@ -5,7 +5,7 @@
       <span class="eyebrow">Тиждень 1 · Роль продакт-менеджера · Урок 1.2</span>
       <h1>Продакт і команда: хто за що відповідає</h1>
       <p class="lead">Чим продакт відрізняється від проджекта і Product Owner, і хто ще працює поруч: від CEO до підтримки.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 60 хвилин</span><span class="chip">4 кроки</span></div>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 75 хвилин</span><span class="chip">4 кроки</span></div>
       <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
@@ -21,7 +21,7 @@
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
     <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Продакт, проджект і PO. Як влаштована команда і хто чого чекає від продакта.</span><small>8 екранів · 35 хв</small></button>
-    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Хто є хто в команді «Слота» і в які пастки потрапляють продакти.</span><small>2 екрани · 10 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Хто є хто в команді «Слота», один напружений день у робочому чаті і типові пастки.</span><small>3 екрани · 15 хв</small></button>
     <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Шість ситуацій «чия це зона?» і ролі своїми словами.</span><small>Завдання · 20 хв</small></button>
     <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
@@ -50,7 +50,7 @@
   <take sel="#pm-vs-project" i="8"></take>
   <div class="self-check pick" id="pick-vac" data-yes="Так, продакта." data-nope="Не зовсім.">
     <span class="label">Перевір себе</span>
-    <p class="pick-q">Вакансія називається «Project Manager», а в обов'язках: «проводити інтерв'ю з користувачами», «формувати гіпотези», «стежити за retention». Кого насправді шукають?</p>
+    <p class="pick-q">Вакансія називається «Project Manager», а в обов'язках: «проводити інтерв'ю з користувачами», «формувати гіпотези», «стежити, скільки клієнтів залишається з продуктом». Кого насправді шукають?</p>
     <div class="pick-opts">
       <button type="button" class="pick-opt" data-ok="1" data-say="Дослідження, гіпотези і метрики — робота продакта. Назва посади вводить в оману, тому вакансію читаємо за змістом.">Продакта</button>
       <button type="button" class="pick-opt" data-say="Назва каже «проджект», але обов'язки — дослідження, гіпотези і метрики. Це робота продакта. Вакансію читаємо за змістом.">Проджекта</button>
@@ -67,6 +67,16 @@
   </div>
   <take sel="#pm-vs-po" i="1-5"></take>
   <div class="fact"><span class="label">Ще одна схожа роль</span><take sel="#pm-vs-po" i="7"></take></div>
+  <div class="self-check pick" id="pick-po" data-yes="Так, продакт." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">У банку над мобільним застосунком працюють продакт-менеджер і окремий Product Owner. Клієнти перестали брати новий кредит, і треба зрозуміти чому. Хто, найімовірніше, візьметься за це першим?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-ok="1" data-say="Продакт дивиться назовні: на ринок, клієнтів і результат. З'ясувати, чому клієнти не беруть кредит, — його робота. PO потім допоможе команді втілити рішення.">Продакт-менеджер</button>
+      <button type="button" class="pick-opt" data-say="У такій парі PO дивиться всередину: беклог, задачі, питання розробників. Причини поведінки клієнтів шукає продакт.">Product Owner</button>
+      <button type="button" class="pick-opt" data-say="Scrum-майстер стежить за тим, як працює команда, а не за клієнтами і продуктом.">Scrum-майстер</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="team" data-step="1" data-name="Як влаштована команда">
@@ -97,6 +107,16 @@
   <h2>Ролі: продуктова команда</h2>
   <p>Ті, хто безпосередньо створює продукт разом з продактом. З ними ти проводиш найбільше часу.</p>
   <take sel="#roles" i="7"></take>
+  <div class="self-check pick" id="pick-field" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Продакт пише бекенд-розробнику: «Це ж просто додати одне поле, до вечора встигнеш?» Що тут не так?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-ok="1" data-say="Для бекенду «одне поле» може означати зміни в базі даних, розрахунках і зв'язках з іншими системами. Складність оцінює розробник, а продакт питає.">Продакт сам оцінив складність чужої роботи</button>
+      <button type="button" class="pick-opt" data-say="Можна звернутися і до техліда, але проблема не в адресаті. Продакт заздалегідь вирішив, що задача проста, хоча оцінювати це не йому.">Треба було писати не розробнику, а техліду</button>
+      <button type="button" class="pick-opt" data-say="Ставити задачі — справді робота продакта. Але «просто» і «до вечора» — це оцінка, яку має дати розробник.">Усе нормально: продакт же ставить задачі</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="roles-biz" data-step="1" data-name="Ролі: бізнес">
@@ -117,6 +137,26 @@
   <take sel="#slot" i="5"></take>
 </section>
 
+<section class="screen" id="scene" data-step="2" data-name="Сцена: тиждень запуску">
+  <h2>Сцена: два запуски в один день</h2>
+  <p>Другий тиждень у «Слоті». У середу ввечері в робочому чаті з'являються повідомлення:</p>
+  <div class="chat">
+    <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO і маркетинг</span><span class="bubble">У понеділок запускаю рекламу в Instagram на салони Києва. Бюджет уже оплачений.</span></div></div>
+    <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">У понеділок ми ж викочуємо новий екран розкладу. Якщо з ним щось піде не так, нові салони побачать це першими.</span></div></div>
+    <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">Про новий екран я дізналася щойно, з цього чату. Що мені відповідати салонам, коли почнуть питати?</span></div></div>
+    <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO і маркетинг</span><span class="bubble">Розберися, будь ласка.</span></div></div>
+  </div>
+  <div class="pick" id="pick-launch" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що зробиш?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Реклама — зона Андрія як маркетолога, і бюджет уже оплачено. Продакт може впливати, але не наказувати. До того ж проблема не в рекламі, а в тому, що ніхто не знав планів одне одного.">Попросити Андрія перенести рекламу, бо вона заважає релізу</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Тут зійшлися три кола: маркетинг, розробка і підтримка. Продакт з'єднує їх: допомагає вирішити, що зсунути, і стежить, щоб ніхто не дізнався про зміни останнім. А наступного разу план запусків варто показати всім заздалегідь.">Зібрати Андрія, Олега й Олену на 15 хвилин: звірити дати, вирішити, що зсунути на кілька днів, і підготувати Олену до питань салонів</button>
+      <button type="button" class="pick-opt" data-say="Кожна зона справді чужа, але проблема саме на стику. Якщо продакт не з'єднає кола, нові салони прийдуть на свіжий і ще не перевірений екран, а Олена не знатиме, що їм відповідати.">Не втручатися: реліз — зона Олега, реклама — зона Андрія</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+</section>
+
 <section class="screen" id="mistakes" data-step="2" data-name="Типові пастки">
   <h2>Типові пастки в роботі з командою</h2>
   <take sel="#mistakes" i="1-2"></take>
@@ -135,6 +175,18 @@
       <take sel="#task" i="4"></take>
     </div>
   </div>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <p class="muted" style="font-size:14px">Приклад на ситуації, якої немає в списку: Марта хоче переробити екран налаштування розкладу.</p>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Продакт. Треба переробити, бо екран незручний».</p><p>Не розділено, чия це зона і що робить продакт. Рішення ухвалене одразу, без питання, наскільки проблема серйозна і що доведеться відкласти.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Як виглядатиме екран, вирішує Марта. Продакт приносить їй проблему: салони плутаються в налаштуванні, Софія це підтверджує, у таблиці Олени є скарги. Потім разом з Олегом оцінює, скільки це займе, і ставить задачу в пріоритет поруч з іншими».</p><p>Чітко видно і головну людину, і внесок продакта: проблема, дані, пріоритет.</p></div>
+    </div>
+    <ul>
+      <li>У відповіді дві частини: <b>хто головний</b> і <b>що конкретно робить продакт</b>.</li>
+      <li>Продакт не забирає чужу зону (дизайн, терміни, закон), але й не самоусувається.</li>
+      <li>Є хоча б одна дія «до рішення»: з'ясувати проблему, подивитися дані, попередити тих, кого зачепить.</li>
+    </ul>
+  </div></details>
 </section>
 
 <section class="screen" id="task2" data-step="3" data-name="Ролі своїми словами">
@@ -149,6 +201,16 @@
       <take sel="#task" i="7"></take>
     </div>
   </div>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p><b>CSM:</b> «Customer Success Manager. Працює з клієнтами після покупки, відповідає за продовження і розширення співпраці».</p><p>Текст переписаний з уроку. Людина не з IT не зрозуміє, що таке «розширення співпраці», і не видно, що CSM потрібно від продакта.</p></div>
+      <div class="ex"><span class="label">Добре</span><p><b>CSM:</b> «Людина, яка дбає, щоб клієнт, що вже заплатив, не розчарувався і не пішов: допомагає налаштуватися, дзвонить, коли щось не так. Від продакта їй треба заздалегідь знати, що зміниться в продукті, і щоб скарги, які вона приносить, хтось розбирав».</p><p>Просто, своїми словами, і є обидві частини: що робить і що потрібно від продакта.</p></div>
+    </div>
+    <ul>
+      <li>В описі є і робота людини, і її очікування від продакта.</li>
+      <li>Серед п'яти ролей є не лише продуктова команда, а й бізнес: продажі, підтримка, маркетинг.</li>
+    </ul>
+  </div></details>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">

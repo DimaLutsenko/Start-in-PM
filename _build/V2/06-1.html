@@ -1,109 +1,318 @@
 <!--{"code": "6.1", "title": "LTV, CAC і окупність", "week": 6, "js": ["tools"], "steps": "Розбираємось|На прикладі «Слота»|Пробуємо|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 6 · Юніт-економіка · Урок 6.1</span>
       <h1>LTV, CAC і окупність</h1>
-      <p class="lead">Скільки коштує залучити клієнта і скільки він приносить.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">60 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take><take sel="#goal" i="4"></take>
+      <p class="lead">Чи заробляє «Слот» на одному клієнті? Рахуємо маржу, вартість залучення, цінність клієнта і окупність — шкільною арифметикою, крок за кроком.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 60 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-2"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Пояснити, що таке юніт-економіка і навіщо вона продакту.</span></li><li><span>Порахувати маржу, CAC, LTV і окупність для продукту за підпискою.</span></li><li><span>Оцінити, чи здорова юніт-економіка, і зрозуміти, які важелі її покращують.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span><b>LTV</b> — скільки маржі клієнт залишить за весь час. <b>CAC</b> — скільки коштувало його залучити.</span></li>
+        <li><span>Здоровим вважають LTV утричі більший за CAC і окупність до року.</span></li>
+        <li><span>Найсильніший важіль зазвичай — відтік: менше йдуть, довше платять.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Головна ідея на одному прикладі, Дохід і маржа, CAC: скільки коштує клієнт…</span><small>8 екранів</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад на «Слоті», Типові помилки.</span><small>2 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ідея на прикладі кави, маржа, CAC, LTV, здорові пропорції, важелі.</span><small>7 екранів · 30 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Віктор радіє рекорду продажів. Рахуємо три сегменти і граємо з калькулятором.</span><small>4 екрани · 15 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Юніт-економіка онлайн-школи і рішення про рекламний бюджет.</span><small>2 завдання · 20 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="5"></take>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
-  <take sel="#terms" i="1"></take><take sel="#terms" i="2"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>Вісім скорочень, якими говорять про гроші</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Не завчай: повертайся до цього екрана, коли зустрінеш незнайоме скорочення далі в уроці.</p></div>
+  </div>
+  <take sel="#terms" i="1-2"></take>
 </section>
 
-<section class="screen" id="idea" data-step="1" data-name="Головна ідея на одному прикладі">
-  <div class="head-row"><div><h2>Головна ідея на одному прикладі</h2></div><take sel="#idea" i="6"></take></div>
-  <take sel="#idea" i="1"></take><take sel="#idea" i="2"></take><take sel="#idea" i="3"></take><take sel="#idea" i="4"></take><take sel="#idea" i="5"></take>
-  
+<section class="screen" id="idea" data-step="1" data-name="Ідея на прикладі кави">
+  <div class="head-row">
+    <div><span class="eyebrow">Головна ідея</span><h2>Візок з кавою біля метро</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Юніт-економіка порівнює дві цифри: скільки клієнт приносить і скільки коштує його привести.</p></div>
+  </div>
+  <p>Юніт — це «одиниця», для якої рахуємо економіку. Найчастіше один клієнт. Розберімо найпростіший бізнес.</p>
+  <div class="grid-3">
+    <div class="card edge-green"><span class="label">Маржа з чашки</span><b class="t">60 − 20 = 40 грн</b><p>Чашка коштує 60 грн. Зерно, молоко і стаканчик — 20 грн. Решта лишається тобі.</p></div>
+    <div class="card edge-orange"><span class="label">CAC — ціна клієнта</span><b class="t">1 000 ÷ 50 = 20 грн</b><p>Листівки за тиждень коштували 1 000 грн і привели 50 нових клієнтів.</p></div>
+    <div class="card edge-blue"><span class="label">LTV — цінність клієнта</span><b class="t">10 × 40 = 400 грн</b><p>Клієнт купує в середньому 10 чашок, поки не переїде чи не знайде іншу каву.</p></div>
+  </div>
+  <div class="grid-2">
+    <div class="ex"><span class="label">Коли все добре</span><p>Клієнт приносить 400 грн, а коштує 20. Кожна гривня в листівки повертається в 20 разів. Більше листівок — більше прибутку.</p></div>
+    <div class="warn"><span class="label">Коли все погано</span><p>Листівки перестали працювати: за ту саму 1 000 грн приходять 2 клієнти. CAC = 1 000 ÷ 2 = 500 грн, а LTV лишився 400. Кожен новий клієнт — мінус 100 грн.</p><span class="fix"><b>Висновок:</b> клієнтів більшає, а гроші тануть. Чим більше реклами, тим швидше розорення.</span></div>
+  </div>
 </section>
 
-<section class="screen" id="margin" data-step="1" data-name="Дохід і маржа">
-  <div class="head-row"><div><h2>Дохід і маржа</h2></div><take sel="#margin" i="9"></take></div>
-  <take sel="#margin" i="1"></take><take sel="#margin" i="2"></take><take sel="#margin" i="3"></take><take sel="#margin" i="4"></take><take sel="#margin" i="5"></take><take sel="#margin" i="6"></take><take sel="#margin" i="7"></take><take sel="#margin" i="8"></take>
-  
+<section class="screen" id="margin" data-step="1" data-name="Дохід і маржа">
+  <div class="head-row">
+    <div><span class="eyebrow">Крок 1 розрахунку</span><h2>Дохід і маржа</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Рахуй не те, що клієнт платить, а те, що лишається після витрат на його обслуговування.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <p><b>ARPU</b> — середній дохід з одного клієнта за місяць. Якщо тарифи різні, ділимо весь місячний дохід на кількість клієнтів.</p>
+      <take sel="#margin" i="2"></take>
+      <div class="ex"><span class="label">ARPU «Слота» на числах</span><p>180 майстрів × 390 + 170 малих салонів × 790 + 50 великих × 1 990 = 70 200 + 134 300 + 99 500 = 304 000 грн на місяць.</p><p>304 000 ÷ 400 клієнтів = <b>760 грн</b>. Це ARPU.</p></div>
+    </div>
+    <div>
+      <p>Частина цих грошей одразу йде на обслуговування клієнта. Це <b>змінні витрати</b>: вони ростуть разом із кількістю клієнтів. У «Слоті» це:</p>
+      <take sel="#margin" i="5"></take>
+      <p>Зарплати розробників, оренда, зарплата Андрія — <b>постійні витрати</b>. Вони не залежать від того, 400 салонів чи 410, тому в юніт-економіку одного клієнта не входять.</p>
+    </div>
+  </div>
+  <take sel="#margin" i="7"></take>
+  <div class="grid-2">
+    <div class="ex"><span class="label">Малий салон</span><p>790 − 210 = <b>580 грн</b> маржі на місяць. У відсотках: 580 ÷ 790 ≈ 73%. У продуктах за підпискою маржа зазвичай висока, 70–85%: ще один клієнт коштує недорого.</p></div>
+    <take sel="#margin" i="9"></take>
+  </div>
+  <div class="self-check pick" id="pick-61-cost" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">«Слот» підключив ще 10 салонів. Яка з цих витрат зросте і тому входить у маржу одного клієнта?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Зарплата Олега не зміниться від 10 нових салонів. Це постійна витрата, вона не входить в юніт-економіку одного клієнта.">Зарплата Олега</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Нові салони — нові записи, а отже, нові SMS-нагадування. Ця витрата росте з кожним клієнтом, тому її віднімають від доходу.">SMS-нагадування клієнтам салонів</button>
+      <button type="button" class="pick-opt" data-say="Оренда офісу однакова і для 400, і для 410 салонів. Це постійна витрата.">Оренда офісу</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="cac" data-step="1" data-name="CAC: скільки коштує клієнт">
-  <h2>CAC: скільки коштує клієнт</h2>
-  <take sel="#cac" i="1"></take><take sel="#cac" i="2"></take><take sel="#cac" i="3"></take><take sel="#cac" i="4"></take><take sel="#cac" i="5"></take><take sel="#cac" i="6"></take><take sel="#cac" i="7"></take><take sel="#cac" i="8"></take><take sel="#cac" i="9"></take>
-  
+<section class="screen" id="cac" data-step="1" data-name="CAC">
+  <div class="head-row">
+    <div><span class="eyebrow">Крок 2 розрахунку</span><h2>CAC: скільки коштує клієнт</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> CAC — усі витрати на залучення за період, поділені на нових клієнтів за той самий період.</p></div>
+  </div>
+  <take sel="#cac" i="2"></take>
+  <div class="split">
+    <div>
+      <div class="ex"><span class="label">Малі салони «Слота» за пів року</span><p>На рекламу, зарплати і бонуси продажів для малих салонів пішло 288 000 грн. Прийшло 60 нових салонів.</p><p>288 000 ÷ 60 = <b>4 800 грн</b>. Стільки коштує один новий малий салон.</p></div>
+      <take sel="#cac" i="4"></take>
+    </div>
+    <div>
+      <take sel="#cac" i="5"></take>
+    </div>
+  </div>
+  <details class="more"><summary>Детальніше: змішаний і платний CAC</summary><div>
+    <p>Частина клієнтів приходить сама: за рекомендацією, з пошуку. Тому рахують два CAC.</p>
+    <take sel="#cac" i="8"></take>
+    <p><b>На числах.</b> За місяць на рекламу пішло 120 000 грн. Прийшло 100 клієнтів: 60 з реклами і 40 за рекомендаціями. Змішаний CAC: 120 000 ÷ 100 = 1 200 грн. Платний: 120 000 ÷ 60 = 2 000 грн. Якщо плануєш рости саме рекламою, дивись на 2 000: змішаний CAC виглядає кращим лише завдяки тим, хто прийшов безкоштовно.</p>
+  </div></details>
 </section>
 
-<section class="screen" id="ltv" data-step="1" data-name="LTV: скільки приносить клієнт">
-  <h2>LTV: скільки приносить клієнт</h2>
-  <take sel="#ltv" i="1"></take><take sel="#ltv" i="2"></take><take sel="#ltv" i="3"></take><take sel="#ltv" i="4"></take><take sel="#ltv" i="5"></take><take sel="#ltv" i="6"></take><take sel="#ltv" i="7"></take><take sel="#ltv" i="8"></take><take sel="#ltv" i="9"></take><take sel="#ltv" i="10"></take>
-  
+<section class="screen" id="ltv" data-step="1" data-name="LTV">
+  <div class="head-row">
+    <div><span class="eyebrow">Крок 3 розрахунку</span><h2>LTV: скільки приносить клієнт</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> LTV = маржа за місяць × скільки місяців клієнт у середньому з нами.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <span class="label">Спершу — час життя клієнта</span>
+      <p>Якщо щомісяця йде кожен десятий клієнт (відтік 10%), то в середньому клієнт залишається 1 ÷ 0,1 = 10 місяців. Якщо йде кожен двадцятий (5%), то 1 ÷ 0,05 = 20 місяців.</p>
+      <take sel="#ltv" i="4"></take>
+      <p class="muted" style="font-size:14px">Формула працює, якщо відтік приблизно однаковий щомісяця. Як бути, коли це не так, — у наступному уроці про когорти.</p>
+    </div>
+    <div>
+      <span class="label">Потім — LTV</span>
+      <take sel="#ltv" i="7"></take>
+      <div class="ex"><span class="label">Малий салон, крок за кроком</span><p>1. Маржа: 790 − 210 = 580 грн.</p><p>2. Відтік 6%, тож час життя: 1 ÷ 0,06 ≈ 16,7 місяця.</p><p>3. LTV: 580 × 16,7 ≈ <b>9 667 грн</b>. Те саме, що 580 ÷ 0,06.</p></div>
+    </div>
+  </div>
+  <div class="warn"><span class="label">Пастка</span><p>При дуже малому відтоку формула обіцяє клієнтів на десятиліття: відтік 1% — це 100 місяців, понад вісім років. Насправді ринок змінюється, з'являються конкуренти, салони закриваються.</p><span class="fix"><b>Як правильно:</b> обмежувати час життя реалістичним горизонтом, наприклад 36 місяцями, і рахувати відтік на довгому періоді, а не за перші щасливі місяці.</span></div>
+  <details class="more"><summary>Детальніше: три способи порахувати LTV</summary><div><take sel="#ltv" i="6"></take></div></details>
+  <div class="self-check pick" id="pick-61-life" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Великі салони: маржа 1 430 грн, відтік 2,5% на місяць. Який LTV рахуємо в курсі?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Це LTV з ціни, а не з маржі: 1 990 × 40. Змінні витрати 560 грн теж треба відняти.">79 600 грн</button>
+      <button type="button" class="pick-opt" data-say="1 ÷ 0,025 = 40 місяців, і 1 430 × 40 = 57 200 грн. Але 40 місяців більше за наш реалістичний горизонт у 36.">57 200 грн</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Формула дає 40 місяців, обмежуємо їх 36. LTV = 1 430 × 36 = 51 480 грн.">51 480 грн</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="health" data-step="1" data-name="Як зрозуміти, що юніт-економіка здорова">
-  <h2>Як зрозуміти, що юніт-економіка здорова</h2>
-  <take sel="#health" i="1"></take><take sel="#health" i="2"></take><take sel="#health" i="3"></take><take sel="#health" i="4"></take><take sel="#health" i="5"></take><take sel="#health" i="6"></take><take sel="#health" i="7"></take><take sel="#health" i="8"></take><take sel="#health" i="9"></take>
-  
+<section class="screen" id="health" data-step="1" data-name="Здорова юніт-економіка">
+  <div class="head-row">
+    <div><span class="eyebrow">Крок 4: висновок</span><h2>Як зрозуміти, що юніт-економіка здорова</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> LTV ÷ CAC каже, <b>чи</b> окупиться клієнт. Окупність каже, <b>коли</b>.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <span class="label">LTV ÷ CAC</span>
+      <take sel="#health" i="4"></take>
+      <div class="ex"><span class="label">Малий салон</span><p>9 667 ÷ 4 800 ≈ <b>2,0</b>. Клієнт окупається, але запас малий.</p></div>
+    </div>
+    <div>
+      <span class="label">Окупність CAC</span>
+      <take sel="#health" i="6"></take>
+      <div class="ex"><span class="label">Малий салон</span><p>4 800 ÷ 580 ≈ <b>8,3 місяця</b>. Стільки місяців салон має платити, щоб повернути гроші, витрачені на його залучення.</p></div>
+      <p>Поки клієнт не окупився, компанія фактично кредитує його. Чим довша окупність, тим більше грошей треба мати на рахунку, щоб рости.</p>
+      <div class="warn"><span class="label">Найважливіша перевірка</span><p>Окупність має бути коротшою за час життя клієнта. Якщо клієнт окупається за 8 місяців, а в середньому йде через 6, більшість клієнтів не встигає окупитися.</p></div>
+    </div>
+  </div>
+  <div class="fact"><span class="label">Цікаво знати</span><p>Орієнтири «LTV/CAC понад 3» і «окупність до 12 місяців» популяризував венчурний інвестор Девід Скок у статті «SaaS Metrics 2.0» у своєму блозі For Entrepreneurs. Він сам підкреслює, що це лише орієнтири: багато здорових компаній на старті до них не дотягують, і це нормально, якщо видно шлях, як цифри покращити.</p></div>
+  <div class="self-check pick" id="pick-61-ratio" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">LTV клієнта — 6 000 грн, CAC — 4 000 грн. Як оцінити таку модель?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Збитку немає: 6 000 більше за 4 000. Але й здоровою модель назвати не можна.">Збиткова: кожен клієнт приносить мінус</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. 6 000 ÷ 4 000 = 1,5. Клієнт окупається, але з цього запасу ще треба платити зарплати команді й розвивати продукт. Невелике зростання CAC чи відтоку — і модель стане збитковою.">Окупається, але із запасом замало</button>
+      <button type="button" class="pick-opt" data-say="Здоровим вважають співвідношення від 3. Тут 6 000 ÷ 4 000 = 1,5.">Здорова: можна сміливо масштабувати</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="levers" data-step="1" data-name="Важелі: як покращити юніт-економіку">
-  <h2>Важелі: як покращити юніт-економіку</h2>
-  <take sel="#levers" i="1"></take><take sel="#levers" i="2"></take><take sel="#levers" i="3"></take>
-  
+<section class="screen" id="levers" data-step="1" data-name="Важелі">
+  <div class="head-row">
+    <div><span class="eyebrow">Що з цим робити</span><h2>Важелі юніт-економіки</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Кожна цифра у формулах — важіль. І більшість важелів у руках продакта.</p></div>
+  </div>
+  <take sel="#levers" i="2"></take>
+  <div class="ex"><span class="label">Чому відтік — найсильніший важіль</span><p>Малий салон: маржа 580 грн. При відтоку 6% LTV = 580 ÷ 0,06 ≈ 9 667 грн. При відтоку 4% LTV = 580 ÷ 0,04 = 14 500 грн. Це +50%, і жодних змін ціни.</p><p>Щоб отримати такий самий LTV через ціну, маржу треба було б підняти теж на 50%: з 580 до 870 грн. Салони цього, найімовірніше, не приймуть. Тому наступний урок цілком про утримання.</p></div>
 </section>
 
-<section class="screen" id="calc" data-step="1" data-name="Калькулятор юніт-економіки">
-  <h2>Калькулятор юніт-економіки</h2>
-  <take sel="#calc" i="1"></take><take sel="#calc" i="2"></take>
-  
+<section class="screen" id="scene" data-step="2" data-name="Рекордне півріччя">
+  <h2>Рекордне півріччя Віктора</h2>
+  <p>Підсумки півріччя. Віктор задоволений, але в Сергія інше питання.</p>
+  <div class="split" style="grid-template-columns:minmax(0,1fr) 280px">
+    <div>
+      <div class="chat">
+        <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">180 нових приватних майстрів за пів року! Рекорд. Їм продавати найлегше.</span></div></div>
+        <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">Щомісяця від нас іде приблизно кожен сьомий майстер. Найбільше — у перші два місяці.</span></div></div>
+        <div class="msg"><span class="ava p-serhii">С</span><div><span class="who">Сергій · інвестор</span><span class="bubble">Скільки вам коштує один майстер і скільки він приносить? Без цього я не розумію, рекорд це чи проблема.</span></div></div>
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Продакт, порахуєш? І скажи, що робимо з продажами далі.</span></div></div>
+      </div>
+    </div>
+    <div>
+      <span class="label">Цифри приватних майстрів</span>
+      <div class="panel" style="display:flex;flex-direction:column;gap:6px">
+        <span>Ціна: 390 грн, витрати: 100 грн</span>
+        <span>Відтік: 15% на місяць</span>
+        <span>На залучення за пів року: 288 000 грн</span>
+        <span>Нових майстрів за пів року: 180</span>
+      </div>
+    </div>
+  </div>
+  <div class="pick" id="pick-61-scene" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що скажеш?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Порахуй: LTV = 290 ÷ 0,15 ≈ 1 933 грн, CAC = 288 000 ÷ 180 = 1 600 грн. Майстер ледь окупається, тож «ще більше майстрів» майже не приносить грошей.">Продавати приватним майстрам ще більше: їх легко залучати</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. LTV/CAC майстрів лише 1,2, а значна частина йде раніше, ніж окупиться. Спершу рахуємо всі три сегменти і вже тоді вирішуємо, куди спрямувати продажі.">Порахувати юніт-економіку за сегментами, перш ніж планувати продажі</button>
+      <button type="button" class="pick-opt" data-say="Рано. Це найбільший сегмент, і є гіпотези, як зменшити його відтік. Різке рішення без цифр по всіх сегментах — та сама помилка, тільки в інший бік.">Перестати продавати приватним майстрам з понеділка</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад на «Слоті»">
-  <div class="head-row"><div><h2>Приклад на «Слоті»</h2></div><take sel="#slot" i="6"></take></div>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take><take sel="#slot" i="3"></take><take sel="#slot" i="4"></take><take sel="#slot" i="5"></take>
-  
+<section class="screen" id="slot" data-step="2" data-name="Три сегменти «Слота»">
+  <div class="head-row">
+    <div><span class="eyebrow">Розрахунок для Сергія</span><h2>Юніт-економіка трьох сегментів</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Середні цифри ховають різні історії: один сегмент ледь окупається, інший — найвигідніший.</p></div>
+  </div>
+  <take sel="#slot" i="1-2"></take>
+  <take sel="#slot" i="4"></take>
+</section>
+
+<section class="screen" id="slot2" data-step="2" data-name="Що з цього випливає">
+  <div class="head-row">
+    <div><span class="eyebrow">Висновок</span><h2>Що з цього випливає</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Цифри з'єдналися з тим, що ми вже знали про сегменти. Тепер це розмова про те, кому і як продаємо.</p></div>
+  </div>
+  <take sel="#slot" i="5"></take>
+  <div class="grid-3">
+    <div class="ex mini"><b>Урок 2.1</b><span>Приватні майстри йдуть найчастіше: 35% за два місяці.</span></div>
+    <div class="ex mini"><b>Урок 2.2</b><span>Гіпотеза: для частини майстрів біль недостатньо сильний.</span></div>
+    <div class="ex mini"><b>Урок 6.1</b><span>LTV/CAC майстрів 1,2: тепер видно, у скільки це обходиться.</span></div>
+  </div>
+</section>
+
+<section class="screen" id="calc" data-step="2" data-name="Калькулятор">
+  <div class="head-row">
+    <div><span class="eyebrow">Пограй з цифрами</span><h2>Калькулятор юніт-економіки</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Змінюй по одній цифрі і дивись, що відбувається з LTV/CAC. Так відчуваєш силу кожного важеля.</p></div>
+  </div>
+  <take sel="#calc" i="1-2"></take>
+  <take sel="#slot" i="6"></take>
+  <details class="more"><summary>Відповідь: який важіль сильніший</summary><div>
+    <p><b>Відтік 10%:</b> LTV = 290 ÷ 0,1 = 2 900 грн, LTV/CAC = 2 900 ÷ 1 600 ≈ 1,8.</p>
+    <p><b>CAC 800 грн при відтоку 15%:</b> LTV/CAC = 1 933 ÷ 800 ≈ 2,4.</p>
+    <p>У цьому прикладі здешевлення залучення вдвічі дає більше, ніж зниження відтоку з 15% до 10%. Але знизити CAC удвічі зазвичай важко. Порівнюй не лише ефект, а й те, наскільки реально цього досягти.</p>
+  </div></details>
 </section>
 
 <section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
-  <h2>Типові помилки</h2>
+  <h2>П'ять пасток юніт-економіки</h2>
   <take sel="#mistakes" i="1"></take>
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take><take sel="#task" i="6"></take><take sel="#task" i="7"></take>
-  
+<section class="screen" id="task1" data-step="3" data-name="Онлайн-школа">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 1 з 2 · 10 хв</span>
+      <h2 style="font-size:26px">Юніт-економіка онлайн-школи</h2>
+      <take sel="#task" i="1-2"></take>
+      <details class="more"><summary>Підказка: порядок розрахунку</summary><div>
+        <ol class="circled"><li><span>Маржа = ціна − змінні витрати.</span></li><li><span>Час життя = 1 ÷ відтік. 10% — це 0,1.</span></li><li><span>LTV = маржа × час життя.</span></li><li><span>CAC = витрати на залучення ÷ нові учні.</span></li><li><span>Далі LTV ÷ CAC і окупність = CAC ÷ маржа.</span></li></ol>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="3"></take>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="task2" data-step="3" data-name="Подвоїти бюджет?">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 2 з 2 · 10 хв</span>
+      <h2 style="font-size:26px">Подумай як продакт: подвоїти рекламу?</h2>
+      <take sel="#task" i="5"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Так, подвоюємо: учнів стане більше, отже, і грошей більше».</p><p>Немає жодного розрахунку. Не враховано, що кожен новий учень стане дорожчим.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Новий CAC: 600 000 ÷ 375 = 1 600 грн. LTV/CAC: 4 500 ÷ 1 600 ≈ 2,8, нижче за 3. Можна, але реклама працює гірше. Паралельно пропоную знизити відтік з 10% до 8% кращими першими тижнями: LTV стане 5 625 грн, і навіть з дорожчою рекламою LTV/CAC буде ≈ 3,5».</p><p>Є новий CAC, співвідношення, висновок і альтернативний важіль з цифрами.</p></div>
+        </div>
+        <ul><li>Порахований новий CAC і LTV/CAC.</li><li>Є висновок «варто чи ні» і чому.</li><li>Запропоновано інший важіль і оцінено його ефект.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="6-7"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 6.1 · фініш</span><h2 style="font-size:32px">Урок 6.1 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 6.1 · фініш</span><h2 style="font-size:32px">Ти рахуєш гроші на одного клієнта</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>LTV рахують з маржі, CAC — з усіх витрат на залучення.</span></li>
+        <li><span>Орієнтири: LTV/CAC від 3, окупність до 12 місяців і коротша за час життя клієнта.</span></li>
+        <li><span>Рахуй окремо для сегментів: середнє ховає збиткові групи.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
       <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>

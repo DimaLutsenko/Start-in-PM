@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 S = pathlib.Path(__file__).parent
 REPO = pathlib.Path("/home/claude/start-in-pm")
-VER = "19"
+VER = "20"
 
 def build(lid):
     orig_html = (S / "orig" / f"{lid}.html").read_text()

@@ -3,86 +3,227 @@
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
-      <span class="eyebrow">Тиждень 12 · AI, кар&#x27;єра і фінальний проєкт · Урок 12.1</span>
-      <h1>AI в роботі продакта</h1>
-      <p class="lead">Дослідження, аналіз, прототипи і рутина з AI-інструментами.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">60 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <span class="eyebrow">Тиждень 12 · AI, кар'єра і фінальний проєкт · Урок 12.1</span>
+      <h1>AI в роботі продакта</h1>
+      <p class="lead">Як AI-інструменти пришвидшують роботу продакта, де їм не можна довіряти і чим відрізняються продукти на основі AI.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 60 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Знайти задачі у своїй роботі, які AI може пришвидшити, і ті, де йому не можна довіряти.</span></li><li><span>Ставити AI-асистенту задачі так, щоб отримувати корисний результат.</span></li><li><span>Розуміти особливості продуктів на основі AI: якість, вартість, довіра, оцінювання.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span>AI — швидкий помічник для чернеток, узагальнень і прототипів. <b>Рішення і факти — на тобі.</b></span></li>
+        <li><span>Якість відповіді залежить від задачі: контекст, задача, дані, формат, обмеження.</span></li>
+        <li><span>AI-функції в продукті помиляються, коштують грошей за кожен запит і потребують оцінювання.</span></li>
+      </ol>
+    </aside>
   </div>
-  
-  <span class="label">Як пройде урок</span>
+  <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Де AI допомагає продакту, Як ставити задачі AI, Де AI не можна довіряти…</span><small>5 екранів</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад на «Слоті».</span><small>1 екран</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Де AI допомагає, як ставити йому задачі, де йому не можна довіряти, що особливого в AI-продуктах.</span><small>6 екранів · 30 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Андрій хоче AI-помічника для майстрів «за місяць». Що відповіси?</span><small>2 екрани · 10 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Промпт для синтезу інтерв'ю, твоя рутина і аналіз AI-функції.</span><small>Завдання · 25–30 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>П'ять слів про AI</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Щоб працювати з AI, не треба бути інженером. Але ці п'ять слів треба розуміти.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
+  <div class="ex"><span class="label">У «Слоті»</span><p>Ти пишеш <b>промпт</b>: «згрупуй скарги з таблиці Олени за темами». <b>Мовна модель</b> видає теми і цитати. Одна з цитат виявляється вигаданою — це <b>галюцинація</b>. Тому висновки перевіряєш ти: це <b>людина в циклі</b>. А якби «Слот» вбудував таку функцію в продукт, її якість перевіряли б на сотні прикладів — <b>оцінюванням</b>.</p></div>
 </section>
 
-<section class="screen" id="uses" data-step="1" data-name="Де AI допомагає продакту">
-  <h2>Де AI допомагає продакту</h2>
-  <take sel="#uses" i="1"></take><take sel="#uses" i="2"></take><take sel="#uses" i="3"></take>
-  
+<section class="screen" id="uses" data-step="1" data-name="Де AI допомагає">
+  <div class="head-row">
+    <div><span class="eyebrow">Можливості</span><h2>Де AI допомагає продакту</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AI пришвидшує першу версію майже будь-якої роботи. Перевірка цієї версії лишається твоєю.</p></div>
+  </div>
+  <take sel="#uses" i="1-2"></take>
+  <take sel="#uses" i="3"></take>
+  <div class="self-check pick" id="pick-trust" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Яку з цих задач найризикованіше віддати AI без перевірки?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Чернетку листа ти все одно читаєш перед відправкою. Помилку тут легко помітити.">Чернетка листа клієнтам про нову функцію</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Цифри про ринок і конкурентів модель може впевнено вигадати, а помітити це без перевірки за джерелами майже неможливо. Тут галюцинації найнебезпечніші.">Огляд конкурентів з цінами і кількістю клієнтів</button>
+      <button type="button" class="pick-opt" data-say="Контраргументи — це підказки для роздумів, а не факти. Навіть якщо якийсь слабкий, шкоди немає.">Пошук контраргументів до твоєї ідеї</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="prompt" data-step="1" data-name="Як ставити задачі AI">
-  <h2>Як ставити задачі AI</h2>
-  <take sel="#prompt" i="1"></take><take sel="#prompt" i="2"></take><take sel="#prompt" i="3"></take>
-  
+<section class="screen" id="prompt" data-step="1" data-name="Як ставити задачі AI">
+  <div class="head-row">
+    <div><span class="eyebrow">Промпт</span><h2>Як ставити задачі AI</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AI — здібний новий колега, який нічого не знає про твій продукт. Що краще поясниш, то кращий результат.</p></div>
+  </div>
+  <take sel="#prompt" i="1-3"></take>
+  <div class="grid-2">
+    <div class="warn"><span class="label">Слабо</span><p>«Проаналізуй скарги клієнтів».</p><span class="fix">Модель не знає, що за продукт, які скарги, навіщо аналіз і в якому вигляді потрібен результат. Отримаєш загальні слова.</span></div>
+    <div class="ex"><span class="label">У «Слоті»: добре</span><p>«Я продакт сервісу онлайн-запису для салонів. Нижче 40 скарг з таблиці підтримки. Згрупуй їх у 4–6 тем, для кожної дай кількість і дві дослівні цитати. Формат — таблиця. Не вигадуй цитат: якщо для теми мало прикладів, так і напиши».</p></div>
+  </div>
+  <div class="self-check pick" id="pick-prompt" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Промпт: «Я продакт сервісу онлайн-запису для салонів. З'ясовуємо, чому малі салони йдуть у перші два місяці. Нижче нотатки шести інтерв'ю. Знайди головні проблеми клієнтів і дай цитати». Чого бракує найбільше?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Контекст є: хто ти, що за продукт і навіщо задача. Головна дірка в іншому: модель може вигадати цитати, і ніхто їй цього не заборонив.">Контексту</button>
+      <button type="button" class="pick-opt" data-say="Дані є: нотатки інтерв'ю. А от заборони вигадувати немає, хоча саме цитати модель вигадує найчастіше.">Даних</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Немає формату (таблиця? скільки тем?) і обмежень («лише дослівні цитати з нотаток»). Без них отримаєш гарний текст, у якому частину цитат доведеться ловити вручну.">Формату й обмежень</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="risks" data-step="1" data-name="Де AI не можна довіряти">
-  <h2>Де AI не можна довіряти</h2>
-  <take sel="#risks" i="1"></take><take sel="#risks" i="2"></take>
-  
+<section class="screen" id="risks" data-step="1" data-name="Де AI не можна довіряти">
+  <div class="head-row">
+    <div><span class="eyebrow">Ризики</span><h2>Де AI не можна довіряти</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AI робить продакта швидшим. Але якщо довіряти йому сліпо, він робить продакта гіршим.</p></div>
+  </div>
+  <take sel="#risks" i="2"></take>
+  <div class="self-check pick" id="pick-privacy" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Олена хоче розібрати таблицю скарг за допомогою AI. У таблиці є імена і телефони клієнтів салонів. Що порадиш?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Так можна передати персональні дані стороннім. Навіть якщо нічого поганого не станеться, клієнти салонів на це не погоджувались.">Вставити як є: так модель краще зрозуміє контекст</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Для аналізу тем імена і телефони не потрібні. Прибери їх і користуйся сервісом, який схвалила компанія.">Прибрати імена й телефони і використати сервіс, схвалений компанією</button>
+      <button type="button" class="pick-opt" data-say="Відмовлятися зовсім не обов'язково. Достатньо прибрати персональні дані і взяти схвалений інструмент.">Не користуватися AI взагалі</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="aiproducts" data-step="1" data-name="Продукти на основі AI">
-  <div class="head-row"><div><h2>Продукти на основі AI</h2></div><take sel="#aiproducts" i="6"></take></div>
-  <take sel="#aiproducts" i="1"></take><take sel="#aiproducts" i="2"></take><take sel="#aiproducts" i="3"></take><take sel="#aiproducts" i="4"></take><take sel="#aiproducts" i="5"></take>
-  
+<section class="screen" id="aidiff" data-step="1" data-name="Чим особливі AI-функції">
+  <div class="head-row">
+    <div><span class="eyebrow">Продукти на основі AI</span><h2>Чим AI-функція відрізняється від звичайної</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AI-функція не «працює або ні», а помиляється з якоюсь частотою. І кожен її запит коштує грошей.</p></div>
+  </div>
+  <take sel="#aiproducts" i="1-3"></take>
+  <div class="ex"><span class="label">У «Слоті»</span><p>Звичайна кнопка «Записатися» або записує клієнта, або ні: це видно в тесті. AI-помічник, який відповідає в Instagram, може дев'ятнадцять разів записати правильно, а на двадцятий переплутати четвер з п'ятницею. Звичайного тесту тут замало: потрібен набір реальних діалогів, на якому помічника перевіряють після кожної зміни.</p></div>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад на «Слоті»">
-  <h2>Приклад на «Слоті»</h2>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take><take sel="#slot" i="3"></take>
+<section class="screen" id="aiquestions" data-step="1" data-name="Нові питання продакта">
+  <div class="head-row">
+    <div><span class="eyebrow">Продукти на основі AI</span><h2>П'ять нових питань</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AI — нова технологія, але не нова професія. Проблема, гіпотеза, метрика і юніт-економіка працюють і тут.</p></div>
+  </div>
+  <take sel="#aiproducts" i="4-5"></take>
+  <take sel="#aiproducts" i="6"></take>
+</section>
+
+<section class="screen" id="scene" data-step="2" data-name="AI-помічник для майстрів">
+  <h2>«Конкуренти вже з AI»</h2>
+  <p>Андрій повернувся з конференції, де всі говорили про AI. У чаті команди — нова ідея.</p>
+  <div class="split" style="grid-template-columns:minmax(0,1fr) 280px">
+    <div>
+      <div class="chat">
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Хочу AI-помічника, який сам відповідає клієнтам майстрів в Instagram і записує їх. У конкурента вже є щось схоже. Зробимо за місяць?</span></div></div>
+        <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">Зробити демо можна швидко. Але кожна відповідь моделі коштує грошей, а майстер на тарифі 390 може отримувати сотні повідомлень на місяць. І хто відповідає, якщо бот запише не на той день?</span></div></div>
+        <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">Майстри, з якими я говорю, бояться, що бот наговорить їхнім клієнтам дурниць. Для них клієнтська база — найцінніше.</span></div></div>
+        <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Але ж приватні майстри саме тому й ідуть: клієнти пишуть у Direct, а не переходять за посиланням.</span></div></div>
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">То що робимо?</span></div></div>
+      </div>
+    </div>
+    <div>
+      <span class="label">У сцені</span>
+      <div class="cast panel">
+        <div><span class="ava p-andrii">А</span><div><b>Андрій</b><small>CEO. Не хоче відстати від конкурентів.</small></div></div>
+        <div><span class="ava p-oleh">О</span><div><b>Олег</b><small>Техлід. Думає про вартість і помилки.</small></div></div>
+        <div><span class="ava p-olena">О</span><div><b>Олена</b><small>Підтримка. Чує страхи майстрів.</small></div></div>
+        <div><span class="ava p-viktor">В</span><div><b>Віктор</b><small>Продажі. Знає, чому майстри йдуть.</small></div></div>
+        <div><span class="ava p-you">Ти</span><div><b>Ти</b><small>Продакт «Слота».</small></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pick" id="pick-ai" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що запропонуєш?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Так ти побудуєш функцію, не знаючи ні ціни помилки, ні вартості, ні того, чи погодяться майстри. Якщо бот почне помилятися на всіх клієнтах одразу, довіру буде важко повернути.">Будувати повного помічника для всіх майстрів за місяць</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Проблема справжня (Direct замість посилання), але ризиків багато. Дешевий тест: 10 майстрів, AI готує відповідь, майстер її підтверджує одним натиском. Міряємо, скільки відповідей майстер приймає без правок, скільки коштує один діалог і чи стало більше записів. Після цього вирішуємо.">Перевірити на 10 майстрах: AI пропонує відповідь, майстер підтверджує. Міряти точність, вартість і записи</button>
+      <button type="button" class="pick-opt" data-say="Ризики справжні, але проблема теж справжня: приватні майстри йдуть через Direct. Відмова без перевірки — така ж здогадка, як і запуск без перевірки.">Відмовитися: AI надто ризикований для клієнтів майстрів</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+</section>
+
+<section class="screen" id="slot" data-step="2" data-name="AI у твоїй роботі">
+  <div class="head-row">
+    <div><span class="eyebrow">На прикладі «Слота»</span><h2>Як AI допоможе тобі в «Слоті»</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AI бере на себе рутину і першу версію. Перевірку і висновки ти залишаєш собі.</p></div>
+  </div>
+  <take sel="#slot" i="1-3"></take>
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take><take sel="#task" i="6"></take><take sel="#task" i="7"></take><take sel="#task" i="8"></take><take sel="#task" i="9"></take><take sel="#task" i="10"></take><take sel="#task" i="11"></take>
-  
+<section class="screen" id="task1" data-step="3" data-name="Промпт для синтезу">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 1 з 2 · 10–15 хв</span>
+      <h2 style="font-size:26px">Промпт для синтезу інтерв'ю</h2>
+      <take sel="#task" i="1"></take>
+      <take sel="#task" i="3"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Проаналізуй ці інтерв'ю і скажи, що думають клієнти».</p><p>Немає контексту, формату й обмежень. Модель видасть загальні висновки і, можливо, вигадані цитати.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>Промпт називає продукт і мету дослідження, просить конкретну кількість тем, кількість згадок і дослівні цитати, задає формат таблиці і забороняє вигадувати.</p><p>Повний приклад — під полем відповіді.</p></div>
+        </div>
+        <ul><li>У промпті є всі п'ять елементів: контекст, задача, дані, формат, обмеження.</li><li>Задача конкретна: скільки тем, що для кожної.</li><li>Є пряма заборона вигадувати цитати і цифри.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="4-5"></take>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="task2" data-step="3" data-name="Рутина і AI-функція">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 2 з 2 · 15 хв</span>
+      <h2 style="font-size:26px">Твоя рутина і AI-функція для «Слота»</h2>
+      <take sel="#task" i="7"></take>
+      <take sel="#task" i="10"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«AI-помічник — це круто, бо економить час майстрам. Треба взяти найкращу модель».</p><p>Немає ціни помилки, способу міряти якість, вартості і першого кроку. Починається з моделі, а не з проблеми.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Ціна помилки висока: запис не на той день — це злий клієнт і втрачений візит. Тому спершу AI лише пропонує відповідь, майстер підтверджує. Якість: частка відповідей, прийнятих без правок, на 100 реальних діалогах. Вартість: скільки коштує один діалог порівняно з 390 грн тарифу. Першим перевіряю, чи погодяться майстри».</p></div>
+        </div>
+        <ul><li>Для рутини: у кожної задачі є, що саме ти перевірятимеш сам.</li><li>Для функції: названо ціну помилки, метрику якості, вартість і перший дешевий тест.</li><li>Рішення спирається на проблему клієнта, а не на «у конкурентів є».</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="8"></take>
+      <take sel="#task" i="11"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 12.1 · фініш</span><h2 style="font-size:32px">Урок 12.1 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 12.1 · фініш</span><h2 style="font-size:32px">AI — твій помічник, не заміна</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>AI — для чернеток і рутини. Факти перевіряєш за джерелами, рішення ухвалюєш сам.</span></li>
+        <li><span>Хороший промпт: контекст, задача, дані, формат, обмеження. І кілька ітерацій.</span></li>
+        <li><span>AI-функція в продукті — це ціна помилки, оцінювання, вартість запитів і довіра.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
-      <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
+      <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
-      <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
+      <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>
   </div>
 </section>

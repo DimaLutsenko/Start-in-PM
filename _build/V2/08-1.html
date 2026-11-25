@@ -1,73 +1,165 @@
 <!--{"code": "8.1", "title": "RICE, ICE і Kano", "week": 8, "js": ["tools"], "steps": "Розбираємось|На прикладі «Слота»|Пробуємо|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 8 · Пріоритизація і roadmap · Урок 8.1</span>
       <h1>RICE, ICE і Kano</h1>
-      <p class="lead">Фреймворки пріоритизації, їхні сильні сторони і обмеження.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">45 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Ідей завжди більше, ніж рук. Як чесно вибрати, що робити зараз, і пояснити вибір людям, чиї задачі почекають.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 45 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Оцінити задачі за RICE і ICE і порівняти їх між собою.</span></li><li><span>Використати модель Кано, щоб зрозуміти, які функції клієнти сприймають як обов&#x27;язкові, а які як приємний бонус.</span></li><li><span>Розуміти обмеження фреймворків і поєднувати їх із стратегією.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span>Кожне «так» одній задачі — це «ні» або «пізніше» для інших.</span></li>
+        <li><span>RICE і ICE рахують користь на одиницю зусиль. Kano показує, як клієнти сприймають функцію.</span></li>
+        <li><span>Фреймворк — інструмент для розмови, а не суддя. Рішення ухвалюють люди.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Навіщо фреймворки, Найпростіше: цінність і зусилля, RICE…</span><small>7 екранів</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад на «Слоті», Типові помилки.</span><small>2 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Навіщо фреймворки, матриця «цінність / зусилля», RICE з калькулятором, ICE, модель Кано і обмеження.</span><small>8 екранів · 25 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Віктор бачить свою задачу на дні таблиці. Що ти йому скажеш?</span><small>2 екрани · 7 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Розкладаєш функції знайомого застосунку за моделлю Кано.</span><small>Завдання · 15 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>Слова уроку</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Пріоритизація — це вибір не лише що робити, а й чого <b>не</b> робити. Решта слів уроку — інструменти для цього вибору.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
+  <div class="ex"><span class="label">Альтернативна вартість у «Слоті»</span><p>Інтеграція з Instagram займе вісім тижнів. Це не просто «вісім тижнів роботи». Це ще й нагадування у Viber для всіх малих салонів і шаблони послуг, які команда <b>не</b> встигне зробити за цей час.</p></div>
 </section>
 
 <section class="screen" id="why" data-step="1" data-name="Навіщо фреймворки">
-  <h2>Навіщо фреймворки</h2>
-  <take sel="#why" i="1"></take><take sel="#why" i="2"></take><take sel="#why" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Чому не «на відчуттях»</span><h2>Навіщо фреймворки</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Фреймворк не вирішує за тебе. Він змушує всіх дивитися на задачі однаково і сперечатися про припущення, а не про те, чия задача важливіша.</p></div>
+  </div>
+  <take sel="#why" i="1-2"></take>
+  <div class="split">
+    <div><take sel="#why" i="3"></take></div>
+    <div class="ex"><span class="label">У «Слоті» без фреймворку</span><p>Четвер, планування. Віктор каже, що без Instagram «ми втрачаємо клієнтів». Олег — що розклад «от-от упаде». Софія показує макет темної теми. Хто голосніший, той і виграв.</p><p>З RICE розмова інша: «Віктор, ти оцінюєш вплив як великий. На чому це ґрунтується? Скільки угод ми втратили саме через Instagram?»</p></div>
+  </div>
 </section>
 
-<section class="screen" id="valueeffort" data-step="1" data-name="Найпростіше: цінність і зусилля">
-  <h2>Найпростіше: цінність і зусилля</h2>
-  <take sel="#valueeffort" i="1"></take><take sel="#valueeffort" i="2"></take><take sel="#valueeffort" i="3"></take>
-  
+<section class="screen" id="valueeffort" data-step="1" data-name="Цінність і зусилля">
+  <div class="head-row">
+    <div><span class="eyebrow">Найпростіший інструмент</span><h2>Цінність і зусилля</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Дві осі на дошці — і за хвилину видно, що робити першим, а від чого відмовитися.</p></div>
+  </div>
+  <take sel="#valueeffort" i="1-2"></take>
+  <div class="grid-4">
+    <div class="ex mini"><b>Швидка перемога</b><span>Нагадування у Viber: тест уже показав ефект, роботи на два тижні.</span></div>
+    <div class="ex mini"><b>Велика ставка</b><span>Повна інтеграція з Instagram: можливо, цінно, але вісім тижнів.</span></div>
+    <div class="ex mini"><b>Дрібниця</b><span>Новий колір кнопки «Записатися».</span></div>
+    <div class="ex mini"><b>Пастка</b><span>Власний месенджер усередині «Слота»: місяці роботи, а салонам вистачає Viber.</span></div>
+  </div>
+  <take sel="#valueeffort" i="3"></take>
 </section>
 
 <section class="screen" id="rice" data-step="1" data-name="RICE">
-  <h2>RICE</h2>
-  <take sel="#rice" i="1"></take><take sel="#rice" i="2"></take><take sel="#rice" i="3"></take><take sel="#rice" i="4"></take><take sel="#rice" i="5"></take><take sel="#rice" i="6"></take><take sel="#rice" i="7"></take><take sel="#rice" i="8"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Фреймворк 1</span><h2>RICE: користь на одиницю зусиль</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Скільки людей зачепить, наскільки сильно, наскільки ми впевнені — і все це ділимо на зусилля.</p></div>
+  </div>
+  <take sel="#rice" i="1-3"></take>
+  <div class="ex"><span class="label">Порахуємо одну задачу «Слота»</span>
+    <p><b>Нагадування у Viber для малих салонів.</b> Reach — 170 малих салонів. Impact — 3, бо тест скоротив неявки на 40%, з 11% до 6,5%. Confidence — 100%, бо це вже перевірено. Effort — 2 тижні роботи команди.</p>
+    <p>170 × 3 × 1 ÷ 2 = <b>255</b>. Саме число нічого не означає. Воно потрібне, щоб порівняти задачі між собою.</p>
+  </div>
+  <take sel="#rice" i="4"></take>
+  <div class="self-check pick" id="pick-rice-conf" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Інтеграція з Instagram: Reach 180, Impact 1, Confidence 50%, Effort 8. Віктор провів дешевий тест, і вплив підтвердився. Впевненість тепер 100%. Що станеться з оцінкою?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-ok="1" data-say="Confidence — множник. 180 × 1 × 0,5 ÷ 8 ≈ 11, а з 100% — 22,5. Перевірка вдвічі підняла задачу, хоча сама функція не змінилася.">Зросте вдвічі: приблизно з 11 до 22,5</button>
+      <button type="button" class="pick-opt" data-say="Впевненість стоїть у формулі як множник, тому зміна з 50% до 100% подвоює оцінку: з ≈ 11 до 22,5.">Зросте на 50%</button>
+      <button type="button" class="pick-opt" data-say="Зусилля ті самі, але Confidence — множник у формулі. З 50% до 100% оцінка подвоюється.">Не зміниться, бо зусилля ті самі</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+</section>
+
+<section class="screen" id="rice-try" data-step="1" data-name="RICE: спробуй сам">
+  <h2>Спробуй RICE на задачах «Слота»</h2>
+  <take sel="#rice" i="6-7"></take>
+  <take sel="#rice" i="8"></take>
+  <details class="more"><summary>Детальніше: чому шкала впливу така дивна (3, 2, 1, 0,5, 0,25)</summary><div>
+    <p>Люди погано оцінюють вплив «від 1 до 10»: усе здається сімкою. Шкала з кількох фіксованих значень змушує обрати: це величезний вплив чи просто середній? Різниця між 3 і 0,25 — у дванадцять разів, і саме це робить порівняння чесним.</p>
+  </div></details>
 </section>
 
 <section class="screen" id="ice" data-step="1" data-name="ICE">
-  <h2>ICE</h2>
-  <take sel="#ice" i="1"></take><take sel="#ice" i="2"></take><take sel="#ice" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Фреймворк 2</span><h2>ICE: швидко відсортувати ідеї</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Три оцінки від 1 до 10. Швидше за RICE, але грубіше: охоплення не враховано.</p></div>
+  </div>
+  <take sel="#ice" i="1-3"></take>
+  <div class="ex"><span class="label">ICE у «Слоті»: три ідеї, як підняти активацію</span>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Ідея</th><th>I</th><th>C</th><th>E</th><th>Середнє</th></tr></thead>
+      <tbody>
+        <tr><td>На дзвінку-знайомстві Олена разом із салоном створює перший онлайн-запис</td><td>6</td><td>7</td><td>9</td><td><b>7,3</b></td></tr>
+        <tr><td>Коротка відеоінструкція на першому екрані</td><td>4</td><td>5</td><td>8</td><td>5,7</td></tr>
+        <tr><td>Подовжити пробний період удвічі</td><td>8</td><td>3</td><td>5</td><td>5,3</td></tr>
+      </tbody>
+    </table></div>
+    <p>Команда оцінила все за десять хвилин. Ідея з дзвінком виграє: дешево, і вже є сигнал — відколи Олена почала дзвонити новим салонам, когорти утримуються краще (урок 6.2). Тут оцінки усереднили. Якщо перемножити, порядок той самий: 378, 160 і 120. Для такого швидкого відбору експериментів ICE ідеальний. Для квартального плану краще RICE.</p>
+  </div>
 </section>
 
 <section class="screen" id="kano" data-step="1" data-name="Модель Кано">
-  <h2>Модель Кано</h2>
-  <take sel="#kano" i="1"></take><take sel="#kano" i="2"></take><take sel="#kano" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Інший погляд</span><h2>Модель Кано</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Одних функцій ніхто не помічає, поки вони працюють. Інші радують. Ще інші байдужі. Вкладатися в них треба по-різному.</p></div>
+  </div>
+  <take sel="#kano" i="1-2"></take>
+  <take sel="#kano" i="3"></take>
+  <div class="self-check pick" id="pick-kano" data-yes="Так, обов'язкова." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Після запису клієнт одразу отримує повідомлення: «Ви записані на четвер, 15:00». За це ніхто не дякує. Але коли повідомлення не приходить, клієнти дзвонять у салон перепитати. Який це тип?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-ok="1" data-say="Наявність ніхто не помічає, а відсутність дратує. Це класична обов'язкова функція.">Обов'язкова</button>
+      <button type="button" class="pick-opt" data-say="Приємний сюрприз радує, коли він є, а його відсутності ніхто не помічає. Тут навпаки: відсутність дратує.">Приємний сюрприз</button>
+      <button type="button" class="pick-opt" data-say="Байдужа функція нічого не змінює ні коли є, ні коли немає. А тут клієнти дзвонять у салон — зміна є.">Байдужа</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="limits" data-step="1" data-name="Обмеження фреймворків">
-  <div class="head-row"><div><h2>Обмеження фреймворків</h2></div><take sel="#limits" i="3"></take></div>
-  <take sel="#limits" i="1"></take><take sel="#limits" i="2"></take><take sel="#limits" i="4"></take>
-  
+  <div class="head-row"><div><span class="eyebrow">Де фреймворки обманюють</span><h2>Обмеження фреймворків</h2></div><take sel="#limits" i="3"></take></div>
+  <take sel="#limits" i="1-2"></take>
+  <div class="ex"><span class="label">У «Слоті»</span><p>Переписування модуля розкладу, про яке просить Олег, отримає за RICE близько 33 балів, нижче за більшість продуктових задач. Але якщо розклад упаде в п'ятницю ввечері, жодна нова функція не матиме значення. Тому технічні задачі отримують окрему частку часу, а не змагаються з продуктовими.</p></div>
+  <take sel="#limits" i="4"></take>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад на «Слоті»">
-  <h2>Приклад на «Слоті»</h2>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take>
-  
+<section class="screen" id="scene" data-step="2" data-name="Віктор і таблиця">
+  <h2>Віктор бачить свою задачу на дні таблиці</h2>
+  <p>Ти розіслав команді таблицю RICE перед плануванням. Через п'ять хвилин приходить повідомлення.</p>
+  <div class="chat">
+    <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Я подивився. Instagram на останньому місці? Серйозно? Я щотижня чую від салонів, що їм це треба.</span></div></div>
+    <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Схоже, формулу просто підігнали під те, що хоче розробка.</span></div></div>
+    <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">Вісім тижнів я не вигадав. Там API, модерація, купа нестандартних випадків.</span></div></div>
+    <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Давайте без сварок. Що пропонуєш?</span></div></div>
+  </div>
+  <div class="pick" id="pick-viktor-rice" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що відповіси Віктору?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Формально правда, але Віктор почує «твоя думка не важлива». Він піде до Андрія напряму, і таблиця втратить довіру.">«Формула показала, що інтеграція внизу. Цифри не брешуть»</button>
+      <button type="button" class="pick-opt" data-say="Сварки не буде, але таблиця перестане щось означати: наступного разу кожен просто тиснутиме сильніше. І команда вісім тижнів робитиме неперевірену ідею.">«Гаразд, піднімемо інтеграцію вгору, щоб не сваритися»</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Ти не сперечаєшся з Віктором, а запрошуєш його принести дані. Якщо тест підтвердить вплив, впевненість зросте, і задача піде вгору чесно, за тими самими правилами.">«Подивимося разом. Вплив ми поставили середній, а впевненість — 50%, бо даних мало. Давай дешево перевіримо: якщо підтвердиться, задача піде вгору»</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+  <take sel="#slot" i="2"></take>
 </section>
 
 <section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
@@ -76,28 +168,52 @@
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take>
-  
+<section class="screen" id="task" data-step="3" data-name="Практика: Кано">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · 15 хв</span>
+      <h2 style="font-size:26px">Розклади знайомий застосунок за Кано</h2>
+      <take sel="#task" i="1"></take>
+      <div class="main-idea"><p><b>Підказка.</b> Для кожної функції спитай себе: «Що я відчую, якщо її завтра приберуть?» Обурюся — обов'язкова. Засмучуся трохи — лінійна. Не помічу — байдужа або сюрприз.</p></div>
+      <take sel="#task" i="4"></take>
+    </div>
+    <div>
+      <take sel="#task" i="2-3"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Обов'язкова: зручний інтерфейс. Сюрприз: нові функції».</p><p>Це не функції, а загальні слова. Незрозуміло, як перевірити, до якого типу вони належать.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Обов'язкова: переказ на картку доходить за хвилину. Якщо хоч раз зависне на день, я зміню банк».</p><p>Конкретна функція і пояснення через «що буде, якщо її не стане».</p></div>
+        </div>
+        <ul>
+          <li>Кожна функція конкретна: її можна показати пальцем на екрані.</li>
+          <li>Для кожної є пояснення «чому саме цей тип», а не лише назва.</li>
+          <li>У прикладі сюрпризу, що став обов'язковим, видно, що змінилося з часом.</li>
+        </ul>
+      </div></details>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 8.1 · фініш</span><h2 style="font-size:32px">Урок 8.1 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 8.1 · фініш</span><h2 style="font-size:32px">Ти вмієш рахувати пріоритети</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>RICE = охоплення × вплив × впевненість ÷ зусилля. Впевненість чесно штрафує здогадки.</span></li>
+        <li><span>ICE — для швидкого відбору ідей, Kano — щоб розуміти, як клієнти сприймають функцію.</span></li>
+        <li><span>Формула відкриває розмову, а не закриває її. Стратегія і технічні задачі — окремо від балів.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
       <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>

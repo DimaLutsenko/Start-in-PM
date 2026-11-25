@@ -499,10 +499,11 @@ input.wb-field { min-height: 0; }
 .force p { font-size: 0.95rem; font-style: italic; line-height: 1.6; }
 .force .wb-field { background: var(--surface); }
 .builder { display: grid; gap: 8px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
-.builder .row { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 10px; align-items: center; }
+.builder .row { display: grid; grid-template-columns: minmax(92px, max-content) minmax(0, 1fr); gap: 10px; align-items: center; }
 .builder .row span { font-weight: 600; font-size: 0.95rem; }
 .builder .preview { margin-top: 6px; padding: 12px 14px; border-radius: 10px; background: var(--note-soft); font-size: 0.98rem; line-height: 1.6; }
-.builder .preview:empty::before { content: "Тут з'явиться готова job story"; color: var(--muted); }
+.builder .preview:empty::before { content: "Тут з'явиться готове речення"; color: var(--muted); }
+.builder .preview[data-empty]:empty::before { content: attr(data-empty); }
 @media (max-width: 700px) { .quad-legend.three, .forces { grid-template-columns: 1fr; } .builder .row { grid-template-columns: 1fr; gap: 4px; } }
 
 /* Калькулятор */

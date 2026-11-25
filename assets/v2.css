@@ -347,3 +347,5 @@ body.v2:has(.ls-foot) .wb-fab { bottom: calc(env(safe-area-inset-bottom, 0px) + 
 .v2 > main > .wrap { width: min(1184px, calc(100% - 48px)); max-width: none; padding-top: 40px; padding-bottom: 64px; }
 .v2 .page-head h1, .v2 main h1 { font-size: clamp(32px, 4.5vw, 48px); line-height: 1.1; }
 @media (max-width: 640px) { .v2 > main > .wrap { width: calc(100% - 32px); } }
+
+.v2 .warn p, .v2 .warn span:not(.label) { font-size: 15px; line-height: 1.5; }

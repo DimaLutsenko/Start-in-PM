@@ -1,71 +1,146 @@
 <!--{"code": "7.3", "title": "Практика: дизайн експерименту", "week": 7, "js": ["tools"], "steps": "Контекст|Робимо|Розбір|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
-      <span class="eyebrow">Тиждень 7 · Аналітика і експерименти · Урок 7.3</span>
+      <span class="eyebrow">Тиждень 7 · Аналітика й експерименти · Урок 7.3</span>
       <h1>Практика: дизайн експерименту</h1>
-      <p class="lead">Проєктуєш A/B-тест для однієї з гіпотез «Слота».</p>
-      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Андрій готовий запускати нагадування у Viber для всіх. Ти пропонуєш спершу справжній експеримент: спроєктуєш його, прочитаєш результати і ухвалиш рішення. Це сьомий артефакт у портфоліо.</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Спроєктувати експеримент: гіпотеза, метрики, розподіл, розмір, тривалість, правила рішення.</span></li><li><span>Прочитати результати тесту, включно із сегментами і контрметриками.</span></li><li><span>Ухвалити і пояснити рішення на основі результатів.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Заповниш документ експерименту: гіпотеза, метрики, розподіл, розмір, правила рішення.</span></li>
+        <li><span>Прочитаєш результати загалом, за сегментами і за контрметриками.</span></li>
+        <li><span>Ухвалиш рішення і напишеш повідомлення команді.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде практика</span>
   <div class="steps-plan">
-<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Дизайн експерименту, Крок 2. Результати, Крок 3. Прочитай результати, Крок 4. Рішення.</span><small>4 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Що вже відомо після консьєрж-тесту і чому потрібен експеримент.</span><small>1 екран · 5 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Дизайн, результати, читання результатів, рішення.</span><small>4 екрани · 70 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і приклад рішення.</span><small>1 екран · 10 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок тижня.</span><small>4 питання · 5 хв</small></button>
+  </div>
+  <take sel="#goal" i="4"></take>
+</section>
+
+<section class="screen" id="context" data-step="1" data-name="Чому експеримент">
+  <div class="head-row">
+    <div><span class="eyebrow">Контекст</span><h2>Чому не запустити одразу</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Від результату залежить новий тариф за 990 грн. Якщо ефект менший, ніж здається, «Слот» продаватиме обіцянку, яку не виконає.</p></div>
+  </div>
+  <div class="grid-3">
+    <div class="card edge-green"><b class="t">Що вже є</b><p>Сигнал з консьєрж-тесту: у п'яти салонах неявки впали з 10% до 4%. Готова автоматична версія від Ірини.</p></div>
+    <div class="card edge-orange"><b class="t">Чого бракує</b><p>П'ять салонів і два тижні — мала вибірка. Без контрольної групи не видно, що ще могло вплинути: сезон, склад салонів, сама увага Олени.</p></div>
+    <div class="card edge-blue"><b class="t">Що зробимо</b><p>A/B-тест на 160 салонах: половина клієнтів отримує нові нагадування, половина — як зараз. Правила вирішуємо заздалегідь.</p></div>
+  </div>
+  <div class="ex"><span class="label">Згадай з уроку 7.2</span><p>Розмір вибірки, метрику, контрметрики і правила рішення фіксують до старту. Тоді після тесту ніхто не трактуватиме цифри так, як йому вигідно.</p></div>
+</section>
+
+<section class="screen" id="step1" data-step="2" data-name="Дизайн експерименту">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 1 з 4 · 30 хв</span>
+      <h2 style="font-size:26px">Дизайн експерименту</h2>
+      <take sel="#step1" i="1"></take>
+      <details class="more"><summary>Підказка: розмір вибірки</summary><div>
+        <p>Хочемо помітити падіння неявок з 10% до 8%. За правилом з уроку 7.2: 16 × 0,1 × 0,9 ÷ 0,02² = 3 600 записів у кожній групі, 7 200 разом. Поділи на кількість записів на день у тесті і округли до повних тижнів.</p>
+      </div></details>
+      <details class="more"><summary>Самоперевірка: як виглядає слабкий і сильний дизайн</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Увімкнемо нагадування частині салонів на кілька тижнів і подивимося, чи стане краще».</p><p>Немає метрики, розміру, одиниці розподілу і правил. Після тесту кожен побачить те, що хоче.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Розподіляємо клієнтів, а не записи, щоб людина не отримувала різні нагадування. Метрика — частка неявок без попередження. Помічаємо падіння від 2 пунктів, 3 600 записів у групі, два повні тижні. Якщо ефект значущий і ≥ 2 пунктів, а скарг немає — запускаємо».</p><p>Кожне рішення пояснене і записане до старту.</p></div>
+        </div>
+        <ul><li>Є головна метрика з точною формулою і 1–2 контрметрики.</li><li>Одиниця розподілу обрана так, щоб групи не змішувались.</li><li>Розмір і тривалість пораховані, тривалість — повними тижнями.</li><li>Правила рішення описують і позитивний, і нейтральний, і негативний результат.</li></ul>
+      </div></details>
+      <take sel="#step1" i="3"></take>
+    </div>
+    <div>
+      <take sel="#step1" i="2"></take>
+    </div>
   </div>
 </section>
 
-<section class="screen" id="step1" data-step="2" data-name="Крок 1. Дизайн експерименту">
-  <h2>Крок 1. Дизайн експерименту</h2>
-  <take sel="#step1" i="1"></take><take sel="#step1" i="2"></take><take sel="#step1" i="3"></take>
-  
+<section class="screen" id="results" data-step="2" data-name="Результати">
+  <div class="head-row">
+    <div><span class="eyebrow">Крок 2 з 4 · 10 хв</span><h2>Результати тесту</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Дивись не лише на загальну цифру: за сегментами і за контрметриками картина може бути іншою.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <take sel="#results" i="1-2"></take>
+      <p class="muted" style="font-size:14px">У тест потрапили лише записи клієнтів, які залишили номер з Viber, тому записів на салон менше, ніж у середньому по «Слоту».</p>
+    </div>
+    <div>
+      <take sel="#results" i="3-4"></take>
+    </div>
+  </div>
+  <take sel="#results" i="5"></take>
 </section>
 
-<section class="screen" id="results" data-step="2" data-name="Крок 2. Результати">
-  <h2>Крок 2. Результати</h2>
-  <take sel="#results" i="1"></take><take sel="#results" i="2"></take><take sel="#results" i="3"></take><take sel="#results" i="4"></take><take sel="#results" i="5"></take>
-  
+<section class="screen" id="step3" data-step="2" data-name="Прочитай результати">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 3 з 4 · 15 хв</span>
+      <h2 style="font-size:26px">Прочитай результати</h2>
+      <details class="more"><summary>Підказка: пункти і відсотки</summary><div>
+        <p><b>Відсоткові пункти</b> — проста різниця: 11% − 6,5% = 4,5 пункта.</p>
+        <p><b>Відносна зміна</b> — різниця, поділена на початкове значення: 4,5 ÷ 11 ≈ 0,409, тобто мінус 40,9%.</p>
+        <p>Значущість для великих салонів перевір у калькуляторі на попередньому екрані кнопкою «Великі салони».</p>
+      </div></details>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна інтерпретація</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Неявки впали, але скасувань стало більше. Це погано, треба розібратися».</p><p>Зростання скасувань тут очікуване і корисне. І немає жодного слова про великі салони.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Майже весь ефект дають малі салони. У великих різниця незначуща: схоже, нагадування їм мало що додає, бо вони вже телефонують клієнтам самі. Скасування виросли з 3% до 5,5%: неявки перетворюються на попередження, і салон заповнює близько 40% звільнених слотів. Тариф 990 має сенс для малих салонів, не для великих».</p><p>Сегменти, контрметрики і висновок про тариф.</p></div>
+        </div>
+        <ul><li>Окремо оцінено малі і великі салони.</li><li>Зростання скасувань пояснено, а не злякано.</li><li>Є висновок про те, що це означає для тарифу.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step3" i="1-2"></take>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step3" data-step="2" data-name="Крок 3. Прочитай результати">
-  <h2>Крок 3. Прочитай результати</h2>
-  <take sel="#step3" i="1"></take><take sel="#step3" i="2"></take>
-  
-</section>
-
-<section class="screen" id="step4" data-step="2" data-name="Крок 4. Рішення">
-  <h2>Крок 4. Рішення</h2>
-  <take sel="#step4" i="1"></take><take sel="#step4" i="2"></take>
-  
-</section>
-
-<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
-  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><take sel="#criteria" i="1"></take></div>
-  
-  
+<section class="screen" id="step4" data-step="2" data-name="Рішення">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 4 з 4 · 15 хв</span>
+      <h2 style="font-size:26px">Рішення і повідомлення команді</h2>
+      <take sel="#step4" i="1"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабке і сильне повідомлення</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Тест вдався, p &lt; 0,001, z ≈ 6,8. Запускаємо».</p><p>Віктор і Олена не зрозуміють статистики. Незрозуміло, для кого запуск, що з тарифом і хто що робить.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Два тижні, 9 600 записів. У малих салонах неявок на 41% менше (11% → 6,5%), результат надійний. У великих помітної різниці не видно. З понеділка вмикаємо для малих, Віктор з Оленою запускають пілот тарифу 990 на 20 салонах. Ірино, дякую!»</p><p>Коротко, людською мовою, з рішенням, відповідальними і подякою.</p></div>
+        </div>
+        <ul><li>Що тестували, що вийшло, що робимо — у кількох реченнях.</li><li>Цифри зрозумілі людям без статистики.</li><li>Названо, хто що робить далі.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step4" i="2"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="review" data-step="3" data-name="Розбір">
-  <h2>Розбір</h2>
+  <h2>Перевір і порівняй</h2>
+  <take sel="#criteria" i="1"></take>
   <take sel="#review" i="1"></take>
-  
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 7.3 · фініш</span><h2 style="font-size:32px">Тиждень 7 завершено</h2></div></div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 7 · фініш</span><h2 style="font-size:32px">Сьомий артефакт готовий</h2></div></div>
       <take sel="#next" i="1"></take>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
@@ -73,7 +148,7 @@
     </div>
     <div>
       <take sel="#case" i="1"></take>
-      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твій дизайн експерименту</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>

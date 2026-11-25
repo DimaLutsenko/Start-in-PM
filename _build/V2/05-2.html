@@ -1,85 +1,229 @@
 <!--{"code": "5.2", "title": "AARRR і воронки", "week": 5, "js": ["tools"], "steps": "Розбираємось|На прикладі «Слота»|Пробуємо|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 5 · Метрики продукту · Урок 5.2</span>
       <h1>AARRR і воронки</h1>
-      <p class="lead">Шлях користувача від першого контакту до оплати і де він губиться.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">45 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Як розкласти шлях клієнта на етапи, порахувати, скільки людей губиться на кожному, і знайти місце, де продукт втрачає найбільше.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 50 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-2"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Описати шлях клієнта за моделлю AARRR.</span></li><li><span>Побудувати воронку і порахувати конверсії між етапами.</span></li><li><span>Знайти етап, де продукт втрачає найбільше людей, і вирішити, з чого почати.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span><b>AARRR</b> — п'ять етапів шляху клієнта: залучення, активація, утримання, рекомендації, дохід.</span></li>
+        <li><span><b>Воронка</b> показує, скільки людей переходить з кроку на крок і де вони губляться.</span></li>
+        <li><span>Полагодити крок усередині продукту часто дешевше, ніж купити більше реклами.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Піратські метрики, Активація: найнедооціненіший етап, Воронка і конверсії…</span><small>5 екранів</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Типові помилки.</span><small>1 екран</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>AARRR, активація, як рахувати і читати воронку, сегменти і часове вікно.</span><small>6 екранів · 25 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Андрій хоче подвоїти рекламу. Що підказує воронка?</span><small>2 екрани · 10 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Рахуєш воронку «Слота» і описуєш AARRR для знайомого продукту.</span><small>2 завдання · 20 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>П'ять слів уроку</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Воронка — це шлях клієнта в цифрах. Конверсія — частка тих, хто пройшов на наступний крок.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
 </section>
 
 <section class="screen" id="aarrr" data-step="1" data-name="Піратські метрики">
-  <div class="head-row"><div><h2>Піратські метрики</h2></div><take sel="#aarrr" i="4"></take></div>
-  <take sel="#aarrr" i="1"></take><take sel="#aarrr" i="2"></take><take sel="#aarrr" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Модель AARRR</span><h2>Піратські метрики</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> AARRR змушує дивитися на весь шлях клієнта, а не лише на те, скільки людей прийшло.</p></div>
+  </div>
+  <take sel="#aarrr" i="1-2"></take>
+  <div class="grid-2">
+    <div class="card"><b class="t">Порядок буває іншим</b><p>У «Слоті» салон спершу користується безкоштовно, потім платить, і лише потім стає ясно, чи він залишиться. Важливий не порядок, а погляд на весь шлях.</p></div>
+    <div class="warn"><span class="label">Пастка</span><p>Молоді продукти часто вкладають усе в залучення, хоча проблема в активації чи утриманні. Це як лити воду у відро з діркою: води більше, а рівень не росте.</p><span class="fix"><b>Як правильно:</b> спершу знайти, на якому етапі губиться найбільше людей.</span></div>
+  </div>
+  <div class="self-check pick" id="pick-52-stage" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Салон почав пробний період і налаштував розклад, але за тиждень не отримав жодного онлайн-запису. На якому етапі AARRR проблема?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Залучення вже відбулося: салон прийшов і почав пробний період. Він застряг на наступному кроці.">Acquisition, залучення</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Салон прийшов, але ще не отримав справжньої користі: першого клієнта, який записався сам. Це і є активація.">Activation, активація</button>
+      <button type="button" class="pick-opt" data-say="Про утримання говорити рано: салон ще жодного разу не отримав користі, тож і повертатися йому нема до чого.">Retention, утримання</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="activation" data-step="1" data-name="Активація: найнедооціненіший етап">
-  <h2>Активація: найнедооціненіший етап</h2>
-  <take sel="#activation" i="1"></take><take sel="#activation" i="2"></take><take sel="#activation" i="3"></take><take sel="#activation" i="4"></take>
-  
+<section class="screen" id="activation" data-step="1" data-name="Активація">
+  <div class="head-row">
+    <div><span class="eyebrow">Найнедооціненіший етап</span><h2>Активація: перша справжня користь</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Реєстрація — це лише відчинені двері. Клієнт активувався, коли вперше отримав користь.</p></div>
+  </div>
+  <take sel="#activation" i="1-3"></take>
+  <div class="ex"><span class="label">У «Слоті»: як знайшли свою активацію</span><p>Олена порівняла салони, які залишилися, і салони, які пішли. Що перші зробили в перші дні, а другі ні? Виявилося: салони, які отримали хоча б один онлайн-запис за перший тиждень, набагато частіше платять і залишаються. Це кандидат на метрику активації. В уроці 5.3 ти сам перевіриш його на даних.</p></div>
+  <p class="muted" style="font-size:14px">Детальніше про онбординг і ага-момент — у тижні 11.</p>
 </section>
 
-<section class="screen" id="funnel" data-step="1" data-name="Воронка і конверсії">
-  <div class="head-row"><div><h2>Воронка і конверсії</h2></div><take sel="#funnel" i="10"></take></div>
-  <take sel="#funnel" i="1"></take><take sel="#funnel" i="2"></take><take sel="#funnel" i="3"></take><take sel="#funnel" i="4"></take><take sel="#funnel" i="5"></take><take sel="#funnel" i="6"></take><take sel="#funnel" i="7"></take><take sel="#funnel" i="8"></take><take sel="#funnel" i="9"></take>
-  
+<section class="screen" id="funnel" data-step="1" data-name="Як рахувати воронку">
+  <div class="head-row">
+    <div><span class="eyebrow">Рахуємо</span><h2>Воронка і конверсії</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Покрокова конверсія показує, <b>де</b> губляться люди. Наскрізна — скільки дійшло до кінця.</p></div>
+  </div>
+  <take sel="#funnel" i="1-3"></take>
+  <div class="split">
+    <div>
+      <span class="label">Воронка «Слота» за квартал</span>
+      <take sel="#funnel" i="5"></take>
+    </div>
+    <div>
+      <span class="label">Звідки ці відсотки: крок за кроком</span>
+      <ol class="circled filled">
+        <li><span>Сайт → пробний: 600 ÷ 10 000 = 0,06, тобто <b>6%</b>.</span></li>
+        <li><span>Пробний → розклад: 360 ÷ 600 = 0,6, тобто <b>60%</b>.</span></li>
+        <li><span>Розклад → перший онлайн-запис: 216 ÷ 360 = <b>60%</b>.</span></li>
+        <li><span>Перший запис → оплата: 150 ÷ 216 ≈ 0,69, тобто <b>69%</b>.</span></li>
+      </ol>
+      <div class="ex"><span class="label">Наскрізна конверсія</span><p>Ділимо на перший крок, а не на попередній. Від відвідувача до оплати: 150 ÷ 10 000 = 1,5%. Від пробного періоду до оплати: 150 ÷ 600 = 25%.</p></div>
+    </div>
+  </div>
+  <div class="self-check pick" id="pick-52-conv" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Віктор каже: «У нас конверсія 60%!» Що треба уточнити насамперед?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Період теж важливий, але спершу треба зрозуміти, про що взагалі цифра. 60% у воронці «Слота» трапляється на двох різних кроках.">За який період</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Конверсія без «з чого в що» нічого не каже. У воронці «Слота» 60% — це і «пробний → розклад», і «розклад → перший запис».">З якого кроку в який рахували</button>
+      <button type="button" class="pick-opt" data-say="Рекламу оцінюють окремо. Спершу з'ясуй, між якими кроками ця конверсія.">Скільки коштувала реклама</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="segments" data-step="1" data-name="Воронки за сегментами">
-  <h2>Воронки за сегментами</h2>
-  <take sel="#segments" i="1"></take><take sel="#segments" i="2"></take>
-  
+<section class="screen" id="read" data-step="1" data-name="Як читати воронку">
+  <div class="head-row">
+    <div><span class="eyebrow">Читаємо</span><h2>Де шукати можливості</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Найцікавіші втрати — всередині продукту: там губляться люди, які вже прийшли.</p></div>
+  </div>
+  <div class="grid-2">
+    <div class="card edge-blue"><b class="t">Перший крок: 6%</b><p>Найбільша втрата, але це нормально: на сайт заходить багато людей, яким продукт просто не підходить. Порівнюй зі схожими продуктами і з власними минулими місяцями.</p></div>
+    <div class="card edge-orange"><b class="t">Усередині продукту: 40% і ще 40%</b><p>З тих, хто почав пробний період, 40% не налаштовують розклад. З тих, хто налаштував, ще 40% не отримують жодного онлайн-запису. Ці люди вже витратили час і загубилися.</p></div>
+  </div>
+  <div class="ex"><span class="label">Порахуймо «що якщо»</span><p>Припустимо, підказка під час налаштування допомогла, і перший онлайн-запис отримують не 60%, а 75% тих, хто налаштував розклад. Решта не змінилася.</p><p>360 × 0,75 = 270 салонів з першим записом. Далі оплачують ті самі 69%: 270 × 150 ÷ 216 ≈ 188 оплат замість 150. Це +38 оплат без жодної гривні на рекламу.</p></div>
+  <p>Пам'ятаєш з інтерв'ю «налаштовувала два вечори, ледь не кинула» і «клієнти пишуть в Instagram»? У воронці ці історії перетворилися на цифри.</p>
+</section>
+
+<section class="screen" id="segments" data-step="1" data-name="Сегменти і часове вікно">
+  <div class="head-row">
+    <div><span class="eyebrow">Дві деталі, без яких цифри брешуть</span><h2>Сегменти і часове вікно</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Будуй воронки окремо для різних груп клієнтів і завжди кажи, за який час рахуєш крок.</p></div>
+  </div>
+  <div class="grid-2">
+    <div class="card"><b class="t">Окремі воронки для сегментів</b><p>Приватному майстру треба налаштувати лише себе, салону — кількох майстрів. Їхні шляхи різні, і проблема одного ховається за успіхом іншого. Так само варто розділяти джерела: реклама, рекомендації, продажі.</p></div>
+    <div class="card"><b class="t">Часове вікно</b><p>«Отримали перший онлайн-запис» — за який час? За день, тиждень, місяць? Поки вікно не зафіксоване, березень неможливо чесно порівняти з квітнем.</p></div>
+  </div>
+  <div class="ex"><span class="label">У «Слоті»</span><p>Олег спершу рахував «перший онлайн-запис будь-коли». Березневі салони мали на це місяць, а квітневі — тиждень, і здавалося, що квітень гірший. Коли домовилися про вікно «протягом 7 днів від початку пробного періоду», різниця зникла.</p></div>
+</section>
+
+<section class="screen" id="scene" data-step="2" data-name="Більше реклами?">
+  <h2>«Давайте подвоїмо рекламу»</h2>
+  <p>Кінець кварталу. Нових оплат менше, ніж планували, і Андрій хоче швидкого рішення.</p>
+  <div class="split" style="grid-template-columns:minmax(0,1fr) 280px">
+    <div>
+      <div class="chat">
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">150 оплат за квартал — мало. Пропоную подвоїти бюджет на рекламу. Більше відвідувачів — більше оплат.</span></div></div>
+        <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Підтримую. Мені потрібні нові контакти, без них план не виконати.</span></div></div>
+        <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">Ті, хто вже прийшов, губляться на налаштуванні. Мені щодня пишуть: «не розумію, як відкрити запис на потрібні години».</span></div></div>
+        <div class="msg"><span class="ava p-marta">М</span><div><span class="who">Марта · дизайнерка</span><span class="bubble">Екран налаштування розкладу я б переробила за тиждень. Він справді заплутаний.</span></div></div>
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Що скажеш? Куди вкладаємо наступний квартал?</span></div></div>
+      </div>
+    </div>
+    <div>
+      <span class="label">Воронка під рукою</span>
+      <div class="panel" style="display:flex;flex-direction:column;gap:6px">
+        <span>Сайт → пробний: 6%</span>
+        <span><b>Пробний → розклад: 60%</b></span>
+        <span>Розклад → перший запис: 60%</span>
+        <span>Перший запис → оплата: 69%</span>
+      </div>
+    </div>
+  </div>
+  <div class="pick" id="pick-52-scene" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що запропонуєш?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Подвоєна реклама приведе вдвічі більше людей у ту саму діряву воронку: 40% з них так само загубляться на налаштуванні. До того ж реклама зі зростанням бюджету зазвичай дорожчає.">Подвоїти рекламу, як пропонує Андрій</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Люди вже прийшли і загубилися всередині продукту. Якщо налаштування пройдуть 80% замість 60%, оплат стане приблизно на третину більше без додаткової реклами. Рекламу можна збільшити потім, коли воронка буде щільнішою.">Спершу полагодити налаштування розкладу разом з Мартою, а рекламу поки не чіпати</button>
+      <button type="button" class="pick-opt" data-say="Перший крок воронки втрачає найбільше людей, але це нормально для будь-якого сайту. Дешевше допомогти тим, хто вже почав пробний період.">Переробити сайт, бо там втрачається 94% відвідувачів</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
-  <h2>Типові помилки</h2>
+  <h2>П'ять пасток у роботі з воронкою</h2>
   <take sel="#mistakes" i="1"></take>
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take>
-  
+<section class="screen" id="task1" data-step="3" data-name="Порахуй воронку">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 1 з 2 · 10 хв</span>
+      <h2 style="font-size:26px">Порахуй воронку «Слота»</h2>
+      <p>Візьми цифри з воронки за квартал: 10 000 відвідувачів, 600 пробних, 360 налаштували розклад, 216 отримали перший онлайн-запис, 150 оплатили.</p>
+      <details class="more"><summary>Підказка: як рахувати «що якщо»</summary><div>
+        <ol class="circled"><li><span>Почни з 600 пробних і помнож на нову конверсію налаштування: 80% — це 0,8.</span></li><li><span>Результат помнож на 60%: стільки отримають перший запис.</span></li><li><span>Далі оплачують так само, як зараз: 150 з 216. Помнож на 150 ÷ 216.</span></li><li><span>Для останнього питання: скільки відвідувачів дадуть стільки оплат при наскрізній конверсії 1,5%? Поділи оплати на 0,015.</span></li></ol>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="2"></take>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="task2" data-step="3" data-name="AARRR знайомого продукту">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 2 з 2 · 10 хв</span>
+      <h2 style="font-size:26px">AARRR для продукту, яким ти користуєшся</h2>
+      <take sel="#task" i="4"></take>
+      <p>Для кожного етапу напиши дві речі: що він означає саме в цьому продукті і яку цифру ти б рахував, разом з періодом.</p>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Активація: користувач зареєструвався. Утримання: користувачі повертаються».</p><p>Реєстрація — ще не користь. «Повертаються» — не метрика: незрозуміло, як рахувати і за який час.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Сервіс доставки їжі. Активація: перше замовлення доставлене протягом 7 днів після реєстрації, частка від нових. Утримання: частка тих, хто зробив замовлення і через 30 днів після першого».</p><p>Кожен етап — момент користі, з формулою і часовим вікном.</p></div>
+        </div>
+        <ul><li>Активація описує першу справжню користь, а не реєстрацію.</li><li>У кожного етапу є цифра і період, які можна порахувати.</li><li>Етап «Рекомендації» описує, як саме люди приводять інших.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="5"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 5.2 · фініш</span><h2 style="font-size:32px">Урок 5.2 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 5.2 · фініш</span><h2 style="font-size:32px">Ти бачиш, де губляться люди</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>AARRR — погляд на весь шлях клієнта, а не лише на залучення.</span></li>
+        <li><span>Завжди кажи, з якого кроку в який рахуєш конверсію і за який час.</span></li>
+        <li><span>Шукай найбільшу втрату всередині продукту: це часто дешевше за рекламу.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
       <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>

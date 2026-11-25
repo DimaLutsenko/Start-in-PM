@@ -1,84 +1,171 @@
 <!--{"code": "5.3", "title": "Практика: система метрик", "week": 5, "js": ["tools"], "steps": "Контекст|Робимо|Розбір|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 5 · Метрики продукту · Урок 5.3</span>
       <h1>Практика: система метрик</h1>
-      <p class="lead">Обираєш North Star для «Слота» і будуєш дерево метрик.</p>
-      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Андрій просить до кінця тижня пропозицію: що «Слот» рахує, як і хто на це дивиться. Це п'ятий артефакт у портфоліо.</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-2"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Обрати і обґрунтувати головну метрику продукту.</span></li><li><span>Побудувати воронку сегменту за даними і знайти найслабше місце.</span></li><li><span>Описати метрики так, щоб розробник міг налаштувати їх збір, а команда — однаково їх розуміти.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Поясниш Андрію, чому головна метрика — не кількість салонів і не дохід.</span></li>
+        <li><span>Порахуєш воронку малих салонів і знайдеш найслабше місце.</span></li>
+        <li><span>Опишеш три метрики так, щоб Олег налаштував збір без жодного уточнення, і запропонуєш ритм.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде практика</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Вхідні дані.</span><small>1 екран</small></button>
-<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Головна метрика, Крок 2. Воронка малих салонів, Крок 3. Дерево метрик, Крок 4. Опис метрик…</span><small>5 екранів</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Дані Олени і Олега про малі салони.</span><small>1 екран · 5 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Головна метрика, воронка, дерево, опис метрик, ритм.</span><small>5 екранів · 70 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і приклад готової системи метрик.</span><small>1 екран · 10 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок тижня.</span><small>4 питання · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="data" data-step="1" data-name="Вхідні дані">
-  <h2>Вхідні дані</h2>
-  <take sel="#data" i="1"></take><take sel="#data" i="2"></take><take sel="#data" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Контекст</span><h2>Вхідні дані</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Шлях малих салонів від пробного періоду до другого місяця після оплати і зв'язок першого онлайн-запису з оплатою.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <take sel="#data" i="1-2"></take>
+    </div>
+    <div>
+      <span class="label">Дані аналітики від Олега</span>
+      <div class="grid-2">
+        <div class="card edge-green"><b class="t">Отримали онлайн-запис за 7 днів</b><p>55 салонів, з них оплатили <b>44</b>.</p></div>
+        <div class="card edge-orange"><b class="t">Налаштували, але без онлайн-запису</b><p>23 салони, з них оплатили лише <b>2</b>.</p></div>
+      </div>
+      <p class="muted" style="font-size:14px">Ці цифри знадобляться в кроці 2: вони покажуть, що саме є активацією «Слота».</p>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step1" data-step="2" data-name="Крок 1. Головна метрика">
-  <h2>Крок 1. Головна метрика</h2>
-  <take sel="#step1" i="1"></take><take sel="#step1" i="2"></take><take sel="#step1" i="3"></take><take sel="#step1" i="4"></take>
-  
+<section class="screen" id="step1" data-step="2" data-name="Головна метрика">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 1 з 5 · 15 хв</span>
+      <h2 style="font-size:26px">Головна метрика</h2>
+      <take sel="#step1" i="1-2"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Дохід — погана метрика, тому дивимося на відвідані записи».</p><p>Андрій почує, що його цифри «погані», і перестане слухати. Немає зв'язку з тим, що питає Сергій.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Платні салони і дохід лишаються у звіті для Сергія. Але салон спершу перестає отримувати клієнтів через «Слот», а платити перестає на один-два місяці пізніше. Відвідані записи падають одразу. Це наш датчик: він дає час врятувати салон, а коли він росте, згодом ростуть і платні салони».</p><p>Не протиставляє метрики, а показує, що головна випереджає дохід.</p></div>
+        </div>
+        <ul><li>Пояснення показує зв'язок з доходом, а не каже «дохід неважливий».</li><li>Є аргумент про час: метрика змінюється раніше.</li><li>Назва метрики містить період і що саме рахуємо.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step1" i="3-4"></take>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step2" data-step="2" data-name="Крок 2. Воронка малих салонів">
-  <h2>Крок 2. Воронка малих салонів</h2>
-  <take sel="#step2" i="1"></take><take sel="#step2" i="2"></take>
-  
+<section class="screen" id="step2" data-step="2" data-name="Воронка малих салонів">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 2 з 5 · 15 хв</span>
+      <h2 style="font-size:26px">Воронка малих салонів</h2>
+      <take sel="#step2" i="1"></take>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Крок</th><th>Салонів</th></tr></thead>
+        <tbody>
+          <tr><td>Почали пробний період</td><td>120</td></tr>
+          <tr><td>Налаштували послуги і розклад</td><td>78</td></tr>
+          <tr><td>Перший онлайн-запис за 7 днів</td><td>55</td></tr>
+          <tr><td>Оплатили після пробного</td><td>46, з них 44 з онлайн-записом</td></tr>
+          <tr><td>Залишилися через 2 місяці</td><td>38</td></tr>
+        </tbody>
+      </table></div>
+      <details class="more"><summary>Підказка: як рахувати</summary><div>
+        <p>Покрокова конверсія = кількість на кроці ÷ кількість на попередньому × 100%. Наприклад, перша: 78 ÷ 120.</p>
+        <p>Третій крок рахуй від 55 салонів з онлайн-записом: з них оплатили 44. Ще 2 оплати дали салони без запису, тому 46 тут не підходить.</p>
+        <p>Для останнього питання порахуй дві частки окремо: скільки з 55 оплатили і скільки з 23 оплатили. Потім поділи першу частку на другу.</p>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step2" i="2"></take>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step3" data-step="2" data-name="Крок 3. Дерево метрик">
-  <h2>Крок 3. Дерево метрик</h2>
-  <take sel="#step3" i="1"></take><take sel="#step3" i="2"></take>
-  
+<section class="screen" id="step3" data-step="2" data-name="Дерево метрик">
+  <span class="label" style="color:var(--ink)">Крок 3 з 5 · 15 хв</span>
+  <h2 style="font-size:26px">Дерево метрик</h2>
+  <take sel="#step3" i="1"></take>
+  <div class="ex"><span class="label">Приклад одного рядка</span><p><b>Активні салони</b> → метрики рівнем нижче: нові платні салони за місяць, частка салонів, які залишилися через 2 місяці. → Хто впливає: Віктор і Катерина на нові, Олена й онбординг на утримання.</p></div>
+  <take sel="#step3" i="2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Записів на салон → більше записів. Хто впливає: усі».</p><p>Метрика рівнем нижче повторює верхню, а «усі» означає, що ніхто.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Записів на салон → частка онлайн-записів від усіх, частка салонів з посиланням в Instagram. Хто впливає: продуктова команда (Софія, Марта) і Олена під час онбордингу».</p><p>Конкретні цифри, які можна порахувати, і конкретні люди.</p></div>
+    </div>
+    <ul><li>Кожна метрика рівнем нижче вужча за складову і її можна порахувати щотижня.</li><li>У кожного рядка є людина чи команда, а не «усі».</li></ul>
+  </div></details>
 </section>
 
-<section class="screen" id="step4" data-step="2" data-name="Крок 4. Опис метрик">
-  <h2>Крок 4. Опис метрик</h2>
-  <take sel="#step4" i="1"></take><take sel="#step4" i="2"></take><take sel="#step4" i="3"></take><take sel="#step4" i="4"></take>
-  
+<section class="screen" id="step4" data-step="2" data-name="Опис метрик">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 4 з 5 · 20 хв</span>
+      <h2 style="font-size:26px">Опис метрик</h2>
+      <take sel="#step4" i="1-3"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Неявки. Рахуємо, скільки клієнтів не прийшло. Щомісяця».</p><p>Не ясно: у штуках чи у відсотках? Від чого? Чи вважати неявкою скасування за годину?</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Частка неявок у малих салонах. Формула: записи зі статусом «не прийшов» ÷ усі записи, час яких минув за тиждень. Скасування не рахуємо. Джерело: статуси записів. Щопонеділка за минулий тиждень. Контрметрика: частка записів, скасованих менш ніж за 2 години».</p><p>Двоє людей порахують цю метрику однаково.</p></div>
+        </div>
+        <ul><li>Є всі п'ять частин: назва, формула, джерело, як часто, контрметрика.</li><li>Формула містить і чисельник, і знаменник, і період.</li><li>Метрики пов'язані з деревом і з головною метрикою.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step4" i="4"></take>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step5" data-step="2" data-name="Крок 5. Ритм">
-  <h2>Крок 5. Ритм</h2>
-  <take sel="#step5" i="1"></take><take sel="#step5" i="2"></take>
-  
-</section>
-
-<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
-  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><take sel="#criteria" i="1"></take></div>
-  
-  
+<section class="screen" id="step5" data-step="2" data-name="Ритм">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 5 з 5 · 10 хв</span>
+      <h2 style="font-size:26px">Ритм роботи з метриками</h2>
+      <take sel="#step5" i="1"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Зробимо дашборд і будемо на нього дивитися».</p><p>Хто дивиться? Коли? А якщо цифра впала — що тоді?</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Щопонеділка 15 хвилин: головна метрика й активація. Щомісяця з Андрієм: когорти і воронки за сегментами. Якщо активація падає два тижні поспіль, Олена дзвонить новим салонам без онлайн-запису, і ми шукаємо причину».</p><p>Є регулярність, люди і дія на випадок падіння.</p></div>
+        </div>
+        <ul><li>Названо, хто дивиться і як часто.</li><li>Є правило «що робимо, якщо цифра йде не туди».</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step5" i="2"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="review" data-step="3" data-name="Розбір">
-  <h2>Розбір</h2>
+  <h2>Перевір і порівняй</h2>
+  <take sel="#criteria" i="1"></take>
   <take sel="#review" i="1"></take>
-  
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 5.3 · фініш</span><h2 style="font-size:32px">Тиждень 5 завершено</h2></div></div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 5 · фініш</span><h2 style="font-size:32px">П'ятий артефакт готовий</h2></div></div>
       <take sel="#next" i="1"></take>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
@@ -86,7 +173,7 @@
     </div>
     <div>
       <take sel="#case" i="1"></take>
-      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твоя система метрик</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>

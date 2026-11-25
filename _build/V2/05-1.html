@@ -1,85 +1,276 @@
 <!--{"code": "5.1", "title": "North Star і дерево метрик", "week": 5, "js": ["tools"], "steps": "Розбираємось|На прикладі «Слота»|Пробуємо|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 5 · Метрики продукту · Урок 5.1</span>
       <h1>North Star і дерево метрик</h1>
-      <p class="lead">Одна головна метрика і як вона розкладається на ті, на які можна впливати.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">45 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Одна головна метрика продукту і як розкласти її на цифри, на які кожна команда може вплинути вже цього тижня.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 50 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-2"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Відрізнити корисні метрики від «метрик марнославства».</span></li><li><span>Обрати головну метрику продукту і перевірити її за критеріями.</span></li><li><span>Розкласти головну метрику на дерево метрик, на які може впливати команда.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span>Корисна метрика підказує, <b>що робити</b>. Метрика марнославства лише тішить око.</span></li>
+        <li><span><b>North Star</b> — одна цифра, яка росте, коли клієнти отримують користь.</span></li>
+        <li><span><b>Дерево метрик</b> розкладає її на частини, і кожна команда бачить свій важіль.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Корисні метрики і метрики марнославства, North Star: головна метрика продукту, Дерево метрик.</span><small>4 екрани</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад на «Слоті», Типові помилки.</span><small>2 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Корисні і марнославні метрики, North Star, дерево метрик, контрметрики.</span><small>6 екранів · 25 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Команда сперечається, яку цифру повісити на стіну. Розбираємо кандидатів.</span><small>3 екрани · 10 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Рахуєш North Star «Слота» і будуєш дерево для знайомого продукту.</span><small>2 завдання · 20–30 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>Сім слів про метрики</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Метрика — це не будь-яка цифра, а та, на яку регулярно дивляться і з якої випливають рішення.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
+  <span class="label">Так ці слова звучать у чаті «Слота»</span>
+  <div class="grid-3">
+    <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">«Дохід за квартал — запізніла метрика. Коли він упаде, салони вже давно підуть».</span></div></div>
+    <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">«Онлайн-записи в перший тиждень — випереджальна: по них я бачу, хто з нових салонів може піти».</span></div></div>
+    <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">«Записів побільшало? Добре. А контрметрика — скасування — не виросла?»</span></div></div>
+  </div>
 </section>
 
-<section class="screen" id="vanity" data-step="1" data-name="Корисні метрики і метрики марнославства">
-  <div class="head-row"><div><h2>Корисні метрики і метрики марнославства</h2></div><take sel="#vanity" i="4"></take></div>
-  <take sel="#vanity" i="1"></take><take sel="#vanity" i="2"></take><take sel="#vanity" i="3"></take>
-  
+<section class="screen" id="vanity" data-step="1" data-name="Корисні і марнославні метрики">
+  <div class="head-row">
+    <div><span class="eyebrow">Яким цифрам вірити</span><h2>Корисні метрики і метрики марнославства</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Якщо зміна цифри не змінює твоїх дій, ця цифра тобі не допомагає.</p></div>
+  </div>
+  <div class="ex"><span class="label">У «Слоті»</span><p>Андрій готує слайд для Сергія: «За півтора року в «Слоті» зареєструвалося 3 500 салонів!» Звучить вражаюче. Але платять зараз лише 400.</p><p>Цифра 3 500 може тільки рости: навіть якщо завтра всі салони підуть, вона не зменшиться. Тому вона нічого не каже про те, чи стає продукт кращим.</p></div>
+  <p>Таку цифру називають <b>метрикою марнославства</b> (vanity metric). Термін популяризував Ерік Райс у книзі «The Lean Startup».</p>
+  <div class="split">
+    <div><take sel="#vanity" i="3"></take></div>
+    <div>
+      <take sel="#vanity" i="4"></take>
+    </div>
+  </div>
+  <div class="self-check pick" id="pick-51-vanity" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Яка з цих цифр — метрика марнославства?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Ця цифра може впасти, і тоді ясно, що робити: шукати, чому салони почали рідше платити після пробного періоду.">Частка салонів, які оплатили після пробного періоду</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Сума за весь час тільки росте, навіть коли продукт погіршується. Зміна цієї цифри не підказує жодної дії.">Скільки разів застосунок «Слота» завантажили за весь час</button>
+      <button type="button" class="pick-opt" data-say="Цю цифру рахують за тиждень, вона може падати, а падіння одразу підказує, куди дивитися: нагадування, розклад, сезон.">Частка неявок за минулий тиждень</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="nsm" data-step="1" data-name="North Star: головна метрика продукту">
-  <h2>North Star: головна метрика продукту</h2>
-  <take sel="#nsm" i="1"></take><take sel="#nsm" i="2"></take><take sel="#nsm" i="3"></take><take sel="#nsm" i="4"></take><take sel="#nsm" i="5"></take><take sel="#nsm" i="6"></take><take sel="#nsm" i="7"></take>
-  
+<section class="screen" id="nsm" data-step="1" data-name="North Star">
+  <div class="head-row">
+    <div><span class="eyebrow">Головна метрика</span><h2>North Star: одна цифра для всіх</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> North Star росте тоді, коли клієнти отримують користь. Тому за нею звіряють курс усі команди.</p></div>
+  </div>
+  <p>У компанії десятки метрик. Коли кожна команда «качає» свою, вони можуть тягнути в різні боки. North Star — одна метрика, яка об'єднує всіх. Назва від Полярної зорі: за нею моряки звіряли курс.</p>
+  <div class="ex"><span class="label">У «Слоті»: що буває без спільної цифри</span><p>Віктор отримує бонус за кількість нових салонів і охоче продає приватним майстрам: їм продати найлегше. Через два місяці третина з них іде, а Олена гасить пожежі в підтримці. Кожен виконав свій план, а «Слоту» від цього не краще.</p></div>
+  <span class="label">П'ять ознак хорошої North Star</span>
+  <take sel="#nsm" i="3"></take>
+  <details class="more"><summary>Детальніше: випереджальні і запізнілі метрики</summary><div>
+    <p><b>Запізніла</b> метрика показує результат, коли змінити вже нічого не можна. Відтік за пів року каже, що салони пішли, але вони вже пішли.</p>
+    <p><b>Випереджальна</b> змінюється раніше і дає час втрутитися. Якщо новий салон за перший тиждень не отримав жодного онлайн-запису, Олена може зателефонувати йому сьогодні, поки він ще не вирішив піти.</p>
+    <p>North Star має бути випереджальною щодо доходу: спершу росте вона, а вже потім гроші.</p>
+  </div></details>
+</section>
+
+<section class="screen" id="nsm-ex" data-step="1" data-name="Приклади North Star">
+  <div class="head-row">
+    <div><span class="eyebrow">Як це виглядає в житті</span><h2>Приклади North Star</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> North Star майже ніколи не є доходом. Це момент, коли клієнт отримав цінність.</p></div>
+  </div>
+  <p>Ці приклади часто наводять у книжках і статтях про продуктові метрики. Це не офіційні звіти компаній, а ілюстрації ідеї.</p>
+  <div class="grid-3">
+    <div class="card edge-blue"><span class="label">Airbnb · оренда житла</span><b class="t">Заброньовані ночі</b><p>Цінність отримують і гість, і господар лише тоді, коли ніч справді заброньована.</p></div>
+    <div class="card edge-green"><span class="label">Spotify · музика</span><b class="t">Час прослуховування</b><p>Слухання — це і є цінність для людини, і саме воно веде до платної підписки.</p></div>
+    <div class="card edge-orange"><span class="label">Slack · робочий месенджер</span><b class="t">Повідомлення в командах</b><p>Показує, що команда справді працює в продукті, а не просто зареєструвалася.</p></div>
+  </div>
+  <p>Чому не дохід? Дохід — важлива, але запізніла цифра, і він не показує, чи отримують клієнти користь. Можна підняти ціни, дохід на кілька місяців зросте, а клієнти почнуть тихо йти.</p>
+  <div class="fact"><span class="label">Цікаво знати</span><p>Вираз «North Star Metric» пов'язують із Шоном Еллісом, автором терміна «growth hacking», і спільнотою growth-маркетологів. Широко відомим підхід зробила компанія продуктової аналітики Amplitude: її безкоштовний посібник «The North Star Playbook» (один зі співавторів — Джон Катлер) пояснює, як обрати метрику і побудувати під нею дерево.</p></div>
+  <div class="self-check pick" id="pick-51-mrr" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Андрій пропонує зробити North Star «Слота» щомісячний дохід (MRR). Яку ознаку хорошої North Star ця метрика порушує найсильніше?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Дохід якраз дуже простий: його розуміє кожен. Проблема в іншому: він може рости і без жодної користі для салонів.">Простота</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. MRR росте і від підвищення цін, хоча салони не отримали нічого нового. До того ж він запізнілий: салон перестає отримувати користь раніше, ніж перестає платити.">Відображає цінність для клієнта</button>
+      <button type="button" class="pick-opt" data-say="Дохід прямо пов'язаний з бізнесом, тут усе гаразд. Слабке місце — він не показує, чи отримують салони користь.">Веде до доходу</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="tree" data-step="1" data-name="Дерево метрик">
-  <h2>Дерево метрик</h2>
-  <take sel="#tree" i="1"></take><take sel="#tree" i="2"></take><take sel="#tree" i="3"></take><take sel="#tree" i="4"></take><take sel="#tree" i="5"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Від цілі до щоденної роботи</span><h2>Дерево метрик</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Головну метрику розкладають на множники. Кожен множник — важіль, за який відповідає конкретна команда.</p></div>
+  </div>
+  <p>Розробник не може «збільшити відвідані записи» напряму. Йому потрібна цифра, на яку впливає саме його робота. Тому North Star розкладають на складові, як шкільну формулу.</p>
+  <div class="split">
+    <div><take sel="#tree" i="2"></take></div>
+    <div>
+      <span class="label">Порахуймо на числах «Слота»</span>
+      <ol class="circled filled">
+        <li><span><b>Активні салони:</b> 340.</span></li>
+        <li><span><b>Записів на салон за тиждень:</b> у середньому 60. Усього записів: 340 × 60 = 20 400.</span></li>
+        <li><span><b>Частка, на яку клієнт прийшов:</b> неявок 10%, тож приходять на 90%. Відвіданих записів: 20 400 × 0,9 = 18 360, тобто приблизно 18 000.</span></li>
+      </ol>
+      <div class="ex"><span class="label">Що дає один важіль</span><p>Нагадування знизили неявки з 10% до 8%. Тоді 20 400 × 0,92 = 18 768. North Star виросла на 408 відвіданих записів на тиждень, хоча нових салонів не додалося.</p></div>
+    </div>
+  </div>
+  <div class="grid-3">
+    <div class="ex mini"><b>Активні салони</b><span>Віктор і Катерина приводять нові, Олена з онбордингом утримує наявні.</span></div>
+    <div class="ex mini"><b>Записів на салон</b><span>Продуктова команда: онлайн-запис, посилання в Instagram, зручний розклад.</span></div>
+    <div class="ex mini"><b>Частка відвіданих</b><span>Продуктова команда: нагадування і підтвердження запису.</span></div>
+  </div>
+  <div class="self-check pick" id="pick-51-branch" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Ірина зробила нагадування у Viber з кнопкою «Підтверджую». На яку гілку дерева воно впливає найпряміше?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Нових салонів нагадування не приводить. Воно діє на клієнтів, які вже записалися.">Активні салони</button>
+      <button type="button" class="pick-opt" data-say="Кількість записів нагадування майже не змінює: людина вже записалася. Змінюється те, чи вона прийде.">Записів на салон</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Нагадування зменшує неявки, а отже, збільшує частку записів, на які клієнт прийшов. Саме цей множник і зросте.">Частка відвіданих записів</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад на «Слоті»">
-  <h2>Приклад на «Слоті»</h2>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take><take sel="#slot" i="3"></take><take sel="#slot" i="4"></take>
-  
+<section class="screen" id="guard" data-step="1" data-name="Контрметрики">
+  <div class="head-row">
+    <div><span class="eyebrow">Захист від «покращень»</span><h2>Контрметрики</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Будь-яку цифру можна підняти шкідливим способом. Контрметрика вчасно це помітить.</p></div>
+  </div>
+  <p>Коли команді ставлять ціль «підняти метрику», виникає спокуса знайти найкоротший шлях. Іноді він шкодить продукту. Тому до кожної цільової метрики додають ще одну, яка стежить за побічними ефектами. Англійською її називають guardrail metric — «огорожа».</p>
+  <div class="warn"><span class="label">Пастка</span><p>Щоб підняти «записи на салон», можна дозволити кільком клієнтам записуватися на той самий час. Записів стане більше, а майстри почнуть сваритися з клієнтами, які прийшли одночасно.</p><span class="fix"><b>Як правильно:</b> поруч із записами стежити за часткою скасованих записів і кількістю скарг від салонів.</span></div>
+  <div class="grid-3">
+    <div class="card"><b class="t">Ціль: більше онлайн-записів</b><p>Контрметрика: частка записів, які салон скасував сам.</p></div>
+    <div class="card"><b class="t">Ціль: менше неявок</b><p>Контрметрика: скарги клієнтів на зайві повідомлення.</p></div>
+    <div class="card"><b class="t">Ціль: більше нових салонів</b><p>Контрметрика: частка нових салонів, які пішли за перші два місяці.</p></div>
+  </div>
+</section>
+
+<section class="screen" id="scene" data-step="2" data-name="Яку цифру повісити на стіну">
+  <h2>Яку цифру повісити на стіну?</h2>
+  <p>Понеділкова зустріч. Андрій хоче, щоб уся команда дивилася на одну цифру. Кожен пропонує свою.</p>
+  <div class="split" style="grid-template-columns:minmax(0,1fr) 280px">
+    <div>
+      <div class="chat">
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Сергій завжди питає про платні салони. Може, їх і зробимо головною цифрою? Просто і зрозуміло.</span></div></div>
+        <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Я за дохід, MRR. Гроші — це те, що нас годує.</span></div></div>
+        <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">Салони, які пішли минулого місяця, платили до останнього дня. А онлайн-записів у них не було вже кілька тижнів. Ми просто цього не бачили.</span></div></div>
+        <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">Ми можемо порахувати будь-що: записи, неявки, візити. Скажіть лише, що саме.</span></div></div>
+        <div class="msg"><span class="ava p-andrii">А</span><div><span class="who">Андрій · CEO</span><span class="bubble">Продакт, твоє слово. Яку одну цифру вішаємо на стіну?</span></div></div>
+      </div>
+    </div>
+    <div>
+      <span class="label">Що варто пам'ятати</span>
+      <div class="panel" style="display:flex;flex-direction:column;gap:8px">
+        <span>✓ North Star відображає користь для салону.</span>
+        <span>✓ Змінюється раніше за дохід.</span>
+        <span>✓ Команди розуміють, як на неї впливати.</span>
+      </div>
+    </div>
+  </div>
+  <div class="pick" id="pick-51-scene" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що запропонуєш?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Олена щойно показала слабке місце: салон платить за звичкою, хоча користі вже не отримує. Ця цифра дізнається про проблему останньою.">Кількість платних салонів</button>
+      <button type="button" class="pick-opt" data-say="Дохід — запізніла цифра, і він росте навіть від підвищення цін. Він лишиться у звіті для Сергія, але не як головна метрика.">MRR, щомісячний дохід</button>
+      <button type="button" class="pick-opt" data-say="Близько, але запис, на який клієнт не прийшов, не приносить салону грошей. Цінність з'являється тоді, коли клієнт сів у крісло.">Усі записи в «Слоті» за тиждень</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Ця цифра росте, лише коли салон отримує користь: клієнт записався і прийшов. Вона щотижнева і пов'язана з проблемою неявок, яку ми вже знайшли.">Відвідані записи через «Слот» за тиждень</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+</section>
+
+<section class="screen" id="slot" data-step="2" data-name="Кандидати «Слота»">
+  <div class="head-row">
+    <div><span class="eyebrow">Розбір після зустрічі</span><h2>Чотири кандидати на North Star</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Виграє метрика, яка росте лише тоді, коли салон заробляє завдяки «Слоту».</p></div>
+  </div>
+  <take sel="#slot" i="2"></take>
+  <div class="ex"><span class="label">Скільки це зараз</span><p>340 активних салонів × 60 записів на тиждень × 90% відвіданих ≈ 18 000 відвіданих записів на тиждень. Це стартова точка, від якої команда міряє прогрес.</p></div>
+  <p>Кількість платних салонів і дохід нікуди не зникають: Андрій і далі показує їх Сергію. Але це результат, а North Star — датчик, який попереджає раніше.</p>
 </section>
 
 <section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
-  <h2>Типові помилки</h2>
+  <h2>П'ять пасток із метриками</h2>
   <take sel="#mistakes" i="1"></take>
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take><take sel="#task" i="6"></take><take sel="#task" i="7"></take><take sel="#task" i="8"></take><take sel="#task" i="9"></take><take sel="#task" i="10"></take><take sel="#task" i="11"></take>
-  
+<section class="screen" id="task1" data-step="3" data-name="Порахуй North Star">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 1 з 2 · 10 хв</span>
+      <h2 style="font-size:26px">Порахуй North Star «Слота»</h2>
+      <take sel="#task" i="3"></take>
+      <details class="more"><summary>Підказка: як рахувати</summary><div>
+        <p>Іди по дереву зверху вниз, як на екрані «Дерево метрик».</p>
+        <ol class="circled"><li><span>Усього записів = салони × записів на салон.</span></li><li><span>Відвідані = усього записів × (1 − частка неявок). 8% — це 0,08.</span></li><li><span>Для третього питання порахуй відвідані при неявках 5% і відніми попередню відповідь.</span></li></ol>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="4"></take>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="task2" data-step="3" data-name="North Star знайомого продукту">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 2 з 2 · 15–20 хв</span>
+      <h2 style="font-size:26px">North Star для продукту, яким ти користуєшся</h2>
+      <take sel="#task" i="6"></take>
+      <ol class="circled">
+        <li><span>Назви момент, коли людина отримує користь. Це кандидат на North Star.</span></li>
+        <li><span>Перевір його за п'ятьма ознаками: цінність, дохід, випереджальність, вплив команд, простота.</span></li>
+        <li><span>Розклади на 2–3 множники, як «салони × записи × частка відвіданих».</span></li>
+        <li><span>Подумай, як цю цифру можна «підняти» шкідливо, і обери контрметрику.</span></li>
+      </ol>
+      <take sel="#task" i="11"></take>
+    </div>
+    <div>
+      <take sel="#task" i="7-10"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Таксі. North Star — дохід за місяць. Дерево: кількість поїздок × середня ціна».</p><p>Дохід росте і від підвищення цін. До того ж ніде немає користі для пасажира: чи доїхав він вчасно і без проблем.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Таксі. North Star — завершені поїздки за тиждень, де машина приїхала за 10 хвилин. Дерево: активні пасажири × поїздок на пасажира × частка вчасних подач. Контрметрика: скасування поїздок водіями».</p><p>Метрика описує момент користі, рахується щотижня, а кожен множник має свою команду.</p></div>
+        </div>
+        <ul><li>Метрика описує дію, у якій клієнт отримує користь, а не гроші компанії.</li><li>Множники дерева при перемноженні дають саме North Star.</li><li>Контрметрика ловить шкідливий спосіб підняти цифру.</li></ul>
+      </div></details>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 5.1 · фініш</span><h2 style="font-size:32px">Урок 5.1 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 5.1 · фініш</span><h2 style="font-size:32px">У «Слота» є North Star</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>Перевіряй цифру питанням: «Що я зроблю інакше, якщо вона зміниться?»</span></li>
+        <li><span>North Star показує користь для клієнта і росте раніше за дохід.</span></li>
+        <li><span>Дерево метрик дає кожній команді її важіль, а контрметрика стереже від шкідливих «покращень».</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
       <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>

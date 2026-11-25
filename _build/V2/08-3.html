@@ -1,78 +1,137 @@
 <!--{"code": "8.3", "title": "Практика: квартальний roadmap", "week": 8, "js": ["tools"], "steps": "Контекст|Робимо|Розбір|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 8 · Пріоритизація і roadmap · Урок 8.3</span>
       <h1>Практика: квартальний roadmap</h1>
-      <p class="lead">Пріоритизуєш беклог і збираєш roadmap «Слота».</p>
-      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Десять задач, місця — на чотири-п'ять. Пріоритизуєш беклог «Слота», збираєш roadmap на квартал і готуєш три непрості розмови.</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Оцінити беклог за RICE разом з командою.</span></li><li><span>Поєднати оцінки з ціллю кварталу і стратегією.</span></li><li><span>Скласти roadmap за темами і пояснити рішення стейкхолдерам.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Оціниш десять задач беклогу за RICE.</span></li>
+        <li><span>Перевіриш результат здоровим глуздом: ціль кварталу, технічний борг, залежності.</span></li>
+        <li><span>Збереш roadmap Now / Next / Later і напишеш, що скажеш Віктору, Олегу і Софії.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде практика</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Вхідні дані.</span><small>1 екран</small></button>
-<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Оцінка за RICE, Крок 2. Перевірка здоровим глуздом, Крок 3. Roadmap, Крок 4. Розмови.</span><small>4 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Хто що просить і яка ціль кварталу.</span><small>1 екран · 10 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>RICE, перевірка здоровим глуздом, roadmap, розмови.</span><small>4 екрани · 60 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і приклад повного рішення.</span><small>2 екрани · 15 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок тижня.</span><small>4 питання · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="data" data-step="1" data-name="Вхідні дані">
-  <div class="head-row"><div><h2>Вхідні дані</h2></div><take sel="#data" i="3"></take></div>
-  <take sel="#data" i="1"></take><take sel="#data" i="2"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Тиждень до планування</span><h2>Вхідні дані</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Ціль кварталу — фільтр для всього беклогу: малі салони мають рідше йти, а нові — частіше починати користуватися.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <take sel="#data" i="1-2"></take>
+      <take sel="#data" i="3"></take>
+    </div>
+    <div>
+      <span class="label">Що тобі написали за останні тижні</span>
+      <div class="chat">
+        <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Нагадую про Instagram. Майстри питають щотижня.</span></div></div>
+        <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">Модуль розкладу треба переписати. Минулого місяця двічі гасили пожежу вночі.</span></div></div>
+        <div class="msg"><span class="ava p-oleh">С</span><div><span class="who">Софія · фронтенд</span><span class="bubble">Темна тема — два тижні, і всім буде приємно. Можна?</span></div></div>
+        <div class="msg"><span class="ava p-olena">М</span><div><span class="who">Марина · адміністраторка великого салону</span><span class="bubble">Новим майстрам показую застосунок сама, пів дня на кожного. Може, зробите для них гід?</span></div></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step1" data-step="2" data-name="Крок 1. Оцінка за RICE">
-  <h2>Крок 1. Оцінка за RICE</h2>
-  <take sel="#step1" i="1"></take><take sel="#step1" i="2"></take>
-  
+<section class="screen" id="step1" data-step="2" data-name="Крок 1. Оцінка за RICE">
+  <h2>Крок 1. Оцінка за RICE</h2>
+  <take sel="#step1" i="1"></take>
+  <div class="ex"><span class="label">Як міркувати: приклад для однієї задачі</span><p><b>Шаблони послуг.</b> Impact — 2: вони прямо працюють на активацію, другу половину цілі. Confidence — 80%: є інтерв'ю і воронка, але тесту ще не було. Так само пройди всі десять задач. Оцінюй вплив саме на ціль кварталу, а не «загалом корисно».</p></div>
+  <take sel="#step1" i="2"></take>
 </section>
 
-<section class="screen" id="step2" data-step="2" data-name="Крок 2. Перевірка здоровим глуздом">
+<section class="screen" id="step2" data-step="2" data-name="Крок 2. Здоровий глузд">
   <h2>Крок 2. Перевірка здоровим глуздом</h2>
-  <take sel="#step2" i="1"></take><take sel="#step2" i="2"></take>
-  
+  <take sel="#step2" i="1-2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Усе нормально, беремо три верхні задачі. Переписування розкладу — пізніше, бо RICE низький».</p><p>Таблиця стала вироком. Технічний ризик проігноровано, залежності не перевірено.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Підказка з Instagram висока, але не про малі салони. Залишаю як дешевий тест на тиждень. Переписування — в окремі 20% часу. Тариф 990 має сенс лише після нагадувань для всіх».</p><p>Кожне відхилення від таблиці пояснене ціллю, ризиком або залежністю.</p></div>
+    </div>
+    <ul>
+      <li>Ти назвав хоча б одну задачу, яку піднімаєш або опускаєш всупереч оцінці, і пояснив чому.</li>
+      <li>Для технічного боргу є конкретне рішення, а не «колись».</li>
+      <li>Знайдено хоча б одну залежність між задачами.</li>
+    </ul>
+  </div></details>
 </section>
 
 <section class="screen" id="step3" data-step="2" data-name="Крок 3. Roadmap">
   <h2>Крок 3. Roadmap</h2>
-  <take sel="#step3" i="1"></take><take sel="#step3" i="2"></take><take sel="#step3" i="3"></take>
-  
+  <take sel="#step3" i="1-3"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Зараз: нагадування, підказка Instagram, тариф, шаблони, список очікування, гід, звіти».</p><p>Сім задач без тем і цілей. Це вдвічі більше, ніж команда встигне, і не видно, навіщо кожна.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Зараз: менше неявок у малих салонах (нагадування для всіх, пілот тарифу 990); простіший старт, активація з 46% до 60% (шаблони послуг); стабільність — 20% часу. Не робимо: темну тему».</p><p>Дві-три теми з цілями, і вони вміщуються в місткість команди.</p></div>
+    </div>
+    <ul>
+      <li>Сума зусиль у «Зараз» не більша за місткість: близько 12 тижнів роботи на квартал, з них 20% на технічні задачі.</li>
+      <li>У кожної теми є ціль у метриці.</li>
+      <li>У «Далі» є умова: що має статися, щоб тема перейшла в «Зараз».</li>
+      <li>Список «не робимо» не порожній і пояснений.</li>
+    </ul>
+  </div></details>
 </section>
 
 <section class="screen" id="step4" data-step="2" data-name="Крок 4. Розмови">
   <h2>Крок 4. Розмови</h2>
-  <take sel="#step4" i="1"></take><take sel="#step4" i="2"></take>
-  
+  <take sel="#step4" i="1"></take>
+  <div class="grid-3">
+    <div class="ex mini"><b>1 · Причина</b><span>Чому зараз інше важливіше: ціль, дані, ризик.</span></div>
+    <div class="ex mini"><b>2 · Задача не зникла</b><span>Де вона в roadmap і що з нею буде далі.</span></div>
+    <div class="ex mini"><b>3 · Умова</b><span>Що може змінити рішення: дані, тест, новий квартал.</span></div>
+  </div>
+  <take sel="#step4" i="2"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p>«Вікторе, за RICE твоя інтеграція на останньому місці, тому не цього кварталу».</p><p>Таблиця замість пояснення. Віктор не знає, що може змінити рішення, і піде до Андрія.</p></div>
+      <div class="ex"><span class="label">Добре</span><p>«Повна інтеграція — вісім тижнів, а ми ще не знаємо, наскільки вона допоможе. Цього кварталу за тиждень тестуємо підказку з Instagram. Якщо майстри з нею залишаються частіше, у тебе буде сильний аргумент, і інтеграція піде вгору».</p><p>Причина, альтернатива, чесна умова.</p></div>
+    </div>
+    <ul>
+      <li>Кожне повідомлення пояснює причину мовою цієї людини: Віктору — про угоди, Олегу — про ризики, Софії — про клієнтів.</li>
+      <li>Видно, що задача не зникла, і названо умову, за якої рішення зміниться.</li>
+      <li>Немає фраз «так вирішила формула» або «Андрій сказав».</li>
+    </ul>
+  </div></details>
 </section>
 
-<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
-  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><take sel="#criteria" i="1"></take></div>
-  
-  
+<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
+  <div class="head-row"><div><span class="eyebrow">Перед розбором</span><h2>Як зрозуміти, що зроблено добре</h2></div><div class="main-idea"><p><b>Головне.</b> Хороший roadmap витримує питання «чому саме це?» від кожного, чия задача не потрапила в «Зараз».</p></div></div>
+  <take sel="#criteria" i="1"></take>
 </section>
 
 <section class="screen" id="review" data-step="3" data-name="Розбір">
   <h2>Розбір</h2>
+  <p>Порівняй зі своїм варіантом. Твої оцінки можуть відрізнятися: важливо, чи ти можеш їх пояснити.</p>
   <take sel="#review" i="1"></take>
-  
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 8.3 · фініш</span><h2 style="font-size:32px">Тиждень 8 завершено</h2></div></div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 8 · фініш</span><h2 style="font-size:32px">Восьмий артефакт готовий</h2></div></div>
       <take sel="#next" i="1"></take>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
@@ -80,7 +139,7 @@
     </div>
     <div>
       <take sel="#case" i="1"></take>
-      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твій roadmap</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>

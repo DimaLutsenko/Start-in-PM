@@ -1,61 +1,173 @@
 <!--{"code": "3.2", "title": "Кількісні дані і конкуренти", "week": 3, "js": [], "steps": "Розбираємось|На прикладі «Слота»|Пробуємо|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 3 · Дослідження користувачів · Урок 3.2</span>
       <h1>Кількісні дані і конкуренти</h1>
-      <p class="lead">Опитування, продуктові дані і аналіз конкурентів.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">45 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <p class="lead">Інтерв'ю пояснюють, чому. Цифри показують, скільки. А конкуренти — що люди обирають замість тебе.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 45 хвилин</span><span class="chip">4 кроки</span></div>
+      <p>Шість розмов показали: приватних майстрів дратує, що клієнти пишуть у месенджери. Але скільки таких серед усіх 180? Половина? Кожен десятий? Від цього залежить, чи варто взагалі щось робити.</p>
+      <p>У цьому уроці — опитування, продуктова аналітика і аналіз конкурентів, який допомагає ухвалити рішення, а не просто порівнює функції.</p>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Вирішити, коли потрібні якісні дані, а коли кількісні, і як їх поєднувати.</span></li><li><span>Скласти опитування без типових помилок і розуміти, що можна дізнатися з продуктової аналітики.</span></li><li><span>Провести аналіз конкурентів, який допомагає ухвалювати рішення, а не просто порівнює функції.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span>Якісні дані пояснюють <b>чому</b>, кількісні показують <b>скільки</b>. Потрібні обидва.</span></li>
+        <li><span>Опитування кажуть, що люди думають. Аналітика показує, що вони роблять.</span></li>
+        <li><span>Конкуренти — не таблиця функцій, а все, чим люди виконують ту саму роботу.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Якісні і кількісні дані, Опитування, Продуктова аналітика…</span><small>5 екранів</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад на «Слоті», Типові помилки.</span><small>2 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Якісні і кількісні дані, опитування і NPS, продуктова аналітика, конкуренти.</span><small>6 екранів · 25 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Віктор хоче склад «як у конкурента». Ти дивишся на конкурентів через роботу малих салонів.</span><small>3 екрани · 10 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Складаєш опитування про неявки і порівнюєш конкурентів знайомого продукту.</span><small>Завдання · 25–30 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
+  <take sel="#goal" i="4"></take>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>Нові слова уроку</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Тріангуляція — головне слово уроку: висновку довіряють, коли його підтверджують кілька різних джерел.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
 </section>
 
-<section class="screen" id="qualquant" data-step="1" data-name="Якісні і кількісні дані">
-  <h2>Якісні і кількісні дані</h2>
-  <take sel="#qualquant" i="1"></take><take sel="#qualquant" i="2"></take><take sel="#qualquant" i="3"></take>
-  
+<section class="screen" id="qualquant" data-step="1" data-name="Якісні і кількісні дані">
+  <div class="head-row">
+    <div><span class="eyebrow">Два види даних</span><h2>Якісні і кількісні дані</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Кожне джерело закриває слабке місце іншого. Окремо — неповна картина, разом — діагноз.</p></div>
+  </div>
+  <p>Уяви лікаря. Аналіз крові показує низький гемоглобін — це кількісні дані. Розмова показує, що пацієнт місяцями майже не їсть м'яса і постійно втомлюється — це якісні. Лише разом вони дають діагноз.</p>
+  <take sel="#qualquant" i="2"></take>
+  <div class="ex"><span class="label">Типовий цикл у «Слоті»</span><div class="grid-3">
+    <div class="ex mini" style="background:var(--surface)"><b>Аналітика: що?</b><span>Приватні майстри йдуть найчастіше: 35% за два місяці.</span></div>
+    <div class="ex mini" style="background:var(--surface)"><b>Інтерв'ю: чому?</b><span>Клієнти пишуть у месенджери, і майстер не бачить, за що платить.</span></div>
+    <div class="ex mini" style="background:var(--surface)"><b>Опитування: скільки?</b><span>Яка частка майстрів, що пішли, отримувала записи переважно в месенджерах?</span></div>
+  </div></div>
+  <div class="self-check pick" id="pick-qq" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Андрій питає: «Скільки малих салонів узагалі користуються нагадуваннями?» Яке джерело дасть відповідь найшвидше і найточніше?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Інтерв'ю пояснять, чому салони вмикають або не вмикають нагадування, але не покажуть точну частку серед 170 салонів.">Інтерв'ю з п'ятьма власницями</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Це питання «скільки», і відповідь уже є в даних продукту: хто ввімкнув нагадування, видно без жодного опитування.">Дані продукту: хто ввімкнув нагадування</button>
+      <button type="button" class="pick-opt" data-say="Опитування дасть відповідь, але повільніше і лише від тих, хто відповів. Якщо дані вже є в продукті, питати людей не треба.">Опитування всіх салонів</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="survey" data-step="1" data-name="Опитування">
-  <h2>Опитування</h2>
-  <take sel="#survey" i="1"></take><take sel="#survey" i="2"></take><take sel="#survey" i="3"></take><take sel="#survey" i="4"></take><take sel="#survey" i="5"></take><take sel="#survey" i="6"></take><take sel="#survey" i="7"></take><take sel="#survey" i="8"></take><take sel="#survey" i="9"></take><take sel="#survey" i="10"></take><take sel="#survey" i="11"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Кількісне джерело</span><h2>Опитування</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Хороше опитування скласти важче, ніж провести інтерв'ю: незрозуміле питання вже ніхто не уточнить.</p></div>
+  </div>
+  <div class="grid-2">
+    <div class="card edge-green"><b class="t">Корисне, щоб</b><p>Перевірити, наскільки поширене те, що ти почув в інтерв'ю. Розділити користувачів на сегменти за відповідями. Регулярно міряти задоволення.</p></div>
+    <div class="card edge-orange"><b class="t">Погано підходить, щоб</b><p>Дізнатися щось зовсім нове. Ти отримаєш відповіді лише на ті питання, які здогадався поставити.</p></div>
+  </div>
+  <span class="label">Типові помилки в питаннях</span>
+  <take sel="#survey" i="6"></take>
+  <details class="more"><summary>Детальніше: хто насправді відповідає на опитування</summary><div>
+    <take sel="#survey" i="8"></take>
+  </div></details>
+</section>
+
+<section class="screen" id="nps" data-step="1" data-name="NPS">
+  <div class="head-row">
+    <div><span class="eyebrow">Найпопулярніше питання</span><h2>NPS</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Сама цифра NPS мало що пояснює. Найцінніше — відповіді на «Чому ви поставили таку оцінку?»</p></div>
+  </div>
+  <p>«Наскільки ймовірно, що ви порекомендуєте наш продукт другові чи колезі? Від 0 до 10».</p>
+  <div class="grid-3">
+    <div class="card edge-orange"><b class="t">0–6 · критики</b><p>Незадоволені. Можуть відраджувати інших.</p></div>
+    <div class="card"><b class="t">7–8 · нейтральні</b><p>Загалом задоволені, але не в захваті. Не додаються ні до промоутерів, ні до критиків, але входять у загальну кількість відповідей.</p></div>
+    <div class="card edge-green"><b class="t">9–10 · промоутери</b><p>Лояльні. Рекомендують продукт.</p></div>
+  </div>
+  <p><b>NPS = частка промоутерів − частка критиків.</b> Метрику запропонував Фредерік Райхгельд у статті для Harvard Business Review у 2003 році. Її використовують тисячі компаній.</p>
+  <div class="ex"><span class="label">У «Слоті»</span><p>З 100 салонів, що відповіли, 40 поставили 9–10, 35 — 7–8, а 25 — 0–6. Нейтральні рахуються в загальних 100, тож NPS = 40% − 25% = 15. Результат пишуть без знака відсотка: він може бути від −100 до +100. Але Андрію корисніше інше: серед критиків 18 салонів пишуть про незрозуміле налаштування. Це вже підказка, що робити.</p></div>
+  <details class="more"><summary>Детальніше: за що NPS критикують</summary><div>
+    <p>NPS легко зібрати і порівнювати в часі. Але він погано пояснює причини. А питання «порекомендуєте?» не завжди має сенс: чи рекомендують люди бухгалтерську програму? Тому NPS варто завжди доповнювати відкритим питанням про причину оцінки.</p>
+  </div></details>
 </section>
 
 <section class="screen" id="analytics" data-step="1" data-name="Продуктова аналітика">
-  <div class="head-row"><div><h2>Продуктова аналітика</h2></div><take sel="#analytics" i="7"></take></div>
-  <take sel="#analytics" i="1"></take><take sel="#analytics" i="2"></take><take sel="#analytics" i="3"></take><take sel="#analytics" i="4"></take><take sel="#analytics" i="5"></take><take sel="#analytics" i="6"></take><take sel="#analytics" i="8"></take><take sel="#analytics" i="9"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Що люди роблять</span><h2>Продуктова аналітика</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Опитування показує, що люди кажуть. Аналітика — що вони роблять. Поведінка не буває ввічливою.</p></div>
+  </div>
+  <p>Продукт записує <b>події</b> — дії користувачів: зареєструвався, налаштував розклад, створив запис, оплатив підписку. До кожної події додаються <b>властивості</b>: хто, з якого пристрою, з якого сегменту. З подій будують графіки, воронки і когорти. Їх розберемо в тижнях 5 і 6.</p>
+  <p class="muted">Інструменти: Google Analytics для сайтів, Amplitude, Mixpanel, PostHog для продуктів. Часто дані лежать і в базі продукту, і аналітик дістає їх через SQL.</p>
+  <span class="label">Що можна дізнатися: приклади для «Слота»</span>
+  <div class="grid-3">
+    <div class="card"><b class="t">Де люди губляться</b><p>На якому кроці налаштування салони кидають реєстрацію.</p></div>
+    <div class="card"><b class="t">Чим користуються, а чим ні</b><p>Наприклад: звіт, який просили продажі, відкрили лише кілька відсотків салонів.</p></div>
+    <div class="card"><b class="t">Чим відрізняються ті, хто лишається</b><p>Наприклад: салони, які за перший тиждень опублікували посилання на запис, лишаються помітно частіше.</p></div>
+  </div>
+  <take sel="#analytics" i="7"></take>
+  <details class="more"><summary>Детальніше: дані, які вже є в компанії</summary><div>
+    <take sel="#analytics" i="9"></take>
+  </div></details>
 </section>
 
 <section class="screen" id="competitors" data-step="1" data-name="Аналіз конкурентів">
-  <h2>Аналіз конкурентів</h2>
-  <take sel="#competitors" i="1"></take><take sel="#competitors" i="2"></take><take sel="#competitors" i="3"></take><take sel="#competitors" i="4"></take><take sel="#competitors" i="5"></take><take sel="#competitors" i="6"></take><take sel="#competitors" i="7"></take><take sel="#competitors" i="8"></take><take sel="#competitors" i="9"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Хто ще виконує роботу</span><h2>Аналіз конкурентів</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Клієнти обирають не за кількістю функцій, а за тим, наскільки добре продукт виконує їхню роботу.</p></div>
+  </div>
+  <p>Новачки роблять велику таблицю «у нас є — у них немає». Вона виглядає солідно, але мало допомагає. Згадай урок 2.2: конкуренти — усе, що люди «наймають» для тієї самої роботи.</p>
+  <div class="grid-3">
+    <div class="card edge-blue"><b class="t">Прямі</b><p>Схожі продукти для тієї ж аудиторії: інші сервіси онлайн-запису.</p></div>
+    <div class="card edge-green"><b class="t">Непрямі</b><p>Інші продукти, що виконують ту саму роботу інакше: Instagram з кнопкою запису, Google Календар, CRM загального призначення.</p></div>
+    <div class="card edge-orange"><b class="t">Замінники</b><p>Не продукти, а способи: блокнот, Viber, адміністратор на телефоні, «нічого не робити».</p></div>
+  </div>
+  <div class="split">
+    <div><span class="label">Що порівнювати замість функцій</span><take sel="#competitors" i="7"></take></div>
+    <div><span class="label">Як збирати інформацію</span><p>Зареєструйся в продукті конкурента і пройди шлях клієнта. Почитай відгуки: у середніх оцінках на три зірки часто найбільше конкретики. Спитай на інтерв'ю: «Що ще ви пробували?» І поговори з продажами: вони щотижня чують, з чим клієнти порівнюють.</p></div>
+  </div>
+  <div class="self-check pick" id="pick-comp" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">До якої групи конкурентів для «Слота» належить адміністраторка, яка приймає записи по телефону і веде зошит?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Прямі — це схожі продукти для тієї самої аудиторії. Адміністраторка із зошитом — не продукт.">Прямий конкурент</button>
+      <button type="button" class="pick-opt" data-say="Непрямий — інший продукт, який виконує ту саму роботу. Тут взагалі немає продукту, лише спосіб.">Непрямий конкурент</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Це спосіб виконати ту саму роботу без жодного продукту. Саме замінники часто й виграють у малих салонах.">Замінник</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад на «Слоті»">
-  <h2>Приклад на «Слоті»</h2>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take><take sel="#slot" i="3"></take><take sel="#slot" i="4"></take>
-  
+<section class="screen" id="scene" data-step="2" data-name="«У них є склад»">
+  <h2>«У них є склад»</h2>
+  <p>Віктор повертається з зустрічі з малим салоном, який обирав між «Слотом» і конкурентом. Назви сервісів вигадані.</p>
+  <div class="chat">
+    <div class="msg"><span class="ava p-viktor">В</span><div><span class="who">Віктор · продажі</span><span class="bubble">Знову програли «BeautyPro». У них є склад, зарплати майстрів, купа звітів. Нам треба все це, інакше не виграємо.</span></div></div>
+    <div class="msg"><span class="ava p-oleh">О</span><div><span class="who">Олег · техлід</span><span class="bubble">Склад — це пів року роботи. І ми так і не дізналися, чи він потрібен салонам на 3–4 майстри.</span></div></div>
+    <div class="msg"><span class="ava p-olena">О</span><div><span class="who">Олена · підтримка</span><span class="bubble">До речі, двоє салонів прийшли до нас якраз від «BeautyPro». Казали, там складно і дорого.</span></div></div>
+  </div>
+  <div class="pick" id="pick-stock" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: що запропонуєш?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Так ти копіюєш продукт для мереж і втрачаєш простоту, за яку до вас прийшли салони від «BeautyPro». Пів року розробки на здогадку.">Додати склад і зарплати, як у «BeautyPro»</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Подивися, кому продає кожен конкурент, яку роботу він виконує найкраще і на що скаржаться його клієнти. Так видно, де «Слот» може виграти, а не просто наздогнати.">Порівняти конкурентів за роботою малих салонів і скаргами їхніх клієнтів</button>
+      <button type="button" class="pick-opt" data-say="Ігнорувати конкурентів небезпечно: Віктор щотижня бачить, з ким вас порівнюють. Питання не в тому, чи дивитися на них, а як.">Не зважати на конкурентів, робити своє</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
+</section>
+
+<section class="screen" id="slot" data-step="2" data-name="Конкуренти «Слота»">
+  <div class="head-row">
+    <div><span class="eyebrow">Розбір</span><h2>Конкуренти «Слота» для малих салонів</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Порівняння за роботою і скаргами клієнтів показує вільне місце на ринку, а не список функцій, яких «бракує».</p></div>
+  </div>
+  <take sel="#slot" i="2"></take>
+  <take sel="#slot" i="3"></take>
+  <div class="ex"><span class="label">Наступний крок: перевірити масштаб</span><take sel="#slot" i="4"></take></div>
 </section>
 
 <section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
@@ -64,28 +176,64 @@
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take><take sel="#task" i="6"></take><take sel="#task" i="7"></take><take sel="#task" i="8"></take>
-  
+<section class="screen" id="task" data-step="3" data-name="Опитування про неявки">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 1 з 2</span>
+      <h2 style="font-size:26px">Опитування про неявки</h2>
+      <p>Склади коротке опитування для всіх 400 салонів «Слота».</p>
+      <take sel="#task" i="3"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Наскільки вас дратують неявки і чи хотіли б ви автоматичні нагадування? · шкала 1–5»</p><p>Два питання в одному, навідне, про майбутнє, ще й розмита шкала.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Скільки разів минулого тижня клієнт не прийшов, не попередивши? · число»</p><p>Одне питання, про минуле, з точною відповіддю.</p></div>
+        </div>
+        <ul><li>Кожне питання про минуле або поточну поведінку, без «чи хотіли б ви».</li><li>Одне питання — одна думка.</li><li>Де є варіанти, є і «Інше».</li><li>Не питаєш того, що вже є в базі (наприклад, сегмент салону).</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="4-5"></take>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="task2" data-step="3" data-name="Конкуренти твого продукту">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 2 з 2</span>
+      <h2 style="font-size:26px">Конкуренти твого продукту</h2>
+      <p>Обери продукт, яким користуєшся, назви роботу, яку він виконує, і знайди по одному конкуренту з кожної групи.</p>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="warn"><span class="label">Слабо</span><p><b>Нова пошта.</b> Прямий: Укрпошта. Непрямий: Meest. Замінник: «немає».</p><p>Meest — теж пряма служба доставки. А замінник є майже завжди: передати посилку з водієм автобуса чи знайомим.</p></div>
+        <div class="ex"><span class="label">Добре</span><p><b>Нова пошта: отримати посилку швидко і зручно.</b> Прямий: Укрпошта — дешевше, але повільніше. Непрямий: кур'єрська доставка магазину — привозять додому, але треба чекати вдома. Замінник: передати з водієм маршрутки — швидко в межах регіону, але без гарантій.</p><p>Кожна група названа правильно, і для кожного конкурента видно, у чому сила і слабкість для клієнта.</p></div>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="7-8"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 3.2 · фініш</span><h2 style="font-size:32px">Урок 3.2 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 3.2 · фініш</span><h2 style="font-size:32px">Ти бачиш і причини, і масштаб</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>Якісні дані — чому, кількісні — скільки. Висновок перевіряй кількома джерелами.</span></li>
+        <li><span>Опитування: коротко, про минуле, одне питання — одна думка. Дивись, хто відповів.</span></li>
+        <li><span>Конкурентів порівнюй за роботою клієнта. Не забувай про замінники.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
       <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>

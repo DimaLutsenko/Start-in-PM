@@ -134,7 +134,7 @@ const Tools = (() => {
         const on = seg === "all" || seg === g;
         s += `<polyline class="ln ln-${g}${on ? "" : " off"}" points="${pts}"/>`;
         s += `<circle class="dot ln-${g}${on ? "" : " off"}" cx="${x(LAST)}" cy="${y(BASE[g][LAST])}" r="4"/>`;
-        s += `<text class="lbl ln-${g}${on ? "" : " off"}" x="${x(LAST) - 6}" y="${y(BASE[g][LAST]) - 9}" text-anchor="end">${name} · ${BASE[g][LAST]}%</text>`;
+        s += `<text class="lbl ln-${g}${on ? "" : " off"}" x="${x(LAST) - 6}" y="${y(BASE[g][LAST]) - 9}" text-anchor="end">${name} · типово ≈${BASE[g][LAST]}%</text>`;
       });
       s += `<text class="tick" x="${W - R}" y="${H - 6}" text-anchor="end">місяців з моменту підключення →</text>`;
       chart.innerHTML = s + "</svg>";
@@ -170,8 +170,8 @@ const Tools = (() => {
       out("pv", !isFinite(pv) ? "—" : pv < 0.001 ? "< 0,001" : fmt(pv, 3));
       const v = el.querySelector(".calc-verdict");
       if (!isFinite(pv)) { v.className = "calc-verdict mid"; v.textContent = "Введи кількість учасників і подій у кожній групі."; return; }
-      if (pv < 0.05) { v.className = "calc-verdict good"; v.textContent = "Різниця статистично значуща: p-значення менше 0,05. Малоймовірно, що вона виникла випадково."; }
-      else { v.className = "calc-verdict bad"; v.textContent = "Різниця не значуща: вона цілком могла виникнути випадково. Потрібно більше даних або ефекту немає."; }
+      if (pv < 0.05) { v.className = "calc-verdict good"; v.textContent = "Різниця статистично значуща: p-значення менше 0,05. Якби зміна нічого не давала, таку або більшу різницю ми бачили б рідше, ніж у 5% тестів."; }
+      else { v.className = "calc-verdict bad"; v.textContent = "Різниця не значуща: таку різницю легко отримати навіть тоді, коли зміна нічого не дає. Потрібно більше даних — або ефекту справді немає."; }
     }
     el.querySelectorAll("input").forEach((i) => i.addEventListener("input", calc));
     el.querySelectorAll("[data-preset]").forEach((b) => b.addEventListener("click", () => {

@@ -1,78 +1,116 @@
 <!--{"code": "2.3", "title": "Практика: сегменти і JTBD", "week": 2, "js": ["matrix"], "steps": "Контекст|Робимо|Розбір|Перевіряємо"}-->
-
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
       <span class="eyebrow">Тиждень 2 · Користувач і його задачі · Урок 2.3</span>
       <h1>Практика: сегменти і JTBD</h1>
-      <p class="lead">Описуєш сегменти «Слота» і їхні ключові задачі.</p>
-      <div class="chips"><span class="chip">Практика</span><span class="chip">90 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take><take sel="#goal" i="4"></take>
+      <p class="lead">Перетворюєш хаотичну таблицю скарг на сегменти, роботи і першу протоперсону «Слота».</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <p>Ти попросив Олену показати таблицю скарг салонів. Вона прийшла з ноутбуком і словами: «Нарешті хтось спитав». У таблиці все впереміш: перерви в розкладі, SMS, звіти, Viber.</p>
+      <p>Продакт, який реагує на кожну скаргу окремо, стає «секретарем задач». Твоє завдання — побачити за скаргами закономірності.</p>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Розкласти сирі відгуки клієнтів за роботами, які за ними стоять.</span></li><li><span>Побачити, як роботи відрізняються між сегментами, і записати їх як job stories.</span></li><li><span>Скласти протоперсону і список питань, які треба перевірити в розмовах з клієнтами.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Розкладеш 12 скарг за роботами, які за ними стоять.</span></li>
+        <li><span>Запишеш головну роботу кожного сегменту як job story і обереш пріоритетний сегмент.</span></li>
+        <li><span>Складеш протоперсону і три припущення для перевірки в розмовах.</span></li>
+      </ol>
+    </aside>
   </div>
-  
   <span class="label">Як пройде практика</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Вхідні дані: таблиця Олени.</span><small>1 екран</small></button>
-<button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Крок 1. Які роботи стоять за скаргами, Крок 2. Роботи за сегментами, Крок 3. Протоперсона, Крок 4. Що перевірити.</span><small>4 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Як зрозуміти, що зроблено добре, Розбір.</span><small>2 екрани</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Таблиця Олени: 12 характерних скарг за три місяці.</span><small>1 екран · 10 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Роботи за скаргами, job stories сегментів, протоперсона, припущення.</span><small>4 екрани · 60 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і розбір від автора курсу.</span><small>2 екрани · 15 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок другого тижня.</span><small>4 питання · 5 хв</small></button>
+  </div>
+  <p class="muted">Результат — другий артефакт у портфоліо: <b>сегменти і роботи «Слота»</b> з протоперсоною для пріоритетного сегменту.</p>
+</section>
+
+<section class="screen" id="data" data-step="1" data-name="Таблиця Олени">
+  <div class="head-row">
+    <div><span class="eyebrow">Вхідні дані</span><h2>Таблиця Олени</h2></div>
+    <take sel="#data" i="3"></take>
+  </div>
+  <take sel="#data" i="1-2"></take>
+  <div class="ex"><span class="label">Як читати скаргу</span><p>Скарга №9: «Клієнти питають, чи можна записатися через Viber». Мовою рішення це «додайте Viber». Мовою роботи: майстер хоче, щоб клієнти записувалися без нього, але вони звикли писати туди, де вже спілкуються.</p></div>
+</section>
+
+<section class="screen" id="step1" data-step="2" data-name="Роботи за скаргами">
+  <h2>Крок 1. Які роботи стоять за скаргами</h2>
+  <take sel="#step1" i="1-2"></take>
+</section>
+
+<section class="screen" id="step2" data-step="2" data-name="Роботи за сегментами">
+  <h2>Крок 2. Роботи за сегментами</h2>
+  <take sel="#step2" i="1-3"></take>
+  <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+    <div class="grid-2">
+      <div class="warn"><span class="label">Слабо</span><p><b>Великі салони:</b> «Коли я користуюся «Слотом», я хочу бачити звіти, щоб бачити звіти».</p><p>Ситуація всередині продукту, мотивація — функція, результат повторює мотивацію.</p></div>
+      <div class="ex"><span class="label">Добре</span><p><b>Великі салони:</b> «Коли наприкінці місяця я рахую зарплати майстрів трьох філій, я хочу бачити, хто скільки заробив, без ручних підрахунків, щоб не помилитися і не сваритися з майстрами».</p><p>Конкретний момент з життя, немає назви функції, є емоційна сторона.</p></div>
+    </div>
+    <ul><li>Ситуація існувала б і без «Слота».</li><li>У відповіді про «наскільки добре» є висновок: де «Слот» не виконує роботу і що з цього випливає.</li></ul>
+  </div></details>
+</section>
+
+<section class="screen" id="step3" data-step="2" data-name="Протоперсона">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 3</span>
+      <h2 style="font-size:26px">Протоперсона</h2>
+      <take sel="#step3" i="1-2"></take>
+      <div class="ex mini"><b>Нагадування: цифри з уроку 2.1</b><span>Приватні майстри: 180 салонів, 390 грн, 35% ідуть за 2 місяці. Малі салони: 170, 790 грн, 18%. Великі: 50, 1990 грн, 6%.</span></div>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="warn"><span class="label">Слабо</span><p>«Світлана, 35 років, любить подорожі, має двох дітей. Хоче розвивати салон».</p><p>Біографія без поведінки. Не видно, як вона працює зараз, що їй заважає і за чим вона вирішує, чи платити.</p></div>
+        <div class="ex"><span class="label">Добре</span><p>«Протоперсона (гіпотеза): Світлана, власниця салону на 3 майстри. Записи веде адміністраторка, частину приймає сама в Instagram. Що заважає: 2–3 неявки на тиждень. Платитиме далі, якщо побачить, що "дірок" у розкладі менше».</p><p>Кожен рядок підказує, що будувати і як міряти успіх. Позначено, що це гіпотеза.</p></div>
+        <ul><li>Вибір сегменту пояснено цифрами, а не лише враженням.</li><li>Немає зайвих деталей, які не впливають на продукт.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step3" i="3"></take>
+    </div>
   </div>
 </section>
 
-<section class="screen" id="data" data-step="1" data-name="Вхідні дані: таблиця Олени">
-  <div class="head-row"><div><h2>Вхідні дані: таблиця Олени</h2></div><take sel="#data" i="3"></take></div>
-  <take sel="#data" i="1"></take><take sel="#data" i="2"></take>
-  
+<section class="screen" id="step4" data-step="2" data-name="Що перевірити">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 4</span>
+      <h2 style="font-size:26px">Що перевірити</h2>
+      <take sel="#step4" i="1-2"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="warn"><span class="label">Слабо</span><p>«Клієнтам потрібен Viber».</p><p>Це висновок, а не припущення. Незрозуміло, кого питати і що саме має підтвердитися.</p></div>
+        <div class="ex"><span class="label">Добре</span><p>«Більшість приватних майстрів, які пішли, отримували записи переважно в месенджерах, а не за посиланням. Хочу дізнатися: звідки приходили їхні записи в останній місяць перед відходом».</p><p>Видно, у кого питати, що саме з'ясувати і що підтвердить або спростує припущення.</p></div>
+        <ul><li>Кожне припущення можна перевірити розмовою або даними.</li><li>Припущення стосуються різних ризиків, а не повторюють одне одного.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#step4" i="3"></take>
+    </div>
+  </div>
 </section>
 
-<section class="screen" id="step1" data-step="2" data-name="Крок 1. Які роботи стоять за скаргами">
-  <h2>Крок 1. Які роботи стоять за скаргами</h2>
-  <take sel="#step1" i="1"></take><take sel="#step1" i="2"></take>
-  
-</section>
-
-<section class="screen" id="step2" data-step="2" data-name="Крок 2. Роботи за сегментами">
-  <h2>Крок 2. Роботи за сегментами</h2>
-  <take sel="#step2" i="1"></take><take sel="#step2" i="2"></take><take sel="#step2" i="3"></take>
-  
-</section>
-
-<section class="screen" id="step3" data-step="2" data-name="Крок 3. Протоперсона">
-  <h2>Крок 3. Протоперсона</h2>
-  <take sel="#step3" i="1"></take><take sel="#step3" i="2"></take><take sel="#step3" i="3"></take>
-  
-</section>
-
-<section class="screen" id="step4" data-step="2" data-name="Крок 4. Що перевірити">
-  <h2>Крок 4. Що перевірити</h2>
-  <take sel="#step4" i="1"></take><take sel="#step4" i="2"></take><take sel="#step4" i="3"></take>
-  
-</section>
-
-<section class="screen" id="criteria" data-step="3" data-name="Як зрозуміти, що зроблено добре">
-  <div class="head-row"><div><h2>Як зрозуміти, що зроблено добре</h2></div><take sel="#criteria" i="1"></take></div>
-  
-  
+<section class="screen" id="criteria" data-step="3" data-name="Критерії">
+  <h2>Як зрозуміти, що зроблено добре</h2>
+  <take sel="#criteria" i="1"></take>
 </section>
 
 <section class="screen" id="review" data-step="3" data-name="Розбір">
   <h2>Розбір</h2>
-  <take sel="#review" i="1"></take><take sel="#review" i="2"></take>
-  
+  <take sel="#review" i="1-2"></take>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 2.3 · фініш</span><h2 style="font-size:32px">Тиждень 2 завершено</h2></div></div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 2 · фініш</span><h2 style="font-size:32px">Другий артефакт готовий</h2></div></div>
       <take sel="#next" i="1"></take>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
@@ -80,7 +118,7 @@
     </div>
     <div>
       <take sel="#case" i="1"></take>
-      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твої сегменти і роботи</a>
       <div class="pager" id="pager"></div>
       <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>

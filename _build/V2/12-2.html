@@ -3,104 +3,246 @@
 <section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
   <div class="start-hero">
     <div>
-      <span class="eyebrow">Тиждень 12 · AI, кар&#x27;єра і фінальний проєкт · Урок 12.2</span>
-      <h1>Співбесіда і кар'єра PM</h1>
-      <p class="lead">Як проходять співбесіди, продуктові кейси і як рости в ролі.</p>
-      <div class="chips"><span class="chip">Теорія</span><span class="chip">60 хв</span><span class="chip">4 кроки</span></div>
-      <take sel="#goal" i="1"></take><take sel="#goal" i="2"></take><take sel="#goal" i="3"></take>
+      <span class="eyebrow">Тиждень 12 · AI, кар'єра і фінальний проєкт · Урок 12.2</span>
+      <h1>Співбесіда і кар'єра PM</h1>
+      <p class="lead">Як проходить співбесіда на продакта, як відповідати на кейси і поведінкові питання, і як зайти в професію.</p>
+      <div class="chips"><span class="chip">Теорія</span><span class="chip">≈ 60 хвилин</span><span class="chip">4 кроки</span></div>
+      <take sel="#goal" i="1-3"></take>
       <button type="button" class="btn" data-next style="align-self:flex-start">Почати урок <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
     </div>
-    <aside class="big-note"><span class="label">Після уроку ти зможеш</span><ol><li><span>Розуміти етапи співбесіди на продакта і що перевіряють на кожному.</span></li><li><span>Відповідати на продуктові, аналітичні і поведінкові питання за зрозумілою структурою.</span></li><li><span>Підготувати резюме і портфоліо з артефактів курсу і спланувати свій шлях у професії.</span></li></ol></aside>
+    <aside class="big-note">
+      <span class="label">Головне за 30 секунд</span>
+      <ol>
+        <li><span>На співбесіді перевіряють не знання, а <b>спосіб мислення</b>. Думай уголос.</span></li>
+        <li><span>Кейси розв'язуй структурою: мета, користувачі, проблеми, рішення, метрики, ризики.</span></li>
+        <li><span>Резюме — це результати з цифрами, а не список обов'язків.</span></li>
+      </ol>
+    </aside>
   </div>
-  
-  <span class="label">Як пройде урок</span>
+  <span class="label">Як пройде урок</span>
   <div class="steps-plan">
-<button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Ключові поняття, Етапи співбесіди, Продуктовий кейс, Аналітичний кейс…</span><small>7 екранів</small></button>
-<button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Приклад: аналітичний кейс про «Слот», Типові помилки на співбесідах.</span><small>2 екрани</small></button>
-<button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Практичне завдання.</span><small>1 екран</small></button>
-<button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і підсумок уроку.</span><small>Тест · 5 хв</small></button>
+    <button type="button" data-jump="1"><i>1</i><b>Розбираємось</b><span>Етапи співбесіди, продуктовий і аналітичний кейс, STAR, резюме і портфоліо, кар'єра.</span><small>7 екранів · 35 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>На прикладі «Слота»</b><span>Пробна співбесіда: аналітичний кейс про неявки.</span><small>3 екрани · 10 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Пробуємо</b><span>Дві історії STAR, продуктовий кейс і рядок у резюме.</span><small>Завдання · 30 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест з поясненнями і короткий підсумок уроку.</span><small>5 питань · 5 хв</small></button>
   </div>
 </section>
 
 <section class="screen" id="terms" data-step="1" data-name="Ключові поняття">
-  <h2>Ключові поняття</h2>
+  <div class="head-row">
+    <div><span class="eyebrow">Ключові поняття</span><h2>Слова співбесіди</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Три типи питань — продуктові, аналітичні, поведінкові — і для кожного своя структура відповіді.</p></div>
+  </div>
   <take sel="#terms" i="1"></take>
-  
 </section>
 
 <section class="screen" id="stages" data-step="1" data-name="Етапи співбесіди">
-  <h2>Етапи співбесіди</h2>
-  <take sel="#stages" i="1"></take><take sel="#stages" i="2"></take><take sel="#stages" i="3"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Процес</span><h2>Етапи співбесіди</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> На кожному етапі оцінюють не лише відповідь, а й те, як ти до неї дійшов.</p></div>
+  </div>
+  <take sel="#stages" i="1-3"></take>
+  <div class="self-check pick" id="pick-aloud" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Два кандидати отримали однаковий кейс. Перший хвилину мовчав і назвав правильну причину. Другий уголос перебирав гіпотези і дійшов до неї не одразу. Хто, найімовірніше, справив краще враження?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Правильна відповідь без ходу думок схожа на вгадування. Інтерв'юер не бачить, чи зможе кандидат так само міркувати в незнайомій ситуації.">Перший: він одразу знайшов відповідь</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Інтерв'юер бачив структуру, гіпотези і як кандидат їх відкидає. Саме так продакт працюватиме з реальними проблемами.">Другий: було видно, як він думає</button>
+      <button type="button" class="pick-opt" data-say="Однаково буває рідко. Хід думок — те, що перевіряють найбільше, тож другий кандидат показав більше.">Однаково: результат той самий</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="product" data-step="1" data-name="Продуктовий кейс">
-  <h2>Продуктовий кейс</h2>
-  <take sel="#product" i="1"></take><take sel="#product" i="2"></take><take sel="#product" i="3"></take><take sel="#product" i="4"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Тип 1</span><h2>Продуктовий кейс</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> «Як би ти покращив…» — це не про ідеї, а про шлях до них: від мети і користувачів до метрик і ризиків.</p></div>
+  </div>
+  <take sel="#product" i="1"></take>
+  <div class="split">
+    <div><take sel="#product" i="2-3"></take></div>
+    <div>
+      <div class="ex"><span class="label">Як це звучить</span><p>«Як покращити застосунок для замовлення їжі?»</p><p>«Спершу уточню: ми хочемо більше нових користувачів чи щоб наявні замовляли частіше? Припустімо, частіше. Користувачі бувають різні: студенти, сім'ї, офісні працівники. Візьму офісних працівників: вони замовляють обід щодня, і їм важлива швидкість. Їхня проблема — щодня обирати з нуля…»</p></div>
+      <take sel="#product" i="4"></take>
+    </div>
+  </div>
+  <div class="self-check pick" id="pick-first" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Тебе питають: «Придумай продукт для літніх людей». Що скажеш першим?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Це вже рішення. Ти ще не знаєш, для кого саме і яку проблему воно розв'язує.">«Застосунок з великими кнопками для відеодзвінків онукам»</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Літні люди дуже різні, і мета компанії теж може бути різною. Уточнення показує, що ти не стрибаєш до рішення.">«Яка мета компанії? І кого саме ми маємо на увазі: тих, хто живе сам, чи тих, про кого піклуються діти?»</button>
+      <button type="button" class="pick-opt" data-say="Метрика потрібна, але наприкінці. Без мети і користувача ще незрозуміло, що міряти.">«Головною метрикою буде кількість активних користувачів»</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="analytics" data-step="1" data-name="Аналітичний кейс">
-  <h2>Аналітичний кейс</h2>
-  <take sel="#analytics" i="1"></take><take sel="#analytics" i="2"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Тип 2</span><h2>Аналітичний кейс</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Не вгадуй причину. Звужуй пошук: дані, характер падіння, зовнішнє чи внутрішнє, сегменти, воронка, гіпотези.</p></div>
+  </div>
+  <take sel="#analytics" i="1-2"></take>
+  <div class="self-check pick" id="pick-drop" data-yes="Так." data-nope="Не зовсім.">
+    <span class="label">Перевір себе</span>
+    <p class="pick-q">Кількість замовлень упала на 15% за один день, різко. Що перевіриш насамперед?</p>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Конкурент рідко забирає 15% клієнтів за один день. Це можливо, але не перша гіпотеза.">Чи не запустив конкурент знижки</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Різке падіння за день частіше означає щось технічне: реліз, збій оплати, помилку в підрахунку. Перевіряється швидко, тому з цього і починаємо.">Чи не було релізу, збою або зміни в тому, як рахуються дані</button>
+      <button type="button" class="pick-opt" data-say="Сезонність дає поступові зміни, а не обвал за один день. До неї варто повернутися, якщо технічні причини відпадуть.">Сезонність</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
 <section class="screen" id="behavior" data-step="1" data-name="Поведінкові питання">
-  <div class="head-row"><div><h2>Поведінкові питання</h2></div><take sel="#behavior" i="5"></take></div>
-  <take sel="#behavior" i="1"></take><take sel="#behavior" i="2"></take><take sel="#behavior" i="3"></take><take sel="#behavior" i="4"></take>
-  
+  <div class="head-row">
+    <div><span class="eyebrow">Тип 3</span><h2>Поведінкові питання і STAR</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Розповідай конкретну історію: коротко ситуація і задача, найдовше — що зробив саме ти, наприкінці — результат і висновок.</p></div>
+  </div>
+  <take sel="#behavior" i="1-3"></take>
+  <div class="grid-2">
+    <div class="ex"><span class="label">Приклад STAR з курсу</span><p><b>S:</b> У «Слоті» продажі обіцяли клієнтам функції, і розробка не встигала. <b>T:</b> Мені треба було домовитися з Віктором, хоча я не його керівник. <b>A:</b> Я поговорив з ним окремо, з'ясував, що він боїться втратити клієнтів, і показав дані: салони йдуть через неявки, а не через брак функцій. Запропонував щотижня розбирати його запити разом. <b>R:</b> Віктор погодився, а нагадування у Viber, які ми зробили першими, скоротили неявки в малих салонах на 41%.</p><p><i>Це навчальна історія, щоб показати структуру. На співбесіді розповідай лише те, що було з тобою насправді.</i></p></div>
+    <div><take sel="#behavior" i="4-5"></take></div>
+  </div>
 </section>
 
-<section class="screen" id="portfolio" data-step="1" data-name="Резюме і портфоліо">
-  <h2>Резюме і портфоліо</h2>
-  <take sel="#portfolio" i="1"></take><take sel="#portfolio" i="2"></take><take sel="#portfolio" i="3"></take><take sel="#portfolio" i="4"></take><take sel="#portfolio" i="5"></take><take sel="#portfolio" i="6"></take><take sel="#portfolio" i="7"></take>
-  
+<section class="screen" id="portfolio" data-step="1" data-name="Резюме і портфоліо">
+  <div class="head-row">
+    <div><span class="eyebrow">Документи</span><h2>Резюме і портфоліо</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Резюме — список результатів. Портфоліо — 2–3 найсильніші артефакти, оформлені як короткі кейси.</p></div>
+  </div>
+  <take sel="#portfolio" i="1-3"></take>
+  <take sel="#portfolio" i="4-7"></take>
 </section>
 
-<section class="screen" id="career" data-step="1" data-name="Кар&#x27;єра продакта">
-  <h2>Кар'єра продакта</h2>
-  <take sel="#career" i="1"></take><take sel="#career" i="2"></take><take sel="#career" i="3"></take><take sel="#career" i="4"></take><take sel="#career" i="5"></take>
-  
+<section class="screen" id="career" data-step="1" data-name="Кар'єра продакта">
+  <div class="head-row">
+    <div><span class="eyebrow">Кар'єра</span><h2>Як зайти в професію і рости</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Найчастіший вхід — з суміжної ролі, де ти вже знаєш продукт і людей.</p></div>
+  </div>
+  <take sel="#career" i="1-2"></take>
+  <div class="ex"><span class="label">Як це може виглядати</span><p>Олена в «Слоті» — підтримка і CSM. Вона щодня чує клієнтів і веде таблицю скарг. Якщо вона захоче в продакти, перший крок — сказати про це Андрію і взяти продуктову задачу: наприклад, провести п'ять інтерв'ю з салонами, які пішли, і принести висновки.</p></div>
+  <take sel="#career" i="3-5"></take>
+  <div class="fact"><span class="label">Цікаво знати</span><p>За даними DOU (квітень 2026), кількість вакансій продакт-менеджерів на сайті зросла з 2 947 у 2024 році до 4 044 у 2025-му. У тій самій статті компанії розповідають, що часто наймають продактів за рекомендаціями і вирощують їх усередині. Тому досвід із суміжної ролі, знайомства в професійній спільноті і портфоліо так важать.</p></div>
+  <div class="warn"><span class="label">Пастка</span><p>У вакансіях на DOU і Djinni легко сплутати <b>Product Manager</b> і <b>Project Manager</b>. Проджект відповідає за терміни, бюджет і виконання задач, продакт — за те, що і навіщо будувати. Перш ніж відгукуватися, прочитай обов'язки, а не лише назву.</p><span class="fix"><b>Як правильно:</b> шукай за словами «Product Manager», «Product Owner», «Product Analyst» і дивись, чи є в обов'язках дослідження користувачів, метрики і пріоритизація. Перевір і вимоги до англійської: у компаніях із закордонними клієнтами чи командою її часто перевіряють уже на скринінгу.</span></div>
 </section>
 
-<section class="screen" id="slot" data-step="2" data-name="Приклад: аналітичний кейс про «Слот»">
-  <h2>Приклад: аналітичний кейс про «Слот»</h2>
-  <take sel="#slot" i="1"></take><take sel="#slot" i="2"></take><take sel="#slot" i="3"></take>
-  
+<section class="screen" id="scene" data-step="2" data-name="Пробна співбесіда">
+  <h2>Пробна співбесіда</h2>
+  <p>Тебе запросили на співбесіду в компанію, яка робить сервіс онлайн-запису. Після знайомства — аналітичний кейс.</p>
+  <div class="split" style="grid-template-columns:minmax(0,1fr) 280px">
+    <div>
+      <div class="chat">
+        <div class="msg"><span class="ava p-oleh">Д</span><div><span class="who">Дарина · Head of Product</span><span class="bubble">Уявіть: у нашому сервісі частка неявок за тиждень зросла з 6% до 9%. Що будете робити?</span></div></div>
+        <div class="msg"><span class="ava p-you">Ти</span><div><span class="who">Ти</span><span class="bubble">Можна кілька секунд подумати?</span></div></div>
+        <div class="msg"><span class="ava p-oleh">Д</span><div><span class="who">Дарина · Head of Product</span><span class="bubble">Звісно. І говоріть уголос, мені цікаво, як ви міркуєте.</span></div></div>
+      </div>
+    </div>
+    <div>
+      <span class="label">Що перевіряють</span>
+      <div class="panel" style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+        <span>Чи не стрибаєш до висновку</span>
+        <span>Чи думаєш про якість даних</span>
+        <span>Чи ділиш проблему на частини</span>
+        <span>Чи вмієш обрати, з чого почати</span>
+      </div>
+    </div>
+  </div>
+  <div class="pick" id="pick-interview" data-yes="Влучно." data-nope="Зрозуміло, чому хочеться, але є краще.">
+    <span class="label" style="color:var(--link)">Твій хід: з чого почнеш відповідь?</span>
+    <div class="pick-opts">
+      <button type="button" class="pick-opt" data-say="Це гіпотеза, і, можливо, правильна. Але названа першою, вона виглядає як вгадування. Спершу перевір дані і характер зростання, тоді ця гіпотеза прозвучить як висновок.">«Мабуть, перестали надходити нагадування клієнтам»</button>
+      <button type="button" class="pick-opt" data-ok="1" data-say="Так. Спершу переконатися, що це не помилка в даних, потім подивитися, різко чи поступово, і лише тоді йти до гіпотез. Інтерв'юерка бачить структуру з першого речення.">«Спершу перевірю, чи не змінилося, як рахуємо неявку, і чи це різкий стрибок, чи поступове зростання»</button>
+      <button type="button" class="pick-opt" data-say="Рішення без діагнозу. Якщо причина у збої нагадувань, нова функція нічого не дасть.">«Я б запропонував передоплату для клієнтів, які не приходять»</button>
+    </div>
+    <div class="pick-out" hidden></div>
+  </div>
 </section>
 
-<section class="screen" id="mistakes" data-step="2" data-name="Типові помилки на співбесідах">
-  <h2>Типові помилки на співбесідах</h2>
+<section class="screen" id="slot" data-step="2" data-name="Сильна відповідь">
+  <div class="head-row">
+    <div><span class="eyebrow">На прикладі «Слота»</span><h2>Як звучить сильна відповідь</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> У сильній відповіді немає «правильної» причини. Є структура, гіпотези і пріоритет перевірки.</p></div>
+  </div>
+  <take sel="#slot" i="2-3"></take>
+</section>
+
+<section class="screen" id="mistakes" data-step="2" data-name="Типові помилки">
+  <h2>П'ять помилок на співбесідах</h2>
   <take sel="#mistakes" i="1"></take>
   <take sel="#case" i="1"></take>
 </section>
 
-<section class="screen" id="task" data-step="3" data-name="Практичне завдання">
-  <h2>Практичне завдання</h2>
-  <take sel="#task" i="1"></take><take sel="#task" i="2"></take><take sel="#task" i="3"></take><take sel="#task" i="4"></take><take sel="#task" i="5"></take><take sel="#task" i="6"></take><take sel="#task" i="7"></take><take sel="#task" i="8"></take><take sel="#task" i="9"></take><take sel="#task" i="10"></take>
-  
+<section class="screen" id="task1" data-step="3" data-name="Дві історії STAR">
+  <style>#task1 .builder .row{grid-template-columns:96px minmax(0,1fr)} #task1 .builder .preview:empty::before{content:"Тут з'явиться готова історія"} @media (max-width:700px){#task1 .builder .row{grid-template-columns:1fr}}</style>
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 1 з 2 · 15 хв</span>
+      <h2 style="font-size:26px">Дві історії STAR</h2>
+      <take sel="#task" i="3"></take>
+      <p>Не маєш досвіду роботи? Підійдуть навчання, волонтерство, домовленості в сім'ї чи з сусідами. Важливо, щоб це була реальна історія з твоїми діями.</p>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Ми в команді не погоджувались щодо дизайну. Ми обговорили і знайшли компроміс. Все вийшло добре».</p><p>Незрозуміло, що зробив саме ти, яка була суперечка і чим вона закінчилась. «Все вийшло добре» — не результат.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«На волонтерському проєкті координаторка хотіла друкувати листівки, а я вважав, що краще оголошення в міських Telegram-каналах. Я не був керівником, тож запропонував тест: тиждень ті й інші. Я порахував реєстрації за кожним каналом: 6 з листівок, 31 з Telegram. Далі ми перенесли бюджет у Telegram. Висновок: суперечку краще розв'язувати дешевим тестом, а не голосуванням».</p></div>
+        </div>
+        <ul><li>Дії від першої особи: «я зробив», а не «ми обговорили».</li><li>Розділ «Дії» найдовший, а ситуація — у двох реченнях.</li><li>Результат конкретний, бажано з цифрою, і є висновок.</li><li>В історії про помилку чесно названо помилку і що ти змінив після неї.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="4"></take>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="task2" data-step="3" data-name="Кейс і резюме">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Завдання · частина 2 з 2 · 15 хв</span>
+      <h2 style="font-size:26px">Продуктовий кейс і рядок у резюме</h2>
+      <take sel="#task" i="6"></take>
+      <take sel="#task" i="9"></take>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна відповідь</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>Кейс: «Зробити великі кнопки і голосове керування». Резюме: «Відповідав за роботу з клієнтами».</p><p>У кейсі одразу рішення, без мети, користувачів і метрик. У резюме обов'язок замість результату.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>Кейс: «Уточнення: мета — щоб люди 65+ частіше їздили самостійно. Користувачі: беру тих, хто живе сам і їздить до лікаря, бо для них поїздка — необхідність, а не розвага. Проблеми: не бачать, де машина; бояться не знайти водія; складно ввести адресу. Пріоритет: страх не знайти водія — через нього люди взагалі не замовляють. Рішення: дзвінок від водія за 2 хвилини до приїзду (інші варіанти: голосове замовлення, допомога родича). Метрика: частка тих, хто замовив повторно за місяць; контрметрика: час подачі. Ризик: водії не дзвонитимуть — перевіряю на двох тижнях в одному місті». Резюме: «Переписав скрипт відповідей підтримки: повторних звернень з тим самим питанням стало на 30% менше за квартал».</p></div>
+        </div>
+        <ul><li>Кейс проходить усі сім кроків, кожен — одне-два речення.</li><li>Обрано один сегмент і одну проблему, з поясненням чому.</li><li>Є головна метрика і контрметрика.</li><li>Рядок резюме: дія, результат у цифрах, зв'язок з бізнесом.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <take sel="#task" i="7"></take>
+      <take sel="#task" i="10"></take>
+    </div>
+  </div>
 </section>
 
 <section class="screen" id="check" data-step="4" data-name="Тест">
   <h2>Самоперевірка</h2>
-  <take sel="#check" i="1"></take><take sel="#check" i="2"></take>
+  <take sel="#check" i="1-2"></take>
 </section>
 
 <section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
   <div class="split">
     <div>
-      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 12.2 · фініш</span><h2 style="font-size:32px">Урок 12.2 пройдено</h2></div></div>
-      
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Урок 12.2 · фініш</span><h2 style="font-size:32px">Ти готовий до співбесіди</h2></div></div>
+      <div class="big-note"><span class="label">Що забрати з уроку</span><ol>
+        <li><span>Думай уголос і починай з уточнень, а не з рішень.</span></li>
+        <li><span>Поведінкові історії — за STAR, від першої особи, з цифрами і висновком.</span></li>
+        <li><span>Резюме — результати, портфоліо — 2–3 кейси з курсу, чесно позначені як навчальні.</span></li></ol></div>
       <span class="label">Перевір себе</span>
       <take sel="#check" i="3"></take>
-      <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
+      <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
     </div>
     <div>
-      <span class="label">Що почитати далі · за бажанням</span><take sel="#more" i="1"></take><take sel="#more" i="2"></take>
+      <span class="label">Що почитати далі · за бажанням</span>
+      <take sel="#more" i="1-2"></take>
       <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»</a>
       <div class="pager" id="pager"></div>
-      <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
+      <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
     </div>
   </div>
 </section>

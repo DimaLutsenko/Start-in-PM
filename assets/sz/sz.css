@@ -90,3 +90,4 @@ details.sz-locked > summary { opacity: .75; }
   .v2 .hd nav { order: 3; flex: 1 0 100%; overflow-x: auto; white-space: nowrap; padding: 12px 0; scrollbar-width: none; }
   .v2 .hd nav a { flex: none; }
 }
+[hidden] { display: none !important; }

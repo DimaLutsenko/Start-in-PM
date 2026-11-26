@@ -45,3 +45,4 @@ body.site { margin: 0; background: var(--s-bg); color: var(--s-ink); font: 16px/
 .s-doc h2 { font: 600 20px/1.3 Unbounded, sans-serif; margin: 32px 0 8px; }
 .s-doc p, .s-doc li { color: #D9D5CC; }
 .s-doc ul { padding-left: 20px; }
+[hidden] { display: none !important; }

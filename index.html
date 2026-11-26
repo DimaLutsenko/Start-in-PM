@@ -9,7 +9,7 @@
 <meta property="og:description" content="Перший курс — «Продакт з нуля»: 12 тижнів практики на наскрізному продукті і портфоліо з 12 артефактів.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/sz/site.css?v=1">
+<link rel="stylesheet" href="/assets/sz/site.css?v=2">
 <script src="/assets/sz/config.js?v=1"></script>
 <script src="/assets/sz/boot.js?v=1"></script>
 <style>
@@ -48,7 +48,7 @@
 <body class="site">
 <header class="s-head"><div class="s-in">
   <a class="s-logo" href="/"><span class="s-mark" aria-hidden="true"><i></i></span><span>SPRINT ZERO</span></a>
-  <nav class="s-nav"><a href="#courses">Курси</a><a href="#author">Про автора</a><a href="#community">Спільнота</a><a class="s-btn y" style="min-height:40px" href="/pm/">Почати безкоштовно</a></nav>
+  <nav class="s-nav"><a href="#courses">Курси</a><a href="#author">Про автора</a><a href="#community">Соцмережі</a><a class="s-btn y" style="min-height:40px" href="/pm/">Почати безкоштовно</a></nav>
 </div></header>
 <main class="s-in s-main">
   <section class="h-hero">
@@ -117,10 +117,9 @@
   </section>
 
   <section class="h-sec" id="community">
-    <h2>Спільнота</h2>
+    <h2>Ми в соцмережах</h2>
     <div class="h-grid">
       <div class="h-card"><h3>Telegram-канал</h3><p>Анонси курсів, новини платформи і корисні матеріали про продакт-менеджмент.</p><a class="s-btn" id="ch2" href="#" target="_blank" rel="noopener">Підписатися</a></div>
-      <div class="h-card" id="grp" hidden><h3>Група учасників</h3><p>Обговорюємо уроки, ділимося артефактами і даємо одне одному фідбек.</p><a class="s-btn" id="grp-a" href="#" target="_blank" rel="noopener">Приєднатися</a></div>
     </div>
   </section>
 </main>
@@ -129,7 +128,6 @@
 (function () {
   var C = window.SZ_CONFIG;
   ["ch1", "ch2"].forEach(function (id) { var a = document.getElementById(id); if (a && C.telegramChannel) { a.href = C.telegramChannel; a.target = "_blank"; a.rel = "noopener"; } });
-  if (C.telegramGroup) { document.getElementById("grp").hidden = false; document.getElementById("grp-a").href = C.telegramGroup; }
 })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>

@@ -14,7 +14,7 @@
 </head>
 <body class="v2" data-root="">
 <header class="hd"><div class="in">
-  <a class="logo" href="index.html"><i aria-hidden="true"></i>Продакт з нуля</a>
+  <a class="logo" href="/" title="На головну Sprint Zero"><i aria-hidden="true"></i>Продакт з нуля</a>
   <nav aria-label="Розділи"><a href="index.html">Головна</a><a href="program.html">Програма</a><a href="product.html">Продукт «Слот»</a><a href="zoshyt.html" aria-current="page">Мій зошит</a></nav>
 </div></header>
 <main><div class="wrap">
@@ -25,16 +25,13 @@
   <p class="muted">Нотатки, виділення з коментарями і відповіді на завдання з усіх уроків, зібрані по тижнях. До кінця курсу тут складеться твоє портфоліо.</p>
 </div>
 
-<section class="backup" aria-label="Резервна копія">
-  <div class="warn">
-    <span class="label">Важливо</span>
-    <p>Записи зберігаються тільки в цьому браузері на цьому пристрої. Якщо очистити браузер або відкрити курс на іншому пристрої, їх там не буде. Регулярно зберігай копію у файл. <span id="backup-info"></span></p>
-  </div>
+<section class="backup" id="backup" aria-label="Збереження і копія" hidden>
+  <div id="store-note"></div>
   <div class="row">
-    <button class="btn" id="btn-download" type="button">Зберегти копію у файл</button>
+    <button class="btn ghost" id="btn-copy" type="button">Скопіювати як текст</button>
+    <button class="btn ghost" id="btn-download" type="button">Завантажити копію у файл</button>
     <label class="btn ghost" for="file-restore">Відновити з файлу</label>
     <input id="file-restore" type="file" accept="application/json,.json" hidden>
-    <button class="btn ghost" id="btn-copy" type="button">Скопіювати як текст</button>
   </div>
   <p id="backup-msg" class="saved-note" role="status"></p>
   <div id="restore-confirm" class="row" hidden>
@@ -44,9 +41,9 @@
   </div>
 </section>
 
-<div id="notebook" style="margin-top:40px"></div>
+<div id="notebook" style="margin-top:32px"></div>
 
-<div class="reset-zone">
+<div class="reset-zone" id="reset-zone" hidden>
   <button class="btn ghost" id="clear-btn" type="button">Очистити зошит</button>
   <span id="clear-confirm" hidden>Видалити всі нотатки, виділення і відповіді? Це не можна скасувати. <button class="btn" id="clear-yes" type="button">Так, видалити</button> <button class="btn ghost" id="clear-no" type="button">Скасувати</button></span>
 </div>
@@ -85,9 +82,21 @@
       });
       html += `</section>`;
     });
-    el.innerHTML = any ? html : `<div class="nb-empty"><b>Зошит поки порожній</b><span>Відкрий <a href="lessons/01-1.html">перший урок</a>: виділяй важливе, пиши нотатки через кнопку «Нотатки» внизу екрана і відповідай на завдання прямо в уроці. Усе з'явиться тут.</span></div>`;
-    const b = WB.data.meta.backup;
-    document.getElementById("backup-info").textContent = b ? `Остання копія: ${fmt(b)}.` : "Ти ще не зберігав копію.";
+    const nx = PMZ.lessons.find((l) => !(JSON.parse(localStorage.getItem("pmz-progress-v1") || "{}").done || {})[l.id]) || PMZ.lessons[0];
+    el.innerHTML = any ? html : `<div class="nb-empty"><b>Поки що тут порожньо</b><span>Тут з'являться твої нотатки, виділення і відповіді на завдання з уроків. Почни курс, і зошит почне наповнюватися.</span><a class="btn" style="align-self:flex-start;justify-self:start;width:auto;margin-top:8px" href="lessons/${nx.id}.html">${nx.id === "01-1" ? "Почати курс" : "Продовжити курс: урок " + nx.code}</a></div>`;
+    document.getElementById("backup").hidden = !any;
+    document.getElementById("reset-zone").hidden = !any;
+    paintStore();
+  }
+
+  function paintStore() {
+    const box = document.getElementById("store-note");
+    const user = window.SZ && SZ.user;
+    box.innerHTML = user
+      ? `<div class="ex"><span class="label">Збережено в акаунті</span><p>Записи автоматично зберігаються в твоєму акаунті і доступні з будь-якого пристрою після входу. За бажанням можна скопіювати їх як текст або завантажити копію у файл.</p></div>`
+      : `<div class="warn"><span class="label">Важливо</span><p>Зараз записи зберігаються тільки в цьому браузері. Увійди через Google, і вони збережуться в акаунті: нічого не загубиться, а продовжити можна з будь-якого пристрою.</p><button class="btn sm" type="button" id="store-in" style="margin-top:12px;align-self:flex-start;justify-self:start;width:auto;display:inline-flex">Увійти і зберегти</button></div>`;
+    const b = document.getElementById("store-in");
+    if (b) b.addEventListener("click", () => window.SZ && SZ.openAuth && SZ.openAuth());
   }
 
   function asText() {
@@ -137,6 +146,7 @@
   document.getElementById("clear-yes").addEventListener("click", () => { WB.clearAll(); clearBox.hidden = true; clearBtn.hidden = false; render(); msg("Зошит очищено."); });
 
   render();
+  window.addEventListener("load", () => { if (window.SZ && SZ.ready) SZ.ready.then(paintStore); });
 })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>

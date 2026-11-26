@@ -63,3 +63,9 @@ details.sz-locked > summary { opacity: .75; }
 .sz-viewas body { padding-top: 48px; }
 .sz-tip .btn { background: var(--note, #FFD54A); color: var(--note-ink, #2E2500); border: 0; }
 .sz-q + .sz-q { margin-top: 6px; }
+.sz-gated > *:not(.sz-gate) { display: none !important; }
+.sz-gate { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; padding: 22px; border-radius: 16px; border: 1px dashed var(--line, #D8DBD3); background: var(--surface, #fff); max-width: 640px; }
+.sz-gate[hidden] { display: none; }
+.sz-gate .label { display: inline-flex; gap: 6px; align-items: center; }
+.sz-gate b { font-size: 20px; }
+.sz-gate p { margin: 0; }

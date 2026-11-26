@@ -402,6 +402,33 @@
       addDiscuss(d);
     });
   }
+  /* розбір автора в практичному уроці відкривається після власної роботи */
+  var REVIEW_MIN = { "01-3": 11, "02-3": 10, "03-3": 10, "04-3": 11, "05-3": 9, "06-3": 7, "07-3": 6, "08-3": 25, "09-3": 6, "10-3": 3, "11-3": 6, "12-3": 6 };
+  function initReviewGate() {
+    if (!lessonId || !REVIEW_MIN[lessonId] || B.viewAs) return;
+    var screens = $$('.screen[data-name="Розбір"], .screen[data-name^="Приклад"]');
+    if (!screens.length) return;
+    var all = $$(".screen"), first = all.indexOf(screens[0]);
+    var before = all.slice(0, first).filter(function (s) { return +s.dataset.step > 0; });
+    var step = before.length ? +before[before.length - 1].dataset.step : +screens[0].dataset.step;
+    var fields = before.reduce(function (a, s) { return a.concat($$("[data-field]", s)); }, []);
+    var need = Math.min(REVIEW_MIN[lessonId], fields.length);
+    if (!need) return;
+    var notes = screens.map(function (scr) {
+      var n = el('<div class="sz-gate"><span class="label">' + ICON.lock + ' Розбір автора</span><b>Спершу зроби свою частину</b><p>Розбір і приклад автора відкриються, коли ти заповниш свої відповіді. Так ти порівняєш власне рішення з прикладом, а не просто перепишеш його.</p><p class="sz-small" data-cnt></p><button type="button" class="btn sm" data-jump="' + step + '">Повернутися до завдання</button></div>');
+      scr.insertBefore(n, scr.firstChild);
+      return n;
+    });
+    function filled() { return fields.filter(function (f) { return (f.value || "").trim().length >= 3; }).length; }
+    function paint() {
+      var have = filled(), open = have >= need;
+      screens.forEach(function (scr, i) { scr.classList.toggle("sz-gated", !open); notes[i].hidden = open; $("[data-cnt]", notes[i]).textContent = "Заповнено " + have + " з " + need + " потрібних полів."; });
+    }
+    paint();
+    fields.forEach(function (f) { f.addEventListener("input", paint); });
+    var was = filled() >= need;
+    fields.forEach(function (f) { f.addEventListener("input", function () { if (!was && filled() >= need) { was = true; track("review_unlocked"); } }); });
+  }
   function addDiscuss(d) {
     var url = discussUrl(); if (!url) return;
     var body = $("div", d) || d;
@@ -481,6 +508,7 @@
 
   initViewAs();
   initSelfCheck();
+  initReviewGate();
   initFeedback();
   track("page_view", { props: { path: location.pathname, ref: document.referrer ? document.referrer.slice(0, 120) : null } });
   setInterval(function () { if (B.events.length) flushEvents(); }, 5000);

@@ -49,7 +49,7 @@ def build(lid):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/style.css?v={VER}">
 <link rel="stylesheet" href="../assets/v2.css?v={VER}">
-<link rel="stylesheet" href="/assets/sz/sz.css?v=2">
+<link rel="stylesheet" href="/assets/sz/sz.css?v=3">
 <script src="/assets/sz/config.js?v=1"></script>
 <script src="/assets/sz/boot.js?v=1"></script>
 </head>
@@ -75,7 +75,7 @@ def build(lid):
 <script>{script}
 Stepper.init();</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="/assets/sz/app.js?v=2"></script>
+<script src="/assets/sz/app.js?v=3"></script>
 </body>
 </html>
 """

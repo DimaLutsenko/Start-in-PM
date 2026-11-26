@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Адмінка · Sprint Zero</title>
+<title>Панель автора · Sprint Zero</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/sz/site.css?v=1">
-<link rel="stylesheet" href="/assets/sz/sz.css?v=2">
+<link rel="stylesheet" href="/assets/sz/sz.css?v=3">
 <script src="/assets/sz/config.js?v=1"></script>
 <script src="/assets/sz/boot.js?v=1"></script>
 <style>
@@ -44,12 +44,12 @@ table.a-tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
 </head>
 <body class="site">
 <header class="s-head"><div class="s-in">
-  <a class="s-logo" href="/"><span class="s-mark" aria-hidden="true"><i></i></span><span>SPRINT ZERO · адмінка</span></a>
+  <a class="s-logo" href="/"><span class="s-mark" aria-hidden="true"><i></i></span><span>SPRINT ZERO · панель автора</span></a>
   <nav class="s-nav"><a href="/pm/">Курс</a><span id="who" class="s-muted"></span></nav>
 </div></header>
 <main class="s-in s-main" id="app"><p class="s-muted">Завантажую…</p></main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="/assets/sz/app.js?v=2"></script>
+<script src="/assets/sz/app.js?v=3"></script>
 <script src="/pm/assets/course.js?v=20"></script>
 <script>
 (function () {
@@ -66,7 +66,7 @@ table.a-tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
 
   SZ.ready.then(function () {
     if (!SZ.user) {
-      app.innerHTML = '<div class="a-panel"><h2>Вхід в адмінку</h2><p class="s-muted">Увійди акаунтом адміністратора.</p><div><button class="s-btn y" id="in" type="button">Увійти через Google</button></div></div>';
+      app.innerHTML = '<div class="a-panel"><h2>Панель автора</h2><p class="s-muted">Увійди акаунтом адміністратора.</p><div><button class="s-btn y" id="in" type="button">Увійти через Google</button></div></div>';
       document.getElementById("in").addEventListener("click", function () { SZ.openAuth({ title: "Вхід в адмінку", text: "Увійди акаунтом адміністратора Sprint Zero." }); });
       return;
     }

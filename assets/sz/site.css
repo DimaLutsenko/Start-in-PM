@@ -1,0 +1,47 @@
+/* Sprint Zero: стиль сторінок платформи (головна, сертифікат, документи, адмінка). */
+:root { --s-bg: #0C0C0C; --s-surface: #161616; --s-line: #2A2A2A; --s-ink: #F4F1EA; --s-muted: #A8A49C; --s-y: #FFD43B; --s-ok: #7CE0A3; --s-bad: #FF8A80; }
+* { box-sizing: border-box; }
+body.site { margin: 0; background: var(--s-bg); color: var(--s-ink); font: 16px/1.55 Inter, system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+.site a { color: var(--s-y); }
+.site a:hover { color: #FFE27A; }
+.s-in { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.s-head { border-bottom: 1px solid #222; }
+.s-head .s-in { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
+.s-logo { display: inline-flex; align-items: center; gap: 10px; color: var(--s-ink) !important; text-decoration: none; font: 800 17px Unbounded, sans-serif; }
+.s-mark { width: 30px; height: 30px; border-radius: 50%; border: 4px solid var(--s-y); display: inline-flex; align-items: center; justify-content: center; }
+.s-mark i { width: 4px; height: 12px; background: var(--s-y); border-radius: 2px; transform: rotate(35deg); }
+.s-nav { display: flex; flex-wrap: wrap; gap: 22px; align-items: center; font-size: 15px; }
+.s-nav a { color: #D9D5CC; text-decoration: none; }
+.s-nav a:hover { color: var(--s-ink); }
+.s-main { flex: 1; padding-top: 40px; padding-bottom: 72px; display: flex; flex-direction: column; gap: 28px; }
+.s-muted { color: var(--s-muted); }
+.s-kicker { font-size: 12px; font-weight: 600; letter-spacing: .16em; color: var(--s-muted); }
+.s-banner { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; border-radius: 10px; padding: 16px 20px; }
+.s-banner div, .s-banner { flex-direction: row; }
+.s-banner b { display: block; font-size: 16px; }
+.s-banner span { font-size: 14px; }
+.s-banner.ok { background: #13261A; border: 1px solid #2D5A3C; color: var(--s-ok); }
+.s-banner.ok b { color: #C9F2D7; } .s-banner.ok span { color: #9CC9AC; }
+.s-banner.bad { background: #2A1514; border: 1px solid #5A2D2A; flex-direction: column; align-items: flex-start; gap: 4px; }
+.s-banner.bad b { color: #FFD1CC; } .s-banner.bad span { color: #E0A9A3; }
+.s-cert-grid { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+.s-cert-grid > .szc-box { flex: 999 1 640px; min-width: 0; border: 1px solid #262626; }
+.s-side { flex: 1 1 300px; display: flex; flex-direction: column; gap: 20px; }
+.s-side h1 { margin: 6px 0 2px; font: 600 28px/1.2 Unbounded, sans-serif; }
+.s-side p { margin: 6px 0 0; color: #D9D5CC; }
+.s-btns { display: flex; flex-direction: column; gap: 10px; }
+.s-btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 18px; border-radius: 8px; border: 1px solid #3A3A3A; background: #1E1E1E; color: var(--s-ink) !important; font: 600 15px Inter, system-ui, sans-serif; text-decoration: none; cursor: pointer; }
+.s-btn:hover { border-color: #5A5A5A; }
+.s-btn.y { background: var(--s-y); border-color: var(--s-y); color: #121212 !important; }
+.s-btn.y:hover { background: #FFE27A; }
+.s-box { background: var(--s-surface); border: 1px solid #262626; border-radius: 10px; padding: 18px; display: flex; flex-direction: column; gap: 10px; }
+.s-box ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; color: #D9D5CC; }
+.s-foot { border-top: 1px solid #222; color: var(--s-muted); font-size: 14px; }
+.s-foot .s-in { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; padding-top: 22px; padding-bottom: 22px; }
+.s-foot a { color: var(--s-muted); }
+/* документи */
+.s-doc { max-width: 760px; }
+.s-doc h1 { font: 600 34px/1.2 Unbounded, sans-serif; margin: 0 0 8px; }
+.s-doc h2 { font: 600 20px/1.3 Unbounded, sans-serif; margin: 32px 0 8px; }
+.s-doc p, .s-doc li { color: #D9D5CC; }
+.s-doc ul { padding-left: 20px; }

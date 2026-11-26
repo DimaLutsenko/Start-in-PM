@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сертифікат · Sprint Zero Academy</title>
+<meta name="description" content="Перевірка сертифіката Sprint Zero Academy про проходження курсу «Продакт з нуля».">
+<meta property="og:title" content="Сертифікат Sprint Zero Academy">
+<meta property="og:description" content="Курс «Продакт з нуля»: 12 тижнів практики, 36 уроків, 12 робочих артефактів.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sz/site.css?v=1">
+<link rel="stylesheet" href="/assets/sz/cert.css?v=1">
+</head>
+<body class="site">
+<header class="s-head"><div class="s-in">
+  <a class="s-logo" href="/"><span class="s-mark" aria-hidden="true"><i></i></span><span>SPRINT ZERO</span></a>
+  <nav class="s-nav"><a href="/#courses">Курси</a><a href="/pm/">Продакт з нуля</a></nav>
+</div></header>
+<main class="s-in s-main" id="app"><p class="s-muted">Завантажую сертифікат…</p></main>
+<footer class="s-foot"><div class="s-in"><span>© Sprint Zero Academy</span><span><a href="/privacy.html">Конфіденційність</a> · <a href="/terms.html">Умови</a></span></div></footer>
+<script src="/assets/sz/config.js?v=1"></script>
+<script src="/assets/sz/cert.js?v=1"></script>
+<script>
+(function () {
+  var C = window.SZ_CONFIG, app = document.getElementById("app");
+  var id = new URLSearchParams(location.search).get("id") || "";
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  var check = '<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M7.5 12.5l3 3 6-6.5"></path></svg>';
+  function notFound() { app.innerHTML = '<div class="s-banner bad"><b>Сертифікат не знайдено</b><span>Перевір посилання: можливо, його скопійовано не повністю.</span></div>'; }
+  if (!/^[a-f0-9]{6,20}$/.test(id)) return notFound();
+  fetch(C.supabaseUrl + "/rest/v1/rpc/get_certificate", { method: "POST", headers: { apikey: C.supabaseKey, Authorization: "Bearer " + C.supabaseKey, "Content-Type": "application/json" }, body: JSON.stringify({ p_slug: id }) })
+    .then(function (r) { return r.json(); })
+    .then(function (c) {
+      if (!c || !c.number) return notFound();
+      c.slug = id;
+      document.title = "Сертифікат " + c.name_uk + " · Sprint Zero Academy";
+      app.innerHTML = (c.revoked
+        ? '<div class="s-banner bad"><b>Сертифікат анульовано</b><span>№ ' + esc(c.number) + '. Він більше не підтверджує проходження курсу.</span></div>'
+        : '<div class="s-banner ok">' + check + '<div><b>Сертифікат дійсний</b><span>Виданий Sprint Zero Academy · № ' + esc(c.number) + " · " + SZCert.date(c.issued_at) + "</span></div></div>") +
+        '<div class="s-cert-grid"><div class="szc-box szc-print" id="cert"></div>' +
+        '<aside class="s-side"><div><span class="s-kicker">ВЛАСНИК</span><h1>' + esc(c.name_uk) + "</h1><span class=\"s-muted\">" + esc(c.name_lat) + '</span><p>пройшов(-ла) курс «Продакт з нуля»</p></div>' +
+        (c.revoked ? "" : '<div class="s-btns"><button class="s-btn y" type="button" id="pdf">Завантажити PDF</button><a class="s-btn" target="_blank" rel="noopener" href="' + esc(SZCert.linkedIn(c)) + '">Додати в LinkedIn</a><button class="s-btn" type="button" id="copy">Скопіювати посилання</button></div>') +
+        '<div class="s-box"><span class="s-kicker">ЩО ВХОДИЛО В КУРС</span><ul><li>36 уроків за 12 тижнів</li><li>12 робочих артефактів: від карти стейкхолдерів до PRD і roadmap</li><li>Підсумковий тест і фінальна продуктова стратегія</li></ul></div>' +
+        '<div class="s-box"><b>Хочеш так само?</b><span class="s-muted">Курс «Продакт з нуля» безкоштовний. Почни з першого уроку вже сьогодні.</span><a href="/pm/?utm_source=certificate&utm_medium=referral&utm_campaign=' + esc(c.number) + '">Почати безкоштовно →</a></div></aside></div>';
+      SZCert.mount(document.getElementById("cert"), c);
+      var pdf = document.getElementById("pdf");
+      if (pdf) pdf.addEventListener("click", function () { window.print(); });
+      var cp = document.getElementById("copy");
+      if (cp) cp.addEventListener("click", function () {
+        (navigator.clipboard ? navigator.clipboard.writeText(location.href) : Promise.reject()).then(function () { cp.textContent = "Посилання скопійовано"; }, function () { prompt("Скопіюй посилання:", location.href); });
+      });
+    })
+    .catch(function () { app.innerHTML = '<div class="s-banner bad"><b>Не вдалося перевірити сертифікат</b><span>Перевір інтернет і онови сторінку.</span></div>'; });
+})();
+</script>
+</body>
+</html>

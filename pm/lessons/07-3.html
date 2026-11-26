@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Урок 7.3 · Практика: дизайн експерименту</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css?v=20">
+<link rel="stylesheet" href="../assets/v2.css?v=20">
+<link rel="stylesheet" href="/assets/sz/sz.css?v=1">
+<script src="/assets/sz/config.js?v=1"></script>
+<script src="/assets/sz/boot.js?v=1"></script>
+</head>
+<body class="v2" data-root="../" data-lesson="07-3">
+<header class="ls-top"><div class="in">
+  <div class="ls-bar">
+    <div class="l"><a class="ls-close" href="../program.html#week-7" aria-label="До програми"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+    <span class="ls-title">Урок 7.3 · <b>Практика: дизайн експерименту</b></span></div>
+    <span class="ls-count" id="ls-count"></span>
+  </div>
+  <div class="ls-steps" id="ls-steps"></div>
+</div></header>
+<main class="ls-main">
+<article class="lesson-body" data-steps="Контекст|Робимо|Розбір|Перевіряємо">
+<section class="screen" id="start" data-step="0" data-name="Старт" data-nofoot="1">
+  <div class="start-hero">
+    <div>
+      <span class="eyebrow">Тиждень 7 · Аналітика й експерименти · Урок 7.3</span>
+      <h1>Практика: дизайн експерименту</h1>
+      <p class="lead">Андрій готовий запускати нагадування у Viber для всіх. Ти пропонуєш спершу справжній експеримент: спроєктуєш його, прочитаєш результати і ухвалиш рішення. Це сьомий артефакт у портфоліо.</p>
+      <div class="chips"><span class="chip">Практика</span><span class="chip">≈ 90 хвилин</span><span class="chip">4 кроки</span></div>
+      <p>Консьєрж-тест Олени показав обнадійливий сигнал: коли вона вручну писала клієнтам у Viber за добу до запису, неявок стало помітно менше. Ірина за тиждень зробила просту версію автоматичних нагадувань у Viber з кнопками «Підтверджую» і «Не зможу прийти». Андрій готовий запускати для всіх: «Ну все ж ясно».</p>
+      <button type="button" class="btn" data-next style="align-self:flex-start">Почати практику <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <aside class="big-note">
+      <span class="label">Що ти зробиш</span>
+      <ol>
+        <li><span>Заповниш документ експерименту: гіпотеза, метрики, розподіл, розмір, правила рішення.</span></li>
+        <li><span>Прочитаєш результати загалом, за сегментами і за контрметриками.</span></li>
+        <li><span>Ухвалиш рішення і напишеш повідомлення команді.</span></li>
+      </ol>
+    </aside>
+  </div>
+  <span class="label">Як пройде практика</span>
+  <div class="steps-plan">
+    <button type="button" data-jump="1"><i>1</i><b>Контекст</b><span>Що вже відомо після консьєрж-тесту і чому потрібен експеримент.</span><small>1 екран · 5 хв</small></button>
+    <button type="button" data-jump="2"><i>2</i><b>Робимо</b><span>Дизайн, результати, читання результатів, рішення.</span><small>4 екрани · 70 хв</small></button>
+    <button type="button" data-jump="3"><i>3</i><b>Розбір</b><span>Критерії і приклад рішення.</span><small>1 екран · 10 хв</small></button>
+    <button type="button" data-jump="4"><i>4</i><b>Перевіряємо</b><span>Тест і підсумок тижня.</span><small>4 питання · 5 хв</small></button>
+  </div>
+  <div class="panel">
+<span class="label">Після уроку ти зможеш</span>
+<ol class="circled filled">
+<li><span>Спроєктувати експеримент: гіпотеза, метрики, розподіл, розмір, тривалість, правила рішення.</span></li>
+<li><span>Прочитати результати тесту, включно із сегментами і контрметриками.</span></li>
+<li><span>Ухвалити і пояснити рішення на основі результатів.</span></li>
+</ol>
+</div>
+</section>
+
+<section class="screen" id="context" data-step="1" data-name="Чому експеримент">
+  <div class="head-row">
+    <div><span class="eyebrow">Контекст</span><h2>Чому не запустити одразу</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Від результату залежить новий тариф за 990 грн. Якщо ефект менший, ніж здається, «Слот» продаватиме обіцянку, яку не виконає.</p></div>
+  </div>
+  <div class="grid-3">
+    <div class="card edge-green"><b class="t">Що вже є</b><p>Сигнал з консьєрж-тесту: у п'яти салонах неявки впали з 10% до 4%. Готова автоматична версія від Ірини.</p></div>
+    <div class="card edge-orange"><b class="t">Чого бракує</b><p>П'ять салонів і два тижні — мала вибірка. Без контрольної групи не видно, що ще могло вплинути: сезон, склад салонів, сама увага Олени.</p></div>
+    <div class="card edge-blue"><b class="t">Що зробимо</b><p>A/B-тест на 160 салонах: половина клієнтів отримує нові нагадування, половина — як зараз. Правила вирішуємо заздалегідь.</p></div>
+  </div>
+  <div class="ex"><span class="label">Згадай з уроку 7.2</span><p>Розмір вибірки, метрику, контрметрики і правила рішення фіксують до старту. Тоді після тесту ніхто не трактуватиме цифри так, як йому вигідно.</p></div>
+</section>
+
+<section class="screen" id="step1" data-step="2" data-name="Дизайн експерименту">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 1 з 4 · 30 хв</span>
+      <h2 style="font-size:26px">Дизайн експерименту</h2>
+      <p>Заповни документ експерименту. Він потрібен, щоб усі домовилися про правила <b>до</b> старту. Без нього після тесту кожен трактуватиме результати так, як йому вигідно.</p>
+      <details class="more"><summary>Підказка: розмір вибірки</summary><div>
+        <p>Хочемо помітити падіння неявок з 10% до 8%. За правилом з уроку 7.2: 16 × 0,1 × 0,9 ÷ 0,02² = 3 600 записів у кожній групі, 7 200 разом. Поділи на кількість записів на день у тесті і округли до повних тижнів.</p>
+      </div></details>
+      <details class="more"><summary>Самоперевірка: як виглядає слабкий і сильний дизайн</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Увімкнемо нагадування частині салонів на кілька тижнів і подивимося, чи стане краще».</p><p>Немає метрики, розміру, одиниці розподілу і правил. Після тесту кожен побачить те, що хоче.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Розподіляємо клієнтів, а не записи, щоб людина не отримувала різні нагадування. Метрика — частка неявок без попередження. Помічаємо падіння від 2 пунктів, 3 600 записів у групі, два повні тижні. Якщо ефект значущий і ≥ 2 пунктів, а скарг немає — запускаємо».</p><p>Кожне рішення пояснене і записане до старту.</p></div>
+        </div>
+        <ul><li>Є головна метрика з точною формулою і 1–2 контрметрики.</li><li>Одиниця розподілу обрана так, щоб групи не змішувались.</li><li>Розмір і тривалість пораховані, тривалість — повними тижнями.</li><li>Правила рішення описують і позитивний, і нейтральний, і негативний результат.</li></ul>
+      </div></details>
+      <details class="review"><summary>Подивитися приклад дизайну</summary><div class="review-body">
+<p><b>Гіпотеза:</b> ми віримо, що нагадування у Viber з підтвердженням за добу для клієнтів малих і великих салонів зменшить частку неявок. Ми знатимемо, що праві, коли неявки в групі B будуть щонайменше на 2 пункти нижчими, ніж у групі A, і різниця значуща.</p>
+<p><b>Головна метрика:</b> частка записів, на які клієнт не прийшов і не скасував заздалегідь. <b>Контрметрики:</b> частка скасувань; частка звільнених слотів, які салон заповнив; скарги салонів і клієнтів на повідомлення.</p>
+<p><b>Розподіл:</b> 120 малих і 40 великих салонів, які погодилися взяти участь. Розподіляємо <b>клієнтів</b> салону: клієнт завжди потрапляє в ту саму групу, щоб не отримувати різні нагадування на різні записи. Розподіл записів заплутав би клієнтів, а розподіл салонів дав би замало одиниць.</p>
+<p><b>Розмір і тривалість:</b> хочемо помітити падіння з 10% до 8%, це 3 600 записів у групі. За оцінкою — близько 10 днів, тому тримаємо тест два повні тижні.</p>
+<p><b>Правила:</b> якщо ефект значущий і не менше 2 пунктів, а скарг немає — запускаємо для всіх і готуємо новий тариф. Якщо ефект менший або незначущий — не запускаємо тариф, з'ясовуємо причини в інтерв'ю. Якщо скарги на повідомлення різко зросли — зупиняємо раніше.</p>
+</div></details>
+    </div>
+    <div>
+      <div class="panel">
+<div class="answer"><label class="label" for="e-hyp">Гіпотеза</label><textarea class="wb-field" data-field="e-hyp" data-label="Експеримент: гіпотеза" id="e-hyp" placeholder="Ми віримо, що … для … призведе до … Ми знатимемо, що праві, коли …" rows="2"></textarea></div>
+<div class="answer"><label class="label" for="e-metric">Головна метрика</label><input class="wb-field" data-field="e-metric" data-label="Експеримент: головна метрика" id="e-metric" placeholder="Що саме рахуємо і як" type="text"/></div>
+<div class="answer"><label class="label" for="e-guard">Контрметрики</label><textarea class="wb-field" data-field="e-guard" data-label="Експеримент: контрметрики" id="e-guard" placeholder="Що може погіршитися і за чим стежимо" rows="2"></textarea></div>
+<div class="answer"><label class="label" for="e-unit">Хто в тесті і що розподіляємо</label><textarea class="wb-field" data-field="e-unit" data-label="Експеримент: учасники і одиниця розподілу" id="e-unit" placeholder="Які салони, що потрапляє в групи: салони, клієнти чи записи, і чому" rows="2"></textarea></div>
+<div class="answer"><label class="label" for="e-size">Розмір і тривалість</label><textarea class="wb-field" data-field="e-size" data-label="Експеримент: розмір і тривалість" id="e-size" placeholder="Який ефект хочемо помітити, скільки потрібно, скільки днів" rows="2"></textarea></div>
+<div class="answer"><label class="label" for="e-rule">Правила рішення</label><textarea class="wb-field" data-field="e-rule" data-label="Експеримент: правила рішення" id="e-rule" placeholder="Що робимо, якщо результат позитивний, нейтральний, негативний" rows="3"></textarea></div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="results" data-step="2" data-name="Результати">
+  <div class="head-row">
+    <div><span class="eyebrow">Крок 2 з 4 · 10 хв</span><h2>Результати тесту</h2></div>
+    <div class="main-idea"><p><b>Головне.</b> Дивись не лише на загальну цифру: за сегментами і за контрметриками картина може бути іншою.</p></div>
+  </div>
+  <div class="split">
+    <div>
+      <p>Минуло два тижні. Аналітичні дані від Олега:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Група</th><th>Записів</th><th>Неявок</th><th>Частка неявок</th></tr></thead>
+<tbody>
+<tr><td><b>Усі · A (як зараз)</b></td><td>4 800</td><td>444</td><td>9,25%</td></tr>
+<tr><td><b>Усі · B (Viber з підтвердженням)</b></td><td>4 800</td><td>276</td><td>5,75%</td></tr>
+<tr><td>Малі салони · A</td><td>3 600</td><td>396</td><td>11,0%</td></tr>
+<tr><td>Малі салони · B</td><td>3 600</td><td>234</td><td>6,5%</td></tr>
+<tr><td>Великі салони · A</td><td>1 200</td><td>48</td><td>4,0%</td></tr>
+<tr><td>Великі салони · B</td><td>1 200</td><td>42</td><td>3,5%</td></tr>
+</tbody>
+</table></div>
+      <p class="muted" style="font-size:14px">У тест потрапили лише записи клієнтів, які залишили номер з Viber, тому записів на салон менше, ніж у середньому по «Слоту».</p>
+    </div>
+    <div>
+      <p>І контрметрики: у групі A клієнти скасували заздалегідь 3,0% записів, у групі B — 5,5%. Салони заповнили новими клієнтами близько 40% звільнених заздалегідь слотів. Скарг на повідомлення від салонів — дві, від клієнтів — жодної.</p>
+<p>Перевір значущість у калькуляторі. Дані можна підставити кнопками.</p>
+    </div>
+  </div>
+  <div class="calc wb-ignore" id="ab-calc">
+<div class="calc-presets"><span class="label">Дані тесту</span><div class="row">
+<button aria-pressed="true" class="chip-btn" data-preset='{"na":4800,"xa":444,"nb":4800,"xb":276}' type="button">Усі салони</button>
+<button aria-pressed="false" class="chip-btn" data-preset='{"na":3600,"xa":396,"nb":3600,"xb":234}' type="button">Малі салони</button>
+<button aria-pressed="false" class="chip-btn" data-preset='{"na":1200,"xa":48,"nb":1200,"xb":42}' type="button">Великі салони</button>
+<button aria-pressed="false" class="chip-btn" data-preset='{"na":4800,"xa":144,"nb":4800,"xb":264}' type="button">Скасування заздалегідь</button>
+</div></div>
+<div class="calc-grid">
+<div class="calc-inputs">
+<label><span>Група A: учасників</span><input data-in="na" inputmode="numeric" min="1" type="number" value="4800"/></label>
+<label><span>Група A: подій</span><input data-in="xa" inputmode="numeric" min="0" type="number" value="444"/></label>
+<label><span>Група B: учасників</span><input data-in="nb" inputmode="numeric" min="1" type="number" value="4800"/></label>
+<label><span>Група B: подій</span><input data-in="xb" inputmode="numeric" min="0" type="number" value="276"/></label>
+</div>
+<div class="calc-outputs">
+<div class="kv"><span>Частка в A</span><b data-out="pa"></b></div>
+<div class="kv"><span>Частка в B</span><b data-out="pb"></b></div>
+<div class="kv"><span>Різниця</span><b data-out="diff"></b></div>
+<div class="kv"><span>Відносна зміна</span><b data-out="rel"></b></div>
+<div class="kv big"><span>p-значення</span><b data-out="pv"></b></div>
+</div>
+</div>
+<p class="calc-verdict" role="status"></p>
+</div>
+</section>
+
+<section class="screen" id="step3" data-step="2" data-name="Прочитай результати">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 3 з 4 · 15 хв</span>
+      <h2 style="font-size:26px">Прочитай результати</h2>
+      <details class="more"><summary>Підказка: пункти і відсотки</summary><div>
+        <p><b>Відсоткові пункти</b> — проста різниця: 11% − 6,5% = 4,5 пункта.</p>
+        <p><b>Відносна зміна</b> — різниця, поділена на початкове значення: 4,5 ÷ 11 ≈ 0,409, тобто мінус 40,9%.</p>
+        <p>Значущість для великих салонів перевір у калькуляторі на попередньому екрані кнопкою «Великі салони».</p>
+      </div></details>
+      <details class="more"><summary>Самоперевірка: як виглядає слабка і сильна інтерпретація</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Неявки впали, але скасувань стало більше. Це погано, треба розібратися».</p><p>Зростання скасувань тут очікуване і корисне. І немає жодного слова про великі салони.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Майже весь ефект дають малі салони. У великих різниця незначуща: схоже, нагадування їм мало що додає, бо вони вже телефонують клієнтам самі. Скасування виросли з 3% до 5,5%: неявки перетворюються на попередження, і салон заповнює близько 40% звільнених слотів. Тариф 990 має сенс для малих салонів, не для великих».</p><p>Сегменти, контрметрики і висновок про тариф.</p></div>
+        </div>
+        <ul><li>Окремо оцінено малі і великі салони.</li><li>Зростання скасувань пояснено, а не злякано.</li><li>Є висновок про те, що це означає для тарифу.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <div class="num-check">
+<div class="nc-row"><label for="r1">На скільки відсоткових пунктів знизилися неявки в малих салонах</label><input class="wb-field" data-answer="4.5" data-dec="1" data-field="r-small" data-label="Малі салони: зниження, п.п." data-tol="0.1" id="r1" inputmode="decimal" type="text"/><span class="nc-mark"></span></div>
+<div class="nc-row"><label for="r2">На скільки відсотків у відносному вимірі знизилися неявки в малих салонах</label><input class="wb-field" data-answer="40.9" data-dec="1" data-field="r-small-rel" data-label="Малі салони: відносне зниження, %" data-tol="0.6" id="r2" inputmode="decimal" type="text"/><span class="nc-mark"></span></div>
+<div class="nc-row"><label for="r3">Чи значуща різниця у великих салонах? Введи 1, якщо так, і 0, якщо ні</label><input class="wb-field" data-answer="0" data-field="r-large-sig" data-label="Великі салони: значуща (1/0)" data-tol="0.1" id="r3" inputmode="numeric" type="text"/><span class="nc-mark"></span></div>
+<button class="btn" data-check="" type="button">Перевірити</button>
+<div class="nc-result" hidden=""><div class="mx-score"><b class="nc-score"></b><span>правильних відповідей</span></div></div>
+<div class="nc-explain review-body" hidden="">
+<p>Малі салони: з 11% до 6,5%, мінус 4,5 пункта, або мінус 41% неявок. p-значення значно менше 0,001, ефект надійний. Великі салони: з 4% до 3,5%, p ≈ 0,52, різниця не значуща. Це ще не доводить, що ефекту немає: неявок у великих салонах і так мало, а 1 200 записів у групі замало, щоб надійно помітити різницю в пів пункта. Згадай інтерв'ю з Мариною: великі салони вже телефонують клієнтам напередодні, тому їм нагадування майже нічого не додає.</p>
+</div>
+</div>
+<div class="answer"><label class="label" for="r-read">Що ще ти бачиш у результатах? Подумай про скасування і про великі салони.</label><textarea class="wb-field" data-field="r-read" data-label="Інтерпретація результатів" id="r-read" placeholder="Що означають контрметрики, чому великі салони відрізняються, що це каже про тариф" rows="4"></textarea></div>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="step4" data-step="2" data-name="Рішення">
+  <div class="work">
+    <div>
+      <span class="label" style="color:var(--ink)">Крок 4 з 4 · 15 хв</span>
+      <h2 style="font-size:26px">Рішення і повідомлення команді</h2>
+      <p>Згідно з правилами, які ти записав у кроці 1, ухвали рішення. Напиши коротке повідомлення в загальний чат команди: що тестували, що вийшло, що робимо далі. Пам'ятай урок 1.3: формат під людей. Тут прочитають і Андрій, і Олег, і Віктор, і Олена.</p>
+      <details class="more"><summary>Самоперевірка: як виглядає слабке і сильне повідомлення</summary><div>
+        <div class="grid-2">
+          <div class="warn"><span class="label">Слабо</span><p>«Тест вдався, p &lt; 0,001, z ≈ 6,8. Запускаємо».</p><p>Віктор і Олена не зрозуміють статистики. Незрозуміло, для кого запуск, що з тарифом і хто що робить.</p></div>
+          <div class="ex"><span class="label">Добре</span><p>«Два тижні, 9 600 записів. У малих салонах неявок на 41% менше (11% → 6,5%), результат надійний. У великих помітної різниці не видно. З понеділка вмикаємо для малих, Віктор з Оленою запускають пілот тарифу 990 на 20 салонах. Ірино, дякую!»</p><p>Коротко, людською мовою, з рішенням, відповідальними і подякою.</p></div>
+        </div>
+        <ul><li>Що тестували, що вийшло, що робимо — у кількох реченнях.</li><li>Цифри зрозумілі людям без статистики.</li><li>Названо, хто що робить далі.</li></ul>
+      </div></details>
+    </div>
+    <div>
+      <div class="answer"><label class="label" for="dec">Повідомлення в чат команди</label><textarea class="wb-field" data-field="decision" data-label="Рішення за результатами тесту" id="dec" placeholder="Коротко: що тестували · результат · рішення · що далі · подяка" rows="8"></textarea></div>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="review" data-step="3" data-name="Розбір">
+  <h2>Перевір і порівняй</h2>
+  <div class="summary">
+<span class="label">Перевір себе</span>
+<ol class="circled">
+<li><span>У дизайні є головна метрика, контрметрики, одиниця розподілу і правила рішення, визначені заздалегідь.</span></li>
+<li><span>Ти перевірив значущість не лише загалом, а й за сегментами.</span></li>
+<li><span>Ти розумієш, що зростання скасувань — очікуваний і навіть корисний ефект, а не проблема.</span></li>
+<li><span>Рішення спирається на правила, а не на бажання.</span></li>
+<li><span>Повідомлення зрозуміле людям з різних ролей.</span></li>
+</ol>
+</div>
+  <details class="review">
+<summary>Відкрити розбір рішення</summary>
+<div class="review-body">
+<h3>Що показали результати</h3>
+<p>Загальний ефект великий і надійний: неявки впали з 9,25% до 5,75%. Але майже весь ефект дають <b>малі салони</b>: мінус 41% неявок. У великих салонах тест помітної різниці не показав: неявок там і так мало, і вони вже телефонують клієнтам самі.</p>
+<p>Скасувань стало більше: з 3% до 5,5%. Це не погано, а добре: клієнти, які раніше просто не приходили, тепер попереджають. Салон дізнається заздалегідь і заповнює близько 40% таких слотів. Неявка перетворюється на скасування, а скасування — частково на новий запис.</p>
+<h3>Рішення</h3>
+<p>Запускаємо нагадування у Viber для малих салонів і готуємо пілот тарифу за 990 гривень для них. Великим салонам пропонуємо функцію як опцію, без зміни ціни: для них головна цінність в іншому. Наступний крок — список очікування: якщо салон заповнює лише 40% звільнених слотів, функція «повідомити клієнтів, які хотіли записатися на цей час» може підняти цю цифру.</p>
+<h3>Приклад повідомлення в чат</h3>
+<p><i>«Команда, результати тесту нагадувань у Viber. Два тижні, 9 600 записів. У малих салонах неявок стало на 41% менше (з 11% до 6,5%), результат надійний. У великих салонах помітної різниці не видно — вони вже телефонують клієнтам самі. Рішення: з понеділка вмикаємо нагадування для всіх малих салонів, а Віктор з Оленою запускають пілот тарифу 990 грн на 20 салонах. Ірино, дякую за швидку реалізацію, Олено — за консьєрж-тест, з якого все почалося. Деталі в документі експерименту».</i></p>
+</div>
+</details>
+</section>
+
+<section class="screen" id="check" data-step="4" data-name="Тест">
+  <h2>Самоперевірка</h2>
+  <p>Короткий тест на чотири питання. Після кожної відповіді побачиш пояснення.</p>
+<div class="quiz" id="quiz"></div>
+</section>
+
+<section class="screen" id="finish" data-step="4" data-name="Підсумок" data-nofoot="1">
+  <div class="split">
+    <div>
+      <div class="finish-head"><span class="ok"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span><div><span class="label" style="color:var(--done)">Тиждень 7 · фініш</span><h2 style="font-size:32px">Сьомий артефакт готовий</h2></div></div>
+      <p>Сьомий тиждень пройдено: у «Слота» є перша перевірена функція. Але черга ідей не закінчується: Віктор чекає Instagram, Олег — час на технічний борг, Марта пропонує новий онбординг. Як вирішити, що робити наступним? Про пріоритизацію і roadmap — тиждень 8.</p>
+      <span class="label">Перевір себе</span>
+      <ul class="checklist">
+<li><label><input id="c1" type="checkbox"/><span>Спроєктував експеримент</span></label></li>
+<li><label><input id="c2" type="checkbox"/><span>Перевірив результати за сегментами і контрметриками</span></label></li>
+<li><label><input id="c3" type="checkbox"/><span>Ухвалив рішення і написав повідомлення команді</span></label></li>
+</ul>
+      <button class="btn" id="done-btn" type="button">Позначити як пройдений</button>
+    </div>
+    <div>
+      <a class="btn ghost" href="../zoshyt.html">Відкрити «Мій зошит»: там твій дизайн експерименту</a>
+      <div class="pager" id="pager"></div>
+      <button type="button" class="btn ghost sm" data-prev style="align-self:flex-start">Назад до тесту</button>
+    </div>
+  </div>
+</section>
+</article>
+</main>
+<nav class="ls-foot" id="ls-foot" aria-label="Навігація уроком"></nav>
+<script src="../assets/course.js?v=20"></script>
+<script src="../assets/quiz.js?v=20"></script>
+<script src="../assets/workbook.js?v=20"></script>
+<script src="../assets/tools.js?v=20"></script>
+<script src="../assets/stepper.js?v=20"></script>
+<script>PMZ.initLesson();WB.initLesson();Tools.initChecks();Tools.initAB(document.getElementById("ab-calc"));Quiz.init({el:document.getElementById("quiz"),lesson:"07-3",questions:[{"q": "Навіщо записувати правила рішення до старту експерименту?", "options": ["Для звіту", "Щоб після тесту не трактувати результати так, як вигідно", "Так вимагає закон", "Щоб тест був довшим"], "correct": 1, "explain": "Коли правила зафіксовані заздалегідь, рішення спирається на дані, а не на бажання."}, {"q": "Чому в тесті краще розподіляти клієнтів, а не окремі записи?", "options": ["Бо клієнтів більше", "Щоб один клієнт не отримував різні нагадування на різні записи і не плутався", "Бо записи не можна рахувати", "Так простіше"], "correct": 1, "explain": "Одиницю розподілу обирають так, щоб групи не змішувалися і не впливали одна на одну."}, {"q": "Скасувань у групі B стало більше. Як це оцінити?", "options": ["Як провал тесту", "Як очікуваний ефект: неявки перетворюються на скасування, і салон може заповнити звільнений час", "Як помилку в даних", "Ігнорувати"], "correct": 1, "explain": "Саме для цього й потрібні контрметрики: вони показують, що відбувається поруч з головною метрикою."}, {"q": "Ефект є в малих салонах, а у великих тест його не виявив. Яке рішення найрозумніше?", "options": ["Відмовитися від функції", "Запустити для малих салонів і з'ясувати, чому великим вона менш потрібна", "Запустити для всіх з новою ціною", "Повторити тест на великих салонах тричі"], "correct": 1, "explain": "Великі салони вже телефонують клієнтам, тому нагадування їм мало що додає. Рішення має враховувати сегменти."}]});
+Stepper.init();</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="/assets/sz/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Сертифікат · Продакт з нуля</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=20">
+<link rel="stylesheet" href="assets/v2.css?v=20">
+<link rel="stylesheet" href="/assets/sz/sz.css?v=1">
+<link rel="stylesheet" href="/assets/sz/cert.css?v=1">
+<script src="/assets/sz/config.js?v=1"></script>
+<script src="/assets/sz/boot.js?v=1"></script>
+<style>
+.cert-wrap { display: flex; flex-direction: column; gap: 24px; max-width: 960px; }
+.cert-steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.cert-steps li { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.cert-steps .ic { flex: none; width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; background: var(--bg); color: var(--muted); }
+.cert-steps .ok .ic { background: var(--done-bg); color: var(--done); }
+.cert-steps small { display: block; color: var(--muted); margin-top: 2px; }
+.cert-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.cert-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: 15px; }
+.cert-form input[type=text] { font: inherit; font-weight: 400; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); min-height: 48px; box-sizing: border-box; }
+.cert-form .full { grid-column: 1 / -1; }
+.cert-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.cert-note { padding: 14px 16px; border-radius: 12px; background: var(--note-soft, #FFF3C4); }
+@media (max-width: 640px) { .cert-form { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="v2" data-root="">
+<header class="hd"><div class="in">
+  <a class="logo" href="index.html"><i aria-hidden="true"></i>Продакт з нуля</a>
+  <nav aria-label="Розділи"><a href="index.html">Головна</a><a href="program.html">Програма</a><a href="product.html">Продукт «Слот»</a><a href="zoshyt.html">Мій зошит</a></nav>
+</div></header>
+<main><div class="wrap">
+<div class="page-head">
+  <span class="label">Сертифікат</span>
+  <h1>Сертифікат про проходження курсу</h1>
+  <p class="muted">Сертифікат видається, коли пройдено весь курс: усі уроки, практичні завдання кожного тижня і підсумковий тест.</p>
+</div>
+<div class="cert-wrap" id="app"><p class="muted">Завантажую…</p></div>
+</div></main>
+<footer class="site-footer"><div class="wrap"><span>Продакт з нуля · Sprint Zero</span><span></span></div></footer>
+<script src="assets/course.js?v=20"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="/assets/sz/app.js?v=1"></script>
+<script src="/assets/sz/cert.js?v=1"></script>
+<script>
+(function () {
+  var app = document.getElementById("app");
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  var TR = { "а":"a","б":"b","в":"v","г":"h","ґ":"g","д":"d","е":"e","є":"ie","ж":"zh","з":"z","и":"y","і":"i","ї":"i","й":"i","к":"k","л":"l","м":"m","н":"n","о":"o","п":"p","р":"r","с":"s","т":"t","у":"u","ф":"f","х":"kh","ц":"ts","ч":"ch","ш":"sh","щ":"shch","ь":"","ю":"iu","я":"ia","'":"","’":"","ʼ":"" };
+  var START = { "є":"ye","ї":"yi","й":"y","ю":"yu","я":"ya" };
+  function translit(s) {
+    return s.replace(/зг/gi, function (m) { return m[0] === "З" ? "Zgh" : "zgh"; }).split(/(\s+|-)/).map(function (w) {
+      return w.split("").map(function (ch, i) {
+        var lo = ch.toLowerCase(), t = (i === 0 && START[lo]) || TR[lo];
+        if (t === undefined) return ch;
+        return ch !== lo && t ? t.charAt(0).toUpperCase() + t.slice(1) : t;
+      }).join("");
+    }).join("");
+  }
+  var WEEK = function (lid) { return "тиждень " + (+lid.split("-")[0]); };
+
+  SZ.ready.then(function () {
+    if (!SZ.user) {
+      app.innerHTML = '<div class="cert-note"><b>Увійди, щоб перевірити прогрес і отримати сертифікат.</b><br>Сертифікат прив\'язується до акаунту, тому потрібен вхід.</div><div class="cert-actions"><button class="btn" type="button" id="in">Увійти через Google</button></div>';
+      document.getElementById("in").addEventListener("click", function () { SZ.openAuth(); });
+      return;
+    }
+    app.innerHTML = '<p class="muted">Перевіряю прогрес…</p>';
+    return SZ.push().then(function () {
+      return Promise.all([
+        fetch(SZ.rest + "certificates?select=*&course=eq.pm&user_id=eq." + SZ.user.id, { headers: SZ.headers() }).then(function (r) { return r.json(); }),
+        fetch(SZ.rest + "rpc/cert_status", { method: "POST", headers: SZ.headers(), body: JSON.stringify({ p_course: "pm" }) }).then(function (r) { return r.json(); })
+      ]);
+    }).then(function (res) {
+      var cert = res[0] && res[0][0], st = res[1];
+      if (cert) return showCert(cert);
+      renderStatus(st);
+    }).catch(function () { app.innerHTML = '<div class="cert-note">Не вдалося завантажити дані. Перевір інтернет і онови сторінку.</div>'; });
+  });
+
+  function renderStatus(st) {
+    var miss = (st.practice_missing || []);
+    var items = [
+      { ok: st.lessons_ok, t: "Пройдено всі уроки", s: st.lessons_done + " з " + st.lessons_total + " позначено як пройдені" },
+      { ok: st.practice_ok, t: "Виконано практику кожного тижня", s: st.practice_ok ? "Усі 12 практичних уроків заповнені" : "Ще не заповнено: " + miss.map(function (m) { return '<a href="lessons/' + m.lesson + '.html">' + WEEK(m.lesson) + "</a> (" + m.have + " з " + m.need + " полів)"; }).join(", ") },
+      { ok: st.quiz_ok, t: "Підсумковий тест — від 70% правильних", s: st.quiz ? "Твій результат: " + esc(st.quiz) : 'Тест в уроці <a href="lessons/12-3.html">12.3</a> ще не пройдено' }
+    ];
+    app.innerHTML = '<ul class="cert-steps">' + items.map(function (i) { return '<li class="' + (i.ok ? "ok" : "") + '"><span class="ic">' + (i.ok ? "✓" : "·") + "</span><span><b>" + i.t + "</b><small>" + i.s + "</small></span></li>"; }).join("") + "</ul>" +
+      (st.eligible ? form() : '<div class="cert-note">Коли всі три пункти будуть виконані, тут з\'явиться форма для сертифіката.</div>');
+    if (st.eligible) bindForm();
+  }
+
+  function form() {
+    return '<h2 style="margin:8px 0 0">Усе виконано. Залишився один крок</h2><p class="muted" style="margin:0">Вкажи ім\'я так, як воно має бути в сертифікаті. Латиницею — для LinkedIn та англомовних роботодавців.</p>' +
+      '<div class="cert-form"><label>Ім\'я та прізвище українською<input type="text" id="nu" maxlength="80" autocomplete="name"></label>' +
+      '<label>Ім\'я та прізвище латиницею<input type="text" id="nl" maxlength="80"></label>' +
+      '<label class="full sz-check" style="font-weight:400;flex-direction:row"><input type="checkbox" id="ok"> <span>Я перевірив(-ла) написання. Після видачі ім\'я можна змінити тільки через підтримку.</span></label></div>' +
+      '<div class="szc-box" id="prev"></div>' +
+      '<div class="cert-actions"><button class="btn" type="button" id="go" disabled>Отримати сертифікат</button><span class="muted" id="msg"></span></div>';
+  }
+  function bindForm() {
+    var nu = document.getElementById("nu"), nl = document.getElementById("nl"), ok = document.getElementById("ok"), go = document.getElementById("go"), msg = document.getElementById("msg");
+    var latTouched = false;
+    nu.value = (SZ.profile && SZ.profile.full_name) || "";
+    nl.value = /[а-яіїєґ]/i.test(nu.value) ? translit(nu.value) : nu.value;
+    function upd() {
+      if (!latTouched) nl.value = /[а-яіїєґ]/i.test(nu.value) ? translit(nu.value) : nu.value;
+      SZCert.mount(document.getElementById("prev"), { name_uk: nu.value || "Ім'я Прізвище", name_lat: nl.value, number: "SZ-PM-····", first_cohort: true });
+      go.disabled = !(ok.checked && nu.value.trim().length >= 2 && nl.value.trim().length >= 2);
+    }
+    nu.addEventListener("input", upd); nl.addEventListener("input", function () { latTouched = true; upd(); }); ok.addEventListener("change", upd);
+    upd();
+    go.addEventListener("click", function () {
+      go.disabled = true; msg.textContent = "Видаю сертифікат…";
+      fetch(SZ.rest + "rpc/issue_certificate", { method: "POST", headers: SZ.headers(), body: JSON.stringify({ p_course: "pm", p_name_uk: nu.value.trim(), p_name_lat: nl.value.trim() }) })
+        .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; return j; }); })
+        .then(function (c) { SZ.track("cert_page_issued"); showCert(c); })
+        .catch(function (e) { go.disabled = false; msg.textContent = e && /not_eligible/.test(e.message || "") ? "Ще не всі умови виконані. Онови сторінку." : "Не вдалося видати сертифікат. Спробуй ще раз."; });
+    });
+  }
+
+  function showCert(c) {
+    var url = location.origin + "/cert/?id=" + c.slug;
+    app.innerHTML = '<div class="cert-note"><b>Вітаємо! Курс пройдено.</b> Сертифікат № ' + esc(c.number) + ' виданий ' + SZCert.date(c.issued_at) + '.</div>' +
+      '<div class="szc-box" id="prev"></div>' +
+      '<div class="cert-actions"><a class="btn" href="' + esc(url) + '">Відкрити сторінку сертифіката</a><a class="btn ghost" target="_blank" rel="noopener" href="' + esc(SZCert.linkedIn(c)) + '">Додати в LinkedIn</a></div>';
+    SZCert.mount(document.getElementById("prev"), c);
+  }
+})();
+</script>
+</body>
+</html>

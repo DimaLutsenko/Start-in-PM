@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Адмінка · Sprint Zero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/sz/site.css?v=1">
+<link rel="stylesheet" href="/assets/sz/sz.css?v=1">
+<script src="/assets/sz/config.js?v=1"></script>
+<script src="/assets/sz/boot.js?v=1"></script>
+<style>
+.a-tabs { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid #262626; }
+.a-tabs button { font: 600 15px Inter, sans-serif; color: var(--s-muted); background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 14px; cursor: pointer; min-height: 44px; }
+.a-tabs button[aria-selected="true"] { color: var(--s-ink); border-color: var(--s-y); }
+.a-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.a-kpis div { background: var(--s-surface); border: 1px solid #262626; border-radius: 10px; padding: 14px 16px; }
+.a-kpis b { display: block; font: 600 28px Unbounded, sans-serif; }
+.a-kpis span { color: var(--s-muted); font-size: 13px; }
+.a-tbl-wrap { overflow-x: auto; border: 1px solid #262626; border-radius: 10px; }
+table.a-tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+.a-tbl th, .a-tbl td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #222; vertical-align: top; }
+.a-tbl th { color: var(--s-muted); font-weight: 600; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; background: #111; position: sticky; top: 0; }
+.a-tbl tr.click { cursor: pointer; } .a-tbl tr.click:hover td { background: #151515; }
+.a-tbl .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.a-bar { height: 8px; border-radius: 4px; background: #262626; min-width: 120px; }
+.a-bar i { display: block; height: 100%; border-radius: 4px; background: var(--s-y); }
+.a-search { font: inherit; padding: 10px 14px; border-radius: 8px; border: 1px solid #333; background: #111; color: var(--s-ink); min-height: 44px; width: min(380px, 100%); }
+.a-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.a-panel { background: var(--s-surface); border: 1px solid #262626; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.a-panel h2 { margin: 0; font: 600 22px Unbounded, sans-serif; }
+.a-panel h3 { margin: 10px 0 0; font-size: 16px; }
+.a-ans { display: grid; grid-template-columns: minmax(140px, 260px) 1fr; gap: 6px 16px; font-size: 14px; }
+.a-ans dt { color: var(--s-muted); } .a-ans dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.a-chip { display: inline-block; font-size: 12px; padding: 3px 9px; border-radius: 999px; background: #222; color: #D9D5CC; margin: 2px 4px 2px 0; }
+.a-chip.y { background: #3A3214; color: var(--s-y); }
+.a-mini { font: 600 13px Inter, sans-serif; padding: 7px 12px; border-radius: 6px; border: 1px solid #3A3A3A; background: #1E1E1E; color: var(--s-ink); cursor: pointer; min-height: 34px; }
+.a-mini:hover { border-color: #5A5A5A; }
+.a-empty { color: var(--s-muted); padding: 24px; text-align: center; }
+@media (max-width: 640px) { .a-ans { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="site">
+<header class="s-head"><div class="s-in">
+  <a class="s-logo" href="/"><span class="s-mark" aria-hidden="true"><i></i></span><span>SPRINT ZERO · адмінка</span></a>
+  <nav class="s-nav"><a href="/pm/">Курс</a><span id="who" class="s-muted"></span></nav>
+</div></header>
+<main class="s-in s-main" id="app"><p class="s-muted">Завантажую…</p></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="/assets/sz/app.js?v=1"></script>
+<script src="/pm/assets/course.js?v=20"></script>
+<script>
+(function () {
+  var app = document.getElementById("app");
+  var LESSONS = (window.PMZ && PMZ.lessons) || [];
+  var LT = {}; LESSONS.forEach(function (l) { LT[l.id] = l.code + " " + l.title; });
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
+  function dt(s) { if (!s) return "—"; var d = new Date(s); return d.toLocaleDateString("uk-UA", { day: "2-digit", month: "2-digit", year: "2-digit" }) + " " + d.toLocaleTimeString("uk-UA", { hour: "2-digit", minute: "2-digit" }); }
+  function ago(s) { if (!s) return "—"; var m = (Date.now() - new Date(s)) / 60000; if (m < 60) return Math.round(m) + " хв тому"; if (m < 1440) return Math.round(m / 60) + " год тому"; return Math.round(m / 1440) + " дн тому"; }
+  function get(path) { return fetch(SZ.rest + path, { headers: SZ.headers() }).then(function (r) { if (!r.ok) throw new Error(path + " " + r.status); return r.json(); }); }
+  function send(method, path, body) { return fetch(SZ.rest + path, { method: method, headers: SZ.headers({ Prefer: "return=representation" }), body: JSON.stringify(body) }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }); }
+
+  var data = { students: [], progress: {}, feedback: [], certs: [], events: [], settings: {} };
+
+  SZ.ready.then(function () {
+    if (!SZ.user) {
+      app.innerHTML = '<div class="a-panel"><h2>Вхід в адмінку</h2><p class="s-muted">Увійди акаунтом адміністратора.</p><div><button class="s-btn y" id="in" type="button">Увійти через Google</button></div></div>';
+      document.getElementById("in").addEventListener("click", function () { SZ.openAuth({ title: "Вхід в адмінку", text: "Увійди акаунтом адміністратора Sprint Zero." }); });
+      return;
+    }
+    document.getElementById("who").textContent = SZ.user.email;
+    if (!SZ.profile || !SZ.profile.is_admin) { app.innerHTML = '<div class="a-panel"><h2>Немає доступу</h2><p class="s-muted">Цей акаунт не має прав адміністратора.</p></div>'; return; }
+    load();
+  });
+
+  function load() {
+    app.innerHTML = '<p class="s-muted">Завантажую дані…</p>';
+    Promise.all([
+      get("admin_students?select=*&order=created_at.desc"),
+      get("user_state?select=user_id,value&key=eq.pmz-progress-v1"),
+      get("feedback?select=*&order=created_at.desc&limit=1000"),
+      get("certificates?select=*&order=issued_at.desc"),
+      get("events?select=name,lesson,user_id,anon_id,props,created_at&order=created_at.desc&limit=20000"),
+      get("settings?select=*")
+    ]).then(function (r) {
+      data.students = r[0];
+      data.progress = {}; r[1].forEach(function (row) { try { data.progress[row.user_id] = (JSON.parse(row.value).done) || {}; } catch (e) {} });
+      data.feedback = r[2]; data.certs = r[3]; data.events = r[4];
+      data.settings = {}; r[5].forEach(function (s) { data.settings[s.key] = s.value; });
+      shell();
+    }).catch(function (e) { app.innerHTML = '<div class="a-panel"><h2>Помилка</h2><p class="s-muted">' + esc(e.message) + "</p></div>"; });
+  }
+
+  var TABS = [["students", "Студенти"], ["funnel", "Воронка"], ["feedback", "Відгуки"], ["certs", "Сертифікати"], ["settings", "Налаштування"]];
+  var cur = "students";
+  function shell() {
+    var byName = function (u) { var s = data.students.find(function (x) { return x.id === u; }); return s ? (s.full_name || s.email) : "—"; };
+    data.byName = byName;
+    var active7 = data.students.filter(function (s) { return s.last_event_at && Date.now() - new Date(s.last_event_at) < 7 * 864e5; }).length;
+    var avg = data.feedback.filter(function (f) { return f.scope !== "final" && f.rating; });
+    app.innerHTML = '<div class="a-kpis">' +
+      "<div><b>" + data.students.length + "</b><span>студентів зареєстровано</span></div>" +
+      "<div><b>" + active7 + "</b><span>активні за 7 днів</span></div>" +
+      "<div><b>" + data.students.filter(function (s) { return s.lessons_done >= 3; }).length + "</b><span>пройшли перший тиждень</span></div>" +
+      "<div><b>" + data.certs.filter(function (c) { return !c.revoked_at; }).length + "</b><span>сертифікатів видано</span></div>" +
+      "<div><b>" + (avg.length ? (avg.reduce(function (a, f) { return a + f.rating; }, 0) / avg.length).toFixed(1) : "—") + "</b><span>середня оцінка уроків (" + avg.length + ")</span></div>" +
+      '</div><div class="a-tabs" role="tablist">' + TABS.map(function (t) { return '<button type="button" role="tab" data-t="' + t[0] + '" aria-selected="' + (t[0] === cur) + '">' + t[1] + "</button>"; }).join("") + '</div><div id="tab"></div>';
+    app.querySelectorAll("[data-t]").forEach(function (b) { b.addEventListener("click", function () { cur = b.dataset.t; shell(); }); });
+    ({ students: tStudents, funnel: tFunnel, feedback: tFeedback, certs: tCerts, settings: tSettings })[cur](document.getElementById("tab"));
+    var m = location.hash.match(/u=([0-9a-f-]+)/); if (m && cur === "students") { history.replaceState(null, "", location.pathname); openStudent(m[1]); }
+  }
+
+  function tStudents(box) {
+    box.innerHTML = '<div class="a-row"><input class="a-search" type="search" placeholder="Пошук за ім\'ям або email" aria-label="Пошук студентів" id="q"><span class="s-muted" id="cnt"></span></div><div class="a-tbl-wrap" style="margin-top:12px"><table class="a-tbl"><thead><tr><th>Студент</th><th>Реєстрація</th><th>Остання активність</th><th class="num">Уроків</th><th>Прогрес</th><th>Анкета</th><th>Джерело</th><th>Розсилка</th><th>Сертифікат</th></tr></thead><tbody id="rows"></tbody></table></div><div id="detail" style="margin-top:20px"></div>';
+    var q = box.querySelector("#q");
+    function paint() {
+      var t = q.value.trim().toLowerCase();
+      var list = data.students.filter(function (s) { return !t || (s.full_name || "").toLowerCase().indexOf(t) >= 0 || (s.email || "").toLowerCase().indexOf(t) >= 0; });
+      box.querySelector("#cnt").textContent = list.length + " з " + data.students.length;
+      box.querySelector("#rows").innerHTML = list.length ? list.map(function (s) {
+        var ob = s.onboarding || {};
+        return '<tr class="click" data-u="' + s.id + '"><td><b>' + esc(s.full_name || "—") + '</b><br><span class="s-muted">' + esc(s.email) + "</span></td><td>" + dt(s.created_at) + "</td><td>" + ago(s.last_event_at || s.last_seen_at) + '</td><td class="num">' + s.lessons_done + ' / 36</td><td><div class="a-bar"><i style="width:' + (s.lessons_done / 36 * 100) + '%"></i></div></td><td>' + (ob.role ? '<span class="a-chip">' + esc(ob.role) + '</span><span class="a-chip">' + esc(ob.goal) + '</span><span class="a-chip">' + esc(ob.hours) + "</span>" : '<span class="s-muted">—</span>') + "</td><td>" + esc((s.utm && (s.utm.utm_source || s.utm.ref)) || "—") + "</td><td>" + (s.marketing_consent ? "так" : "ні") + "</td><td>" + esc(s.cert_number || "—") + "</td></tr>";
+      }).join("") : '<tr><td colspan="9" class="a-empty">Поки що немає студентів</td></tr>';
+      box.querySelectorAll("tr[data-u]").forEach(function (tr) { tr.addEventListener("click", function () { openStudent(tr.dataset.u); }); });
+    }
+    q.addEventListener("input", paint); paint();
+  }
+
+  function openStudent(uid) {
+    var s = data.students.find(function (x) { return x.id === uid; }); if (!s) return;
+    var box = document.getElementById("detail");
+    box.innerHTML = '<div class="a-panel"><p class="s-muted">Завантажую дані студента…</p></div>';
+    box.scrollIntoView({ behavior: "smooth", block: "start" });
+    get("user_state?select=key,value,updated_at&user_id=eq." + uid).then(function (rows) {
+      var st = {}; rows.forEach(function (r) { st[r.key] = r.value; });
+      var wb = {}; try { wb = JSON.parse(st["pmz-workbook-v1"] || "{}"); } catch (e) {}
+      var done = data.progress[uid] || {};
+      var ob = s.onboarding || {};
+      var fb = data.feedback.filter(function (f) { return f.user_id === uid; });
+      var lids = Object.keys(wb.fields || {}).concat(Object.keys(wb.notes || {})).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
+      box.innerHTML = '<div class="a-panel"><div class="a-row" style="justify-content:space-between"><h2>' + esc(s.full_name || s.email) + '</h2><div class="a-row"><button class="s-btn y" type="button" id="va">Дивитися як студент</button><button class="a-mini" type="button" id="cl">Закрити</button></div></div>' +
+        '<dl class="a-ans"><dt>Email</dt><dd>' + esc(s.email) + "</dd><dt>Реєстрація</dt><dd>" + dt(s.created_at) + "</dd><dt>Остання активність</dt><dd>" + dt(s.last_event_at || s.last_seen_at) + "</dd>" +
+        "<dt>Анкета</dt><dd>" + (ob.role ? esc(ob.role) + " · " + esc(ob.goal) + " · " + esc(ob.hours) : "—") + "</dd><dt>Джерело</dt><dd>" + esc(JSON.stringify(s.utm || {})) + "</dd>" +
+        "<dt>Пройдені уроки</dt><dd>" + (Object.keys(done).sort().map(function (l) { return '<span class="a-chip y">' + esc(l.replace("-", ".").replace(/^0/, "")) + "</span>"; }).join("") || "—") + "</dd></dl>" +
+        (fb.length ? "<h3>Відгуки</h3>" + fb.map(function (f) { return '<p style="margin:0"><span class="a-chip">' + esc(f.scope + " " + f.ref) + "</span> <b>" + f.rating + "</b> " + esc(f.comment || "") + "</p>"; }).join("") : "") +
+        "<h3>Відповіді і нотатки</h3>" + (lids.length ? lids.map(function (lid) {
+          var f = (wb.fields || {})[lid] || {}, keys = Object.keys(f).filter(function (k) { return !f[k].hidden; }).sort(function (a, b) { return (f[a].order || 0) - (f[b].order || 0); });
+          var hl = (wb.highlights || {})[lid] || [];
+          return "<details><summary><b>" + esc(LT[lid] || lid) + '</b> <span class="s-muted">· полів: ' + keys.length + (hl.length ? " · виділень: " + hl.length : "") + "</span></summary><dl class=\"a-ans\" style=\"margin:10px 0 16px\">" +
+            keys.map(function (k) { return "<dt>" + esc(f[k].label || k) + "</dt><dd>" + esc(f[k].v) + "</dd>"; }).join("") +
+            (wb.notes && wb.notes[lid] ? "<dt>Нотатки</dt><dd>" + esc(wb.notes[lid]) + "</dd>" : "") +
+            hl.map(function (h) { return "<dt>Виділення</dt><dd>«" + esc(h.quote) + "»" + (h.comment ? " — " + esc(h.comment) : "") + "</dd>"; }).join("") + "</dl></details>";
+        }).join("") : '<p class="s-muted">Поки що немає відповідей</p>') + "</div>";
+      box.querySelector("#cl").addEventListener("click", function () { box.innerHTML = ""; });
+      box.querySelector("#va").addEventListener("click", function () {
+        sessionStorage.setItem("sz-viewas", JSON.stringify({ uid: uid, name: s.full_name || s.email, state: st }));
+        location.href = "/pm/";
+      });
+    });
+  }
+
+  function tFunnel(box) {
+    var ev = data.events;
+    function uniq(name, filter) { var set = {}; ev.forEach(function (e) { if (e.name === name && (!filter || filter(e))) set[e.user_id || e.anon_id] = 1; }); return Object.keys(set).length; }
+    var steps = [
+      ["Відкрили курс", uniq("page_view", function (e) { return e.props && /^\/pm\/?(index\.html)?$/.test(e.props.path || ""); })],
+      ["Почали онбординг", uniq("onboarding_start")],
+      ["Заповнили анкету", uniq("onboarding_done")],
+      ["Зареєструвалися", data.students.length],
+      ["Відкрили урок 1.1", uniq("page_view", function (e) { return e.lesson === "01-1"; })]
+    ];
+    var max = Math.max.apply(null, steps.map(function (s) { return s[1]; }).concat([1]));
+    var users = Object.keys(data.progress).length || 1;
+    box.innerHTML = '<p class="s-muted">Дані подій за весь час (останні 20 000 подій). Анонімні відвідувачі рахуються за ідентифікатором браузера.</p>' +
+      '<div class="a-tbl-wrap"><table class="a-tbl"><thead><tr><th>Крок</th><th class="num">Людей</th><th></th></tr></thead><tbody>' +
+      steps.map(function (s) { return "<tr><td>" + s[0] + '</td><td class="num">' + s[1] + '</td><td style="width:50%"><div class="a-bar"><i style="width:' + (s[1] / max * 100) + '%"></i></div></td></tr>'; }).join("") + "</tbody></table></div>" +
+      '<h3 style="margin:24px 0 8px">Пройдені уроки серед зареєстрованих (' + Object.keys(data.progress).length + ' з прогресом)</h3><div class="a-tbl-wrap"><table class="a-tbl"><thead><tr><th>Урок</th><th class="num">Пройшли</th><th class="num">Оцінка</th><th></th></tr></thead><tbody>' +
+      LESSONS.map(function (l) {
+        var n = Object.keys(data.progress).filter(function (u) { return data.progress[u][l.id]; }).length;
+        var fr = data.feedback.filter(function (f) { return (f.scope === "lesson" && f.ref === l.id) || (f.scope === "week" && /-3$/.test(l.id) && f.ref === String(l.week.n)); });
+        var avg = fr.length ? (fr.reduce(function (a, f) { return a + f.rating; }, 0) / fr.length).toFixed(1) + " (" + fr.length + ")" : "—";
+        return "<tr><td>" + esc(l.code + " " + l.title) + '</td><td class="num">' + n + '</td><td class="num">' + avg + '</td><td style="width:40%"><div class="a-bar"><i style="width:' + (n / users * 100) + '%"></i></div></td></tr>';
+      }).join("") + "</tbody></table></div>";
+  }
+
+  function tFeedback(box) {
+    var f = data.feedback;
+    box.innerHTML = '<div class="a-tbl-wrap"><table class="a-tbl"><thead><tr><th>Дата</th><th>Студент</th><th>Що</th><th class="num">Оцінка</th><th>Коментар</th></tr></thead><tbody>' +
+      (f.length ? f.map(function (x) {
+        var what = x.scope === "lesson" ? "Урок " + (LT[x.ref] || x.ref) : x.scope === "week" ? "Тиждень " + x.ref : "Фінал: порекомендує курс (0–10)";
+        return "<tr><td>" + dt(x.created_at) + "</td><td>" + esc(data.byName(x.user_id)) + "</td><td>" + esc(what) + '</td><td class="num"><b>' + x.rating + "</b></td><td>" + esc(x.comment || "") + "</td></tr>";
+      }).join("") : '<tr><td colspan="5" class="a-empty">Відгуків поки немає</td></tr>') + "</tbody></table></div>";
+  }
+
+  function tCerts(box) {
+    var c = data.certs;
+    box.innerHTML = '<div class="a-tbl-wrap"><table class="a-tbl"><thead><tr><th>Номер</th><th>Ім\'я</th><th>Латиницею</th><th>Видано</th><th>Статус</th><th></th></tr></thead><tbody>' +
+      (c.length ? c.map(function (x) {
+        return "<tr><td><a href=\"/cert/?id=" + esc(x.slug) + '" target="_blank">' + esc(x.number) + "</a>" + (x.first_cohort ? ' <span class="a-chip y">перший потік</span>' : "") + "</td><td>" + esc(x.name_uk) + "</td><td>" + esc(x.name_lat) + "</td><td>" + dt(x.issued_at) + "</td><td>" + (x.revoked_at ? "анульовано" : "дійсний") + '</td><td><div class="a-row"><button class="a-mini" data-ren="' + x.id + '" type="button">Змінити ім\'я</button><button class="a-mini" data-rev="' + x.id + '" type="button">' + (x.revoked_at ? "Відновити" : "Анулювати") + "</button></div></td></tr>";
+      }).join("") : '<tr><td colspan="6" class="a-empty">Сертифікатів поки немає</td></tr>') + "</tbody></table></div>";
+    box.querySelectorAll("[data-ren]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var x = c.find(function (y) { return y.id === b.dataset.ren; });
+        var uk = prompt("Ім'я українською", x.name_uk); if (uk == null) return;
+        var lat = prompt("Ім'я латиницею", x.name_lat); if (lat == null) return;
+        send("PATCH", "certificates?id=eq." + x.id, { name_uk: uk.trim(), name_lat: lat.trim() }).then(load, function () { alert("Не вдалося зберегти"); });
+      });
+    });
+    box.querySelectorAll("[data-rev]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var x = c.find(function (y) { return y.id === b.dataset.rev; });
+        if (!x.revoked_at && !confirm("Анулювати сертифікат " + x.number + "? Сторінка сертифіката покаже, що він недійсний.")) return;
+        send("PATCH", "certificates?id=eq." + x.id, { revoked_at: x.revoked_at ? null : new Date().toISOString() }).then(load, function () { alert("Не вдалося зберегти"); });
+      });
+    });
+  }
+
+  function tSettings(box) {
+    var be = data.settings.beta_end;
+    box.innerHTML = '<div class="a-panel"><h2>Перший потік</h2><p class="s-muted">Усі, хто зареєструвався до цієї дати, отримують у сертифікаті мітку «Перший потік». Поки дата не задана, мітку отримують усі.</p>' +
+      '<div class="a-row"><label for="be">Кінець першого потоку</label><input class="a-search" style="width:auto" type="date" id="be" value="' + (be && be !== null ? String(be).slice(0, 10) : "") + '"><button class="s-btn y" type="button" id="save">Зберегти</button><button class="a-mini" type="button" id="clr">Прибрати дату</button><span id="msg" class="s-muted"></span></div></div>';
+    function save(v) { send("PATCH", "settings?key=eq.beta_end", { value: v }).then(function () { box.querySelector("#msg").textContent = "Збережено"; data.settings.beta_end = v; }, function () { box.querySelector("#msg").textContent = "Помилка"; }); }
+    box.querySelector("#save").addEventListener("click", function () { var v = box.querySelector("#be").value; if (v) save(v + "T23:59:59+02:00"); });
+    box.querySelector("#clr").addEventListener("click", function () { box.querySelector("#be").value = ""; save(null); });
+  }
+})();
+</script>
+</body>
+</html>

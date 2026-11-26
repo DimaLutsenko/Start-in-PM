@@ -1,0 +1,36 @@
+/* Сертифікат Sprint Zero: 1200×848, друк на A4 альбомно. */
+.szc-box { position: relative; width: 100%; overflow: hidden; border-radius: 10px; }
+.szc-scale { width: 1200px; height: 848px; transform-origin: top left; }
+.szc { position: relative; width: 1200px; height: 848px; box-sizing: border-box; padding: 28px; background: #121212; color: #F4F1EA; font-family: Inter, system-ui, sans-serif; overflow: hidden; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.szc-ring { position: absolute; right: -170px; top: -170px; width: 520px; height: 520px; border-radius: 50%; border: 56px solid #FFD43B; opacity: .08; }
+.szc-in { position: relative; height: 100%; box-sizing: border-box; border: 1px solid #3A3A3A; border-radius: 6px; padding: 52px 64px 44px; display: flex; flex-direction: column; }
+.szc-top { display: flex; justify-content: space-between; align-items: center; }
+.szc-logo { display: flex; align-items: center; gap: 14px; }
+.szc-logo b { display: block; font-family: Unbounded, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: .02em; }
+.szc-logo small { display: block; font-size: 11px; letter-spacing: .32em; color: #A8A49C; }
+.szc-mark { width: 44px; height: 44px; border-radius: 50%; border: 6px solid #FFD43B; box-sizing: border-box; display: flex; align-items: center; justify-content: center; }
+.szc-mark i { width: 6px; height: 18px; background: #FFD43B; border-radius: 3px; transform: rotate(35deg); }
+.szc-badge { background: #FFD43B; color: #121212; font-family: Unbounded, sans-serif; font-weight: 600; font-size: 14px; padding: 10px 18px; border-radius: 4px; transform: rotate(3deg); box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.szc-main { margin-top: 52px; display: flex; flex-direction: column; gap: 12px; }
+.szc-kicker { font-size: 13px; font-weight: 600; letter-spacing: .28em; color: #FFD43B; }
+.szc-pre { font-size: 18px; color: #A8A49C; }
+.szc h1 { margin: 0; font-family: Unbounded, sans-serif; font-weight: 600; font-size: 56px; line-height: 1.1; letter-spacing: -.01em; color: #F4F1EA; }
+.szc-lat { font-size: 18px; color: #A8A49C; letter-spacing: .04em; }
+.szc p { margin: 6px 0 0; font-size: 19px; line-height: 1.5; color: #D9D5CC; max-width: 780px; }
+.szc p strong { color: #F4F1EA; }
+.szc-skills { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; max-width: 920px; }
+.szc-skills span { border: 1px solid #4A4A4A; border-radius: 999px; padding: 8px 16px; font-size: 14px; }
+.szc-foot { margin-top: auto; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; align-items: end; border-top: 1px solid #3A3A3A; padding-top: 22px; }
+.szc-foot small { display: block; font-size: 12px; letter-spacing: .14em; color: #A8A49C; margin-bottom: 6px; }
+.szc-foot b { font-size: 17px; font-weight: 500; }
+.szc-mono { font-family: ui-monospace, Menlo, monospace; }
+.szc-sign { text-align: right; }
+.szc-sign b { display: block; font-family: Unbounded, sans-serif; font-weight: 600; margin-bottom: 6px; }
+.szc-sign small { letter-spacing: 0; font-size: 12px; margin: 0; }
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  body * { visibility: hidden; }
+  .szc-print, .szc-print * { visibility: visible; }
+  .szc-print { position: fixed; left: 0; top: 0; }
+  .szc-print .szc-scale { transform: scale(0.935) !important; }
+}

@@ -202,7 +202,7 @@
     function onKey(e) { if (e.key === "Escape" && opts.closable !== false) close(); }
     document.addEventListener("keydown", onKey);
     var x = $(".sz-x", wrap); if (x) x.addEventListener("click", close);
-    var f = $("button, input, a", $(".sz-card", wrap)); if (f && f.focus) setTimeout(function () { f.focus(); }, 30);
+    var f = $("button:not(.sz-x), input, a", $(".sz-card", wrap)); if (f && f.focus) setTimeout(function () { f.focus(); }, 30);
     return { el: wrap, close: close };
   }
 

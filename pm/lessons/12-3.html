@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/style.css?v=20">
 <link rel="stylesheet" href="../assets/v2.css?v=20">
-<link rel="stylesheet" href="/assets/sz/sz.css?v=1">
+<link rel="stylesheet" href="/assets/sz/sz.css?v=2">
 <script src="/assets/sz/config.js?v=1"></script>
 <script src="/assets/sz/boot.js?v=1"></script>
 </head>
@@ -273,6 +273,6 @@ var tb=document.querySelector("#materials-table tbody");if(!tb)return;
 rows.forEach(function(r){var v=WB.getField(r[0],r[1]);var tr=document.createElement("tr");var a=document.createElement("td");a.innerHTML='<a href="'+r[0]+'.html">'+WB.esc(r[2])+'</a>';var b=document.createElement("td");b.textContent=v?v:"Ще не заповнено";if(!v)b.className="muted";b.style.whiteSpace="pre-wrap";tr.appendChild(a);tr.appendChild(b);tb.appendChild(tr);});})();Quiz.init({el:document.getElementById("quiz"),lesson:"12-3",questions:[{"q": "Чим стратегія відрізняється від roadmap?", "options": ["Нічим", "Стратегія пояснює, як і чому продукт виграватиме, і що не робимо; roadmap — порядок ініціатив", "Roadmap важливіший", "Стратегія — це список функцій"], "correct": 1, "explain": "Roadmap виростає зі стратегії. Без стратегії roadmap перетворюється на список побажань."}, {"q": "Тиждень 2: навіщо продакту сегменти?", "options": ["Щоб красиво малювати слайди", "Різні групи клієнтів мають різні потреби, і рішення для всіх нікому не підходить", "Щоб більше продавати", "Щоб скоротити команду"], "correct": 1, "explain": "Сегментація дає фокус: кого і від чого ми рятуємо."}, {"q": "Тиждень 6: LTV/CAC приватних майстрів — 1,21. Що це означає?", "options": ["Сегмент дуже вигідний", "Ми ледь повертаємо гроші, витрачені на залучення", "Треба вдвічі збільшити рекламу", "Нічого, це нормальна цифра"], "correct": 1, "explain": "Орієнтир здорового бізнесу — близько 3. При 1,2 зростання в цьому сегменті спалює гроші."}, {"q": "Тиждень 7: експеримент показав покращення, але p-value 0,3. Що робимо?", "options": ["Запускаємо на всіх", "Результат може бути випадковим: збираємо більше даних або вирішуємо з урахуванням ризику", "Ховаємо результат", "Міняємо метрику, щоб вийшло"], "correct": 1, "explain": "Висока p-value означає, що різниця може бути шумом. Чесно визнаємо невизначеність."}, {"q": "Тиждень 10: Віктор проти рішення продакта. Перший крок?", "options": ["Іти до Андрія по підтримку", "Зрозуміти інтереси Віктора за його позицією", "Ігнорувати", "Погодитися на все"], "correct": 1, "explain": "За позицією «ні» зазвичай стоять інтереси. Знайшовши їх, часто знаходиш рішення для обох."}, {"q": "Що найкраще показує, що стратегія хороша?", "options": ["Вона довга", "Вона робить вибір, спирається на дані і має вимірювані цілі", "У ній багато нових функцій", "Вона влаштовує всіх без винятку"], "correct": 1, "explain": "Стратегія без відмов і без даних — це список побажань."}]});
 Stepper.init();</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script src="/assets/sz/app.js?v=1"></script>
+<script src="/assets/sz/app.js?v=2"></script>
 </body>
 </html>
